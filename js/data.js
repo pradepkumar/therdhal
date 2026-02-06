@@ -11,7 +11,7 @@ const DataModule = (function () {
         elections: {}
     };
 
-    // Party color mapping
+    // Party color mapping (primary colors for single-color display)
     const partyColors = {
         'DMK': '#e53935',
         'AIADMK': '#4caf50',
@@ -33,6 +33,50 @@ const DataModule = (function () {
         'OTHERS': '#78909c'
     };
 
+    // Party flag colors (array of colors from their official flags)
+    const partyFlagColors = {
+        'DMK': ['#000000', '#e53935'],  // Black and Red
+        'AIADMK': ['#000000', '#e53935'],  // Black and Red (same as DMK)
+        'ADMK': ['#000000', '#e53935'],
+        'BJP': ['#FF9933', '#138808'],  // Saffron and Green
+        'INC': ['#FF9933', '#FFFFFF', '#138808'],  // Saffron, White, Green
+        'CONGRESS': ['#FF9933', '#FFFFFF', '#138808'],
+        'PMK': ['#1976d2', '#ffeb3b', '#ff9800'],  // Blue, Yellow, Orange
+        'MDMK': ['#e53935', '#000000', '#e53935'],  // Red-Black-Red
+        'VCK': ['#00bcd4', '#e53935'],  // Sky Blue and Red
+        'CPI': ['#f44336'],  // Red
+        'CPI(M)': ['#b71c1c'],  // Dark Red
+        'DMDK': ['#009688'],  // Teal
+        'TMC': ['#795548'],  // Brown
+        'AMMK': ['#8bc34a'],  // Light Green
+        'NTK': ['#ffc107'],  // Amber
+        'MNM': ['#3f51b5'],  // Indigo
+        'IND': ['#607d8b'],  // Blue Grey
+        'OTHERS': ['#78909c']  // Grey
+    };
+
+    // Party logos (using placeholder paths - will be updated with actual logos)
+    const partyLogos = {
+        'DMK': 'assets/logos/DMK.png',
+        'AIADMK': 'assets/logos/AIADMK.svg',
+        'ADMK': 'assets/logos/AIADMK.svg',
+        'BJP': 'assets/logos/BJP.svg',
+        'INC': 'assets/logos/INC.svg',
+        'CONGRESS': 'assets/logos/INC.svg',
+        'PMK': 'assets/logos/PMK.jpg',
+        'MDMK': 'assets/logos/placeholder.svg',
+        'VCK': 'assets/logos/placeholder.svg',
+        'CPI': 'assets/logos/placeholder.svg',
+        'CPI(M)': 'assets/logos/placeholder.svg',
+        'DMDK': 'assets/logos/DMDK.png',
+        'TMC': 'assets/logos/placeholder.svg',
+        'AMMK': 'assets/logos/placeholder.svg',
+        'NTK': 'assets/logos/NTK.png',
+        'MNM': 'assets/logos/placeholder.svg',
+        'IND': 'assets/logos/placeholder.svg',
+        'OTHERS': 'assets/logos/placeholder.svg'
+    };
+
     /**
      * Get party color
      */
@@ -40,6 +84,24 @@ const DataModule = (function () {
         if (!party) return partyColors['OTHERS'];
         const normalized = party.toUpperCase().trim();
         return partyColors[normalized] || partyColors['OTHERS'];
+    }
+
+    /**
+     * Get party flag colors (array of colors)
+     */
+    function getPartyFlagColors(party) {
+        if (!party) return partyFlagColors['OTHERS'];
+        const normalized = party.toUpperCase().trim();
+        return partyFlagColors[normalized] || partyFlagColors['OTHERS'];
+    }
+
+    /**
+     * Get party logo path
+     */
+    function getPartyLogo(party) {
+        if (!party) return partyLogos['OTHERS'];
+        const normalized = party.toUpperCase().trim();
+        return partyLogos[normalized] || partyLogos['OTHERS'];
     }
 
     /**
@@ -237,6 +299,8 @@ const DataModule = (function () {
         getConstituencyInfo,
         getElectionResults,
         getWinnerHistory,
-        getPartyColor
+        getPartyColor,
+        getPartyFlagColors,
+        getPartyLogo
     };
 })();

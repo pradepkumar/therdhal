@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Path to source CSV
-const CSV_PATH = 'c:/Pradep/Projects/2021_results.csv';
+const CSV_PATH = './data/2021_results.csv';
 const OUTPUT_PATH = './data/elections-2021.json';
 const CONSTITUENCIES_OUTPUT = './data/constituencies.json';
 

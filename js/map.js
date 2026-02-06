@@ -278,7 +278,7 @@ const MapModule = (function () {
                 });
 
                 // Tooltip - only enabled at constituency zoom level (handled via CSS/opacity)
-                const tooltip = layer.bindTooltip(`${id}. ${name}`, {
+                const tooltip = layer.bindTooltip(name, {
                     permanent: false,
                     direction: 'center',
                     className: 'constituency-tooltip'

@@ -105,12 +105,28 @@
     <!-- Constituency Detail Overlay -->
     <div id="constituency-overlay" class="overlay hidden">
         <div class="overlay-content">
-            <button class="overlay-close" id="overlay-close" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 6L6 18M6 6l12 12" />
-                </svg>
-            </button>
+            <div class="overlay-nav-controls">
+                <div class="header-navigation">
+                    <button id="prev-constituency" class="header-nav-btn prev" aria-label="Previous Constituency">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button id="next-constituency" class="header-nav-btn next" aria-label="Next Constituency">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <button class="overlay-close" id="overlay-close" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
 
             <header class="overlay-header">
                 <div class="constituency-badge" id="constituency-type">General</div>
@@ -118,7 +134,10 @@
                     <span class="name-en">Constituency Name</span>
                     <span class="name-ta">தொகுதி பெயர்</span>
                 </h2>
-                <p class="constituency-district" id="constituency-district">District Name</p>
+                <div class="constituency-meta-header">
+                    <p class="constituency-district" id="constituency-district">District Name</p>
+                    <p class="constituency-description" id="constituency-description"></p>
+                </div>
             </header>
 
             <div class="overlay-body">

@@ -6,6 +6,10 @@ const UIModule = (function () {
     let yearFilter, districtFilter, constituencyFilter;
     let backButton, legend, loadingOverlay;
     let overlay, overlayClose;
+    let currentConstituencyId = null;
+    let allConstituencies = [];
+    let touchStartX = 0;
+    let touchEndX = 0;
     let isUpdatingDistrict = false;  // Flag to prevent recursive updates
     let isUpdatingConstituency = false;  // Flag to prevent recursive updates
 
@@ -18,6 +22,12 @@ const UIModule = (function () {
         loadingOverlay = document.getElementById('loading');
         overlay = document.getElementById('constituency-overlay');
         overlayClose = document.getElementById('overlay-close');
+
+        // Load all constituencies once for navigation
+        DataModule.getConstituencyList().then(list => {
+            allConstituencies = list;
+        });
+
         setupEventListeners();
     }
 
@@ -40,7 +50,32 @@ const UIModule = (function () {
         });
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') hideConstituencyOverlay();
+            if (overlay.classList.contains('hidden')) return;
+            if (e.key === 'ArrowRight') navigateToNext();
+            if (e.key === 'ArrowLeft') navigateToPrev();
         });
+
+        // Navigation buttons
+        const prevBtn = document.getElementById('prev-constituency');
+        const nextBtn = document.getElementById('next-constituency');
+        if (prevBtn) prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigateToPrev();
+        });
+        if (nextBtn) nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navigateToNext();
+        });
+
+        // Swipe support
+        overlay.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        overlay.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
 
         // Legend toggle
         const legendToggle = document.getElementById('legend-toggle');
@@ -68,7 +103,7 @@ const UIModule = (function () {
         list.forEach(c => {
             const opt = document.createElement('option');
             opt.value = c.id;
-            opt.textContent = `${c.id}. ${c.name}`;
+            opt.textContent = c.name;
             constituencyFilter.appendChild(opt);
         });
     }
@@ -177,6 +212,7 @@ const UIModule = (function () {
     }
 
     async function showConstituencyOverlay(id) {
+        currentConstituencyId = id;
         const info = await DataModule.getConstituencyInfo(id);
         const history = await DataModule.getWinnerHistory(id);
         const electionResults = await DataModule.getElectionResults(2021, id);
@@ -190,6 +226,7 @@ const UIModule = (function () {
         document.querySelector('#constituency-name .name-en').textContent = info.name;
         document.querySelector('#constituency-name .name-ta').textContent = info.name_ta || '';
         document.getElementById('constituency-district').textContent = info.district;
+        document.getElementById('constituency-description').textContent = info.description || '';
         document.getElementById('registered-voters').textContent = info.registered_voters?.toLocaleString() || 'N/A';
         document.getElementById('constituency-id').textContent = id;
 
@@ -210,15 +247,56 @@ const UIModule = (function () {
         const candidatesEl = document.getElementById('candidates-table');
         if (electionResults && electionResults.candidates) {
             const maxVotes = Math.max(...electionResults.candidates.map(c => c.votes || 0));
-            candidatesEl.innerHTML = electionResults.candidates.map((c, i) => {
+
+            // Calculate total votes for vote share bar
+            const totalVotes = electionResults.candidates.reduce((sum, c) => sum + (c.votes || 0), 0);
+
+            // Create vote share visualization bar HTML
+            const voteShareBar = electionResults.candidates.map((c, i) => {
+                const sharePercent = totalVotes > 0 ? ((c.votes || 0) / totalVotes * 100) : 0;
                 const partyColor = DataModule.getPartyColor(c.party);
+                // Only show labels for top 3 candidates and if segment is large enough
+                const showLabel = i < 3 && sharePercent > 7;
+                return sharePercent > 0 ? `<div class="vote-share-segment" style="width:${sharePercent}%;background:${partyColor}" title="${c.party}: ${sharePercent.toFixed(1)}%">${showLabel ? `<span class="segment-label">${sharePercent.toFixed(1)}%</span>` : ''}</div>` : '';
+            }).join('');
+
+            // Insert vote share bar before candidates
+            const voteShareBarHTML = `<div class="vote-share-bar">${voteShareBar}</div>`;
+
+            candidatesEl.innerHTML = voteShareBarHTML + electionResults.candidates.map((c, i) => {
+                const partyColor = DataModule.getPartyColor(c.party);
+                const partyFlagColors = DataModule.getPartyFlagColors(c.party);
+                const partyLogo = DataModule.getPartyLogo(c.party);
                 const votePercent = maxVotes > 0 ? ((c.votes || 0) / maxVotes * 100) : 0;
                 const isWinner = i === 0;
-                return `<div class="candidate-row ${isWinner ? 'winner' : ''}" style="--candidate-color:${partyColor}">
+
+                // Create gradient for multi-colored border
+                let borderGradient;
+                if (partyFlagColors.length === 1) {
+                    borderGradient = partyFlagColors[0];
+                } else if (partyFlagColors.length === 2) {
+                    borderGradient = `linear-gradient(to bottom, ${partyFlagColors[0]} 50%, ${partyFlagColors[1]} 50%)`;
+                } else if (partyFlagColors.length === 3) {
+                    borderGradient = `linear-gradient(to bottom, ${partyFlagColors[0]} 33.33%, ${partyFlagColors[1]} 33.33%, ${partyFlagColors[1]} 66.66%, ${partyFlagColors[2]} 66.66%)`;
+                } else {
+                    // For more than 3 colors, distribute evenly
+                    const step = 100 / partyFlagColors.length;
+                    const stops = partyFlagColors.map((color, idx) =>
+                        `${color} ${idx * step}%, ${color} ${(idx + 1) * step}%`
+                    ).join(', ');
+                    borderGradient = `linear-gradient(to bottom, ${stops})`;
+                }
+
+                return `<div class="candidate-row ${isWinner ? 'winner' : ''}" style="--candidate-color:${partyColor};--border-gradient:${borderGradient}">
                     <span class="candidate-rank">${i + 1}</span>
+                    <div class="candidate-logo-box">
+                        <img src="${partyLogo}" alt="${c.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
+                    </div>
                     <div class="candidate-info">
                         <div class="candidate-name">${c.name}</div>
-                        <span class="candidate-party" style="background:${partyColor};color:white">${c.party}</span>
+                        <span class="candidate-party" style="background:${partyColor};color:white">
+                            <span class="party-name">${c.party}</span>
+                        </span>
                     </div>
                     <div class="candidate-votes">
                         <div class="candidate-vote-count">${(c.votes || 0).toLocaleString()}</div>
@@ -244,13 +322,50 @@ const UIModule = (function () {
         overlay.classList.remove('hidden');
     }
 
-    function hideConstituencyOverlay() { overlay.classList.add('hidden'); }
+    function hideConstituencyOverlay() {
+        overlay.classList.add('hidden');
+        document.body.classList.remove('overlay-open');
+        currentConstituencyId = null;
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+            navigateToNext();
+        } else if (touchEndX > touchStartX + swipeThreshold) {
+            navigateToPrev();
+        }
+    }
+
+    function navigateToNext() {
+        if (!allConstituencies.length) return;
+
+        const currentIndex = allConstituencies.findIndex(c => c.id == currentConstituencyId);
+        if (currentIndex === -1) return;
+
+        const nextIndex = (currentIndex + 1) % allConstituencies.length;
+        const nextId = allConstituencies[nextIndex].id;
+
+        MapModule.zoomToConstituency(nextId);
+    }
+
+    function navigateToPrev() {
+        if (!allConstituencies.length) return;
+
+        const currentIndex = allConstituencies.findIndex(c => c.id == currentConstituencyId);
+        if (currentIndex === -1) return;
+
+        const prevIndex = (currentIndex - 1 + allConstituencies.length) % allConstituencies.length;
+        const prevId = allConstituencies[prevIndex].id;
+
+        MapModule.zoomToConstituency(prevId);
+    }
 
     return {
         init, populateDistrictDropdown, populateConstituencyDropdown,
         handleDistrictChange, handleYearChange, showLoading, hideLoading,
         showBackButton, hideBackButton, showLegend, hideLegend,
         showConstituencyOverlay, hideConstituencyOverlay, setDistrictDropdown,
-        setConstituencyDropdowns
+        setConstituencyDropdowns, navigateToNext, navigateToPrev
     };
 })();
