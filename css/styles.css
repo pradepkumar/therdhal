@@ -159,23 +159,17 @@ body {
 /* Filter Bar */
 .filter-bar {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-3);
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
     padding-bottom: var(--space-2);
 }
 
-.filter-bar::-webkit-scrollbar {
-    display: none;
-}
-
 .filter-group {
-    flex-shrink: 0;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     gap: var(--space-1);
-    min-width: 100px;
+    min-width: 90px;
 }
 
 .filter-label {
@@ -276,6 +270,20 @@ body {
     color: var(--color-text-secondary) !important;
 }
 
+/* Remove focus outline/bounding box from interactive map elements */
+.leaflet-interactive {
+    outline: none !important;
+}
+
+.leaflet-interactive:focus {
+    outline: none !important;
+}
+
+svg.leaflet-zoom-animated path {
+    outline: none !important;
+}
+
+
 /* District/Constituency Labels */
 .district-label,
 .constituency-label {
@@ -329,7 +337,8 @@ body {
     position: absolute;
     bottom: var(--space-8);
     right: var(--space-4);
-    z-index: var(--z-controls);
+    z-index: 1000;
+    /* High z-index to ensure it's always visible on top */
     background: var(--color-bg-glass);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -337,6 +346,23 @@ body {
     padding: var(--space-4);
     min-width: 160px;
     box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+}
+
+.legend.collapsed {
+    min-width: auto;
+}
+
+.legend-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.legend.collapsed .legend-header {
+    margin-bottom: 0;
 }
 
 .legend-title {
@@ -345,13 +371,47 @@ body {
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: var(--space-3);
+    margin: 0;
+}
+
+.legend-toggle {
+    background: transparent;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    padding: var(--space-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.legend-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
+}
+
+.legend-toggle svg {
+    transition: transform var(--transition-base);
+}
+
+.legend.collapsed .legend-toggle svg {
+    transform: rotate(180deg);
 }
 
 .legend-items {
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
+    overflow: hidden;
+    max-height: 500px;
+    transition: max-height var(--transition-base), opacity var(--transition-base);
+}
+
+.legend.collapsed .legend-items {
+    max-height: 0;
+    opacity: 0;
 }
 
 .legend-item {
@@ -765,7 +825,7 @@ body {
     }
 
     .filter-bar {
-        overflow-x: visible;
+        flex-wrap: nowrap;
         gap: var(--space-4);
     }
 

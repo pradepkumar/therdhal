@@ -57,29 +57,63 @@ const MapModule = (function () {
     function handleZoomChange() {
         const zoom = map.getZoom();
 
-        // Toggle district layer visibility
-        if (districtLayer) {
-            if (zoom < CONSTITUENCY_MIN_ZOOM) {
-                districtLayer.setStyle({ opacity: 1, fillOpacity: 0.3 });
-                showDistrictLabels();
-            } else {
-                districtLayer.setStyle({ opacity: 0.3, fillOpacity: 0.1 });
+        // If a year is selected, always show constituencies and hide districts
+        if (currentYear) {
+            // Hide district layer when year is selected
+            if (districtLayer) {
+                districtLayer.setStyle({ opacity: 0, fillOpacity: 0 });
                 hideDistrictLabels();
             }
-        }
 
-        // Toggle constituency layer visibility
-        if (constituencyLayer) {
-            if (zoom >= CONSTITUENCY_MIN_ZOOM) {
+            // Always show constituency layer when year is selected
+            if (constituencyLayer) {
+                if (!map.hasLayer(constituencyLayer)) {
+                    constituencyLayer.addTo(map);
+                }
                 constituencyLayer.setStyle(feature => getConstituencyStyle(feature, true));
+                // Only show labels at higher zoom levels
                 if (zoom >= LABEL_MIN_ZOOM) {
                     showConstituencyLabels();
                 } else {
                     hideConstituencyLabels();
                 }
-            } else {
-                constituencyLayer.setStyle({ opacity: 0, fillOpacity: 0 });
-                hideConstituencyLabels();
+            }
+
+            // Ensure legend stays visible when year is selected
+            UIModule.showLegend();
+        } else {
+            // Original behavior when no year is selected
+            // Toggle district layer visibility
+            if (districtLayer) {
+                if (zoom < CONSTITUENCY_MIN_ZOOM) {
+                    districtLayer.setStyle({ opacity: 1, fillOpacity: 0.3 });
+                    showDistrictLabels();
+                } else {
+                    districtLayer.setStyle({ opacity: 0.3, fillOpacity: 0.1 });
+                    hideDistrictLabels();
+                }
+            }
+
+            // Toggle constituency layer visibility and interactivity
+            if (constituencyLayer) {
+                if (zoom >= CONSTITUENCY_MIN_ZOOM) {
+                    // Add constituency layer to map and make it interactive
+                    if (!map.hasLayer(constituencyLayer)) {
+                        constituencyLayer.addTo(map);
+                    }
+                    constituencyLayer.setStyle(feature => getConstituencyStyle(feature, true));
+                    if (zoom >= LABEL_MIN_ZOOM) {
+                        showConstituencyLabels();
+                    } else {
+                        hideConstituencyLabels();
+                    }
+                } else {
+                    // Remove constituency layer from map to prevent interaction
+                    if (map.hasLayer(constituencyLayer)) {
+                        map.removeLayer(constituencyLayer);
+                    }
+                    hideConstituencyLabels();
+                }
             }
         }
     }
@@ -220,15 +254,15 @@ const MapModule = (function () {
                 label._constituencyId = id;
                 constituencyLabels.push(label);
 
-                // Hover effects - only at constituency zoom level
+                // Hover effects - interactive at all zoom levels when year is selected
                 layer.on('mouseover', () => {
-                    if (map.getZoom() >= CONSTITUENCY_MIN_ZOOM) {
+                    if (map.getZoom() >= CONSTITUENCY_MIN_ZOOM || currentYear) {
                         layer.setStyle(getHighlightStyle());
                     }
                 });
 
                 layer.on('mouseout', () => {
-                    if (map.getZoom() >= CONSTITUENCY_MIN_ZOOM) {
+                    if (map.getZoom() >= CONSTITUENCY_MIN_ZOOM || currentYear) {
                         // Don't reset if this is the selected constituency
                         if (layer._constituencyId != selectedConstituency) {
                             layer.setStyle(getConstituencyStyle(feature, true));
@@ -236,9 +270,9 @@ const MapModule = (function () {
                     }
                 });
 
-                // Click handler - only at constituency zoom level
+                // Click handler - interactive at all zoom levels when year is selected
                 layer.on('click', () => {
-                    if (map.getZoom() >= CONSTITUENCY_MIN_ZOOM) {
+                    if (map.getZoom() >= CONSTITUENCY_MIN_ZOOM || currentYear) {
                         selectConstituency(id, name);
                     }
                 });
@@ -250,7 +284,12 @@ const MapModule = (function () {
                     className: 'constituency-tooltip'
                 });
             }
-        }).addTo(map);
+        });
+
+        // Only add to map if we're at constituency zoom level
+        if (map.getZoom() >= CONSTITUENCY_MIN_ZOOM) {
+            constituencyLayer.addTo(map);
+        }
     }
 
     /**
@@ -322,13 +361,8 @@ const MapModule = (function () {
         // Show back button
         UIModule.showBackButton();
 
-        // Update dropdown (but don't trigger zoom again)
-        const districtFilter = document.getElementById('district-filter');
-        if (districtFilter.value !== name) {
-            districtFilter.value = name;
-            // Only populate constituency dropdown, don't zoom again
-            UIModule.populateConstituencyDropdown(name);
-        }
+        // Update dropdown using the UI module method (prevents recursive zoom)
+        UIModule.setDistrictDropdown(name);
     }
 
     /**
@@ -399,11 +433,15 @@ const MapModule = (function () {
      */
     function setElectionYear(year) {
         currentYear = year;
+        // Update constituency layer styles whether or not it's currently visible
+        // This ensures colors are ready when user zooms in
         if (constituencyLayer) {
             constituencyLayer.setStyle(feature =>
-                getConstituencyStyle(feature, map.getZoom() >= CONSTITUENCY_MIN_ZOOM)
+                getConstituencyStyle(feature, true)
             );
         }
+        // Trigger zoom change handler to update layer visibility based on year selection
+        handleZoomChange();
     }
 
     /**

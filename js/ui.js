@@ -6,6 +6,8 @@ const UIModule = (function () {
     let yearFilter, districtFilter, constituencyFilter;
     let backButton, legend, loadingOverlay;
     let overlay, overlayClose;
+    let isUpdatingDistrict = false;  // Flag to prevent recursive updates
+    let isUpdatingConstituency = false;  // Flag to prevent recursive updates
 
     function init() {
         yearFilter = document.getElementById('year-filter');
@@ -27,6 +29,8 @@ const UIModule = (function () {
             handleDistrictChange(e.target.value);
         });
         constituencyFilter.addEventListener('change', (e) => {
+            // Prevent handling if we're programmatically updating the dropdown
+            if (isUpdatingConstituency) return;
             if (e.target.value) MapModule.zoomToConstituency(e.target.value);
         });
         backButton.addEventListener('click', () => MapModule.resetToOverview());
@@ -37,6 +41,14 @@ const UIModule = (function () {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') hideConstituencyOverlay();
         });
+
+        // Legend toggle
+        const legendToggle = document.getElementById('legend-toggle');
+        if (legendToggle) {
+            legendToggle.addEventListener('click', () => {
+                legend.classList.toggle('collapsed');
+            });
+        }
     }
 
     async function populateDistrictDropdown() {
@@ -75,11 +87,63 @@ const UIModule = (function () {
     }
 
     async function handleDistrictChange(district) {
+        // Prevent handling if we're programmatically updating the dropdown
+        if (isUpdatingDistrict) return;
+
         await populateConstituencyDropdown(district);
         if (district) {
             // Zoom to selected district
             MapModule.zoomToDistrict(district);
         }
+    }
+
+    function setDistrictDropdown(district) {
+        isUpdatingDistrict = true;
+
+        // Find the matching option (case-insensitive)
+        const districtUpper = district.toUpperCase();
+        let matchedValue = null;
+
+        for (let i = 0; i < districtFilter.options.length; i++) {
+            const option = districtFilter.options[i];
+            if (option.value.toUpperCase() === districtUpper) {
+                matchedValue = option.value;
+                break;
+            }
+        }
+
+        if (matchedValue) {
+            districtFilter.value = matchedValue;
+            populateConstituencyDropdown(matchedValue);
+        }
+
+        isUpdatingDistrict = false;
+    }
+
+    function setConstituencyDropdowns(constituencyId, district) {
+        isUpdatingDistrict = true;
+        isUpdatingConstituency = true;
+
+        // Set district dropdown first
+        if (district) {
+            const districtUpper = district.toUpperCase();
+            for (let i = 0; i < districtFilter.options.length; i++) {
+                const option = districtFilter.options[i];
+                if (option.value.toUpperCase() === districtUpper) {
+                    districtFilter.value = option.value;
+                    break;
+                }
+            }
+        }
+
+        // Populate constituency dropdown for the district
+        populateConstituencyDropdown(district).then(() => {
+            // Set constituency dropdown
+            constituencyFilter.value = String(constituencyId);
+
+            isUpdatingDistrict = false;
+            isUpdatingConstituency = false;
+        });
     }
 
     function showLoading() { loadingOverlay.classList.remove('hidden'); }
@@ -88,6 +152,11 @@ const UIModule = (function () {
     function hideBackButton() { backButton.classList.add('hidden'); }
 
     function showLegend() {
+        if (!legend) {
+            console.warn('Legend element not found');
+            return;
+        }
+
         const parties = [
             { name: 'DMK', color: DataModule.getPartyColor('DMK') },
             { name: 'AIADMK', color: DataModule.getPartyColor('AIADMK') },
@@ -101,13 +170,20 @@ const UIModule = (function () {
         legend.classList.remove('hidden');
     }
 
-    function hideLegend() { legend.classList.add('hidden'); }
+    function hideLegend() {
+        if (legend) {
+            legend.classList.add('hidden');
+        }
+    }
 
     async function showConstituencyOverlay(id) {
         const info = await DataModule.getConstituencyInfo(id);
         const history = await DataModule.getWinnerHistory(id);
         const electionResults = await DataModule.getElectionResults(2021, id);
         if (!info) return;
+
+        // Update dropdowns to reflect the selected constituency
+        setConstituencyDropdowns(id, info.district);
 
         document.getElementById('constituency-type').textContent = info.type || 'General';
         document.getElementById('constituency-type').className = `constituency-badge ${info.type === 'SC' ? 'sc' : ''}`;
@@ -174,6 +250,7 @@ const UIModule = (function () {
         init, populateDistrictDropdown, populateConstituencyDropdown,
         handleDistrictChange, handleYearChange, showLoading, hideLoading,
         showBackButton, hideBackButton, showLegend, hideLegend,
-        showConstituencyOverlay, hideConstituencyOverlay
+        showConstituencyOverlay, hideConstituencyOverlay, setDistrictDropdown,
+        setConstituencyDropdowns
     };
 })();

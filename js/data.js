@@ -2,7 +2,7 @@
  * Data Module - Handles loading and caching of all map and election data
  */
 
-const DataModule = (function() {
+const DataModule = (function () {
     // Data cache
     const cache = {
         districts: null,
@@ -15,6 +15,7 @@ const DataModule = (function() {
     const partyColors = {
         'DMK': '#e53935',
         'AIADMK': '#4caf50',
+        'ADMK': '#4caf50',  // Alias for AIADMK
         'BJP': '#ff9800',
         'INC': '#2196f3',
         'CONGRESS': '#2196f3',
@@ -105,8 +106,29 @@ const DataModule = (function() {
      */
     async function loadElectionData(year) {
         if (cache.elections[year]) return cache.elections[year];
-        cache.elections[year] = await loadJSON(`data/elections-${year}.json`);
-        return cache.elections[year];
+
+        const rawData = await loadJSON(`data/elections-${year}.json`);
+
+        // Transform data to extract winner and runner_up for each constituency
+        const transformedData = {
+            year: rawData.year,
+            constituencies: {}
+        };
+
+        for (const [id, constituency] of Object.entries(rawData.constituencies)) {
+            const candidates = constituency.candidates || [];
+            const winner = candidates.find(c => c.winner === true) || candidates[0];
+            const runner_up = candidates[1];
+
+            transformedData.constituencies[id] = {
+                ...constituency,
+                winner: winner,
+                runner_up: runner_up
+            };
+        }
+
+        cache.elections[year] = transformedData;
+        return transformedData;
     }
 
     /**
@@ -138,11 +160,11 @@ const DataModule = (function() {
             name: data.name,
             district: data.district
         }));
-        
+
         if (district) {
             list = list.filter(c => c.district === district);
         }
-        
+
         return list.sort((a, b) => parseInt(a.id) - parseInt(b.id));
     }
 
@@ -168,7 +190,7 @@ const DataModule = (function() {
     async function getWinnerHistory(constituencyId) {
         const years = getAvailableYears();
         const history = [];
-        
+
         for (const year of years) {
             try {
                 const data = await loadElectionData(year);
@@ -185,7 +207,7 @@ const DataModule = (function() {
                 console.warn(`No data for ${year}`);
             }
         }
-        
+
         return history;
     }
 
@@ -198,7 +220,7 @@ const DataModule = (function() {
             loadConstituencies(),
             loadConstituencyMeta()
         ]);
-        
+
         return { districts, constituencies, meta };
     }
 
