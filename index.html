@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Explore Tamil Nadu's 234 assembly constituencies with interactive maps and historical election data from 2011, 2016, and 2021.">
+    <meta name="keywords" content="Tamil Nadu, Elections, Assembly, Constituencies, DMK, AIADMK, 2021, Map">
+    <meta name="theme-color" content="#1a1a2e">
+
+    <title>Tamil Nadu Election Companion | Interactive Constituency Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Header with branding and filters -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="branding">
+                <h1 class="app-title">
+                    <span class="title-en">TN Election Map</span>
+                    <span class="title-ta">தேர்தல் வரைபடம்</span>
+                </h1>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label for="year-filter" class="filter-label">Year</label>
+                    <select id="year-filter" class="filter-select">
+                        <option value="">All Years</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="district-filter" class="filter-label">District</label>
+                    <select id="district-filter" class="filter-select">
+                        <option value="">All Districts</option>
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="constituency-filter" class="filter-label">Constituency</label>
+                    <select id="constituency-filter" class="filter-select">
+                        <option value="">All Constituencies</option>
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Map Container -->
+    <main class="map-container">
+        <div id="map"></div>
+
+        <!-- Back to Overview Button -->
+        <button id="back-btn" class="back-button hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Overview</span>
+        </button>
+
+        <!-- Legend -->
+        <div id="legend" class="legend hidden">
+            <h3 class="legend-title">Winning Party</h3>
+            <div class="legend-items">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading map data...</p>
+        </div>
+    </main>
+
+    <!-- Constituency Detail Overlay -->
+    <div id="constituency-overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <button class="overlay-close" id="overlay-close" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+
+            <header class="overlay-header">
+                <div class="constituency-badge" id="constituency-type">General</div>
+                <h2 class="constituency-name" id="constituency-name">
+                    <span class="name-en">Constituency Name</span>
+                    <span class="name-ta">தொகுதி பெயர்</span>
+                </h2>
+                <p class="constituency-district" id="constituency-district">District Name</p>
+            </header>
+
+            <div class="overlay-body">
+                <!-- Voter Stats -->
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span class="stat-value" id="registered-voters">0</span>
+                        <span class="stat-label">Registered Voters</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="constituency-id">0</span>
+                        <span class="stat-label">Constituency ID</span>
+                    </div>
+                </div>
+
+                <!-- Election History -->
+                <section class="history-section">
+                    <h3 class="section-title">Election History</h3>
+                    <div class="election-timeline" id="election-history">
+                        <!-- Populated dynamically -->
+                    </div>
+                </section>
+
+                <!-- All Candidates Table -->
+                <section class="candidates-section" id="candidates-section">
+                    <h3 class="section-title">2021 Election Results</h3>
+                    <div class="candidates-table" id="candidates-table">
+                        <!-- Populated dynamically -->
+                    </div>
+                </section>
+
+                <!-- Previous Winners -->
+                <section class="winners-section">
+                    <h3 class="section-title">Previous Winners</h3>
+                    <div class="winners-list" id="winners-list">
+                        <!-- Populated dynamically -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+    <script src="js/data.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

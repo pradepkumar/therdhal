@@ -1,0 +1,1640 @@
+{
+  "1": {
+    "name": "GUMMIDIPUNDI",
+    "district": "TIRUVALLUR",
+    "type": "GEN",
+    "electors": 284412,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "2": {
+    "name": "PONNERI",
+    "district": "TIRUVALLUR",
+    "type": "SC",
+    "electors": 268994,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "3": {
+    "name": "TIRUTTANI",
+    "district": "TIRUVALLUR",
+    "type": "GEN",
+    "electors": 295358,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "4": {
+    "name": "THIRUVALLUR",
+    "district": "TIRUVALLUR",
+    "type": "GEN",
+    "electors": 277516,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "5": {
+    "name": "POONAMALLEE",
+    "district": "TIRUVALLUR",
+    "type": "SC",
+    "electors": 361331,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "6": {
+    "name": "AVADI",
+    "district": "TIRUVALLUR",
+    "type": "GEN",
+    "electors": 446678,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "7": {
+    "name": "MADURAVOYAL",
+    "district": "TIRUVALLUR",
+    "type": "GEN",
+    "electors": 454179,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "8": {
+    "name": "AMBATTUR",
+    "district": "TIRUVALLUR",
+    "type": "GEN",
+    "electors": 387516,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "9": {
+    "name": "MADAVARAM",
+    "district": "TIRUVALLUR",
+    "type": "GEN",
+    "electors": 456079,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "10": {
+    "name": "THIRUVOTTIYUR",
+    "district": "TIRUVALLUR",
+    "type": "GEN",
+    "electors": 306977,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "11": {
+    "name": "DR. RADHAKRISHNAN NAGAR",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 263492,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "12": {
+    "name": "PERAMBUR",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 318074,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "13": {
+    "name": "KOLATHUR",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 284056,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "14": {
+    "name": "VILLIVAKKAM",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 257675,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "15": {
+    "name": "THIRU-VI-KA-NAGAR",
+    "district": "CHENNAI",
+    "type": "SC",
+    "electors": 220547,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "16": {
+    "name": "EGMORE",
+    "district": "CHENNAI",
+    "type": "SC",
+    "electors": 195110,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "17": {
+    "name": "ROYAPURAM",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 193595,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "18": {
+    "name": "HARBOUR",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 176353,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "19": {
+    "name": "CHEPAUK-THIRUVALLIKENI",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 235564,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "20": {
+    "name": "THOUSAND LIGHTS",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 241671,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "21": {
+    "name": "ANNA NAGAR",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 287974,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "22": {
+    "name": "VIRUGAMPAKKAM",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 293604,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "23": {
+    "name": "SAIDAPET",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 279510,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "24": {
+    "name": "THEAYAGARAYA NAGAR",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 246676,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "25": {
+    "name": "MYLAPORE",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 271077,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "26": {
+    "name": "VELACHERY",
+    "district": "CHENNAI",
+    "type": "GEN",
+    "electors": 314549,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "27": {
+    "name": "SHOZHINGANALLUR",
+    "district": "KANCHIPURAM",
+    "type": "GEN",
+    "electors": 699612,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "28": {
+    "name": "ALANDUR",
+    "district": "KANCHIPURAM",
+    "type": "GEN",
+    "electors": 390909,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "29": {
+    "name": "SRIPERUMBUDUR",
+    "district": "KANCHIPURAM",
+    "type": "SC",
+    "electors": 357400,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "30": {
+    "name": "PALLAVARAM",
+    "district": "KANCHIPURAM",
+    "type": "GEN",
+    "electors": 437387,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "31": {
+    "name": "TAMBARAM",
+    "district": "KANCHIPURAM",
+    "type": "GEN",
+    "electors": 418082,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "32": {
+    "name": "CHENGALPATTU",
+    "district": "KANCHIPURAM",
+    "type": "GEN",
+    "electors": 431361,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "33": {
+    "name": "THIRUPORUR",
+    "district": "KANCHIPURAM",
+    "type": "GEN",
+    "electors": 296921,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "34": {
+    "name": "CHEYYUR",
+    "district": "KANCHIPURAM",
+    "type": "SC",
+    "electors": 229994,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "35": {
+    "name": "MADURANTHAKAM",
+    "district": "KANCHIPURAM",
+    "type": "SC",
+    "electors": 230430,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "36": {
+    "name": "UTHIRAMERUR",
+    "district": "KANCHIPURAM",
+    "type": "GEN",
+    "electors": 262832,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "37": {
+    "name": "KANCHEEPURAM",
+    "district": "KANCHIPURAM",
+    "type": "GEN",
+    "electors": 313089,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "38": {
+    "name": "ARAKONAM",
+    "district": "VELLORE",
+    "type": "SC",
+    "electors": 228885,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "39": {
+    "name": "SHOLINGHUR",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 279821,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "40": {
+    "name": "KATPADI",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 251683,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "41": {
+    "name": "RANIPET",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 268593,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "42": {
+    "name": "ARCOT",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 263490,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "43": {
+    "name": "VELLORE",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 256083,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "44": {
+    "name": "ANAIKATTU",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 256722,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "45": {
+    "name": "KILVAITHINANKUPPAM",
+    "district": "VELLORE",
+    "type": "SC",
+    "electors": 227613,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "46": {
+    "name": "GUDIYATHAM",
+    "district": "VELLORE",
+    "type": "SC",
+    "electors": 291662,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "47": {
+    "name": "VANIAYAMBADI",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 251485,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "48": {
+    "name": "AMBUR",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 240343,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "49": {
+    "name": "JOLARPET",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 242477,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "50": {
+    "name": "TIRUPPATTUR",
+    "district": "VELLORE",
+    "type": "GEN",
+    "electors": 241561,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "51": {
+    "name": "UTHANGARAI",
+    "district": "KRISHNAGIRI",
+    "type": "SC",
+    "electors": 240172,
+    "sub_region": "WESTERN REGION"
+  },
+  "52": {
+    "name": "BARGUR",
+    "district": "KRISHNAGIRI",
+    "type": "GEN",
+    "electors": 250106,
+    "sub_region": "WESTERN REGION"
+  },
+  "53": {
+    "name": "KRISHNAGIRI",
+    "district": "KRISHNAGIRI",
+    "type": "GEN",
+    "electors": 269615,
+    "sub_region": "WESTERN REGION"
+  },
+  "54": {
+    "name": "VEPPANAHALLI",
+    "district": "KRISHNAGIRI",
+    "type": "GEN",
+    "electors": 252294,
+    "sub_region": "WESTERN REGION"
+  },
+  "55": {
+    "name": "HOSUR",
+    "district": "KRISHNAGIRI",
+    "type": "GEN",
+    "electors": 353970,
+    "sub_region": "WESTERN REGION"
+  },
+  "56": {
+    "name": "THALLI",
+    "district": "KRISHNAGIRI",
+    "type": "GEN",
+    "electors": 251780,
+    "sub_region": "WESTERN REGION"
+  },
+  "57": {
+    "name": "PALACODE",
+    "district": "DHARMAPURI",
+    "type": "GEN",
+    "electors": 236459,
+    "sub_region": "WESTERN REGION"
+  },
+  "58": {
+    "name": "PENNAGARAM",
+    "district": "DHARMAPURI",
+    "type": "GEN",
+    "electors": 247417,
+    "sub_region": "WESTERN REGION"
+  },
+  "59": {
+    "name": "DHARMAPURI",
+    "district": "DHARMAPURI",
+    "type": "GEN",
+    "electors": 272723,
+    "sub_region": "WESTERN REGION"
+  },
+  "60": {
+    "name": "PAPPIREDDIPPATTI",
+    "district": "DHARMAPURI",
+    "type": "GEN",
+    "electors": 269012,
+    "sub_region": "WESTERN REGION"
+  },
+  "61": {
+    "name": "HARUR",
+    "district": "DHARMAPURI",
+    "type": "SC",
+    "electors": 253078,
+    "sub_region": "WESTERN REGION"
+  },
+  "62": {
+    "name": "CHENGAM",
+    "district": "TIRUVANNAMALAI",
+    "type": "SC",
+    "electors": 277646,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "63": {
+    "name": "TIRUVANNAMALAI",
+    "district": "TIRUVANNAMALAI",
+    "type": "GEN",
+    "electors": 291304,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "64": {
+    "name": "KILPENNATHUR",
+    "district": "TIRUVANNAMALAI",
+    "type": "GEN",
+    "electors": 256945,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "65": {
+    "name": "KALASAPAKKAM",
+    "district": "TIRUVANNAMALAI",
+    "type": "GEN",
+    "electors": 244442,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "66": {
+    "name": "POLUR",
+    "district": "TIRUVANNAMALAI",
+    "type": "GEN",
+    "electors": 245368,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "67": {
+    "name": "ARANI",
+    "district": "TIRUVANNAMALAI",
+    "type": "GEN",
+    "electors": 277332,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "68": {
+    "name": "CHEYYAR",
+    "district": "TIRUVANNAMALAI",
+    "type": "GEN",
+    "electors": 262529,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "69": {
+    "name": "VANDAVASI",
+    "district": "TIRUVANNAMALAI",
+    "type": "SC",
+    "electors": 242122,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "70": {
+    "name": "GINGEE",
+    "district": "VILLUPURAM",
+    "type": "GEN",
+    "electors": 264518,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "71": {
+    "name": "MAILAM",
+    "district": "VILLUPURAM",
+    "type": "GEN",
+    "electors": 222627,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "72": {
+    "name": "TINDIVANAM",
+    "district": "VILLUPURAM",
+    "type": "SC",
+    "electors": 232740,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "73": {
+    "name": "VANUR",
+    "district": "VILLUPURAM",
+    "type": "SC",
+    "electors": 228359,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "74": {
+    "name": "VILLUPURAM",
+    "district": "VILLUPURAM",
+    "type": "GEN",
+    "electors": 266155,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "75": {
+    "name": "VIKRAVANDI",
+    "district": "VILLUPURAM",
+    "type": "GEN",
+    "electors": 237887,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "76": {
+    "name": "TIRUKKOYILUR",
+    "district": "VILLUPURAM",
+    "type": "GEN",
+    "electors": 257266,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "77": {
+    "name": "ULUNDURPET",
+    "district": "VILLUPURAM",
+    "type": "GEN",
+    "electors": 296360,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "78": {
+    "name": "RISHIVANDIAM",
+    "district": "VILLUPURAM",
+    "type": "GEN",
+    "electors": 268278,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "79": {
+    "name": "SANKARAPURAM",
+    "district": "VILLUPURAM",
+    "type": "GEN",
+    "electors": 271176,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "80": {
+    "name": "KALLAKURICHI",
+    "district": "VILLUPURAM",
+    "type": "SC",
+    "electors": 288968,
+    "sub_region": "CHENNAI CITY REGION"
+  },
+  "81": {
+    "name": "GANGAVALLI",
+    "district": "SALEM",
+    "type": "SC",
+    "electors": 241866,
+    "sub_region": "WESTERN REGION"
+  },
+  "82": {
+    "name": "ATTUR",
+    "district": "SALEM",
+    "type": "SC",
+    "electors": 258533,
+    "sub_region": "WESTERN REGION"
+  },
+  "83": {
+    "name": "YERCAUD",
+    "district": "SALEM",
+    "type": "ST",
+    "electors": 287548,
+    "sub_region": "WESTERN REGION"
+  },
+  "84": {
+    "name": "OMALUR",
+    "district": "SALEM",
+    "type": "GEN",
+    "electors": 299023,
+    "sub_region": "WESTERN REGION"
+  },
+  "85": {
+    "name": "METTUR",
+    "district": "SALEM",
+    "type": "GEN",
+    "electors": 291217,
+    "sub_region": "WESTERN REGION"
+  },
+  "86": {
+    "name": "EDAPADI",
+    "district": "SALEM",
+    "type": "GEN",
+    "electors": 288768,
+    "sub_region": "WESTERN REGION"
+  },
+  "87": {
+    "name": "SANKARI",
+    "district": "SALEM",
+    "type": "GEN",
+    "electors": 277442,
+    "sub_region": "WESTERN REGION"
+  },
+  "88": {
+    "name": "SALEM (West)",
+    "district": "SALEM",
+    "type": "GEN",
+    "electors": 301668,
+    "sub_region": "WESTERN REGION"
+  },
+  "89": {
+    "name": "SALEM (North)",
+    "district": "SALEM",
+    "type": "GEN",
+    "electors": 280532,
+    "sub_region": "WESTERN REGION"
+  },
+  "90": {
+    "name": "SALEM (South)",
+    "district": "SALEM",
+    "type": "GEN",
+    "electors": 263134,
+    "sub_region": "WESTERN REGION"
+  },
+  "91": {
+    "name": "VEERAPANDI",
+    "district": "SALEM",
+    "type": "GEN",
+    "electors": 261212,
+    "sub_region": "WESTERN REGION"
+  },
+  "92": {
+    "name": "RASIPURAM",
+    "district": "NAMAKKAL",
+    "type": "SC",
+    "electors": 239980,
+    "sub_region": "WESTERN REGION"
+  },
+  "93": {
+    "name": "SENDAMANGALAM",
+    "district": "NAMAKKAL",
+    "type": "ST",
+    "electors": 246181,
+    "sub_region": "WESTERN REGION"
+  },
+  "94": {
+    "name": "NAMAKKAL",
+    "district": "NAMAKKAL",
+    "type": "GEN",
+    "electors": 263152,
+    "sub_region": "WESTERN REGION"
+  },
+  "95": {
+    "name": "PARAMATHI-VELUR",
+    "district": "NAMAKKAL",
+    "type": "GEN",
+    "electors": 226395,
+    "sub_region": "WESTERN REGION"
+  },
+  "96": {
+    "name": "TIRUCHENGODE",
+    "district": "NAMAKKAL",
+    "type": "GEN",
+    "electors": 234619,
+    "sub_region": "WESTERN REGION"
+  },
+  "97": {
+    "name": "KUMARAPALAYAM",
+    "district": "NAMAKKAL",
+    "type": "GEN",
+    "electors": 256087,
+    "sub_region": "WESTERN REGION"
+  },
+  "98": {
+    "name": "ERODE (East)",
+    "district": "ERODE",
+    "type": "GEN",
+    "electors": 229524,
+    "sub_region": "WESTERN REGION"
+  },
+  "99": {
+    "name": "ERODE (West)",
+    "district": "ERODE",
+    "type": "GEN",
+    "electors": 296394,
+    "sub_region": "WESTERN REGION"
+  },
+  "100": {
+    "name": "MODAKURICHI",
+    "district": "ERODE",
+    "type": "GEN",
+    "electors": 241638,
+    "sub_region": "WESTERN REGION"
+  },
+  "101": {
+    "name": "DHARAPURAM",
+    "district": "ERODE",
+    "type": "SC",
+    "electors": 261619,
+    "sub_region": "WESTERN REGION"
+  },
+  "102": {
+    "name": "KANGAYAM",
+    "district": "ERODE",
+    "type": "GEN",
+    "electors": 258865,
+    "sub_region": "WESTERN REGION"
+  },
+  "103": {
+    "name": "PERUNDURAI",
+    "district": "ERODE",
+    "type": "GEN",
+    "electors": 229834,
+    "sub_region": "WESTERN REGION"
+  },
+  "104": {
+    "name": "BHAVANI",
+    "district": "ERODE",
+    "type": "GEN",
+    "electors": 241179,
+    "sub_region": "WESTERN REGION"
+  },
+  "105": {
+    "name": "ANTHIYUR",
+    "district": "ERODE",
+    "type": "GEN",
+    "electors": 221338,
+    "sub_region": "WESTERN REGION"
+  },
+  "106": {
+    "name": "GOBICHETTIPALAYAM",
+    "district": "TIRUPUR",
+    "type": "GEN",
+    "electors": 259671,
+    "sub_region": "WESTERN REGION"
+  },
+  "107": {
+    "name": "BHAVANISAGAR",
+    "district": "TIRUPUR",
+    "type": "SC",
+    "electors": 259230,
+    "sub_region": "WESTERN REGION"
+  },
+  "108": {
+    "name": "UDHAGAMANDALAM",
+    "district": "TIRUPUR",
+    "type": "GEN",
+    "electors": 208053,
+    "sub_region": "WESTERN REGION"
+  },
+  "109": {
+    "name": "GUDALUR",
+    "district": "TIRUPUR",
+    "type": "SC",
+    "electors": 191624,
+    "sub_region": "WESTERN REGION"
+  },
+  "110": {
+    "name": "COONOOR",
+    "district": "TIRUPUR",
+    "type": "GEN",
+    "electors": 194738,
+    "sub_region": "WESTERN REGION"
+  },
+  "111": {
+    "name": "METTUPALAYAM",
+    "district": "TIRUPUR",
+    "type": "GEN",
+    "electors": 299551,
+    "sub_region": "WESTERN REGION"
+  },
+  "112": {
+    "name": "AVANASHI",
+    "district": "TIRUPUR",
+    "type": "SC",
+    "electors": 282823,
+    "sub_region": "WESTERN REGION"
+  },
+  "113": {
+    "name": "TIRUPPUR (North)",
+    "district": "TIRUPUR",
+    "type": "GEN",
+    "electors": 381313,
+    "sub_region": "WESTERN REGION"
+  },
+  "114": {
+    "name": "TIRUPPUR (South)",
+    "district": "NILGIRIS",
+    "type": "GEN",
+    "electors": 278001,
+    "sub_region": "WESTERN REGION"
+  },
+  "115": {
+    "name": "PALLADAM",
+    "district": "NILGIRIS",
+    "type": "GEN",
+    "electors": 392070,
+    "sub_region": "WESTERN REGION"
+  },
+  "116": {
+    "name": "SULUR",
+    "district": "NILGIRIS",
+    "type": "GEN",
+    "electors": 319773,
+    "sub_region": "WESTERN REGION"
+  },
+  "117": {
+    "name": "KAVUNDAMPALAYAM",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 468649,
+    "sub_region": "WESTERN REGION"
+  },
+  "118": {
+    "name": "COIMBATORE NORTH",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 342508,
+    "sub_region": "WESTERN REGION"
+  },
+  "119": {
+    "name": "THONDAMUTHUR",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 328298,
+    "sub_region": "WESTERN REGION"
+  },
+  "120": {
+    "name": "COIMBATORE SOUTH",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 255009,
+    "sub_region": "WESTERN REGION"
+  },
+  "121": {
+    "name": "SINGANALLUR",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 327265,
+    "sub_region": "WESTERN REGION"
+  },
+  "122": {
+    "name": "KINATHUKADAVU",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 329041,
+    "sub_region": "WESTERN REGION"
+  },
+  "123": {
+    "name": "POLLACHI",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 229257,
+    "sub_region": "WESTERN REGION"
+  },
+  "124": {
+    "name": "VALPARAI",
+    "district": "COIMBATORE",
+    "type": "SC",
+    "electors": 207270,
+    "sub_region": "WESTERN REGION"
+  },
+  "125": {
+    "name": "UDUMALPET",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 272553,
+    "sub_region": "WESTERN REGION"
+  },
+  "126": {
+    "name": "MADATHUKULAM",
+    "district": "COIMBATORE",
+    "type": "GEN",
+    "electors": 251072,
+    "sub_region": "WESTERN REGION"
+  },
+  "127": {
+    "name": "PALANI",
+    "district": "DINDIGUL",
+    "type": "GEN",
+    "electors": 280081,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "128": {
+    "name": "ODDANCHATRAM",
+    "district": "DINDIGUL",
+    "type": "GEN",
+    "electors": 242845,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "129": {
+    "name": "ATHOOR",
+    "district": "DINDIGUL",
+    "type": "GEN",
+    "electors": 294946,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "130": {
+    "name": "NILAKOTTAI",
+    "district": "DINDIGUL",
+    "type": "SC",
+    "electors": 246176,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "131": {
+    "name": "NATHAM",
+    "district": "DINDIGUL",
+    "type": "GEN",
+    "electors": 285299,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "132": {
+    "name": "DINDIGUL",
+    "district": "DINDIGUL",
+    "type": "GEN",
+    "electors": 281677,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "133": {
+    "name": "VEDASANDUR",
+    "district": "DINDIGUL",
+    "type": "GEN",
+    "electors": 265818,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "134": {
+    "name": "ARAVAKURICHI",
+    "district": "KARUR",
+    "type": "GEN",
+    "electors": 216203,
+    "sub_region": "CENTRAL REGION"
+  },
+  "135": {
+    "name": "KARUR",
+    "district": "KARUR",
+    "type": "GEN",
+    "electors": 248067,
+    "sub_region": "CENTRAL REGION"
+  },
+  "136": {
+    "name": "KRISHNARAYAPURAM",
+    "district": "KARUR",
+    "type": "SC",
+    "electors": 214924,
+    "sub_region": "CENTRAL REGION"
+  },
+  "137": {
+    "name": "KULITHALAI",
+    "district": "KARUR",
+    "type": "GEN",
+    "electors": 229173,
+    "sub_region": "CENTRAL REGION"
+  },
+  "138": {
+    "name": "MANAPPARAI",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "GEN",
+    "electors": 291696,
+    "sub_region": "CENTRAL REGION"
+  },
+  "139": {
+    "name": "SRIRANGAM",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "GEN",
+    "electors": 315482,
+    "sub_region": "CENTRAL REGION"
+  },
+  "140": {
+    "name": "TIRUCHIRAPALLI (West)",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "GEN",
+    "electors": 273241,
+    "sub_region": "CENTRAL REGION"
+  },
+  "141": {
+    "name": "TIRUCHIRAPALLI (East)",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "GEN",
+    "electors": 258495,
+    "sub_region": "CENTRAL REGION"
+  },
+  "142": {
+    "name": "THIRUVERAMBUR",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "GEN",
+    "electors": 295859,
+    "sub_region": "CENTRAL REGION"
+  },
+  "143": {
+    "name": "LALGUDI",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "GEN",
+    "electors": 220565,
+    "sub_region": "CENTRAL REGION"
+  },
+  "144": {
+    "name": "MANACHANALLUR",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "GEN",
+    "electors": 247041,
+    "sub_region": "CENTRAL REGION"
+  },
+  "145": {
+    "name": "MUSIRI",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "GEN",
+    "electors": 236517,
+    "sub_region": "CENTRAL REGION"
+  },
+  "146": {
+    "name": "THURAIYUR",
+    "district": "TIRUCHIRAPPALLI",
+    "type": "SC",
+    "electors": 229513,
+    "sub_region": "CENTRAL REGION"
+  },
+  "147": {
+    "name": "PERAMBALUR",
+    "district": "PERAMBALUR",
+    "type": "SC",
+    "electors": 306938,
+    "sub_region": "CENTRAL REGION"
+  },
+  "148": {
+    "name": "KUNNAM",
+    "district": "PERAMBALUR",
+    "type": "GEN",
+    "electors": 274677,
+    "sub_region": "CENTRAL REGION"
+  },
+  "149": {
+    "name": "ARIYALUR",
+    "district": "ARIYALUR",
+    "type": "GEN",
+    "electors": 266412,
+    "sub_region": "CENTRAL REGION"
+  },
+  "150": {
+    "name": "JAYANKONDAM",
+    "district": "ARIYALUR",
+    "type": "GEN",
+    "electors": 269181,
+    "sub_region": "CENTRAL REGION"
+  },
+  "151": {
+    "name": "TITTAKUDI",
+    "district": "CUDDALORE",
+    "type": "SC",
+    "electors": 220424,
+    "sub_region": "CENTRAL REGION"
+  },
+  "152": {
+    "name": "VRIDDHACHALAM",
+    "district": "CUDDALORE",
+    "type": "GEN",
+    "electors": 255432,
+    "sub_region": "CENTRAL REGION"
+  },
+  "153": {
+    "name": "NEYVELI",
+    "district": "CUDDALORE",
+    "type": "GEN",
+    "electors": 221050,
+    "sub_region": "CENTRAL REGION"
+  },
+  "154": {
+    "name": "PANRUTI",
+    "district": "CUDDALORE",
+    "type": "GEN",
+    "electors": 247548,
+    "sub_region": "CENTRAL REGION"
+  },
+  "155": {
+    "name": "CUDDALORE",
+    "district": "CUDDALORE",
+    "type": "GEN",
+    "electors": 243414,
+    "sub_region": "CENTRAL REGION"
+  },
+  "156": {
+    "name": "KURINJIPADI",
+    "district": "CUDDALORE",
+    "type": "GEN",
+    "electors": 242238,
+    "sub_region": "CENTRAL REGION"
+  },
+  "157": {
+    "name": "BHUVANAGIRI",
+    "district": "CUDDALORE",
+    "type": "GEN",
+    "electors": 250941,
+    "sub_region": "CENTRAL REGION"
+  },
+  "158": {
+    "name": "CHIDAMBARAM",
+    "district": "CUDDALORE",
+    "type": "GEN",
+    "electors": 254903,
+    "sub_region": "CENTRAL REGION"
+  },
+  "159": {
+    "name": "KATTUMANNARKOIL",
+    "district": "CUDDALORE",
+    "type": "SC",
+    "electors": 231397,
+    "sub_region": "CENTRAL REGION"
+  },
+  "160": {
+    "name": "SIRKALI",
+    "district": "NAGAPATTINAM",
+    "type": "SC",
+    "electors": 255406,
+    "sub_region": "CENTRAL REGION"
+  },
+  "161": {
+    "name": "MAYILADUTHURAI",
+    "district": "NAGAPATTINAM",
+    "type": "GEN",
+    "electors": 248987,
+    "sub_region": "CENTRAL REGION"
+  },
+  "162": {
+    "name": "POOMPUHAR",
+    "district": "NAGAPATTINAM",
+    "type": "GEN",
+    "electors": 276417,
+    "sub_region": "CENTRAL REGION"
+  },
+  "163": {
+    "name": "NAGAPATTINAM",
+    "district": "NAGAPATTINAM",
+    "type": "GEN",
+    "electors": 199472,
+    "sub_region": "CENTRAL REGION"
+  },
+  "164": {
+    "name": "KILVELUR",
+    "district": "NAGAPATTINAM",
+    "type": "SC",
+    "electors": 180026,
+    "sub_region": "CENTRAL REGION"
+  },
+  "165": {
+    "name": "VEDARANYAM",
+    "district": "NAGAPATTINAM",
+    "type": "GEN",
+    "electors": 196104,
+    "sub_region": "CENTRAL REGION"
+  },
+  "166": {
+    "name": "THIRUTHURAIPUNDI",
+    "district": "TIRUVARUR",
+    "type": "SC",
+    "electors": 242228,
+    "sub_region": "CENTRAL REGION"
+  },
+  "167": {
+    "name": "MANNARGUDI",
+    "district": "TIRUVARUR",
+    "type": "GEN",
+    "electors": 259926,
+    "sub_region": "CENTRAL REGION"
+  },
+  "168": {
+    "name": "THIRUVARUR",
+    "district": "TIRUVARUR",
+    "type": "GEN",
+    "electors": 284354,
+    "sub_region": "CENTRAL REGION"
+  },
+  "169": {
+    "name": "NANNILAM",
+    "district": "TIRUVARUR",
+    "type": "GEN",
+    "electors": 273734,
+    "sub_region": "CENTRAL REGION"
+  },
+  "170": {
+    "name": "THIRUVIDAMARUDUR",
+    "district": "THANJAVUR",
+    "type": "SC",
+    "electors": 261940,
+    "sub_region": "CENTRAL REGION"
+  },
+  "171": {
+    "name": "KUMBAKONAM",
+    "district": "THANJAVUR",
+    "type": "GEN",
+    "electors": 276506,
+    "sub_region": "CENTRAL REGION"
+  },
+  "172": {
+    "name": "PAPANASAM",
+    "district": "THANJAVUR",
+    "type": "GEN",
+    "electors": 263485,
+    "sub_region": "CENTRAL REGION"
+  },
+  "173": {
+    "name": "THIRUVAIYARU",
+    "district": "THANJAVUR",
+    "type": "GEN",
+    "electors": 270682,
+    "sub_region": "CENTRAL REGION"
+  },
+  "174": {
+    "name": "THANJAVUR",
+    "district": "THANJAVUR",
+    "type": "GEN",
+    "electors": 296498,
+    "sub_region": "CENTRAL REGION"
+  },
+  "175": {
+    "name": "ORATHANAD",
+    "district": "THANJAVUR",
+    "type": "GEN",
+    "electors": 245037,
+    "sub_region": "CENTRAL REGION"
+  },
+  "176": {
+    "name": "PATTUKKOTTAI",
+    "district": "THANJAVUR",
+    "type": "GEN",
+    "electors": 247278,
+    "sub_region": "CENTRAL REGION"
+  },
+  "177": {
+    "name": "PERAVURANI",
+    "district": "THANJAVUR",
+    "type": "GEN",
+    "electors": 221825,
+    "sub_region": "CENTRAL REGION"
+  },
+  "178": {
+    "name": "GANDHARVAKOTTAI",
+    "district": "PUDUKKOTTAI",
+    "type": "SC",
+    "electors": 211712,
+    "sub_region": "CENTRAL REGION"
+  },
+  "179": {
+    "name": "VIRALIMALAI",
+    "district": "PUDUKKOTTAI",
+    "type": "GEN",
+    "electors": 226411,
+    "sub_region": "CENTRAL REGION"
+  },
+  "180": {
+    "name": "PUDUKKOTTAI",
+    "district": "PUDUKKOTTAI",
+    "type": "GEN",
+    "electors": 246630,
+    "sub_region": "CENTRAL REGION"
+  },
+  "181": {
+    "name": "THIRUMAYAM",
+    "district": "PUDUKKOTTAI",
+    "type": "GEN",
+    "electors": 229441,
+    "sub_region": "CENTRAL REGION"
+  },
+  "182": {
+    "name": "ALANGUDI",
+    "district": "PUDUKKOTTAI",
+    "type": "GEN",
+    "electors": 218990,
+    "sub_region": "CENTRAL REGION"
+  },
+  "183": {
+    "name": "ARANTANGI",
+    "district": "PUDUKKOTTAI",
+    "type": "GEN",
+    "electors": 239350,
+    "sub_region": "CENTRAL REGION"
+  },
+  "184": {
+    "name": "KARAIKUDI",
+    "district": "SIVAGANGA",
+    "type": "GEN",
+    "electors": 320785,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "185": {
+    "name": "TIRUPPATTUR",
+    "district": "SIVAGANGA",
+    "type": "GEN",
+    "electors": 292811,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "186": {
+    "name": "SIVAGANGA",
+    "district": "SIVAGANGA",
+    "type": "GEN",
+    "electors": 304788,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "187": {
+    "name": "MANAMADURAI",
+    "district": "SIVAGANGA",
+    "type": "SC",
+    "electors": 281833,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "188": {
+    "name": "MELUR",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 246237,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "189": {
+    "name": "MADURAI EAST",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 333462,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "190": {
+    "name": "SHOLAVANDAN",
+    "district": "MADURAI",
+    "type": "SC",
+    "electors": 220607,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "191": {
+    "name": "MADURAI NORTH",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 246157,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "192": {
+    "name": "MADURAI SOUTH",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 231713,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "193": {
+    "name": "MADURAI CENTRAL",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 244846,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "194": {
+    "name": "MADURAI WEST",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 309726,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "195": {
+    "name": "THIRUPARANKUNDRAM",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 324280,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "196": {
+    "name": "THIRUMANGALAM",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 282215,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "197": {
+    "name": "USILAMPATTI",
+    "district": "MADURAI",
+    "type": "GEN",
+    "electors": 287879,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "198": {
+    "name": "ANDIPATTI",
+    "district": "THENI",
+    "type": "GEN",
+    "electors": 279946,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "199": {
+    "name": "PERIYAKULAM",
+    "district": "THENI",
+    "type": "SC",
+    "electors": 288528,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "200": {
+    "name": "BODINAYAKANUR",
+    "district": "THENI",
+    "type": "GEN",
+    "electors": 281513,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "201": {
+    "name": "CUMBUM",
+    "district": "THENI",
+    "type": "GEN",
+    "electors": 291001,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "202": {
+    "name": "RAJAPALAYAM",
+    "district": "VIRUDHUNAGAR",
+    "type": "GEN",
+    "electors": 241856,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "203": {
+    "name": "SRIVILLIPUTHUR",
+    "district": "VIRUDHUNAGAR",
+    "type": "SC",
+    "electors": 252992,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "204": {
+    "name": "SATTUR",
+    "district": "VIRUDHUNAGAR",
+    "type": "GEN",
+    "electors": 255132,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "205": {
+    "name": "SIVAKASI",
+    "district": "VIRUDHUNAGAR",
+    "type": "GEN",
+    "electors": 263750,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "206": {
+    "name": "VIRUDHUNAGAR",
+    "district": "VIRUDHUNAGAR",
+    "type": "GEN",
+    "electors": 226907,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "207": {
+    "name": "ARUPPUKOTTAI",
+    "district": "VIRUDHUNAGAR",
+    "type": "GEN",
+    "electors": 226456,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "208": {
+    "name": "TIRUCHULI",
+    "district": "VIRUDHUNAGAR",
+    "type": "GEN",
+    "electors": 223097,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "209": {
+    "name": "PARAMAKUDI",
+    "district": "RAMANATHAPURAM",
+    "type": "SC",
+    "electors": 258050,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "210": {
+    "name": "TIRUVADANAI",
+    "district": "RAMANATHAPURAM",
+    "type": "GEN",
+    "electors": 293677,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "211": {
+    "name": "RAMANATHAPURAM",
+    "district": "RAMANATHAPURAM",
+    "type": "GEN",
+    "electors": 311143,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "212": {
+    "name": "MUDUKULATHUR",
+    "district": "RAMANATHAPURAM",
+    "type": "GEN",
+    "electors": 314714,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "213": {
+    "name": "VILATHIKULAM",
+    "district": "THOOTHUKUDI",
+    "type": "GEN",
+    "electors": 218464,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "214": {
+    "name": "THOOTHUKKUDI",
+    "district": "THOOTHUKUDI",
+    "type": "GEN",
+    "electors": 289545,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "215": {
+    "name": "TIRUCHENDUR",
+    "district": "THOOTHUKUDI",
+    "type": "GEN",
+    "electors": 249194,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "216": {
+    "name": "SRIVAIKUNTAM",
+    "district": "THOOTHUKUDI",
+    "type": "GEN",
+    "electors": 227240,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "217": {
+    "name": "OTTAPIDARAM",
+    "district": "THOOTHUKUDI",
+    "type": "SC",
+    "electors": 254712,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "218": {
+    "name": "KOVILPATTI",
+    "district": "THOOTHUKUDI",
+    "type": "GEN",
+    "electors": 268319,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "219": {
+    "name": "SANKARANKOVIL",
+    "district": "TIRUNELVELI",
+    "type": "SC",
+    "electors": 256488,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "220": {
+    "name": "VASUDEVANALLUR",
+    "district": "TIRUNELVELI",
+    "type": "SC",
+    "electors": 244721,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "221": {
+    "name": "KADAYANALLUR",
+    "district": "TIRUNELVELI",
+    "type": "GEN",
+    "electors": 291931,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "222": {
+    "name": "TENKASI",
+    "district": "TIRUNELVELI",
+    "type": "GEN",
+    "electors": 295729,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "223": {
+    "name": "ALANGULAM",
+    "district": "TIRUNELVELI",
+    "type": "GEN",
+    "electors": 262891,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "224": {
+    "name": "TIRUNELVELI",
+    "district": "TIRUNELVELI",
+    "type": "GEN",
+    "electors": 295302,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "225": {
+    "name": "AMBASAMUDRAM",
+    "district": "TIRUNELVELI",
+    "type": "GEN",
+    "electors": 246676,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "226": {
+    "name": "PALAYAMCOTTAI",
+    "district": "TIRUNELVELI",
+    "type": "GEN",
+    "electors": 278897,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "227": {
+    "name": "NANGUNERI",
+    "district": "TIRUNELVELI",
+    "type": "GEN",
+    "electors": 280685,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "228": {
+    "name": "RADHAPURAM",
+    "district": "TIRUNELVELI",
+    "type": "GEN",
+    "electors": 275132,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "229": {
+    "name": "KANNIYAKUMARI",
+    "district": "KANNIYAKUMARI",
+    "type": "GEN",
+    "electors": 299074,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "230": {
+    "name": "NAGERCOIL",
+    "district": "KANNIYAKUMARI",
+    "type": "GEN",
+    "electors": 274657,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "231": {
+    "name": "COLACHEL",
+    "district": "KANNIYAKUMARI",
+    "type": "GEN",
+    "electors": 271991,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "232": {
+    "name": "PADMANABHAPURAM",
+    "district": "KANNIYAKUMARI",
+    "type": "GEN",
+    "electors": 242802,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "233": {
+    "name": "VILAVANCODE",
+    "district": "KANNIYAKUMARI",
+    "type": "GEN",
+    "electors": 251138,
+    "sub_region": "SOUTHERN REGION"
+  },
+  "234": {
+    "name": "KILLIYOOR",
+    "district": "KANNIYAKUMARI",
+    "type": "GEN",
+    "electors": 257959,
+    "sub_region": "SOUTHERN REGION"
+  }
+}
