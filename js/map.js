@@ -4,10 +4,16 @@
 
 const MapModule = (function () {
     let map = null;
+    let tileLayer = null;
     let districtLayer = null;
     let constituencyLayer = null;
     let districtLabels = [];
     let constituencyLabels = [];
+
+    const TILE_URLS = {
+        dark: 'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',
+        light: 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png'
+    };
 
     // Tamil Nadu bounds (tighter to only show TN)
     const TN_CENTER = [11.1271, 78.6569];
@@ -39,8 +45,8 @@ const MapModule = (function () {
             attributionControl: false
         });
 
-        // Add tile layer (dark theme, NO labels)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+        const theme = (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) || 'dark';
+        tileLayer = L.tileLayer(TILE_URLS[theme] || TILE_URLS.dark, {
             subdomains: 'abcd',
             maxZoom: 19
         }).addTo(map);
@@ -460,6 +466,15 @@ const MapModule = (function () {
         }
     }
 
+    /**
+     * Switch map basemap to match theme (dark / light)
+     */
+    function setTheme(theme) {
+        if (tileLayer && TILE_URLS[theme]) {
+            tileLayer.setUrl(TILE_URLS[theme]);
+        }
+    }
+
     // Public API
     return {
         init,
@@ -470,6 +485,7 @@ const MapModule = (function () {
         resetToOverview,
         setElectionYear,
         getMap,
-        invalidateSize
+        invalidateSize,
+        setTheme
     };
 })();

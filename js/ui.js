@@ -37,8 +37,54 @@ const UIModule = (function () {
         });
 
         setupEventListeners();
+        setupTheme();
         setupCandidateSearch();
         setupOverlayYearControls();
+    }
+
+    function getStoredTheme() {
+        try {
+            return localStorage.getItem('theme') || 'dark';
+        } catch (e) {
+            return 'dark';
+        }
+    }
+
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', theme === 'dark' ? '#1a1a2e' : '#f4f4f8');
+        if (typeof MapModule !== 'undefined' && MapModule.setTheme) MapModule.setTheme(theme);
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            const sun = themeToggle.querySelector('.icon-sun');
+            const moon = themeToggle.querySelector('.icon-moon');
+            if (sun && moon) {
+                if (theme === 'dark') {
+                    sun.classList.remove('hidden');
+                    moon.classList.add('hidden');
+                    themeToggle.setAttribute('aria-label', 'Switch to light mode');
+                    themeToggle.setAttribute('title', 'Switch to light mode');
+                } else {
+                    sun.classList.add('hidden');
+                    moon.classList.remove('hidden');
+                    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+                    themeToggle.setAttribute('title', 'Switch to dark mode');
+                }
+            }
+        }
+    }
+
+    function setupTheme() {
+        applyTheme(getStoredTheme());
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const next = getStoredTheme() === 'dark' ? 'light' : 'dark';
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                applyTheme(next);
+            });
+        }
     }
 
     function setupEventListeners() {

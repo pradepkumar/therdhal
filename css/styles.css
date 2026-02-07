@@ -69,6 +69,9 @@
     --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4);
     --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
 
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-border-subtle: rgba(255, 255, 255, 0.05);
+
     /* Transitions */
     --transition-fast: 150ms ease;
     --transition-base: 250ms ease;
@@ -83,6 +86,72 @@
     /* Layout */
     --header-height: 120px;
     --header-height-mobile: 140px;
+}
+
+/* Light theme overrides (default is dark above) */
+[data-theme="light"] {
+    --color-bg-primary: #f4f4f8;
+    --color-bg-secondary: #ffffff;
+    --color-bg-tertiary: #e8e8f0;
+    --color-bg-glass: rgba(255, 255, 255, 0.9);
+
+    --color-text-primary: #1a1a2e;
+    --color-text-secondary: #4a4a6a;
+    --color-text-muted: #6b6b8a;
+
+    --color-accent-primary: #4f46e5;
+    --color-accent-secondary: #7c3aed;
+    --color-accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.12);
+    --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.25);
+
+    --color-border: rgba(0, 0, 0, 0.12);
+    --color-border-subtle: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .filter-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234a4a6a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* Theme toggle button (next to Filters) */
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+    background: var(--color-bg-glass);
+    border-color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
+}
+
+.theme-toggle-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.theme-toggle-btn .icon-moon.hidden,
+.theme-toggle-btn .icon-sun.hidden {
+    display: none;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
 }
 
 /* Reset & Base */
@@ -120,7 +189,7 @@ body {
     background: var(--color-bg-glass);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .header-content {
@@ -143,7 +212,7 @@ body {
     align-items: center;
     gap: var(--space-2);
     background: var(--color-bg-tertiary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     color: var(--color-text-primary);
     padding: var(--space-2) var(--space-3);
@@ -242,7 +311,7 @@ body {
 .filter-select {
     appearance: none;
     background: var(--color-bg-tertiary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     color: var(--color-text-primary);
     font-family: var(--font-primary);
@@ -281,7 +350,7 @@ body {
     width: 100%;
     appearance: none;
     background: var(--color-bg-tertiary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     color: var(--color-text-primary);
     font-family: var(--font-primary);
@@ -307,7 +376,7 @@ body {
     left: 0;
     right: 0;
     background: var(--color-bg-secondary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     margin-top: var(--space-1);
     max-height: 300px;
@@ -324,7 +393,7 @@ body {
 .search-result-item {
     padding: var(--space-2) var(--space-3);
     cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--color-border-subtle);
     transition: background-color var(--transition-fast);
 }
 
@@ -387,7 +456,7 @@ body {
 .leaflet-control-zoom a {
     background: var(--color-bg-secondary) !important;
     color: var(--color-text-primary) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--color-border) !important;
     width: 36px !important;
     height: 36px !important;
     line-height: 36px !important;
@@ -455,6 +524,11 @@ svg.leaflet-zoom-animated path {
     font-size: var(--font-size-xs);
 }
 
+[data-theme="light"] .district-label,
+[data-theme="light"] .constituency-label {
+    text-shadow: none;
+}
+
 /* Back Button */
 .back-button {
     position: absolute;
@@ -466,7 +540,7 @@ svg.leaflet-zoom-animated path {
     gap: var(--space-2);
     background: var(--color-bg-glass);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
     color: var(--color-text-primary);
     font-family: var(--font-primary);
@@ -492,7 +566,7 @@ svg.leaflet-zoom-animated path {
     /* High z-index to ensure it's always visible on top */
     background: var(--color-bg-glass);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     padding: var(--space-4);
     min-width: 160px;
@@ -593,7 +667,7 @@ svg.leaflet-zoom-animated path {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: var(--space-1);
     margin-bottom: var(--space-2);
 }
@@ -714,7 +788,7 @@ svg.leaflet-zoom-animated path {
 .header-navigation {
     display: flex;
     background: var(--color-bg-tertiary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
     overflow: hidden;
 }
@@ -742,7 +816,7 @@ svg.leaflet-zoom-animated path {
 }
 
 .header-nav-btn.prev {
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid var(--color-border);
 }
 
 .overlay-close {
@@ -752,7 +826,7 @@ svg.leaflet-zoom-animated path {
     align-items: center;
     justify-content: center;
     background: var(--color-bg-tertiary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
     color: var(--color-text-secondary);
     cursor: pointer;
@@ -768,7 +842,7 @@ svg.leaflet-zoom-animated path {
     position: relative;
     padding: var(--space-6) var(--space-6) var(--space-4);
     background: linear-gradient(180deg, var(--color-bg-tertiary) 0%, var(--color-bg-secondary) 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .constituency-badge {
@@ -1248,7 +1322,7 @@ svg.leaflet-zoom-animated path {
     background: var(--color-bg-tertiary);
     border-radius: var(--radius-md);
     padding: 2px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
 }
 
 .year-nav-btn {
@@ -1301,7 +1375,7 @@ svg.leaflet-zoom-animated path {
     left: 50%;
     transform: translateX(-50%);
     background: var(--color-bg-secondary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     z-index: 10;
