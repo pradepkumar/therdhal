@@ -4,6 +4,8 @@
 
 const UIModule = (function () {
     let yearFilter, districtFilter, constituencyFilter;
+    let candidateFilterGroup, candidateSearchInput, candidateResults;
+    let searchTimeout;
     let backButton, legend, loadingOverlay;
     let overlay, overlayClose;
     let currentConstituencyId = null;
@@ -21,7 +23,12 @@ const UIModule = (function () {
         legend = document.getElementById('legend');
         loadingOverlay = document.getElementById('loading');
         overlay = document.getElementById('constituency-overlay');
+        overlay = document.getElementById('constituency-overlay');
         overlayClose = document.getElementById('overlay-close');
+
+        candidateFilterGroup = document.getElementById('candidate-filter-group');
+        candidateSearchInput = document.getElementById('candidate-search');
+        candidateResults = document.getElementById('candidate-results');
 
         // Load all constituencies once for navigation
         DataModule.getConstituencyList().then(list => {
@@ -29,6 +36,7 @@ const UIModule = (function () {
         });
 
         setupEventListeners();
+        setupCandidateSearch();
     }
 
     function setupEventListeners() {
@@ -84,6 +92,42 @@ const UIModule = (function () {
                 legend.classList.toggle('collapsed');
             });
         }
+
+        // Filter toggle
+        const filterToggle = document.getElementById('filter-toggle');
+        const filterContainer = document.getElementById('filter-container');
+        if (filterToggle && filterContainer) {
+            filterToggle.addEventListener('click', () => {
+                const isCollapsed = filterContainer.classList.toggle('collapsed');
+                filterToggle.classList.toggle('active', !isCollapsed);
+
+                if (isCollapsed) {
+                    filterContainer.style.overflow = 'hidden';
+                } else {
+                    // Wait for transition to finish before allowing overflow
+                    setTimeout(() => {
+                        if (!filterContainer.classList.contains('collapsed')) {
+                            filterContainer.style.overflow = 'visible';
+                        }
+                    }, 350);
+                }
+
+                // Trigger map resize since container height changed
+                setTimeout(() => {
+                    MapModule.invalidateSize();
+                }, 350); // Matches var(--transition-slow)
+            });
+
+            // Initial state based on screen width
+            if (window.innerWidth < 768) {
+                filterContainer.classList.add('collapsed');
+                filterToggle.classList.remove('active');
+                filterContainer.style.overflow = 'hidden';
+            } else {
+                filterToggle.classList.add('active');
+                filterContainer.style.overflow = 'visible';
+            }
+        }
     }
 
     async function populateDistrictDropdown() {
@@ -115,9 +159,11 @@ const UIModule = (function () {
             window.electionData[year] = data;
             MapModule.setElectionYear(year);
             showLegend();
+            if (candidateFilterGroup) candidateFilterGroup.classList.remove('hidden');
         } else {
             MapModule.setElectionYear(null);
             hideLegend();
+            if (candidateFilterGroup) candidateFilterGroup.classList.add('hidden');
         }
     }
 
@@ -359,6 +405,77 @@ const UIModule = (function () {
         const prevId = allConstituencies[prevIndex].id;
 
         MapModule.zoomToConstituency(prevId);
+    }
+
+    function setupCandidateSearch() {
+        if (!candidateSearchInput) return;
+
+        candidateSearchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            const query = e.target.value;
+
+            if (query.length < 2) {
+                candidateResults.innerHTML = '';
+                candidateResults.classList.remove('active');
+                return;
+            }
+
+            searchTimeout = setTimeout(async () => {
+                const year = yearFilter.value;
+                if (!year) return;
+
+                const results = await DataModule.searchCandidates(year, query);
+                displayCandidateResults(results);
+            }, 300);
+        });
+
+        // Hide results on click outside
+        document.addEventListener('click', (e) => {
+            if (!candidateSearchInput.contains(e.target) && !candidateResults.contains(e.target)) {
+                candidateResults.classList.remove('active');
+            }
+        });
+
+        // Show results on focus if input has value
+        candidateSearchInput.addEventListener('focus', () => {
+            if (candidateSearchInput.value.length >= 2 && candidateResults.children.length > 0) {
+                candidateResults.classList.add('active');
+            }
+        });
+    }
+
+    function displayCandidateResults(results) {
+        if (!results || results.length === 0) {
+            candidateResults.innerHTML = '<div class="search-result-item"><span class="search-result-meta">No candidates found</span></div>';
+            candidateResults.classList.add('active');
+            return;
+        }
+
+        candidateResults.innerHTML = results.map(c => `
+        <div class="search-result-item" data-constituency-id="${c.constituencyId}">
+            <span class="search-result-name">${c.name}</span>
+            <div class="search-result-meta">
+                <span class="search-party-tag" style="background:${DataModule.getPartyColor(c.party)}">${c.party}</span>
+                <span>${c.constituencyName}</span>
+                <span>(${c.district})</span>
+            </div>
+        </div>
+    `).join('');
+
+        candidateResults.classList.add('active');
+
+        // Add click listeners to items
+        candidateResults.querySelectorAll('.search-result-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                const constituencyId = item.dataset.constituencyId;
+                // Check if we clicked on a valid item (not "No candidates found")
+                if (constituencyId && constituencyId !== "undefined") {
+                    MapModule.zoomToConstituency(constituencyId);
+                    candidateResults.classList.remove('active');
+                    candidateSearchInput.value = ''; // Clear search after selection
+                }
+            });
+        });
     }
 
     return {

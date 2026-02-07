@@ -36,8 +36,8 @@ const DataModule = (function () {
     // Party flag colors (array of colors from their official flags)
     const partyFlagColors = {
         'DMK': ['#000000', '#e53935'],  // Black and Red
-        'AIADMK': ['#000000', '#e53935'],  // Black and Red (same as DMK)
-        'ADMK': ['#000000', '#e53935'],
+        'AIADMK': ['#000000', '#FFFFFF', '#e53935'],  // Black white and Red
+        'ADMK': ['#000000', '#FFFFFF', '#e53935'],
         'BJP': ['#FF9933', '#138808'],  // Saffron and Green
         'INC': ['#FF9933', '#FFFFFF', '#138808'],  // Saffron, White, Green
         'CONGRESS': ['#FF9933', '#FFFFFF', '#138808'],
@@ -49,8 +49,8 @@ const DataModule = (function () {
         'DMDK': ['#009688'],  // Teal
         'TMC': ['#795548'],  // Brown
         'AMMK': ['#8bc34a'],  // Light Green
-        'NTK': ['#ffc107'],  // Amber
-        'MNM': ['#3f51b5'],  // Indigo
+        'NTK': ['#E93C2D', '#FFC72C'],  // Red and Yellow
+        'MNM': ['#FFFFFF', '#D60505', '#FFFFFF'],  // White, Red, White
         'IND': ['#607d8b'],  // Blue Grey
         'OTHERS': ['#78909c']  // Grey
     };
@@ -72,7 +72,7 @@ const DataModule = (function () {
         'TMC': 'assets/logos/placeholder.svg',
         'AMMK': 'assets/logos/placeholder.svg',
         'NTK': 'assets/logos/NTK.png',
-        'MNM': 'assets/logos/placeholder.svg',
+        'MNM': 'assets/logos/MNM.png',
         'IND': 'assets/logos/placeholder.svg',
         'OTHERS': 'assets/logos/placeholder.svg'
     };
@@ -274,6 +274,35 @@ const DataModule = (function () {
     }
 
     /**
+     * Search for candidates in a specific year
+     */
+    async function searchCandidates(year, query) {
+        if (!year || !query || query.length < 2) return [];
+
+        const data = await loadElectionData(year);
+        const results = [];
+        const normalizedQuery = query.toLowerCase();
+
+        for (const [constituencyId, constituency] of Object.entries(data.constituencies)) {
+            // Check if candidates array exists
+            const candidates = constituency.candidates || [];
+
+            for (const candidate of candidates) {
+                if (candidate.name && candidate.name.toLowerCase().includes(normalizedQuery)) {
+                    results.push({
+                        ...candidate,
+                        constituencyName: constituency.name,
+                        constituencyId: constituencyId,
+                        district: constituency.district
+                    });
+                }
+            }
+        }
+
+        return results.sort((a, b) => (b.votes || 0) - (a.votes || 0)).slice(0, 50); // Limit to 50 results
+    }
+
+    /**
      * Load all initial data
      */
     async function loadInitialData() {
@@ -299,6 +328,7 @@ const DataModule = (function () {
         getConstituencyInfo,
         getElectionResults,
         getWinnerHistory,
+        searchCandidates,
         getPartyColor,
         getPartyFlagColors,
         getPartyLogo

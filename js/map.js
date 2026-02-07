@@ -451,6 +451,15 @@ const MapModule = (function () {
         return map;
     }
 
+    /**
+     * Invalidate map size - should be called when map container size changes
+     */
+    function invalidateSize() {
+        if (map) {
+            map.invalidateSize();
+        }
+    }
+
     // Public API
     return {
         init,
@@ -460,6 +469,7 @@ const MapModule = (function () {
         zoomToConstituency,
         resetToOverview,
         setElectionYear,
-        getMap
+        getMap,
+        invalidateSize
     };
 })();

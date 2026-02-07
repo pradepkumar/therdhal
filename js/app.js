@@ -38,7 +38,7 @@ const App = (function () {
         } catch (error) {
             console.error('Failed to initialize app:', error);
             UIModule.hideLoading();
-            alert('Failed to load map data. Please refresh the page.');
+            alert('Failed to load map data. Please refresh the page. Error: ' + error.message);
         }
     }
 

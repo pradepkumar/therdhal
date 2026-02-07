@@ -35,32 +35,50 @@
                     <span class="title-en">TN Election Map</span>
                     <span class="title-ta">தேர்தல் வரைபடம்</span>
                 </h1>
+                <button id="filter-toggle" class="header-toggle-btn" aria-label="Toggle Filters">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                    <span>Filters</span>
+                </button>
             </div>
 
             <!-- Filter Controls -->
-            <div class="filter-bar">
-                <div class="filter-group">
-                    <label for="year-filter" class="filter-label">Year</label>
-                    <select id="year-filter" class="filter-select">
-                        <option value="">All Years</option>
-                        <option value="2021">2021</option>
-                    </select>
-                </div>
+            <div id="filter-container" class="filter-container">
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label for="year-filter" class="filter-label">Year</label>
+                        <select id="year-filter" class="filter-select">
+                            <option value="">All Years</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
 
-                <div class="filter-group">
-                    <label for="district-filter" class="filter-label">District</label>
-                    <select id="district-filter" class="filter-select">
-                        <option value="">All Districts</option>
-                        <!-- Populated dynamically -->
-                    </select>
-                </div>
+                    <div class="filter-group">
+                        <label for="district-filter" class="filter-label">District</label>
+                        <select id="district-filter" class="filter-select">
+                            <option value="">All Districts</option>
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
 
-                <div class="filter-group">
-                    <label for="constituency-filter" class="filter-label">Constituency</label>
-                    <select id="constituency-filter" class="filter-select">
-                        <option value="">All Constituencies</option>
-                        <!-- Populated dynamically -->
-                    </select>
+                    <div class="filter-group">
+                        <label for="constituency-filter" class="filter-label">Constituency</label>
+                        <select id="constituency-filter" class="filter-select">
+                            <option value="">All Constituencies</option>
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div id="candidate-filter-group" class="filter-group hidden">
+                        <label for="candidate-search" class="filter-label">Candidate Name</label>
+                        <div class="candidate-search-container">
+                            <input type="text" id="candidate-search" class="search-input"
+                                placeholder="Search candidate..." autocomplete="off">
+                            <div id="candidate-results" class="search-results-dropdown"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
