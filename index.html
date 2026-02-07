@@ -52,6 +52,7 @@
                         <select id="year-filter" class="filter-select">
                             <option value="">All Years</option>
                             <option value="2021">2021</option>
+                            <option value="2016">2016</option>
                         </select>
                     </div>
 
@@ -181,7 +182,31 @@
 
                 <!-- All Candidates Table -->
                 <section class="candidates-section" id="candidates-section">
-                    <h3 class="section-title">2021 Election Results</h3>
+                    <div class="section-header-controls">
+                        <h3 class="section-title">Election Results</h3>
+                        <div class="year-control">
+                            <button id="prev-election-year" class="year-nav-btn" aria-label="Previous Election Year">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <div class="year-dropdown-container">
+                                <button id="current-election-year-btn" class="year-display-btn">2021</button>
+                                <div id="year-dropdown-menu" class="year-dropdown-menu hidden">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+                            <button id="next-election-year" class="year-nav-btn" aria-label="Next Election Year">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                     <div class="candidates-table" id="candidates-table">
                         <!-- Populated dynamically -->
                     </div>

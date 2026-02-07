@@ -29,6 +29,10 @@ const DataModule = (function () {
         'AMMK': '#8bc34a',
         'NTK': '#ffc107',
         'MNM': '#3f51b5',
+        'IUML': '#006400',
+        'MMK': '#00a65a',
+        'IJK': '#ff6600',
+        'KMDK': '#99cc33',
         'IND': '#607d8b',
         'OTHERS': '#78909c'
     };
@@ -51,6 +55,10 @@ const DataModule = (function () {
         'AMMK': ['#8bc34a'],  // Light Green
         'NTK': ['#E93C2D', '#FFC72C'],  // Red and Yellow
         'MNM': ['#FFFFFF', '#D60505', '#FFFFFF'],  // White, Red, White
+        'IUML': ['#006400'],  // Dark Green
+        'MMK': ['#00a65a'],  // Green
+        'IJK': ['#ff6600', '#0000ff'],  // Orange and Blue
+        'KMDK': ['#99cc33'],  // Yellow-Green
         'IND': ['#607d8b'],  // Blue Grey
         'OTHERS': ['#78909c']  // Grey
     };
@@ -73,6 +81,10 @@ const DataModule = (function () {
         'AMMK': 'assets/logos/placeholder.svg',
         'NTK': 'assets/logos/NTK.png',
         'MNM': 'assets/logos/MNM.png',
+        'IUML': 'assets/logos/placeholder.svg',
+        'MMK': 'assets/logos/placeholder.svg',
+        'IJK': 'assets/logos/placeholder.svg',
+        'KMDK': 'assets/logos/placeholder.svg',
         'IND': 'assets/logos/placeholder.svg',
         'OTHERS': 'assets/logos/placeholder.svg'
     };
@@ -183,8 +195,13 @@ const DataModule = (function () {
             const winner = candidates.find(c => c.winner === true) || candidates[0];
             const runner_up = candidates[1];
 
+            const electorsForYear = (constituency.electors && typeof constituency.electors === 'object')
+                ? constituency.electors[year]
+                : constituency.electors;
+
             transformedData.constituencies[id] = {
                 ...constituency,
+                electors: electorsForYear,
                 winner: winner,
                 runner_up: runner_up
             };

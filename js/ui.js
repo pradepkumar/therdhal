@@ -14,6 +14,7 @@ const UIModule = (function () {
     let touchEndX = 0;
     let isUpdatingDistrict = false;  // Flag to prevent recursive updates
     let isUpdatingConstituency = false;  // Flag to prevent recursive updates
+    let currentOverlayElectionYear = 2021; // State for overlay year navigation
 
     function init() {
         yearFilter = document.getElementById('year-filter');
@@ -37,6 +38,7 @@ const UIModule = (function () {
 
         setupEventListeners();
         setupCandidateSearch();
+        setupOverlayYearControls();
     }
 
     function setupEventListeners() {
@@ -351,9 +353,14 @@ const UIModule = (function () {
 
     async function showConstituencyOverlay(id) {
         currentConstituencyId = id;
+
+        // Initialize overlay year from filter or default to 2021
+        currentOverlayElectionYear = parseInt(yearFilter.value) || 2021;
+
         const info = await DataModule.getConstituencyInfo(id);
         const history = await DataModule.getWinnerHistory(id);
-        const electionResults = await DataModule.getElectionResults(2021, id);
+        // Election results will be loaded via updateOverlayElectionResults
+
         if (!info) return;
 
         // Update dropdowns to reflect the selected constituency
@@ -365,89 +372,29 @@ const UIModule = (function () {
         document.querySelector('#constituency-name .name-ta').textContent = info.name_ta || '';
         document.getElementById('constituency-district').textContent = info.district;
         document.getElementById('constituency-description').textContent = info.description || '';
-        document.getElementById('registered-voters').textContent = info.registered_voters?.toLocaleString() || 'N/A';
+
+        // Update Constituency ID
         document.getElementById('constituency-id').textContent = id;
 
+        // Render Election History (All Years)
         const histEl = document.getElementById('election-history');
-        histEl.innerHTML = history.length ? history.map(h =>
-            `<div class="election-card" style="--party-color:${DataModule.getPartyColor(h.winner.party)}">
-                <div class="election-year">${h.year}</div>
-                <div class="election-details">
-                    <span class="winner-name">${h.winner.name}</span>
-                    <span class="winner-party" style="background:${DataModule.getPartyColor(h.winner.party)}">${h.winner.party}</span>
-                    <span class="election-margin">Margin: ${h.margin?.toLocaleString() || 'N/A'}</span>
-                    <span class="election-turnout">Turnout: ${h.turnout || 'N/A'}%</span>
-                </div>
-            </div>`
-        ).join('') : '<p class="no-data">No data</p>';
-
-        // Render all candidates for 2021
-        const candidatesEl = document.getElementById('candidates-table');
-        if (electionResults && electionResults.candidates) {
-            const maxVotes = Math.max(...electionResults.candidates.map(c => c.votes || 0));
-
-            // Calculate total votes for vote share bar
-            const totalVotes = electionResults.candidates.reduce((sum, c) => sum + (c.votes || 0), 0);
-
-            // Create vote share visualization bar HTML
-            const voteShareBar = electionResults.candidates.map((c, i) => {
-                const sharePercent = totalVotes > 0 ? ((c.votes || 0) / totalVotes * 100) : 0;
-                const partyColor = DataModule.getPartyColor(c.party);
-                // Only show labels for top 3 candidates and if segment is large enough
-                const showLabel = i < 3 && sharePercent > 7;
-                return sharePercent > 0 ? `<div class="vote-share-segment" style="width:${sharePercent}%;background:${partyColor}" title="${c.party}: ${sharePercent.toFixed(1)}%">${showLabel ? `<span class="segment-label">${sharePercent.toFixed(1)}%</span>` : ''}</div>` : '';
-            }).join('');
-
-            // Insert vote share bar before candidates
-            const voteShareBarHTML = `<div class="vote-share-bar">${voteShareBar}</div>`;
-
-            candidatesEl.innerHTML = voteShareBarHTML + electionResults.candidates.map((c, i) => {
-                const partyColor = DataModule.getPartyColor(c.party);
-                const partyFlagColors = DataModule.getPartyFlagColors(c.party);
-                const partyLogo = DataModule.getPartyLogo(c.party);
-                const votePercent = maxVotes > 0 ? ((c.votes || 0) / maxVotes * 100) : 0;
-                const isWinner = i === 0;
-
-                // Create gradient for multi-colored border
-                let borderGradient;
-                if (partyFlagColors.length === 1) {
-                    borderGradient = partyFlagColors[0];
-                } else if (partyFlagColors.length === 2) {
-                    borderGradient = `linear-gradient(to bottom, ${partyFlagColors[0]} 50%, ${partyFlagColors[1]} 50%)`;
-                } else if (partyFlagColors.length === 3) {
-                    borderGradient = `linear-gradient(to bottom, ${partyFlagColors[0]} 33.33%, ${partyFlagColors[1]} 33.33%, ${partyFlagColors[1]} 66.66%, ${partyFlagColors[2]} 66.66%)`;
-                } else {
-                    // For more than 3 colors, distribute evenly
-                    const step = 100 / partyFlagColors.length;
-                    const stops = partyFlagColors.map((color, idx) =>
-                        `${color} ${idx * step}%, ${color} ${(idx + 1) * step}%`
-                    ).join(', ');
-                    borderGradient = `linear-gradient(to bottom, ${stops})`;
-                }
-
-                return `<div class="candidate-row ${isWinner ? 'winner' : ''}" style="--candidate-color:${partyColor};--border-gradient:${borderGradient}">
-                    <span class="candidate-rank">${i + 1}</span>
-                    <div class="candidate-logo-box">
-                        <img src="${partyLogo}" alt="${c.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
+        if (histEl) {
+            histEl.innerHTML = history.length ? history.map(h =>
+                `<div class="election-card" style="--party-color:${DataModule.getPartyColor(h.winner.party)}">
+                    <div class="election-year">${h.year}</div>
+                    <div class="election-details">
+                        <span class="winner-name">${h.winner.name}</span>
+                        <span class="winner-party" style="background:${DataModule.getPartyColor(h.winner.party)}">${h.winner.party}</span>
+                        <span class="election-margin">Margin: ${h.margin?.toLocaleString() || 'N/A'}</span>
+                        <span class="election-turnout">Turnout: ${h.turnout || 'N/A'}%</span>
                     </div>
-                    <div class="candidate-info">
-                        <div class="candidate-name">${c.name}</div>
-                        <span class="candidate-party" style="background:${partyColor};color:white">
-                            <span class="party-name">${c.party}</span>
-                        </span>
-                    </div>
-                    <div class="candidate-votes">
-                        <div class="candidate-vote-count">${(c.votes || 0).toLocaleString()}</div>
-                        <div class="candidate-vote-share">${c.vote_share?.toFixed(1) || 0}%</div>
-                        <div class="vote-bar-container">
-                            <div class="vote-bar" style="width:${votePercent}%;background:${partyColor}"></div>
-                        </div>
-                    </div>
-                </div>`;
-            }).join('');
-        } else {
-            candidatesEl.innerHTML = '<p class="no-data">No candidate data available</p>';
+                </div>`
+            ).join('') : '<p class="no-data">No data</p>';
         }
+
+        // Handle electors as an object (year-specific) or a single number
+        // Initial update of election results and voters for the current year
+        updateOverlayElectionResults(id, currentOverlayElectionYear);
 
         const winEl = document.getElementById('winners-list');
         winEl.innerHTML = history.length ? history.map(h =>
@@ -568,6 +515,165 @@ const UIModule = (function () {
                 }
             });
         });
+    }
+
+    function setupOverlayYearControls() {
+        // Prev Year Button
+        document.getElementById('prev-election-year').addEventListener('click', () => {
+            const years = DataModule.getAvailableYears().sort((a, b) => a - b);
+            const currentIndex = years.indexOf(currentOverlayElectionYear);
+            if (currentIndex > 0) {
+                currentOverlayElectionYear = years[currentIndex - 1];
+                if (currentConstituencyId) {
+                    updateOverlayElectionResults(currentConstituencyId, currentOverlayElectionYear);
+                }
+            }
+        });
+
+        // Next Year Button
+        document.getElementById('next-election-year').addEventListener('click', () => {
+            const years = DataModule.getAvailableYears().sort((a, b) => a - b);
+            const currentIndex = years.indexOf(currentOverlayElectionYear);
+            if (currentIndex !== -1 && currentIndex < years.length - 1) {
+                currentOverlayElectionYear = years[currentIndex + 1];
+                if (currentConstituencyId) {
+                    updateOverlayElectionResults(currentConstituencyId, currentOverlayElectionYear);
+                }
+            }
+        });
+
+        // Year Display Button (Dropdown)
+        const yearBtn = document.getElementById('current-election-year-btn');
+        const yearDropdown = document.getElementById('year-dropdown-menu');
+
+        yearBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Populate dropdown
+            const years = DataModule.getAvailableYears().sort((a, b) => b - a);
+            yearDropdown.innerHTML = years.map(y =>
+                `<button class="year-option ${y === currentOverlayElectionYear ? 'selected' : ''}" data-year="${y}">${y}</button>`
+            ).join('');
+
+            yearDropdown.classList.toggle('hidden');
+        });
+
+        // Handle dropdown selection
+        yearDropdown.addEventListener('click', (e) => {
+            if (e.target.classList.contains('year-option')) {
+                const selectedYear = parseInt(e.target.dataset.year);
+                if (selectedYear) {
+                    currentOverlayElectionYear = selectedYear;
+                    if (currentConstituencyId) {
+                        updateOverlayElectionResults(currentConstituencyId, currentOverlayElectionYear);
+                    }
+                    yearDropdown.classList.add('hidden');
+                }
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!yearBtn.contains(e.target) && !yearDropdown.contains(e.target)) {
+                yearDropdown.classList.add('hidden');
+            }
+        });
+    }
+
+    async function updateOverlayElectionResults(id, year) {
+        // Update display button
+        document.getElementById('current-election-year-btn').textContent = year;
+
+        // Update prev/next button states
+        const years = DataModule.getAvailableYears().sort((a, b) => a - b);
+        const currentIndex = years.indexOf(year);
+        document.getElementById('prev-election-year').disabled = (currentIndex <= 0);
+        document.getElementById('next-election-year').disabled = (currentIndex === -1 || currentIndex >= years.length - 1);
+
+        // Update Registered Voters (depends on year)
+        const info = await DataModule.getConstituencyInfo(id);
+        if (info) {
+            const electorsCount = (info.electors && typeof info.electors === 'object')
+                ? info.electors[year]
+                : info.electors;
+            document.getElementById('registered-voters').textContent = electorsCount?.toLocaleString() || 'N/A';
+        }
+
+        // Fetch and display results
+        const candidatesEl = document.getElementById('candidates-table');
+        candidatesEl.innerHTML = '<div class="loading-spinner" style="margin:20px auto;"></div>'; // Inline loading
+
+        try {
+            const electionResults = await DataModule.getElectionResults(year, id);
+
+            if (electionResults && electionResults.candidates) {
+                const maxVotes = Math.max(...electionResults.candidates.map(c => c.votes || 0));
+
+                // Calculate total votes for vote share bar
+                const totalVotes = electionResults.candidates.reduce((sum, c) => sum + (c.votes || 0), 0);
+
+                // Create vote share visualization bar HTML
+                const voteShareBar = electionResults.candidates.map((c, i) => {
+                    const sharePercent = totalVotes > 0 ? ((c.votes || 0) / totalVotes * 100) : 0;
+                    const partyColor = DataModule.getPartyColor(c.party);
+                    // Only show labels for top 3 candidates and if segment is large enough
+                    const showLabel = i < 3 && sharePercent > 7;
+                    return sharePercent > 0 ? `<div class="vote-share-segment" style="width:${sharePercent}%;background:${partyColor}" title="${c.party}: ${sharePercent.toFixed(1)}%">${showLabel ? `<span class="segment-label">${sharePercent.toFixed(1)}%</span>` : ''}</div>` : '';
+                }).join('');
+
+                // Insert vote share bar before candidates
+                const voteShareBarHTML = `<div class="vote-share-bar">${voteShareBar}</div>`;
+
+                candidatesEl.innerHTML = voteShareBarHTML + electionResults.candidates.map((c, i) => {
+                    const partyColor = DataModule.getPartyColor(c.party);
+                    const partyFlagColors = DataModule.getPartyFlagColors(c.party);
+                    const partyLogo = DataModule.getPartyLogo(c.party);
+                    const votePercent = maxVotes > 0 ? ((c.votes || 0) / maxVotes * 100) : 0;
+                    const isWinner = i === 0;
+
+                    // Create gradient for multi-colored border
+                    let borderGradient;
+                    if (partyFlagColors.length === 1) {
+                        borderGradient = partyFlagColors[0];
+                    } else if (partyFlagColors.length === 2) {
+                        borderGradient = `linear-gradient(to bottom, ${partyFlagColors[0]} 50%, ${partyFlagColors[1]} 50%)`;
+                    } else if (partyFlagColors.length === 3) {
+                        borderGradient = `linear-gradient(to bottom, ${partyFlagColors[0]} 33.33%, ${partyFlagColors[1]} 33.33%, ${partyFlagColors[1]} 66.66%, ${partyFlagColors[2]} 66.66%)`;
+                    } else {
+                        // For more than 3 colors, distribute evenly
+                        const step = 100 / partyFlagColors.length;
+                        const stops = partyFlagColors.map((color, idx) =>
+                            `${color} ${idx * step}%, ${color} ${(idx + 1) * step}%`
+                        ).join(', ');
+                        borderGradient = `linear-gradient(to bottom, ${stops})`;
+                    }
+
+                    return `<div class="candidate-row ${isWinner ? 'winner' : ''}" style="--candidate-color:${partyColor};--border-gradient:${borderGradient}">
+                        <span class="candidate-rank">${i + 1}</span>
+                        <div class="candidate-logo-box">
+                            <img src="${partyLogo}" alt="${c.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
+                        </div>
+                        <div class="candidate-info">
+                            <div class="candidate-name">${c.name}</div>
+                            <span class="candidate-party" style="background:${partyColor};color:white">
+                                <span class="party-name">${c.party}</span>
+                            </span>
+                        </div>
+                        <div class="candidate-votes">
+                            <div class="candidate-vote-count">${(c.votes || 0).toLocaleString()}</div>
+                            <div class="candidate-vote-share">${c.vote_share?.toFixed(1) || 0}%</div>
+                            <div class="vote-bar-container">
+                                <div class="vote-bar" style="width:${votePercent}%;background:${partyColor}"></div>
+                            </div>
+                        </div>
+                    </div>`;
+                }).join('');
+            } else {
+                candidatesEl.innerHTML = '<p class="no-data">No candidate data available for this year</p>';
+            }
+        } catch (e) {
+            console.error('Error fetching election results:', e);
+            candidatesEl.innerHTML = '<p class="no-data">Error loading data</p>';
+        }
     }
 
     return {

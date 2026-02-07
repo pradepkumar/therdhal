@@ -1,17 +1,53 @@
 /**
- * Convert 2021_results.csv to elections-2021.json
- * Captures ALL candidate data per constituency including:
- * - votes, vote_share, winner, incumbent, deposit_lost
- * - myneta_education, profession, description
+ * Convert CSV election results to JSON format
+ * Usage: node convert-csv.js [CSV_PATH] [OUTPUT_PATH] [CONST_OUTPUT_PATH]
  */
 
 const fs = require('fs');
 const path = require('path');
 
-// Path to source CSV
-const CSV_PATH = './data/2021_results.csv';
-const OUTPUT_PATH = './data/elections-2021.json';
-const CONSTITUENCIES_OUTPUT = './data/constituencies.json';
+// Alliance Definitions
+const ALLIANCES = {
+    2021: {
+        "SPA": {
+            "name": "Secular Progressive Alliance",
+            "parties": ["DMK", "INC", "VCK", "CPI", "CPM", "IUML", "MMK", "KNMDK", "TVK", "MVK", "PT"]
+        },
+        "NDA": {
+            "name": "National Democratic Alliance",
+            "parties": ["ADMK", "PMK", "BJP", "TMC(M)", "TMJK", "AIMMK", "AISMK", "PB", "TNPWP"]
+        }
+    },
+    2016: {
+        "AIADMK+": {
+            "name": "AIADMK Alliance",
+            "parties": ["ADMK", "AIFB", "RPI", "TMJK", "JMM", "MNJK"]
+        },
+        "DMK+": {
+            "name": "DMK-INC Alliance",
+            "parties": ["DMK", "INC", "IUML", "PT", "MNJK", "MMK"]
+        },
+        "PWF": {
+            "name": "DMDK-PWF-TMC Alliance",
+            "parties": ["DMDK", "MDMK", "CPI", "CPM", "VCK", "TMC(M)"]
+        },
+        "NDA": {
+            "name": "National Democratic Alliance",
+            "parties": ["BJP", "IJK", "KMDK", "APPD", "NJP"]
+        }
+    }
+};
+
+// Default Paths
+const DEFAULT_CSV_PATH = './data/2021_results.csv';
+const DEFAULT_OUTPUT_PATH = './data/elections-2021.json';
+const DEFAULT_CONST_OUTPUT = './data/constituencies.json';
+
+// Parse args
+const args = process.argv.slice(2);
+const CSV_PATH = args[0] || DEFAULT_CSV_PATH;
+const OUTPUT_PATH = args[1] || DEFAULT_OUTPUT_PATH;
+const CONSTITUENCIES_OUTPUT = args[2] || DEFAULT_CONST_OUTPUT;
 
 function parseCSV(content) {
     const lines = content.split('\n');
@@ -53,8 +89,14 @@ function parseCSVLine(line) {
 }
 
 function convertToJSON(rows) {
+    if (rows.length === 0) return { elections: { year: 0, alliances: {}, constituencies: {} }, constituencyMeta: {} };
+
+    // Detect Year from first row
+    const year = parseInt(rows[0].Year) || 2021;
+
     const elections = {
-        year: 2021,
+        year: year,
+        alliances: ALLIANCES[year] || {},
         constituencies: {}
     };
 
@@ -94,7 +136,7 @@ function convertToJSON(rows) {
         // Add each candidate
         candidates.forEach(c => {
             // Skip if NOTA
-            const isNota = c.Candidate === 'None Of The Above' || c.Party === 'NOTA';
+            const isNota = c.Candidate === 'None Of The Above' || c.Party === 'NOTA' || c.Candidate === 'None of the Above';
 
             const candidate = {
                 name: c.Candidate || '',
@@ -133,7 +175,9 @@ function convertToJSON(rows) {
             name: firstCandidate.Constituency_Name || '',
             district: firstCandidate.District_Name || '',
             type: firstCandidate.Constituency_Type || 'GEN',
-            electors: parseInt(firstCandidate.Electors) || 0,
+            electors: {
+                [year]: parseInt(firstCandidate.Electors) || 0
+            },
             sub_region: firstCandidate.Sub_Region || ''
         };
     });
@@ -142,33 +186,33 @@ function convertToJSON(rows) {
 }
 
 function main() {
-    console.log('Reading CSV file...');
-    const csvContent = fs.readFileSync(CSV_PATH, 'utf-8');
+    console.log(`Reading CSV file: ${CSV_PATH}`);
+    try {
+        const csvContent = fs.readFileSync(CSV_PATH, 'utf-8');
 
-    console.log('Parsing CSV...');
-    const rows = parseCSV(csvContent);
-    console.log(`Parsed ${rows.length} candidate rows`);
+        console.log('Parsing CSV...');
+        const rows = parseCSV(csvContent);
+        console.log(`Parsed ${rows.length} candidate rows`);
 
-    console.log('Converting to JSON...');
-    const { elections, constituencyMeta } = convertToJSON(rows);
+        console.log('Converting to JSON...');
+        const { elections, constituencyMeta } = convertToJSON(rows);
 
-    const constCount = Object.keys(elections.constituencies).length;
-    console.log(`Processed ${constCount} constituencies`);
+        const constCount = Object.keys(elections.constituencies).length;
+        console.log(`Processed ${constCount} constituencies for year ${elections.year}`);
 
-    // Write elections JSON
-    console.log(`Writing ${OUTPUT_PATH}...`);
-    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(elections, null, 2));
+        // Write elections JSON
+        console.log(`Writing ${OUTPUT_PATH}...`);
+        fs.writeFileSync(OUTPUT_PATH, JSON.stringify(elections, null, 2));
 
-    // Write constituency metadata
-    console.log(`Writing ${CONSTITUENCIES_OUTPUT}...`);
-    fs.writeFileSync(CONSTITUENCIES_OUTPUT, JSON.stringify(constituencyMeta, null, 2));
+        // Write constituency metadata
+        console.log(`Writing ${CONSTITUENCIES_OUTPUT}...`);
+        fs.writeFileSync(CONSTITUENCIES_OUTPUT, JSON.stringify(constituencyMeta, null, 2));
 
-    console.log('Done!');
+        console.log('Done!');
 
-    // Print sample
-    const sampleConstNo = Object.keys(elections.constituencies)[0];
-    console.log('\nSample constituency:', sampleConstNo);
-    console.log(JSON.stringify(elections.constituencies[sampleConstNo], null, 2));
+    } catch (error) {
+        console.error('Error:', error.message);
+    }
 }
 
 main();
