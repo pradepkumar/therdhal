@@ -1,0 +1,155 @@
+/* ========================================
+   Legend Component Styles
+   ======================================== */
+
+.legend {
+    position: absolute;
+    bottom: var(--space-8);
+    right: var(--space-4);
+    z-index: 1000;
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    min-width: 160px;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+}
+
+.legend.collapsed {
+    min-width: auto;
+}
+
+.legend-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.legend.collapsed .legend-header {
+    margin-bottom: 0;
+}
+
+.legend-title {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.legend-toggle {
+    background: transparent;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    padding: var(--space-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.legend-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
+}
+
+.legend-toggle svg {
+    transition: transform var(--transition-base);
+}
+
+.legend.collapsed .legend-toggle svg {
+    transform: rotate(180deg);
+}
+
+.legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+    transition: max-height var(--transition-base), opacity var(--transition-base);
+}
+
+.legend.collapsed .legend-items {
+    max-height: 0;
+    opacity: 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+/* Legend Alliances */
+.legend-alliance {
+    margin-bottom: var(--space-4);
+}
+
+.legend-alliance:last-child {
+    margin-bottom: 0;
+}
+
+.alliance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--space-1);
+    margin-bottom: var(--space-2);
+}
+
+.alliance-name {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--color-text-secondary);
+}
+
+.alliance-seats {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.alliance-parties {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-left: var(--space-1);
+}
+
+.legend-item .party-name {
+    flex: 1;
+}
+
+.legend-item .party-seats {
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+/* Responsive Legend */
+@media (min-width: 768px) {
+    .legend {
+        bottom: var(--space-6);
+        right: var(--space-6);
+    }
+}

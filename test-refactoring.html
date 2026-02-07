@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactoring Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .pass {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .fail {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #666;
+            margin-top: 0;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🧪 Refactoring Test Suite</h1>
+
+    <div class="test-section">
+        <h2>Module Loading Tests</h2>
+        <div id="module-tests"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Data Module Tests</h2>
+        <div id="data-tests"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Utility Module Tests</h2>
+        <div id="utility-tests"></div>
+    </div>
+
+    <!-- Load modules in correct order -->
+    <script src="js/utils/constants.js"></script>
+    <script src="js/utils/formatters.js"></script>
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/data/partyConfig.js"></script>
+    <script src="js/data/dataLoader.js"></script>
+    <script src="js/data/dataQueries.js"></script>
+    <script src="js/compat.js"></script>
+
+    <script>
+        function addResult(containerId, testName, passed, message = '') {
+            const container = document.getElementById(containerId);
+            const div = document.createElement('div');
+            div.className = `test-result ${passed ? 'pass' : 'fail'}`;
+            div.innerHTML = `<strong>${passed ? '✓' : '✗'} ${testName}</strong>${message ? '<br>' + message : ''}`;
+            container.appendChild(div);
+        }
+
+        // Test module loading
+        addResult('module-tests', 'Constants module loaded', typeof Constants !== 'undefined');
+        addResult('module-tests', 'Formatters module loaded', typeof Formatters !== 'undefined');
+        addResult('module-tests', 'Helpers module loaded', typeof Helpers !== 'undefined');
+        addResult('module-tests', 'PartyConfig module loaded', typeof PartyConfig !== 'undefined');
+        addResult('module-tests', 'DataLoader module loaded', typeof DataLoader !== 'undefined');
+        addResult('module-tests', 'DataQueries module loaded', typeof DataQueries !== 'undefined');
+        addResult('module-tests', 'DataModule compatibility layer loaded', typeof DataModule !== 'undefined');
+
+        // Test Constants
+        if (typeof Constants !== 'undefined') {
+            addResult('utility-tests', 'Constants.AVAILABLE_YEARS exists',
+                Array.isArray(Constants.AVAILABLE_YEARS),
+                `Value: [${Constants.AVAILABLE_YEARS}]`);
+            addResult('utility-tests', 'Constants.DISTRICT_MAX_ZOOM exists',
+                typeof Constants.DISTRICT_MAX_ZOOM === 'number',
+                `Value: ${Constants.DISTRICT_MAX_ZOOM}`);
+        }
+
+        // Test Formatters
+        if (typeof Formatters !== 'undefined') {
+            const testNum = Formatters.formatNumber(1234567);
+            addResult('utility-tests', 'Formatters.formatNumber works',
+                testNum === '12,34,567',
+                `formatNumber(1234567) = "${testNum}"`);
+
+            const testShare = Formatters.formatVoteShare(45.67);
+            addResult('utility-tests', 'Formatters.formatVoteShare works',
+                testShare === '45.67%',
+                `formatVoteShare(45.67) = "${testShare}"`);
+        }
+
+        // Test Helpers
+        if (typeof Helpers !== 'undefined') {
+            const colors = ['#ff0000', '#00ff00', '#0000ff'];
+            const gradient = Helpers.createGradient(colors);
+            addResult('utility-tests', 'Helpers.createGradient works',
+                gradient.includes('linear-gradient'),
+                `Created gradient with ${colors.length} colors`);
+        }
+
+        // Test PartyConfig
+        if (typeof PartyConfig !== 'undefined') {
+            const dmkColor = PartyConfig.getColor('DMK');
+            addResult('data-tests', 'PartyConfig.getColor works',
+                dmkColor === '#e53935',
+                `getColor('DMK') = "${dmkColor}"`);
+
+            const dmkFlags = PartyConfig.getFlagColors('DMK');
+            addResult('data-tests', 'PartyConfig.getFlagColors works',
+                Array.isArray(dmkFlags) && dmkFlags.length > 0,
+                `getFlagColors('DMK') returned ${dmkFlags.length} colors`);
+
+            const dmkLogo = PartyConfig.getLogo('DMK');
+            addResult('data-tests', 'PartyConfig.getLogo works',
+                dmkLogo.includes('assets/logos'),
+                `getLogo('DMK') = "${dmkLogo}"`);
+        }
+
+        // Test DataModule compatibility
+        if (typeof DataModule !== 'undefined') {
+            addResult('data-tests', 'DataModule.getPartyColor exists',
+                typeof DataModule.getPartyColor === 'function');
+            addResult('data-tests', 'DataModule.getPartyFlagColors exists',
+                typeof DataModule.getPartyFlagColors === 'function');
+            addResult('data-tests', 'DataModule.getPartyLogo exists',
+                typeof DataModule.getPartyLogo === 'function');
+            addResult('data-tests', 'DataModule.loadInitialData exists',
+                typeof DataModule.loadInitialData === 'function');
+            addResult('data-tests', 'DataModule.getAvailableYears exists',
+                typeof DataModule.getAvailableYears === 'function');
+
+            // Test compatibility layer
+            const compatColor = DataModule.getPartyColor('AIADMK');
+            addResult('data-tests', 'DataModule compatibility layer works',
+                compatColor === '#4caf50',
+                `DataModule.getPartyColor('AIADMK') = "${compatColor}"`);
+        }
+
+        // Summary
+        const allTests = document.querySelectorAll('.test-result');
+        const passed = document.querySelectorAll('.test-result.pass').length;
+        const failed = document.querySelectorAll('.test-result.fail').length;
+
+        const summary = document.createElement('div');
+        summary.className = 'test-section';
+        summary.innerHTML = `
+            <h2>Test Summary</h2>
+            <p><strong>Total Tests:</strong> ${allTests.length}</p>
+            <p><strong>Passed:</strong> <span style="color: #155724">${passed}</span></p>
+            <p><strong>Failed:</strong> <span style="color: #721c24">${failed}</span></p>
+            <p><strong>Success Rate:</strong> ${((passed / allTests.length) * 100).toFixed(1)}%</p>
+        `;
+        document.body.appendChild(summary);
+
+        console.log(`✅ Refactoring Test Complete: ${passed}/${allTests.length} tests passed`);
+    </script>
+</body>
+
+</html>
