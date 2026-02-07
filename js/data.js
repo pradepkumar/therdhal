@@ -174,6 +174,7 @@ const DataModule = (function () {
         // Transform data to extract winner and runner_up for each constituency
         const transformedData = {
             year: rawData.year,
+            alliances: rawData.alliances || {},
             constituencies: {}
         };
 

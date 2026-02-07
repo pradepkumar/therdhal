@@ -238,16 +238,108 @@ const UIModule = (function () {
             return;
         }
 
-        const parties = [
-            { name: 'DMK', color: DataModule.getPartyColor('DMK') },
-            { name: 'AIADMK', color: DataModule.getPartyColor('AIADMK') },
-            { name: 'BJP', color: DataModule.getPartyColor('BJP') },
-            { name: 'INC', color: DataModule.getPartyColor('INC') },
-            { name: 'Others', color: DataModule.getPartyColor('OTHERS') }
-        ];
-        document.querySelector('.legend-items').innerHTML = parties.map(p =>
-            `<div class="legend-item"><div class="legend-color" style="background:${p.color}"></div><span>${p.name}</span></div>`
-        ).join('');
+        const year = yearFilter.value;
+        if (!year) {
+            hideLegend();
+            return;
+        }
+
+        const data = window.electionData && window.electionData[year];
+        if (!data) return;
+
+        // Update legend title
+        const titleEl = legend.querySelector('.legend-title');
+        if (titleEl) titleEl.textContent = year;
+
+        // Calculate seat counts
+        const partySeats = {};
+        Object.values(data.constituencies).forEach(c => {
+            if (c.winner && c.winner.party) {
+                const party = c.winner.party;
+                partySeats[party] = (partySeats[party] || 0) + 1;
+            }
+        });
+
+        // Group by alliance
+        const alliances = data.alliances || {};
+        const allianceSummary = [];
+        const assignedParties = new Set();
+
+        // Process defined alliances
+        for (const [key, alliance] of Object.entries(alliances)) {
+            const partiesInAlliance = [];
+            let allianceTotalSeats = 0;
+
+            if (alliance.parties) {
+                alliance.parties.forEach(p => {
+                    const normalizedParty = p.trim();
+                    const seats = partySeats[normalizedParty] || 0;
+                    if (seats > 0) {
+                        partiesInAlliance.push({
+                            name: normalizedParty,
+                            seats: seats,
+                            color: DataModule.getPartyColor(normalizedParty)
+                        });
+                        allianceTotalSeats += seats;
+                        assignedParties.add(normalizedParty);
+                    }
+                });
+            }
+
+            if (allianceTotalSeats > 0) {
+                allianceSummary.push({
+                    name: alliance.name,
+                    totalSeats: allianceTotalSeats,
+                    parties: partiesInAlliance.sort((a, b) => b.seats - a.seats)
+                });
+            }
+        }
+
+        // Catch remaining parties in "Others"
+        const othersParties = [];
+        let othersTotalSeats = 0;
+
+        for (const [party, seats] of Object.entries(partySeats)) {
+            if (!assignedParties.has(party)) {
+                othersParties.push({
+                    name: party,
+                    seats: seats,
+                    color: DataModule.getPartyColor(party)
+                });
+                othersTotalSeats += seats;
+            }
+        }
+
+        if (othersTotalSeats > 0) {
+            allianceSummary.push({
+                name: 'Others',
+                totalSeats: othersTotalSeats,
+                parties: othersParties.sort((a, b) => b.seats - a.seats)
+            });
+        }
+
+        // Render HTML
+        const itemsEl = document.querySelector('.legend-items');
+        if (itemsEl) {
+            itemsEl.innerHTML = allianceSummary.map(alliance => `
+                <div class="legend-alliance">
+                    <div class="alliance-header">
+                        <span class="alliance-name">${alliance.name}</span>
+                        <span class="alliance-seats">${alliance.totalSeats}</span>
+                    </div>
+                    <div class="alliance-parties">
+                        ${alliance.parties.map(p => `
+                            <div class="legend-item">
+                                <div class="legend-color" style="background:${p.color}"></div>
+                                <span class="party-name">${p.name}</span>
+                                <span class="party-seats">${p.seats}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
         legend.classList.remove('hidden');
     }
 

@@ -1,5 +1,27 @@
 {
   "year": 2021,
+  "alliances": {
+    "SPA": {
+      "name": "Secular Progressive Alliance",
+      "parties": [
+        "DMK",
+        "INC",
+        "VCK",
+        "CPI",
+        "CPM",
+        "CPI(M)",
+        "IUML"
+      ]
+    },
+    "NDA": {
+      "name": "National Democratic Alliance",
+      "parties": [
+        "ADMK",
+        "PMK",
+        "BJP"
+      ]
+    }
+  },
   "constituencies": {
     "1": {
       "name": "GUMMIDIPUNDI",
