@@ -83,7 +83,8 @@ const DataQueries = (function () {
                     history.push({
                         year,
                         winner: result.winner,
-                        margin: result.winner.votes - (result.runner_up?.votes || 0),
+                        margin: result.winner.margin || (result.winner.votes - (result.runner_up?.votes || 0)),
+                        margin_percent: result.winner.margin_percent,
                         turnout: result.turnout_percent
                     });
                 }

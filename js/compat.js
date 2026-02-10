@@ -25,7 +25,8 @@ const DataModule = {
     // Party configuration
     getPartyColor: (party) => PartyConfig.getColor(party),
     getPartyFlagColors: (party) => PartyConfig.getFlagColors(party),
-    getPartyLogo: (party) => PartyConfig.getLogo(party)
+    getPartyLogo: (party) => PartyConfig.getLogo(party),
+    getPartyBorderGradient: (party) => PartyConfig.getBorderGradient(party)
 };
 
 // Note: MapModule and UIModule remain as-is in their original files

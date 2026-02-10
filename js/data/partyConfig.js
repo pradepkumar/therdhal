@@ -116,5 +116,29 @@ const PartyConfig = {
         if (!party) return this.logos['OTHERS'];
         const normalized = party.toUpperCase().trim();
         return this.logos[normalized] || this.logos['OTHERS'];
+    },
+
+    /**
+     * Get CSS gradient for party flag colors
+     * @param {string} party - Party name
+     * @returns {string} CSS gradient string or hex color
+     */
+    getBorderGradient(party) {
+        const flagColors = this.getFlagColors(party);
+        if (flagColors.length === 0) return this.getColor(party);
+        if (flagColors.length === 1) return flagColors[0];
+
+        if (flagColors.length === 2) {
+            return `linear-gradient(to bottom, ${flagColors[0]} 50%, ${flagColors[1]} 50%)`;
+        } else if (flagColors.length === 3) {
+            return `linear-gradient(to bottom, ${flagColors[0]} 33.33%, ${flagColors[1]} 33.33%, ${flagColors[1]} 66.66%, ${flagColors[2]} 66.66%)`;
+        } else {
+            // For more than 3 colors, distribute evenly
+            const step = 100 / flagColors.length;
+            const stops = flagColors.map((color, idx) =>
+                `${color} ${idx * step}%, ${color} ${(idx + 1) * step}%`
+            ).join(', ');
+            return `linear-gradient(to bottom, ${stops})`;
+        }
     }
 };

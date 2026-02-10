@@ -240,45 +240,7 @@
     color: var(--color-text-muted);
 }
 
-/* Winners List */
-.winners-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-}
 
-.winner-row {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-3);
-    background: var(--color-bg-tertiary);
-    border-radius: var(--radius-md);
-}
-
-.winner-year-badge {
-    font-size: var(--font-size-xs);
-    font-weight: 600;
-    padding: var(--space-1) var(--space-2);
-    background: var(--color-bg-primary);
-    border-radius: var(--radius-sm);
-    color: var(--color-text-secondary);
-}
-
-.winner-info {
-    flex: 1;
-}
-
-.winner-info .name {
-    font-weight: 500;
-    color: var(--color-text-primary);
-    font-size: var(--font-size-sm);
-}
-
-.winner-info .party {
-    font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
-}
 
 /* Candidates Section */
 .candidates-section {
@@ -455,6 +417,7 @@
     width: 4px;
     background: var(--border-gradient, var(--candidate-color, var(--party-other)));
     border-radius: var(--radius-md) 0 0 var(--radius-md);
+    animation: border-slide-left 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .candidate-row.winner::before {
@@ -469,7 +432,8 @@
     font-size: var(--font-size-sm);
     font-weight: 700;
     color: var(--color-text-muted);
-    min-width: 32px;
+    min-width: 48px;
+    padding: 0 var(--space-1);
     text-align: center;
 }
 
@@ -522,6 +486,24 @@
     vertical-align: middle;
 }
 
+.incumbent-pill {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px var(--space-2);
+    background: var(--color-bg-primary);
+    color: var(--color-text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    margin-left: var(--space-2);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    height: 18px;
+    vertical-align: middle;
+}
+
 .candidate-votes {
     text-align: right;
     min-width: 80px;
@@ -553,24 +535,29 @@
     animation: animate-width 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Stagger candidate bars */
-.candidate-row:nth-child(2) .vote-bar {
+/* Stagger candidate bars and row borders */
+.candidate-row:nth-child(2) .vote-bar,
+.candidate-row:nth-child(2)::before {
     animation-delay: 0.1s;
 }
 
-.candidate-row:nth-child(3) .vote-bar {
+.candidate-row:nth-child(3) .vote-bar,
+.candidate-row:nth-child(3)::before {
     animation-delay: 0.15s;
 }
 
-.candidate-row:nth-child(4) .vote-bar {
+.candidate-row:nth-child(4) .vote-bar,
+.candidate-row:nth-child(4)::before {
     animation-delay: 0.2s;
 }
 
-.candidate-row:nth-child(5) .vote-bar {
+.candidate-row:nth-child(5) .vote-bar,
+.candidate-row:nth-child(5)::before {
     animation-delay: 0.25s;
 }
 
-.candidate-row:nth-child(n+6) .vote-bar {
+.candidate-row:nth-child(n+6) .vote-bar,
+.candidate-row:nth-child(n+6)::before {
     animation-delay: 0.3s;
 }
 
@@ -590,6 +577,18 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes border-slide-left {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 

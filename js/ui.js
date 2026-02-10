@@ -379,30 +379,40 @@ const UIModule = (function () {
         // Render Election History (All Years)
         const histEl = document.getElementById('election-history');
         if (histEl) {
-            histEl.innerHTML = history.length ? history.map(h =>
-                `<div class="election-card" style="--party-color:${DataModule.getPartyColor(h.winner.party)}">
-                    <div class="election-year">${h.year}</div>
-                    <div class="election-details">
-                        <span class="winner-name">${h.winner.name}</span>
-                        <span class="winner-party" style="background:${DataModule.getPartyColor(h.winner.party)}">${h.winner.party}</span>
-                        <span class="election-margin">Margin: ${h.margin?.toLocaleString() || 'N/A'}</span>
-                        <span class="election-turnout">Turnout: ${h.turnout || 'N/A'}%</span>
+            const historyTitle = document.querySelector('.history-section .section-title');
+            if (historyTitle) {
+                historyTitle.innerHTML = `Election History <span class="section-subtitle">Winner's Margin / %</span>`;
+            }
+            histEl.innerHTML = history.length ? history.map(h => {
+                const partyColor = DataModule.getPartyColor(h.winner.party);
+                const borderGradient = DataModule.getPartyBorderGradient(h.winner.party);
+                const partyLogo = DataModule.getPartyLogo(h.winner.party);
+
+                return `<div class="candidate-row winner" style="--candidate-color:${partyColor};--border-gradient:${borderGradient}">
+                    <span class="candidate-rank">${h.year}</span>
+                    <div class="candidate-logo-box">
+                        <img src="${partyLogo}" alt="${h.winner.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
                     </div>
-                </div>`
-            ).join('') : '<p class="no-data">No data</p>';
+                    <div class="candidate-info">
+                        <div class="candidate-name">${h.winner.name}</div>
+                        <span class="candidate-party" style="background:${partyColor};color:white">
+                            <span class="party-name">${h.winner.party}</span>
+                        </span>
+                        ${h.winner.incumbent ? '<span class="incumbent-pill">Incumbent</span>' : ''}
+                    </div>
+                    <div class="candidate-votes">
+                        <div class="candidate-vote-count">${h.margin?.toLocaleString() || '0'}</div>
+                        <div class="candidate-vote-share" style="color: ${Helpers.getMarginColor(h.margin_percent)}">
+                            ${h.margin_percent?.toFixed(1) || '0'}%
+                        </div>
+                    </div>
+                </div>`;
+            }).join('') : '<p class="no-data">No data</p>';
         }
 
         // Handle electors as an object (year-specific) or a single number
         // Initial update of election results and voters for the current year
         updateOverlayElectionResults(id, currentOverlayElectionYear);
-
-        const winEl = document.getElementById('winners-list');
-        winEl.innerHTML = history.length ? history.map(h =>
-            `<div class="winner-row">
-                <span class="winner-year-badge">${h.year}</span>
-                <div class="winner-info"><span class="name">${h.winner.name}</span><span class="party">${h.winner.party}</span></div>
-            </div>`
-        ).join('') : '<p class="no-data">No data</p>';
 
         overlay.classList.remove('hidden');
     }
@@ -600,6 +610,10 @@ const UIModule = (function () {
 
         // Fetch and display results
         const candidatesEl = document.getElementById('candidates-table');
+        const resultsTitle = document.querySelector('.candidates-section .section-title');
+        if (resultsTitle) {
+            resultsTitle.innerHTML = `Election Results <span class="section-subtitle">Votes / Share %</span>`;
+        }
         candidatesEl.innerHTML = '<div class="loading-spinner" style="margin:20px auto;"></div>'; // Inline loading
 
         try {
@@ -625,27 +639,10 @@ const UIModule = (function () {
 
                 candidatesEl.innerHTML = voteShareBarHTML + electionResults.candidates.map((c, i) => {
                     const partyColor = DataModule.getPartyColor(c.party);
-                    const partyFlagColors = DataModule.getPartyFlagColors(c.party);
+                    const borderGradient = DataModule.getPartyBorderGradient(c.party);
                     const partyLogo = DataModule.getPartyLogo(c.party);
                     const votePercent = maxVotes > 0 ? ((c.votes || 0) / maxVotes * 100) : 0;
                     const isWinner = i === 0;
-
-                    // Create gradient for multi-colored border
-                    let borderGradient;
-                    if (partyFlagColors.length === 1) {
-                        borderGradient = partyFlagColors[0];
-                    } else if (partyFlagColors.length === 2) {
-                        borderGradient = `linear-gradient(to bottom, ${partyFlagColors[0]} 50%, ${partyFlagColors[1]} 50%)`;
-                    } else if (partyFlagColors.length === 3) {
-                        borderGradient = `linear-gradient(to bottom, ${partyFlagColors[0]} 33.33%, ${partyFlagColors[1]} 33.33%, ${partyFlagColors[1]} 66.66%, ${partyFlagColors[2]} 66.66%)`;
-                    } else {
-                        // For more than 3 colors, distribute evenly
-                        const step = 100 / partyFlagColors.length;
-                        const stops = partyFlagColors.map((color, idx) =>
-                            `${color} ${idx * step}%, ${color} ${(idx + 1) * step}%`
-                        ).join(', ');
-                        borderGradient = `linear-gradient(to bottom, ${stops})`;
-                    }
 
                     return `<div class="candidate-row ${isWinner ? 'winner' : ''}" style="--candidate-color:${partyColor};--border-gradient:${borderGradient}">
                         <span class="candidate-rank">${i + 1}</span>
@@ -657,6 +654,7 @@ const UIModule = (function () {
                             <span class="candidate-party" style="background:${partyColor};color:white">
                                 <span class="party-name">${c.party}</span>
                             </span>
+                            ${c.incumbent ? '<span class="incumbent-pill">Incumbent</span>' : ''}
                         </div>
                         <div class="candidate-votes">
                             <div class="candidate-vote-count">${(c.votes || 0).toLocaleString()}</div>

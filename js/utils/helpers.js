@@ -76,5 +76,20 @@ const Helpers = {
             if (aVal > bVal) return ascending ? 1 : -1;
             return 0;
         });
+    },
+
+    /**
+     * Get a color based on margin percentage (Red for close, Green for wide)
+     * @param {number} percent - Margin percentage
+     * @returns {string} HSL color string
+     */
+    getMarginColor(percent) {
+        if (percent === null || percent === undefined) return 'var(--color-text-muted)';
+
+        // Scale: 0% -> Red (0 deg), 20%+ -> Green (140 deg)
+        // We use HSL for smooth transition
+        const hue = Math.min(percent * 7, 140);
+        // Saturation 80%, Lightness 60% for vibrant but readable colors on dark theme
+        return `hsl(${hue}, 80%, 60%)`;
     }
 };
