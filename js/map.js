@@ -39,11 +39,21 @@ const MapModule = (function () {
             attributionControl: false
         });
 
-        // Add tile layer (dark theme, NO labels)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+        // Add tile layer — theme-aware via ThemeManager
+        const tileUrl = (typeof ThemeManager !== 'undefined')
+            ? ThemeManager.getTileUrl()
+            : 'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png';
+
+        const baseTile = L.tileLayer(tileUrl, {
             subdomains: 'abcd',
             maxZoom: 19
         }).addTo(map);
+
+        // Register with ThemeManager so it can swap tiles on toggle
+        if (typeof ThemeManager !== 'undefined') {
+            ThemeManager.registerTileLayer(baseTile);
+            ThemeManager.registerMap(map);
+        }
 
         // Listen for zoom changes
         map.on('zoomend', handleZoomChange);
@@ -148,8 +158,11 @@ const MapModule = (function () {
             }
         }
 
+        const isDark = typeof ThemeManager === 'undefined' ||
+            ThemeManager.getCurrent() === 'dark';
+
         return {
-            color: '#ffffff',
+            color: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.5)',
             weight: 1,
             opacity: visible ? 0.6 : 0,
             fillColor: fillColor,
@@ -460,6 +473,28 @@ const MapModule = (function () {
         }
     }
 
+    /** Called by ThemeManager after a theme change to refresh GeoJSON border colours */
+    function _redrawStyles() {
+        if (constituencyLayer) {
+            constituencyLayer.setStyle(feature => getConstituencyStyle(feature, true));
+        }
+        // Re-apply selected highlight
+        if (selectedConstituency && constituencyLayer) {
+            const isDark = typeof ThemeManager === 'undefined' ||
+                ThemeManager.getCurrent() === 'dark';
+            constituencyLayer.eachLayer(layer => {
+                if (layer._constituencyId == selectedConstituency) {
+                    layer.setStyle({
+                        weight: 4,
+                        color: isDark ? '#ffffff' : '#0f172a',
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    });
+                }
+            });
+        }
+    }
+
     // Public API
     return {
         init,
@@ -470,6 +505,7 @@ const MapModule = (function () {
         resetToOverview,
         setElectionYear,
         getMap,
-        invalidateSize
+        invalidateSize,
+        _redrawStyles
     };
 })();

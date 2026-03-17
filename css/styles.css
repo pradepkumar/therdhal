@@ -16,6 +16,7 @@
 @import url('components/overlay.css');
 @import url('components/buttons.css');
 @import url('components/loading.css');
+@import url('components/theme.css');
 
 /* Utilities */
 @import url('utilities/helpers.css');

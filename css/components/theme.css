@@ -1,0 +1,144 @@
+/* ========================================
+   Theme Toggle Button & Transitions
+   ======================================== */
+
+/* ── Global theme transition ── */
+*,
+*::before,
+*::after {
+    transition: background-color 0.3s ease, color 0.3s ease,
+                border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Exclude elements where animation transitions would look wrong */
+.leaflet-control-zoom a,
+.vote-bar,
+.vote-share-segment,
+.candidate-row::before,
+.loading-spinner {
+    transition: none;
+}
+
+/* ── Header button group (theme + filter buttons side-by-side) ── */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-shrink: 0;
+}
+
+/* ── Theme Toggle Button ── */
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#theme-toggle:hover {
+    background: var(--color-bg-glass);
+    border-color: var(--color-accent-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+#theme-toggle:active {
+    transform: translateY(0);
+}
+
+/* Icon wrappers inside the toggle */
+.theme-sun,
+.theme-moon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+}
+
+/* ── Light mode overrides for components that use hard-coded rgba borders ── */
+[data-theme="light"] .app-header {
+    border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .header-toggle-btn {
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .filter-select,
+[data-theme="light"] .search-input {
+    border-color: var(--color-border);
+    background-image: var(--select-arrow);
+}
+
+[data-theme="light"] .search-results-dropdown {
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .search-result-item {
+    border-bottom-color: var(--color-border-subtle);
+}
+
+[data-theme="light"] .header-navigation {
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .header-nav-btn.prev {
+    border-right-color: var(--color-border);
+}
+
+[data-theme="light"] .overlay-close {
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .overlay-header {
+    border-bottom-color: var(--color-border-subtle);
+}
+
+[data-theme="light"] .year-control {
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .year-dropdown-menu {
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .legend {
+    border-color: var(--color-border);
+}
+
+[data-theme="light"] .alliance-header {
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="light"] .alliance-seats {
+    background: var(--color-bg-tertiary);
+}
+
+[data-theme="light"] .leaflet-control-zoom a {
+    border-color: var(--color-border) !important;
+    background: var(--color-bg-secondary) !important;
+    color: var(--color-text-primary) !important;
+}
+
+/* District/Constituency label text shadow for readability in light mode */
+[data-theme="light"] .district-label,
+[data-theme="light"] .constituency-label {
+    text-shadow: var(--label-shadow);
+    color: #0f172a;
+}
+
+/* Legend toggle hover */
+[data-theme="light"] .legend-toggle:hover {
+    background: var(--color-bg-tertiary);
+}

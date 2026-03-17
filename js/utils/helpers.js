@@ -86,10 +86,15 @@ const Helpers = {
     getMarginColor(percent) {
         if (percent === null || percent === undefined) return 'var(--color-text-muted)';
 
-        // Scale: 0% -> Red (0 deg), 20%+ -> Green (140 deg)
-        // We use HSL for smooth transition
+        // Scale: 0% -> Red (hue 0), 20%+ -> Green (hue 140)
         const hue = Math.min(percent * 7, 140);
-        // Saturation 80%, Lightness 60% for vibrant but readable colors on dark theme
-        return `hsl(${hue}, 80%, 60%)`;
+
+        // Adjust lightness for readability: dark mode needs brighter (60%),
+        // light mode needs darker (42%) so the same hue scale stays legible.
+        const isLight = typeof ThemeManager !== 'undefined' &&
+            ThemeManager.getCurrent() === 'light';
+        const lightness = isLight ? 42 : 60;
+
+        return `hsl(${hue}, 80%, ${lightness}%)`;
     }
 };

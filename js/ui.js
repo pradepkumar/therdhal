@@ -395,14 +395,13 @@ const UIModule = (function () {
                     </div>
                     <div class="candidate-info">
                         <div class="candidate-name">${h.winner.name}</div>
-                        <span class="candidate-party" style="background:${partyColor};color:white">
-                            <span class="party-name">${h.winner.party}</span>
+                        <span class="candidate-party" style="background:${partyColor};color:white"${h.winner.incumbent ? ' title="Incumbent"' : ''}>
+                            <span class="party-name">${h.winner.party}</span>${h.winner.incumbent ? '<span class="incumbent-star" aria-label="Incumbent">★</span>' : ''}
                         </span>
-                        ${h.winner.incumbent ? '<span class="incumbent-pill">Incumbent</span>' : ''}
                     </div>
                     <div class="candidate-votes">
                         <div class="candidate-vote-count">${h.margin?.toLocaleString() || '0'}</div>
-                        <div class="candidate-vote-share" style="color: ${Helpers.getMarginColor(h.margin_percent)}">
+                        <div class="candidate-vote-share" data-margin="${h.margin_percent ?? ''}" style="color: ${Helpers.getMarginColor(h.margin_percent)}">
                             ${h.margin_percent?.toFixed(1) || '0'}%
                         </div>
                     </div>
@@ -651,10 +650,9 @@ const UIModule = (function () {
                         </div>
                         <div class="candidate-info">
                             <div class="candidate-name">${c.name}</div>
-                            <span class="candidate-party" style="background:${partyColor};color:white">
-                                <span class="party-name">${c.party}</span>
+                            <span class="candidate-party" style="background:${partyColor};color:white"${c.incumbent ? ' title="Incumbent"' : ''}>
+                                <span class="party-name">${c.party}</span>${c.incumbent ? '<span class="incumbent-star" aria-label="Incumbent">★</span>' : ''}
                             </span>
-                            ${c.incumbent ? '<span class="incumbent-pill">Incumbent</span>' : ''}
                         </div>
                         <div class="candidate-votes">
                             <div class="candidate-vote-count">${(c.votes || 0).toLocaleString()}</div>
