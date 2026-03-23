@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tamil Nadu 2026 Assembly Elections - Key dates, timeline, alliance news and countdown for the upcoming election.">
+    <meta name="keywords" content="Tamil Nadu, 2026 Elections, Assembly, TN Elections, DMK, AIADMK, Election Schedule">
+    <meta name="theme-color" content="#1a1a2e">
+
+    <title>TN Elections 2026 | Tamil Nadu Assembly Elections</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared App CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Elections 2026 Page CSS -->
+    <link rel="stylesheet" href="css/components/elections-2026.css">
+
+    <!-- Apply saved theme BEFORE first paint to prevent flash -->
+    <script>
+        (function () {
+            var t = localStorage.getItem('tn-map-theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+            /* Fix: reset.css sets html/body to height:100% + overflow:hidden for the map page.
+               Override those for this standalone page so normal scrolling works. */
+            document.documentElement.style.height = 'auto';
+            document.documentElement.style.overflow = 'auto';
+        })();
+    </script>
+</head>
+
+<body class="elections-page">
+
+    <!-- Page Header -->
+    <header class="elections-header">
+        <div class="elections-header-inner">
+            <a href="index.html" id="back-to-map" class="back-to-map-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span>Back to Map</span>
+            </a>
+
+            <div class="elections-branding">
+                <div class="elections-badge">LIVE</div>
+                <h1 class="elections-title">
+                    <span class="title-en">TN Elections 2026</span>
+                    <span class="title-ta">தேர்தல் 2026</span>
+                </h1>
+                <p class="elections-subtitle">Tamil Nadu Legislative Assembly Elections</p>
+            </div>
+
+            <button id="elections-theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                <span class="theme-sun">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </span>
+                <span class="theme-moon" style="display:none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="elections-main">
+
+        <!-- Countdown Bar — Polling Day Only -->
+        <div class="epg-bar" id="epg-countdown-bar" aria-label="Days to polling day">
+            <span class="epg-bar-label">Polling Day — Apr 23, 2026</span>
+            <div class="epg-bar-timer" id="epg-timer">
+                <span class="epg-unit"><span class="epg-num" id="epg-days">--</span><span class="epg-lbl">d</span></span>
+                <span class="epg-sep">:</span>
+                <span class="epg-unit"><span class="epg-num" id="epg-hours">--</span><span class="epg-lbl">h</span></span>
+                <span class="epg-sep">:</span>
+                <span class="epg-unit"><span class="epg-num" id="epg-mins">--</span><span class="epg-lbl">m</span></span>
+                <span class="epg-sep">:</span>
+                <span class="epg-unit"><span class="epg-num" id="epg-secs">--</span><span class="epg-lbl">s</span></span>
+            </div>
+            <span class="epg-bar-cta" id="epg-bar-state"></span>
+        </div>
+
+        <!-- Compact Horizontal Stepper -->
+        <section class="epg-stepper-section" aria-label="Election schedule stages">
+            <div class="epg-stepper" id="epg-stepper">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Tab Navigation -->
+        <nav class="epg-tabs">
+            <button class="epg-tab-btn active" data-tab="updates">Updates</button>
+            <button class="epg-tab-btn" data-tab="news">News</button>
+            <button class="epg-tab-btn" data-tab="alliances">Alliances</button>
+            <button class="epg-tab-btn" data-tab="candidates">Candidates</button>
+            <button class="epg-tab-btn" data-tab="stars">Star Picks</button>
+        </nav>
+
+        <!-- Tab Panels -->
+        <div id="epg-tab-updates" class="epg-tab-panel active">
+            <section class="epg-news-section" aria-label="Latest election news">
+                <div class="epg-news-header">
+                    <h2 class="epg-news-title">Latest Updates</h2>
+                    <span class="epg-news-count">5 items</span>
+                </div>
+                <div class="epg-news-feed" id="emodal-news">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+        </div>
+
+        <div id="epg-tab-news" class="epg-tab-panel">
+            <!-- Populated by JS -->
+        </div>
+
+        <div id="epg-tab-alliances" class="epg-tab-panel">
+            <!-- Populated by JS -->
+        </div>
+
+        <div id="epg-tab-candidates" class="epg-tab-panel">
+            <!-- Populated by JS -->
+        </div>
+
+        <div id="epg-tab-stars" class="epg-tab-panel">
+            <!-- Populated by JS -->
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="elections-footer">
+        <p>Data sourced from Election Commission of India &amp; Tamil Nadu Chief Electoral Officer. Last updated: <span id="last-updated">March 16, 2026</span>.</p>
+        <p><a href="index.html">← Back to TN Election Map</a></p>
+    </footer>
+
+    <script src="js/elections-2026-data.js"></script>
+    <script src="js/elections-2026.js"></script>
+</body>
+
+</html>

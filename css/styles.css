@@ -17,6 +17,7 @@
 @import url('components/buttons.css');
 @import url('components/loading.css');
 @import url('components/theme.css');
+@import url('components/elections-2026.css');
 
 /* Utilities */
 @import url('utilities/helpers.css');

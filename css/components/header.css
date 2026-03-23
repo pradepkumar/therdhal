@@ -84,3 +84,80 @@
         margin: 0 auto;
     }
 }
+
+/* ── Elections 2026 Nav Button ── */
+.elections-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--color-accent-gradient);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    min-height: 40px;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.elections-nav-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.elections-nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
+}
+
+.elections-nav-btn:hover::before {
+    opacity: 1;
+}
+
+.elections-nav-btn:active {
+    transform: translateY(0);
+}
+
+.elections-nav-btn span:not(.elections-live-dot) {
+    display: none;
+}
+
+/* Pulsing LIVE dot */
+.elections-live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    flex-shrink: 0;
+    animation: live-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* Show label text from 480px+ */
+@media (min-width: 480px) {
+    .elections-nav-btn span:not(.elections-live-dot) {
+        display: inline;
+    }
+}
+
+/* Header-actions layout */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}

@@ -75,10 +75,13 @@
     border-color: var(--color-border);
 }
 
-[data-theme="light"] .filter-select,
-[data-theme="light"] .search-input {
+[data-theme="light"] .filter-select {
     border-color: var(--color-border);
     background-image: var(--select-arrow);
+}
+
+[data-theme="light"] .search-input {
+    border-color: var(--color-border);
 }
 
 [data-theme="light"] .search-results-dropdown {
