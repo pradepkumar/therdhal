@@ -6,7 +6,7 @@
 .app-title {
     display: flex;
     flex-direction: column;
-    gap: var(--space-1);
+    gap: 1px;
 }
 
 .title-en {
@@ -62,15 +62,21 @@
     font-weight: 500;
 }
 
+.title-subtitle {
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+}
+
 /* Responsive Typography */
 @media (min-width: 1024px) {
-    .app-title {
-        flex-direction: row;
-        align-items: baseline;
-        gap: var(--space-3);
-    }
-
     .title-en {
         font-size: var(--font-size-xl);
+    }
+
+    .title-subtitle {
+        font-size: var(--font-size-sm);
     }
 }
