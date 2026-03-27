@@ -15,6 +15,13 @@ const UIModule = (function () {
     let isUpdatingDistrict = false;  // Flag to prevent recursive updates
     let isUpdatingConstituency = false;  // Flag to prevent recursive updates
     let currentOverlayElectionYear = 2021; // State for overlay year navigation
+    let _overlayPrevFocus = null; // Element to restore focus to when overlay closes
+
+    function _getFocusable(container) {
+        return Array.from(container.querySelectorAll(
+            'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )).filter(el => !el.closest('.hidden'));
+    }
 
     function init() {
         yearFilter = document.getElementById('year-filter');
@@ -23,7 +30,6 @@ const UIModule = (function () {
         backButton = document.getElementById('back-btn');
         legend = document.getElementById('legend');
         loadingOverlay = document.getElementById('loading');
-        overlay = document.getElementById('constituency-overlay');
         overlay = document.getElementById('constituency-overlay');
         overlayClose = document.getElementById('overlay-close');
 
@@ -59,10 +65,21 @@ const UIModule = (function () {
             if (e.target === overlay) hideConstituencyOverlay();
         });
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') hideConstituencyOverlay();
             if (overlay.classList.contains('hidden')) return;
+            if (e.key === 'Escape') { hideConstituencyOverlay(); return; }
             if (e.key === 'ArrowRight') navigateToNext();
             if (e.key === 'ArrowLeft') navigateToPrev();
+            if (e.key === 'Tab') {
+                const focusable = _getFocusable(overlay);
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey) {
+                    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+                } else {
+                    if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+                }
+            }
         });
 
         // Navigation buttons
@@ -414,12 +431,21 @@ const UIModule = (function () {
         updateOverlayElectionResults(id, currentOverlayElectionYear);
 
         overlay.classList.remove('hidden');
+        _overlayPrevFocus = document.activeElement;
+        // Move focus into dialog — close button is the first logical target
+        const closeBtn = overlay.querySelector('#overlay-close');
+        if (closeBtn) closeBtn.focus();
     }
 
     function hideConstituencyOverlay() {
         overlay.classList.add('hidden');
         document.body.classList.remove('overlay-open');
         currentConstituencyId = null;
+        // Restore focus to the element that triggered the overlay
+        if (_overlayPrevFocus && typeof _overlayPrevFocus.focus === 'function') {
+            _overlayPrevFocus.focus();
+        }
+        _overlayPrevFocus = null;
     }
 
     function handleSwipe() {

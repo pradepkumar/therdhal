@@ -42,7 +42,7 @@
 .filter-select {
     appearance: none;
     background: var(--color-bg-tertiary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     color: var(--color-text-primary);
     font-family: var(--font-primary);
@@ -60,8 +60,9 @@
     border-color: var(--color-accent-primary);
 }
 
-.filter-select:focus {
-    outline: none;
+.filter-select:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
     border-color: var(--color-accent-primary);
     box-shadow: var(--shadow-glow);
 }
@@ -81,7 +82,7 @@
     width: 100%;
     appearance: none;
     background: var(--color-bg-tertiary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     color: var(--color-text-primary);
     font-family: var(--font-primary);
@@ -95,8 +96,9 @@
     border-color: var(--color-accent-primary);
 }
 
-.search-input:focus {
-    outline: none;
+.search-input:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
     border-color: var(--color-accent-primary);
     box-shadow: var(--shadow-glow);
 }
@@ -107,7 +109,7 @@
     left: 0;
     right: 0;
     background: var(--color-bg-secondary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     margin-top: var(--space-1);
     max-height: 300px;

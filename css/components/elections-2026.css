@@ -47,7 +47,7 @@
     }
 
     .elections-modal-panel {
-        width: 440px;
+        width: min(440px, calc(100vw - var(--space-8)));
         max-height: calc(100vh - 32px);
         border-radius: var(--radius-xl);
     }
@@ -58,7 +58,7 @@
 }
 
 @media (min-width: 1024px) {
-    .elections-modal-panel { width: 480px; }
+    .elections-modal-panel { width: min(480px, calc(100vw - var(--space-8))); }
 }
 
 /* ── Modal Header ── */
@@ -83,7 +83,7 @@
 
 .emodal-live-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #ef4444, #dc2626);
+    background: linear-gradient(135deg, var(--color-error), var(--color-error-dark));
     color: #fff;
     font-size: 0.55rem;
     font-weight: 800;
@@ -109,10 +109,7 @@
 .emodal-title {
     font-size: var(--font-size-base);
     font-weight: 800;
-    background: var(--color-accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-accent-primary);
     line-height: 1.2;
 }
 
@@ -131,8 +128,8 @@
 
 .emodal-close {
     flex-shrink: 0;
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,6 +146,11 @@
     color: white;
     border-color: var(--color-error);
     transform: rotate(90deg);
+}
+
+.emodal-close:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
 }
 
 /* ── Scrollable Body ── */
@@ -270,7 +272,7 @@
 
 .ecd-today-banner {
     margin-top: var(--space-4);
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: linear-gradient(135deg, var(--color-success), var(--color-success-dark));
     color: white;
     font-weight: 700;
     font-size: var(--font-size-sm);
@@ -306,10 +308,7 @@
 .emodal-stat-num {
     font-size: var(--font-size-base);
     font-weight: 800;
-    background: var(--color-accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-accent-primary);
     line-height: 1.2;
 }
 
@@ -392,7 +391,7 @@
 }
 
 .etl-dot-marker.past     { background: var(--color-text-muted); }
-.etl-dot-marker.today    { background: #10b981; box-shadow: 0 0 0 3px rgba(16,185,129,0.25); animation: etl-pulse-today 2s ease-in-out infinite; }
+.etl-dot-marker.today    { background: var(--color-success); box-shadow: 0 0 0 3px rgba(16,185,129,0.25); animation: etl-pulse-today 2s ease-in-out infinite; }
 .etl-dot-marker.next     { background: var(--color-accent-primary); box-shadow: 0 0 0 3px rgba(99,102,241,0.25); animation: etl-pulse-next 2.5s ease-in-out infinite; }
 .etl-dot-marker.upcoming { background: var(--color-bg-tertiary); border-color: var(--color-border); }
 
@@ -420,7 +419,7 @@
 }
 
 .etl-item.is-today .etl-card {
-    border-color: #10b981;
+    border-color: var(--color-success);
     background: linear-gradient(135deg, rgba(16,185,129,0.08), var(--color-bg-tertiary));
     box-shadow: 0 0 12px rgba(16,185,129,0.12);
 }
@@ -465,7 +464,7 @@
 }
 
 .etl-badge.past     { background: rgba(107,107,138,0.2); color: var(--color-text-muted); }
-.etl-badge.today    { background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3); }
+.etl-badge.today    { background: rgba(16,185,129,0.15); color: var(--color-success); border: 1px solid rgba(16,185,129,0.3); }
 .etl-badge.next     { background: rgba(99,102,241,0.15); color: var(--color-accent-primary); border: 1px solid rgba(99,102,241,0.3); }
 .etl-badge.upcoming { background: var(--color-bg-secondary); color: var(--color-text-muted); }
 
@@ -480,7 +479,7 @@
     display: inline-block;
 }
 
-.etl-status.today-tag   { background: rgba(16,185,129,0.15); color: #10b981; }
+.etl-status.today-tag   { background: rgba(16,185,129,0.15); color: var(--color-success); }
 .etl-status.next-tag    { background: rgba(99,102,241,0.15); color: var(--color-accent-primary); }
 .etl-status.past-tag    { background: rgba(107,107,138,0.15); color: var(--color-text-muted); }
 
@@ -513,7 +512,7 @@
 }
 
 .etl-dot.past     { background: var(--color-text-muted); }
-.etl-dot.today    { background: #10b981; }
+.etl-dot.today    { background: var(--color-success); }
 .etl-dot.next     { background: var(--color-accent-primary); }
 .etl-dot.upcoming { background: var(--color-bg-tertiary); outline: 1px solid var(--color-border); }
 
@@ -614,9 +613,7 @@ body.elections-page {
     position: sticky;
     top: 0;
     z-index: var(--z-controls);
-    background: linear-gradient(180deg, var(--color-bg-primary) 0%, rgba(15,15,26,0.95) 100%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: var(--color-bg-secondary);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -678,6 +675,12 @@ body.elections-page {
     background: var(--color-bg-tertiary);
 }
 
+.back-to-map-btn:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-md);
+}
+
 .elections-branding {
     display: flex;
     flex-direction: column;
@@ -688,7 +691,7 @@ body.elections-page {
 
 .elections-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    background: linear-gradient(135deg, var(--color-error) 0%, var(--color-error-dark) 100%);
     color: #fff;
     font-size: 0.6rem;
     font-weight: 800;
@@ -706,10 +709,7 @@ body.elections-page {
     justify-content: center;
     font-size: var(--font-size-lg);
     font-weight: 800;
-    background: var(--color-accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text-primary);
     text-decoration: none;
 }
 
@@ -722,8 +722,6 @@ body.elections-page {
     font-size: var(--font-size-sm);
     font-weight: 700;
     color: var(--color-text-muted);
-    -webkit-text-fill-color: var(--color-text-muted);
-    background: none;
 }
 
 .elections-subtitle {
@@ -734,8 +732,8 @@ body.elections-page {
 
 .theme-toggle-btn {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -752,6 +750,11 @@ body.elections-page {
     border-color: var(--color-accent-primary);
     color: var(--color-accent-primary);
     background: var(--color-bg-tertiary);
+}
+
+.theme-toggle-btn:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
 }
 
 .theme-sun, .theme-moon {
@@ -836,7 +839,7 @@ body.elections-page {
 }
 
 .epg-bar-today {
-    color: #10b981;
+    color: var(--color-success);
     animation: epg-glow-green 2s ease-in-out infinite;
 }
 
@@ -900,7 +903,7 @@ body.elections-page {
 }
 
 .epg-step--today .epg-step-dot {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-dark) 100%);
     border-color: rgba(16,185,129,0.5);
     box-shadow: 0 0 0 6px rgba(16,185,129,0.12), inset 0 0 0 1px rgba(255,255,255,0.1);
     animation: epg-pulse-today 2s ease-in-out infinite;
@@ -944,7 +947,7 @@ body.elections-page {
     opacity: 0.6;
 }
 .epg-step--today .epg-step-label {
-    color: #10b981;
+    color: var(--color-success);
     font-weight: 800;
 }
 .epg-step--next .epg-step-label {
@@ -963,7 +966,7 @@ body.elections-page {
     opacity: 0.5;
 }
 .epg-step--today .epg-step-date {
-    color: #10b981;
+    color: var(--color-success);
     opacity: 0.9;
 }
 .epg-step--next .epg-step-date {
@@ -1140,12 +1143,12 @@ body.elections-page {
 
 .epg-status-confirmed {
     background: rgba(16,185,129,0.15);
-    color: #10b981;
+    color: var(--color-success);
 }
 
 .epg-status-expected {
     background: rgba(245,158,11,0.15);
-    color: #f59e0b;
+    color: var(--color-warning);
 }
 
 .epg-status-tba {

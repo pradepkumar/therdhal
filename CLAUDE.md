@@ -44,25 +44,25 @@ After Feb 2026 refactoring, the JavaScript is organized as follows:
 ```
 js/
 ├── app.js                  # Application initialization (entry point)
-├── data.js                 # Legacy compatibility (original monolithic data module)
 ├── map.js                  # Leaflet map logic (well-structured, not split further)
 ├── ui.js                   # UI components & interactions (well-structured, not split further)
 ├── compat.js               # Compatibility layer exposing DataModule via new modules
-├── core/
-│   └── app.js              # Core initialization logic (placeholder for future)
+├── elections-2026.js       # Standalone 2026 elections page: schedule, countdown, modal logic
+├── elections-2026-data.js  # Evolving 2026 data: alliances, candidates, news (update this file for content changes)
 ├── data/
-│   ├── partyConfig.js      # Party colors, flags, logos (123 lines)
-│   ├── dataLoader.js       # Data loading and caching (142 lines)
-│   └── dataQueries.js      # Query functions for districts, constituencies (147 lines)
+│   ├── partyConfig.js      # Party colors, flags, logos
+│   ├── dataLoader.js       # Data loading and caching
+│   └── dataQueries.js      # Query functions for districts, constituencies
 ├── map/
-│   └── mapCore.js          # Map core initialization (placeholder for future)
+│   └── mapCore.js          # Leaflet map init, state, zoom/bounds configuration
 └── utils/
     ├── constants.js        # Application constants (zoom levels, paths, colors)
     ├── formatters.js       # Number/text formatting utilities
-    └── helpers.js          # General helper functions
+    ├── helpers.js          # General helper functions
+    └── theme.js            # ThemeManager — dark/light mode; MUST load before all other scripts
 ```
 
-**Important**: The refactoring preserved full backward compatibility. `map.js` and `ui.js` were left as-is (already well-structured), and `data.js` was split into smaller modules with a compatibility layer exposing the original `DataModule` interface.
+**Important**: The refactoring preserved full backward compatibility. `map.js` and `ui.js` were left as-is (already well-structured), and the original monolithic `data.js` was split into smaller modules with a compatibility layer (`compat.js`) exposing the original `DataModule` interface.
 
 ### CSS Organization
 
@@ -135,10 +135,11 @@ Use `DataModule.getPartyColor(party)` to retrieve colors programmatically.
 
 ### Key Files to Understand Before Changes
 
-1. **`index.html`**: Script loading order is critical. New utilities must load before data modules, which must load before compatibility layer.
+1. **`index.html`**: Script loading order is critical. `theme.js` must be first; new utilities must load before data modules, which must load before compatibility layer.
 2. **`js/compat.js`**: Exposes `DataModule` global (required by `map.js` and `ui.js`). Changes here affect backward compatibility.
 3. **`css/styles.css`**: Main CSS entry point—all modular CSS must be imported in correct order here.
-4. **`REFACTOR_SUMMARY.md`**: Documents the Feb 2026 refactoring in detail; reference when making structural changes.
+4. **`js/elections-2026-data.js`**: All content for the 2026 elections page (alliances, candidates, news). Edit this for data updates without touching layout logic in `elections-2026.js`.
+5. **`REFACTOR_SUMMARY.md`**: Documents the Feb 2026 refactoring in detail; reference when making structural changes.
 
 ### Common Tasks
 
@@ -165,10 +166,12 @@ Use `DataModule.getPartyColor(party)` to retrieve colors programmatically.
 
 ## Dark/Light Theme Support
 
-The application includes theme switching via localStorage:
-- Default theme determined by system preferences (`prefers-color-scheme`)
-- Theme toggle button in header saves selection to localStorage under key `tn-map-theme`
+Managed by `ThemeManager` in `js/utils/theme.js` (must be the **first** script loaded — prevents tile/color flash on page load):
+- Default theme determined by `prefers-color-scheme`; saved to `localStorage` under key `tn-map-theme`
 - CSS variables adapt to `data-theme` attribute on `<html>` element
+- On theme toggle, also swaps the Leaflet base tile URL (dark/light CartoDB tiles) and calls `MapModule._redrawStyles()` to update GeoJSON border colors
+
+The `elections-2026.html` page uses an inline `<script>` in `<head>` to apply the saved theme before first paint (bypassing the module since it's a standalone page).
 
 When modifying colors or the design system, ensure both light and dark theme variants work.
 
@@ -219,3 +222,25 @@ The current refactored structure prepares for:
 - `TESTING_GUIDE.md`: Manual testing checklist and common issues
 - `docs/PROJECT_CONTEXT.md`: Complete project state, data formats, and known issues
 - `docs/OVERLAY_FEATURES.md`: Constituency overlay UI details
+
+## Design Context
+
+### Users
+**Primary**: Casual Tamil Nadu voters — mobile-first, checking their constituency, candidates, and historical results during election season. Quick lookups dominate; not doing deep research. The product must be scannable and immediately legible to someone mildly curious, possibly on a slow mobile connection.
+
+### Brand Personality
+**Bold, Political, Energetic** — civic tool with attitude. Feels like good political journalism: authoritative but accessible, data-driven but not cold. Interface should feel *alive*, especially during election season.
+
+### Aesthetic Direction
+**Reference**: NYT / Washington Post election maps — editorial clarity, authoritative cartographic style, readable under pressure.
+
+**Anti-references**: Generic SaaS dark mode (cyan + purple glow, glassmorphism), cluttered government portals, sterile data dashboards.
+
+**Key constraint**: The map is the hero. UI elements should feel like editorial annotations, not software panels. Party colors (DMK red, AIADMK green, BJP orange, INC blue) ARE the palette; brand accents (indigo/purple) support chrome only.
+
+### Design Principles
+1. **Map First** — Every design decision defers to the map.
+2. **Party Colors as Identity** — Political colors carry meaning; don't let UI accents compete.
+3. **Mobile-First Legibility** — Primary users are on phones; 375px screen at arm's length.
+4. **Bold Typography over Decoration** — Weight/size contrast creates energy; data speaks for itself.
+5. **Energetic but Trustworthy** — Bold, credible, exciting — think BBC/Al Jazeera infographics, not entertainment.

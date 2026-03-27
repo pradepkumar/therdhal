@@ -9,8 +9,12 @@
     --color-accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
 
     --color-success: #10b981;
+    --color-success-dark: #059669;
     --color-warning: #f59e0b;
+    --color-warning-dark: #d97706;
+    --color-warning-light: #fbbf24;
     --color-error: #ef4444;
+    --color-error-dark: #dc2626;
 
     /* Party Colors */
     --party-dmk: #e53935;
@@ -23,8 +27,8 @@
     --party-ind: #607d8b;
 
     /* Typography */
-    --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-tamil: 'Noto Sans Tamil', 'Inter', sans-serif;
+    --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-tamil: 'Noto Sans Tamil', 'Plus Jakarta Sans', sans-serif;
 
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
@@ -82,7 +86,7 @@
 
     --color-text-primary: #ffffff;
     --color-text-secondary: #a8a8c0;
-    --color-text-muted: #6b6b8a;
+    --color-text-muted: #9090aa;
 
     --color-border: rgba(255, 255, 255, 0.10);
     --color-border-subtle: rgba(255, 255, 255, 0.05);

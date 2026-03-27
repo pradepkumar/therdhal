@@ -258,9 +258,18 @@ function e2026_stopCountdown() {
 /* ════════════════════════════════════════════════
    MODAL OPEN / CLOSE
    ════════════════════════════════════════════════ */
+let _e2026_prevFocus = null;
+
+function _e2026_getFocusable(container) {
+    return Array.from(container.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    ));
+}
+
 function e2026_openModal() {
     const modal = document.getElementById('elections-modal');
     if (!modal) return;
+    _e2026_prevFocus = document.activeElement;
     modal.classList.remove('hidden');
 
     // Initialize new tab-based modal
@@ -269,7 +278,10 @@ function e2026_openModal() {
     e2026_startPageCountdown();
     e2026_initTabs();
 
-    // Trap focus / keyboard: close on Escape
+    // Focus the close button when modal opens
+    const closeBtn = modal.querySelector('#elections-modal-close');
+    if (closeBtn) closeBtn.focus();
+
     document.addEventListener('keydown', e2026_handleKey);
 }
 
@@ -279,10 +291,27 @@ function e2026_closeModal() {
     modal.classList.add('hidden');
     e2026_stopCountdown();
     document.removeEventListener('keydown', e2026_handleKey);
+    // Restore focus to the trigger element
+    if (_e2026_prevFocus && typeof _e2026_prevFocus.focus === 'function') {
+        _e2026_prevFocus.focus();
+    }
+    _e2026_prevFocus = null;
 }
 
 function e2026_handleKey(e) {
-    if (e.key === 'Escape') e2026_closeModal();
+    if (e.key === 'Escape') { e2026_closeModal(); return; }
+    if (e.key !== 'Tab') return;
+    const modal = document.getElementById('elections-modal');
+    if (!modal) return;
+    const focusable = _e2026_getFocusable(modal);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
 }
 
 /* ════════════════════════════════════════════════

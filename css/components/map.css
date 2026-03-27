@@ -30,7 +30,7 @@
 .leaflet-control-zoom a {
     background: var(--color-bg-secondary) !important;
     color: var(--color-text-primary) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--color-border) !important;
     width: 36px !important;
     height: 36px !important;
     line-height: 36px !important;
@@ -64,17 +64,14 @@
     color: var(--color-text-secondary) !important;
 }
 
-/* Remove focus outline from interactive map elements */
-.leaflet-interactive {
-    outline: none !important;
+/* Suppress click-focus ring on map polygons; keyboard nav is on .leaflet-container */
+.leaflet-interactive:focus:not(:focus-visible) {
+    outline: none;
 }
 
-.leaflet-interactive:focus {
-    outline: none !important;
-}
-
-svg.leaflet-zoom-animated path {
-    outline: none !important;
+.leaflet-interactive:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 1px;
 }
 
 /* District/Constituency Labels */

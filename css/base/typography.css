@@ -11,11 +11,8 @@
 
 .title-en {
     font-size: var(--font-size-lg);
-    font-weight: 700;
-    background: var(--color-accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 800;
+    color: var(--color-text-primary);
 }
 
 .title-ta {
