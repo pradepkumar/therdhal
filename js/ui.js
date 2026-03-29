@@ -12,6 +12,8 @@ const UIModule = (function () {
     let allConstituencies = [];
     let touchStartX = 0;
     let touchEndX = 0;
+    let touchStartY = 0;
+    let touchEndY = 0;
     let isUpdatingDistrict = false;  // Flag to prevent recursive updates
     let isUpdatingConstituency = false;  // Flag to prevent recursive updates
     let currentOverlayElectionYear = 2021; // State for overlay year navigation
@@ -97,10 +99,12 @@ const UIModule = (function () {
         // Swipe support
         overlay.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
         }, { passive: true });
 
         overlay.addEventListener('touchend', (e) => {
             touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
             handleSwipe();
         }, { passive: true });
 
@@ -450,10 +454,13 @@ const UIModule = (function () {
     }
 
     function handleSwipe() {
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
         const swipeThreshold = 50;
-        if (touchEndX < touchStartX - swipeThreshold) {
+        if (Math.abs(deltaX) < Math.abs(deltaY)) return; // vertical scroll, ignore
+        if (deltaX < -swipeThreshold) {
             navigateToNext();
-        } else if (touchEndX > touchStartX + swipeThreshold) {
+        } else if (deltaX > swipeThreshold) {
             navigateToPrev();
         }
     }
