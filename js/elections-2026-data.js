@@ -11,7 +11,16 @@ const ALLIANCES_2026 = [
         shortName: 'SPA',
         color: '#e53935',
         parties: [
-            { name: 'DMK',    seats: 175, logo: 'assets/logos/DMK.png' },
+            { name: 'DMK',    seats: 175, logo: 'assets/logos/DMK.png', subParties: [
+                { name: 'DMK',  seats: 164 },
+                { name: 'MDMK', seats: 3 },
+                { name: 'MMK',  seats: 2 },
+                { name: 'KMDK', seats: 2 },
+                { name: 'MKP',  seats: 1 },
+                { name: 'SDPI', seats: 1 },
+                { name: 'MJK',  seats: 1 },
+                { name: 'TDK',  seats: 1 },
+            ]},
             { name: 'INC',    seats: 28,  logo: 'assets/logos/INC.svg' },
             { name: 'DMDK',   seats: 10,  logo: 'assets/logos/DMDK.png' },
             { name: 'VCK',    seats: 8,   logo: 'assets/logos/VCK.png' },
@@ -26,8 +35,21 @@ const ALLIANCES_2026 = [
         shortName: 'AIADMK',
         color: '#4caf50',
         parties: [
-            { name: 'AIADMK', seats: 171, logo: 'assets/logos/AIADMK.svg' },
-            { name: 'BJP',    seats: 32,  logo: 'assets/logos/BJP.svg' },
+            { name: 'AIADMK', seats: 172, logo: 'assets/logos/AIADMK.svg', subParties: [
+                { name: 'AIADMK', seats: 166 },
+                { name: 'IJK',    seats: 2 },
+                { name: 'PBK',    seats: 1 },
+                { name: 'PNK',    seats: 1 },
+                { name: 'STMK',   seats: 1 },
+                { name: 'TMBSP',  seats: 1 },
+            ]},
+            { name: 'BJP',    seats: 33,  logo: 'assets/logos/BJP.svg', subParties: [
+                { name: 'BJP',  seats: 25 },
+                { name: 'TMC',  seats: 5 },
+                { name: 'PNK',  seats: 1 },
+                { name: 'TMMK', seats: 1 },
+                { name: 'SIFC', seats: 1 },
+            ]},
             { name: 'PMK',    seats: 18,  logo: 'assets/logos/PMK.jpg' },
             { name: 'AMMK',   seats: 11 },
         ]

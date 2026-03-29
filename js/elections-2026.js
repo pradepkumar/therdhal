@@ -420,6 +420,17 @@ function e2026_startPageCountdown() {
 }
 
 
+function e2026_makeLogoHtml(partyName, extraClass) {
+    const logoPath = typeof PartyConfig !== 'undefined'
+        ? PartyConfig.getLogo(partyName)
+        : '';
+    const cls = extraClass ? `epg-party-logo ${extraClass}` : 'epg-party-logo';
+    const phCls = extraClass ? `epg-party-logo-placeholder ${extraClass}` : 'epg-party-logo-placeholder';
+    return logoPath && !logoPath.includes('placeholder')
+        ? `<img src="${logoPath}" alt="${partyName}" class="${cls}" onerror="this.style.display='none'" />`
+        : `<div class="${phCls}"></div>`;
+}
+
 function e2026_renderAlliances() {
     const container = document.getElementById('epg-tab-alliances');
     if (!container || typeof ALLIANCES_2026 === 'undefined') return;
@@ -438,51 +449,107 @@ function e2026_renderAlliances() {
         const card = document.createElement('div');
         card.className = 'epg-alliance-card';
 
-        let partyRowsHtml = alliance.parties.map(party => {
+        // Header
+        const header = document.createElement('div');
+        header.className = 'epg-alliance-header';
+        header.style.borderBottomColor = alliance.color;
+        header.innerHTML = `
+            <div class="epg-alliance-color" style="background-color: ${alliance.color};"></div>
+            <div class="epg-alliance-name">${alliance.name}</div>
+        `;
+        card.appendChild(header);
+
+        // Seat table
+        const table = document.createElement('div');
+        table.className = 'epg-seat-table';
+
+        alliance.parties.forEach(party => {
             const seatNum = party.seats != null ? party.seats : '—';
-            const logoPath = typeof PartyConfig !== 'undefined'
-                ? PartyConfig.getLogo(party.name)
-                : (party.logo || '');
-            const logoHtml = logoPath && !logoPath.includes('placeholder')
-                ? `<img src="${logoPath}" alt="${party.name}" class="epg-party-logo" onerror="this.style.display='none'" />`
-                : `<div class="epg-party-logo-placeholder"></div>`;
-            return `
-                <div class="epg-seat-row">
+
+            if (party.subParties && party.subParties.length > 0) {
+                // Expandable row wrapper
+                const wrapper = document.createElement('div');
+                wrapper.className = 'epg-seat-row-wrapper';
+
+                const row = document.createElement('div');
+                row.className = 'epg-seat-row epg-seat-row--expandable';
+                row.setAttribute('role', 'button');
+                row.setAttribute('aria-expanded', 'false');
+                row.innerHTML = `
                     <div class="epg-party-info">
-                        ${logoHtml}
+                        ${e2026_makeLogoHtml(party.name)}
+                        <div class="epg-party-name">${party.name}</div>
+                    </div>
+                    <div class="epg-seat-count">
+                        <span class="epg-seat-num">${seatNum}</span>
+                        <span class="epg-expand-arrow" aria-hidden="true">▾</span>
+                    </div>
+                `;
+
+                // Sub-parties list
+                const subList = document.createElement('div');
+                subList.className = 'epg-sub-parties';
+
+                party.subParties.forEach(sub => {
+                    const subRow = document.createElement('div');
+                    subRow.className = 'epg-sub-row';
+                    subRow.innerHTML = `
+                        <div class="epg-party-info">
+                            ${e2026_makeLogoHtml(sub.name, 'epg-party-logo--sm')}
+                            <div class="epg-party-name">${sub.name}</div>
+                        </div>
+                        <div class="epg-seat-count">
+                            <span class="epg-seat-num epg-seat-num--sm">${sub.seats}</span>
+                        </div>
+                    `;
+                    subList.appendChild(subRow);
+                });
+
+                row.addEventListener('click', () => {
+                    const expanded = wrapper.classList.toggle('is-expanded');
+                    row.setAttribute('aria-expanded', String(expanded));
+                    row.querySelector('.epg-expand-arrow').textContent = expanded ? '▴' : '▾';
+                });
+
+                wrapper.appendChild(row);
+                wrapper.appendChild(subList);
+                table.appendChild(wrapper);
+            } else {
+                const row = document.createElement('div');
+                row.className = 'epg-seat-row';
+                row.innerHTML = `
+                    <div class="epg-party-info">
+                        ${e2026_makeLogoHtml(party.name)}
                         <div class="epg-party-name">${party.name}</div>
                     </div>
                     <div class="epg-seat-count">
                         <span class="epg-seat-num">${seatNum}</span>
                     </div>
-                </div>
-            `;
-        }).join('');
+                `;
+                table.appendChild(row);
+            }
+        });
 
+        card.appendChild(table);
+
+        // Total
         const totalSeats = alliance.parties.reduce((sum, p) => sum + (p.seats || 0), 0);
         const showTotal = alliance.shortName !== 'Others';
-
-        card.innerHTML = `
-            <div class="epg-alliance-header" style="border-bottom-color: ${alliance.color};">
-                <div class="epg-alliance-color" style="background-color: ${alliance.color};"></div>
-                <div class="epg-alliance-name">${alliance.name}</div>
-            </div>
-            <div class="epg-seat-table">
-                ${partyRowsHtml}
-            </div>
-            ${showTotal ? `
-            <div class="epg-seat-total">
+        if (showTotal) {
+            const total = document.createElement('div');
+            total.className = 'epg-seat-total';
+            total.innerHTML = `
                 <span>Total Seats</span>
                 <span style="color: ${alliance.color};">${totalSeats > 0 ? totalSeats : '—'}</span>
-            </div>` : ''}
-        `;
+            `;
+            card.appendChild(total);
+        }
 
         (alliance.shortName === 'SPA' ? col1 : col2).appendChild(card);
     });
 
     alliancesDiv.appendChild(col1);
     alliancesDiv.appendChild(col2);
-
     container.appendChild(alliancesDiv);
 }
 

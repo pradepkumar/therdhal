@@ -28,7 +28,17 @@ const PartyConfig = {
         'IJK': '#ff6600',
         'KMDK': '#99cc33',
         'IND': '#607d8b',
-        'OTHERS': '#78909c'
+        'OTHERS': '#78909c',
+        'MKP': '#e91e63',
+        'SDPI': '#1b5e20',
+        'MJK': '#f57f17',
+        'TDK': '#4a148c',
+        'PBK': '#880e4f',
+        'PNK': '#01579b',
+        'STMK': '#bf360c',
+        'TMBSP': '#33691e',
+        'TMMK': '#4e342e',
+        'SIFC': '#37474f'
     },
 
     // Party flag colors (array of colors from their official flags)
@@ -55,7 +65,17 @@ const PartyConfig = {
         'IJK': ['#ff6600', '#0000ff'],  // Orange and Blue
         'KMDK': ['#99cc33'],  // Yellow-Green
         'IND': ['#607d8b'],  // Blue Grey
-        'OTHERS': ['#78909c']  // Grey
+        'OTHERS': ['#78909c'],  // Grey
+        'MKP': ['#e91e63'],
+        'SDPI': ['#1b5e20'],
+        'MJK': ['#f57f17'],
+        'TDK': ['#4a148c'],
+        'PBK': ['#880e4f'],
+        'PNK': ['#01579b'],
+        'STMK': ['#bf360c'],
+        'TMBSP': ['#33691e'],
+        'TMMK': ['#4e342e'],
+        'SIFC': ['#37474f']
     },
 
     // Party logos (using placeholder paths - will be updated with actual logos)
@@ -83,7 +103,17 @@ const PartyConfig = {
         'IJK': 'assets/logos/placeholder.svg',
         'KMDK': 'assets/logos/placeholder.svg',
         'IND': 'assets/logos/placeholder.svg',
-        'OTHERS': 'assets/logos/placeholder.svg'
+        'OTHERS': 'assets/logos/placeholder.svg',
+        'MKP': 'assets/logos/placeholder.svg',
+        'SDPI': 'assets/logos/placeholder.svg',
+        'MJK': 'assets/logos/placeholder.svg',
+        'TDK': 'assets/logos/placeholder.svg',
+        'PBK': 'assets/logos/placeholder.svg',
+        'PNK': 'assets/logos/placeholder.svg',
+        'STMK': 'assets/logos/placeholder.svg',
+        'TMBSP': 'assets/logos/placeholder.svg',
+        'TMMK': 'assets/logos/placeholder.svg',
+        'SIFC': 'assets/logos/placeholder.svg'
     },
 
     /**
