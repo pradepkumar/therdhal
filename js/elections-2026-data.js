@@ -7,26 +7,38 @@
 /* ── ALLIANCES & SEAT ALLOCATIONS ── */
 const ALLIANCES_2026 = [
     {
-        name: 'INDIA Bloc (DMK-led)',
-        shortName: 'INDIA',
+        name: 'Secular Progressive Alliance (SPA)',
+        shortName: 'SPA',
         color: '#e53935',
         parties: [
-            { name: 'DMK', seats: null, status: 'tba' },
-            { name: 'INC', seats: null, status: 'tba' },
-            { name: 'VCK', seats: null, status: 'tba' },
-            { name: 'IUML', seats: null, status: 'tba' },
-            { name: 'CPI(M)', seats: null, status: 'tba' },
-            { name: 'CPI', seats: null, status: 'tba' },
+            { name: 'DMK',    seats: 175, logo: 'assets/logos/DMK.png' },
+            { name: 'INC',    seats: 28,  logo: 'assets/logos/INC.svg' },
+            { name: 'DMDK',   seats: 10,  logo: 'assets/logos/DMDK.png' },
+            { name: 'VCK',    seats: 8,   logo: 'assets/logos/VCK.png' },
+            { name: 'CPI(M)', seats: 5,   logo: 'assets/logos/CPIM.png' },
+            { name: 'CPI',    seats: 5,   logo: 'assets/logos/CPI.png' },
+            { name: 'MDMK',   seats: 1 },
+            { name: 'IUML',   seats: 2 },
         ]
     },
     {
-        name: 'NDA (AIADMK + BJP)',
-        shortName: 'NDA',
+        name: 'AIADMK-led Alliance',
+        shortName: 'AIADMK',
         color: '#4caf50',
         parties: [
-            { name: 'AIADMK', seats: null, status: 'tba' },
-            { name: 'BJP', seats: null, status: 'tba' },
-            { name: 'PMK', seats: null, status: 'tba' },
+            { name: 'AIADMK', seats: 171, logo: 'assets/logos/AIADMK.svg' },
+            { name: 'BJP',    seats: 32,  logo: 'assets/logos/BJP.svg' },
+            { name: 'PMK',    seats: 18,  logo: 'assets/logos/PMK.jpg' },
+            { name: 'AMMK',   seats: 11 },
+        ]
+    },
+    {
+        name: 'No Alliance',
+        shortName: 'Others',
+        color: '#78909c',
+        parties: [
+            { name: 'NTK', seats: 234, logo: 'assets/logos/NTK.png' },
+            { name: 'TVK', seats: 234 },
         ]
     }
 ];
@@ -118,7 +130,7 @@ const NEWS_EXTERNAL_2026 = [
     },
     {
         party: 'VCK',
-        logoUrl: 'assets/logos/placeholder.svg',
+        logoUrl: 'assets/logos/VCK.png',
         date: 'Mar 13, 2026',
         title: 'VCK Demands Key Constituencies from DMK',
         description: 'Alliance partner seeks favorable seat distribution for SC/ST strongholds',
@@ -127,7 +139,7 @@ const NEWS_EXTERNAL_2026 = [
     },
     {
         party: 'CPI(M)',
-        logoUrl: 'assets/logos/placeholder.svg',
+        logoUrl: 'assets/logos/CPIM.png',
         date: 'Mar 12, 2026',
         title: 'CPI(M) to Contest 8-10 Seats',
         description: 'INDIA bloc ally announces contest strategy for 2026 assembly elections',

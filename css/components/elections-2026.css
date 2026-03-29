@@ -594,176 +594,6 @@
     font-family: var(--font-primary);
 }
 
-/* ════════════════════════════════════════════════
-   STANDALONE PAGE STYLES
-   elections-2026.html layout, not modal
-   ════════════════════════════════════════════════ */
-
-/* ── Body Override for Standalone Page ── */
-body.elections-page {
-    height: auto;
-    min-height: 100dvh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: block;
-}
-
-/* ── Page Shell Layout ── */
-.elections-header {
-    position: sticky;
-    top: 0;
-    z-index: var(--z-controls);
-    background: var(--color-bg-secondary);
-    border-bottom: 1px solid var(--color-border);
-}
-
-.elections-header-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: var(--space-3) var(--space-4);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-3);
-}
-
-.elections-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: var(--space-5) var(--space-4);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);
-}
-
-.elections-footer {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: var(--space-6) var(--space-4) var(--space-8) var(--space-4);
-    font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
-    border-top: 1px solid var(--color-border);
-    text-align: center;
-    line-height: 1.6;
-}
-
-.elections-footer a {
-    color: var(--color-accent-primary);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-.elections-footer a:hover {
-    text-decoration: underline;
-}
-
-/* ── Header Elements ── */
-.back-to-map-btn {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    transition: color var(--transition-fast);
-    flex-shrink: 0;
-    padding: var(--space-2) var(--space-2);
-    border-radius: var(--radius-md);
-}
-.back-to-map-btn:hover {
-    color: var(--color-accent-primary);
-    background: var(--color-bg-tertiary);
-}
-
-.back-to-map-btn:focus-visible {
-    outline: 2px solid var(--color-accent-primary);
-    outline-offset: 2px;
-    border-radius: var(--radius-md);
-}
-
-.elections-branding {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    flex: 1;
-}
-
-.elections-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--color-error) 0%, var(--color-error-dark) 100%);
-    color: #fff;
-    font-size: 0.6rem;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-    padding: 2px 8px;
-    border-radius: var(--radius-full);
-    width: fit-content;
-    animation: emodal-badge-pulse 2s ease-in-out infinite;
-}
-
-.elections-title {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-2);
-    justify-content: center;
-    font-size: var(--font-size-lg);
-    font-weight: 800;
-    color: var(--color-text-primary);
-    text-decoration: none;
-}
-
-.title-en {
-    font-family: var(--font-primary);
-}
-
-.title-ta {
-    font-family: var(--font-tamil);
-    font-size: var(--font-size-sm);
-    font-weight: 700;
-    color: var(--color-text-muted);
-}
-
-.elections-subtitle {
-    font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
-    margin-top: 2px;
-}
-
-.theme-toggle-btn {
-    flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-bg-tertiary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-full);
-    color: var(--color-text-secondary);
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    padding: 0;
-    font-size: 1rem;
-}
-.theme-toggle-btn:hover {
-    border-color: var(--color-accent-primary);
-    color: var(--color-accent-primary);
-    background: var(--color-bg-tertiary);
-}
-
-.theme-toggle-btn:focus-visible {
-    outline: 2px solid var(--color-accent-primary);
-    outline-offset: 2px;
-}
-
-.theme-sun, .theme-moon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
 
 /* ── Countdown Bar (Slim) ── */
 .epg-bar {
@@ -1033,6 +863,11 @@ body.elections-page {
 }
 
 /* ── Tab Panels ── */
+.epg-tab-panels {
+    min-height: 420px;
+    position: relative;
+}
+
 .epg-tab-panel {
     display: none;
     animation: epg-fade-in 200ms ease-out;
@@ -1042,6 +877,16 @@ body.elections-page {
     display: block;
 }
 
+.epg-coming-soon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-style: italic;
+}
+
 @keyframes epg-fade-in {
     from { opacity: 0; transform: translateY(4px); }
     to { opacity: 1; transform: translateY(0); }
@@ -1049,8 +894,14 @@ body.elections-page {
 
 /* ── Alliances Panel ── */
 .epg-alliances {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    gap: var(--space-4);
+}
+
+.epg-alliances-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-4);
 }
 
@@ -1067,6 +918,7 @@ body.elections-page {
     box-shadow: 0 4px 16px rgba(99,102,241,0.08);
 }
 
+
 .epg-alliance-header {
     display: flex;
     align-items: center;
@@ -1079,6 +931,7 @@ body.elections-page {
 .epg-alliance-color {
     width: 12px;
     height: 12px;
+    min-width: 12px;
     border-radius: 50%;
 }
 
@@ -1102,6 +955,26 @@ body.elections-page {
     padding: var(--space-2) var(--space-2);
     border-radius: var(--radius-md);
     background: var(--color-bg-primary);
+}
+
+.epg-party-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.epg-party-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+}
+
+.epg-party-logo-placeholder {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
 }
 
 .epg-party-name {
@@ -1352,28 +1225,6 @@ body.elections-page {
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-    .elections-header-inner {
-        padding: var(--space-2) var(--space-3);
-        flex-wrap: wrap;
-        gap: var(--space-2);
-    }
-
-    .elections-main {
-        padding: var(--space-4) var(--space-3);
-        gap: var(--space-5);
-    }
-
-    .elections-title {
-        font-size: var(--font-size-base);
-    }
-
-    .title-ta {
-        font-size: 0.7rem;
-    }
-
-    .elections-subtitle {
-        font-size: 0.7rem;
-    }
 
     .epg-bar {
         border-radius: var(--radius-lg);
@@ -1400,7 +1251,7 @@ body.elections-page {
     }
 
     .epg-alliances {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .epg-stars-grid {
@@ -1424,9 +1275,6 @@ body.elections-page {
 }
 
 @media (min-width: 768px) {
-    .elections-main {
-        padding: var(--space-6) var(--space-5);
-    }
 
     .epg-step {
         min-width: 80px;

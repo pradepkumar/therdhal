@@ -26,7 +26,9 @@ const DataModule = {
     getPartyColor: (party) => PartyConfig.getColor(party),
     getPartyFlagColors: (party) => PartyConfig.getFlagColors(party),
     getPartyLogo: (party) => PartyConfig.getLogo(party),
-    getPartyBorderGradient: (party) => PartyConfig.getBorderGradient(party)
+    getPartyBorderGradient: (party) => PartyConfig.getBorderGradient(party),
+    getPartyTextColor: (party) => PartyConfig.getTextColor(party),
+    getPartyTextColorForHex: (hex) => PartyConfig.getTextColorForHex(hex)
 };
 
 // Note: MapModule and UIModule remain as-is in their original files

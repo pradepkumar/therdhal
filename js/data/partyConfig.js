@@ -67,17 +67,18 @@ const PartyConfig = {
         'INC': 'assets/logos/INC.svg',
         'CONGRESS': 'assets/logos/INC.svg',
         'PMK': 'assets/logos/PMK.jpg',
-        'MDMK': 'assets/logos/placeholder.svg',
-        'VCK': 'assets/logos/placeholder.svg',
-        'CPI': 'assets/logos/placeholder.svg',
-        'CPI(M)': 'assets/logos/placeholder.svg',
-        'CPM': 'assets/logos/placeholder.svg',
+        'MDMK': 'assets/logos/MDMK.png',
+        'VCK': 'assets/logos/VCK.png',
+        'CPI': 'assets/logos/CPI.png',
+        'CPI(M)': 'assets/logos/CPIM.png',
+        'CPM': 'assets/logos/CPIM.png',
         'DMDK': 'assets/logos/DMDK.png',
         'TMC': 'assets/logos/placeholder.svg',
-        'AMMK': 'assets/logos/placeholder.svg',
+        'AMMK': 'assets/logos/AMMK.png',
         'NTK': 'assets/logos/NTK.png',
         'MNM': 'assets/logos/MNM.png',
-        'IUML': 'assets/logos/placeholder.svg',
+        'IUML': 'assets/logos/IUML.png',
+        'TVK': 'assets/logos/TVK.png',
         'MMK': 'assets/logos/placeholder.svg',
         'IJK': 'assets/logos/placeholder.svg',
         'KMDK': 'assets/logos/placeholder.svg',
@@ -116,6 +117,33 @@ const PartyConfig = {
         if (!party) return this.logos['OTHERS'];
         const normalized = party.toUpperCase().trim();
         return this.logos[normalized] || this.logos['OTHERS'];
+    },
+
+    /**
+     * Get accessible text color (black or white) for a given party background
+     * @param {string} party - Party name
+     * @returns {string} '#1a1a1a' or '#ffffff'
+     */
+    getTextColor(party) {
+        const bg = this.getColor(party);
+        const r = parseInt(bg.slice(1, 3), 16);
+        const g = parseInt(bg.slice(3, 5), 16);
+        const b = parseInt(bg.slice(5, 7), 16);
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        return luminance > 0.5 ? '#1a1a1a' : '#ffffff';
+    },
+
+    /**
+     * Get accessible text color for an arbitrary hex color
+     * @param {string} hex - Hex color string
+     * @returns {string} '#1a1a1a' or '#ffffff'
+     */
+    getTextColorForHex(hex) {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        return luminance > 0.5 ? '#1a1a1a' : '#ffffff';
     },
 
     /**

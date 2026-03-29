@@ -402,6 +402,7 @@ const UIModule = (function () {
             }
             histEl.innerHTML = history.length ? history.map(h => {
                 const partyColor = DataModule.getPartyColor(h.winner.party);
+                const partyTextColor = DataModule.getPartyTextColor(h.winner.party);
                 const borderGradient = DataModule.getPartyBorderGradient(h.winner.party);
                 const partyLogo = DataModule.getPartyLogo(h.winner.party);
 
@@ -412,7 +413,7 @@ const UIModule = (function () {
                     </div>
                     <div class="candidate-info">
                         <div class="candidate-name">${h.winner.name}</div>
-                        <span class="candidate-party" style="background:${partyColor};color:white"${h.winner.incumbent ? ' title="Incumbent"' : ''}>
+                        <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}"${h.winner.incumbent ? ' title="Incumbent"' : ''}>
                             <span class="party-name">${h.winner.party}</span>${h.winner.incumbent ? '<span class="incumbent-star" aria-label="Incumbent">★</span>' : ''}
                         </span>
                     </div>
@@ -529,7 +530,7 @@ const UIModule = (function () {
         <div class="search-result-item" data-constituency-id="${c.constituencyId}">
             <span class="search-result-name">${c.name}</span>
             <div class="search-result-meta">
-                <span class="search-party-tag" style="background:${DataModule.getPartyColor(c.party)}">${c.party}</span>
+                <span class="search-party-tag" style="background:${DataModule.getPartyColor(c.party)};color:${DataModule.getPartyTextColor(c.party)}">${c.party}</span>
                 <span>${c.constituencyName}</span>
                 <span>(${c.district})</span>
             </div>
@@ -654,9 +655,10 @@ const UIModule = (function () {
                 const voteShareBar = electionResults.candidates.map((c, i) => {
                     const sharePercent = totalVotes > 0 ? ((c.votes || 0) / totalVotes * 100) : 0;
                     const partyColor = DataModule.getPartyColor(c.party);
+                    const labelColor = DataModule.getPartyTextColor(c.party);
                     // Only show labels for top 3 candidates and if segment is large enough
                     const showLabel = i < 3 && sharePercent > 7;
-                    return sharePercent > 0 ? `<div class="vote-share-segment" style="width:${sharePercent}%;background:${partyColor}" title="${c.party}: ${sharePercent.toFixed(1)}%">${showLabel ? `<span class="segment-label">${sharePercent.toFixed(1)}%</span>` : ''}</div>` : '';
+                    return sharePercent > 0 ? `<div class="vote-share-segment" style="width:${sharePercent}%;background:${partyColor}" title="${c.party}: ${sharePercent.toFixed(1)}%">${showLabel ? `<span class="segment-label" style="color:${labelColor}">${sharePercent.toFixed(1)}%</span>` : ''}</div>` : '';
                 }).join('');
 
                 // Insert vote share bar before candidates
@@ -664,6 +666,7 @@ const UIModule = (function () {
 
                 candidatesEl.innerHTML = voteShareBarHTML + electionResults.candidates.map((c, i) => {
                     const partyColor = DataModule.getPartyColor(c.party);
+                    const partyTextColor = DataModule.getPartyTextColor(c.party);
                     const borderGradient = DataModule.getPartyBorderGradient(c.party);
                     const partyLogo = DataModule.getPartyLogo(c.party);
                     const votePercent = maxVotes > 0 ? ((c.votes || 0) / maxVotes * 100) : 0;
@@ -676,7 +679,7 @@ const UIModule = (function () {
                         </div>
                         <div class="candidate-info">
                             <div class="candidate-name">${c.name}</div>
-                            <span class="candidate-party" style="background:${partyColor};color:white"${c.incumbent ? ' title="Incumbent"' : ''}>
+                            <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}"${c.incumbent ? ' title="Incumbent"' : ''}>
                                 <span class="party-name">${c.party}</span>${c.incumbent ? '<span class="incumbent-star" aria-label="Incumbent">★</span>' : ''}
                             </span>
                         </div>

@@ -171,7 +171,6 @@ Managed by `ThemeManager` in `js/utils/theme.js` (must be the **first** script l
 - CSS variables adapt to `data-theme` attribute on `<html>` element
 - On theme toggle, also swaps the Leaflet base tile URL (dark/light CartoDB tiles) and calls `MapModule._redrawStyles()` to update GeoJSON border colors
 
-The `elections-2026.html` page uses an inline `<script>` in `<head>` to apply the saved theme before first paint (bypassing the module since it's a standalone page).
 
 When modifying colors or the design system, ensure both light and dark theme variants work.
 

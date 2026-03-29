@@ -118,16 +118,18 @@
 }
 
 .constituency-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: var(--font-size-xs);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: var(--space-1) var(--space-3);
+    padding: 2px var(--space-2);
     border-radius: var(--radius-full);
     background: var(--color-accent-gradient);
     color: white;
-    margin-bottom: var(--space-2);
+    vertical-align: middle;
+    flex-shrink: 0;
 }
 
 .constituency-badge.sc {
@@ -271,10 +273,10 @@
 .year-control {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
+    gap: var(--space-1);
     background: var(--color-bg-tertiary);
     border-radius: var(--radius-md);
-    padding: var(--space-1);
+    padding: 2px var(--space-1);
     border: 1px solid var(--color-border);
 }
 
@@ -282,8 +284,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 28px;
+    min-height: 28px;
     background: transparent;
     border: none;
     color: var(--color-text-secondary);
@@ -315,11 +317,11 @@
     background: transparent;
     border: none;
     color: var(--color-text-primary);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     font-weight: 600;
-    padding: 0 var(--space-2);
+    padding: 0 var(--space-1);
     cursor: pointer;
-    min-width: 50px;
+    min-width: 38px;
     text-align: center;
 }
 
@@ -406,8 +408,7 @@
 .segment-label {
     font-size: 10px;
     font-weight: 700;
-    color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+
     pointer-events: none;
     animation: fade-in 0.5s ease-out 0.8s both;
 }

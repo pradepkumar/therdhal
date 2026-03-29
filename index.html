@@ -11,6 +11,8 @@
 
     <title>Tamil Nadu Election Companion | Interactive Constituency Map</title>
 
+    <link rel="icon" type="image/png" href="assets/logos/therdhal.png">
+
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
@@ -198,9 +200,11 @@
             </div>
 
             <header class="overlay-header">
-                <div class="constituency-badge" id="constituency-type">General</div>
                 <h2 class="constituency-name" id="constituency-name">
-                    <span class="name-en">Constituency Name</span>
+                    <span class="name-en-row">
+                        <span class="name-en">Constituency Name</span>
+                        <span class="constituency-badge" id="constituency-type">General</span>
+                    </span>
                     <span class="name-ta">தொகுதி பெயர்</span>
                 </h2>
                 <div class="constituency-meta-header">
@@ -327,32 +331,24 @@
 
                 <!-- Tab Navigation (no scroll) -->
                 <nav class="epg-tabs" style="flex-shrink: 0; margin: 0; padding: 0;">
-                    <button class="epg-tab-btn active" data-tab="updates">Updates</button>
-                    <button class="epg-tab-btn" data-tab="news">News</button>
-                    <button class="epg-tab-btn" data-tab="alliances">Alliances</button>
+                    <button class="epg-tab-btn active" data-tab="alliances">Alliances</button>
                     <button class="epg-tab-btn" data-tab="candidates">Candidates</button>
                     <button class="epg-tab-btn" data-tab="stars">Stars</button>
                 </nav>
 
                 <!-- Tab Panels (scrollable content) -->
-                <div id="epg-tab-updates" class="epg-tab-panel active" style="min-height: 0; overflow-y: auto;">
-                    <div class="epg-news-feed" id="emodal-news"></div>
-                </div>
+                <div class="epg-tab-panels">
+                    <div id="epg-tab-alliances" class="epg-tab-panel active" style="min-height: 0; overflow-y: auto;">
+                        <!-- Populated by JS -->
+                    </div>
 
-                <div id="epg-tab-news" class="epg-tab-panel" style="min-height: 0; overflow-y: auto;">
-                    <!-- Populated by JS -->
-                </div>
+                    <div id="epg-tab-candidates" class="epg-tab-panel" style="min-height: 0; overflow-y: auto;">
+                        <!-- Populated by JS -->
+                    </div>
 
-                <div id="epg-tab-alliances" class="epg-tab-panel" style="min-height: 0; overflow-y: auto;">
-                    <!-- Populated by JS -->
-                </div>
-
-                <div id="epg-tab-candidates" class="epg-tab-panel" style="min-height: 0; overflow-y: auto;">
-                    <!-- Populated by JS -->
-                </div>
-
-                <div id="epg-tab-stars" class="epg-tab-panel" style="min-height: 0; overflow-y: auto;">
-                    <!-- Populated by JS -->
+                    <div id="epg-tab-stars" class="epg-tab-panel" style="min-height: 0; overflow-y: auto;">
+                        <!-- Populated by JS -->
+                    </div>
                 </div>
 
             </div><!-- /emodal-body -->
