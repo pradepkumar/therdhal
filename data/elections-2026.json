@@ -1,0 +1,5475 @@
+{
+  "year": 2026,
+  "constituencies": {
+    "1": {
+      "name": "GUMMIDIPUNDI",
+      "district": "TIRUVALLUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Vijayakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Sridhar",
+          "party": "NTK"
+        },
+        {
+          "name": "T.J. Govindarajan",
+          "party": "DMK"
+        },
+        {
+          "name": "V. Sudhakar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "2": {
+      "name": "PONNERI",
+      "district": "TIRUVALLUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "Dr. M S Ravi",
+          "party": "TVK"
+        },
+        {
+          "name": "Rajathi",
+          "party": "NTK"
+        },
+        {
+          "name": "Siruniyam P. Balaraman",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Durai Chandrasekar",
+          "party": "INC"
+        }
+      ]
+    },
+    "3": {
+      "name": "TIRUTTANI",
+      "district": "TIRUVALLUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. Sathyakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Chandran",
+          "party": "NTK"
+        },
+        {
+          "name": "Tiruttani Ko. Ari",
+          "party": "AIADMK"
+        },
+        {
+          "name": "D. Krishnamurthy",
+          "party": "DMDK"
+        }
+      ]
+    },
+    "4": {
+      "name": "THIRUVALLUR",
+      "district": "TIRUVALLUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. Arunkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Senthil Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "V.G. Rajendran",
+          "party": "DMK"
+        },
+        {
+          "name": "B.V. Ramana",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "5": {
+      "name": "POONAMALLEE",
+      "district": "TIRUVALLUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "R. Prakasam",
+          "party": "TVK"
+        },
+        {
+          "name": "Mehala",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Krishnaswamy",
+          "party": "DMK"
+        },
+        {
+          "name": "T.A. Elumalai",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "6": {
+      "name": "AVADI",
+      "district": "TIRUVALLUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Rameshkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Punitha",
+          "party": "NTK"
+        },
+        {
+          "name": "S.M. Nasar",
+          "party": "DMK"
+        },
+        {
+          "name": "M. Rajasimha Mahendra",
+          "party": "BJP"
+        }
+      ]
+    },
+    "7": {
+      "name": "MADURAVOYAL",
+      "district": "TIRUVALLUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "P. Revanth Saran",
+          "party": "TVK"
+        },
+        {
+          "name": "Revathi",
+          "party": "NTK"
+        },
+        {
+          "name": "Karambakkam Ganapathy",
+          "party": "DMK"
+        },
+        {
+          "name": "Pa. Benjamin",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "8": {
+      "name": "AMBATTUR",
+      "district": "TIRUVALLUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Balamurugan",
+          "party": "TVK"
+        },
+        {
+          "name": "Aadhithan",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. A.P. Poornima",
+          "party": "DMK"
+        },
+        {
+          "name": "K.N. Sekar",
+          "party": "PMK"
+        }
+      ]
+    },
+    "9": {
+      "name": "MADAVARAM",
+      "district": "TIRUVALLUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. L. Vijay Prabhu",
+          "party": "TVK"
+        },
+        {
+          "name": "Kruthika Elumalai",
+          "party": "NTK"
+        },
+        {
+          "name": "Madavaram V. Moorthi",
+          "party": "AIADMK"
+        },
+        {
+          "name": "S. Sudharsanam",
+          "party": "DMK"
+        }
+      ]
+    },
+    "10": {
+      "name": "THIRUVOTTIYUR",
+      "district": "TIRUVALLUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Senthilkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Sathya Baskar",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Kuppan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "L Sundarrajan",
+          "party": "CPI(M)"
+        }
+      ]
+    },
+    "11": {
+      "name": "DR. RADHAKRISHNAN NAGAR",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Maria Wilson",
+          "party": "TVK"
+        },
+        {
+          "name": "Vennila Thayumanavan",
+          "party": "NTK"
+        },
+        {
+          "name": "J.J. Ebenezer",
+          "party": "DMK"
+        },
+        {
+          "name": "R. S. Rajesh",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "12": {
+      "name": "PERAMBUR",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C. Joseph Vijay",
+          "party": "TVK",
+          "star_candidate": true,
+          "position": "Party President"
+        },
+        {
+          "name": "Vetrithamizhan",
+          "party": "NTK"
+        },
+        {
+          "name": "R.D. Sekar",
+          "party": "DMK"
+        },
+        {
+          "name": "M Thilagabama",
+          "party": "PMK"
+        }
+      ]
+    },
+    "13": {
+      "name": "KOLATHUR",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V.S. Babu",
+          "party": "TVK"
+        },
+        {
+          "name": "Soundrapandian",
+          "party": "NTK"
+        },
+        {
+          "name": "M.K. Stalin",
+          "party": "DMK",
+          "star_candidate": true,
+          "position": "Chief Minister"
+        },
+        {
+          "name": "P. Santhana Krishnan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "14": {
+      "name": "VILLIVAKKAM",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Adhav Arjuna",
+          "party": "TVK",
+          "star_candidate": true,
+          "position": "Election Campaign General Secretary"
+        },
+        {
+          "name": "Roshini",
+          "party": "NTK"
+        },
+        {
+          "name": "Karthikeyan",
+          "party": "DMK"
+        },
+        {
+          "name": "Adhav Arjuna",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "15": {
+      "name": "THIRU-VI-KA-NAGAR",
+      "district": "CHENNAI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "M R Pallavi",
+          "party": "TVK"
+        },
+        {
+          "name": "Jegadeesh Chander",
+          "party": "NTK"
+        },
+        {
+          "name": "K.S. Ravichandran",
+          "party": "DMK"
+        },
+        {
+          "name": "Porkodi Armstrong",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "16": {
+      "name": "EGMORE",
+      "district": "CHENNAI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "Rajmohan",
+          "party": "TVK"
+        },
+        {
+          "name": "Saranya",
+          "party": "NTK"
+        },
+        {
+          "name": "I. Paranthamen",
+          "party": "DMK"
+        },
+        {
+          "name": "Abishek Rengasamy",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "17": {
+      "name": "ROYAPURAM",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K V Vijayathamu",
+          "party": "TVK"
+        },
+        {
+          "name": "Babumailan",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Idream R. Murthy",
+          "party": "DMK"
+        },
+        {
+          "name": "D. Jayakumar",
+          "party": "AIADMK",
+          "star_candidate": true,
+          "position": "Senior leader, ex-minister"
+        }
+      ]
+    },
+    "18": {
+      "name": "HARBOUR",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Sinora Ashok",
+          "party": "TVK"
+        },
+        {
+          "name": "Rufhkhan Sheriff",
+          "party": "NTK"
+        },
+        {
+          "name": "P.K. Sekar Babu",
+          "party": "DMK"
+        },
+        {
+          "name": "R. Manohar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "19": {
+      "name": "CHEPAUK-THIRUVALLIKENI",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "D. Selvam",
+          "party": "TVK"
+        },
+        {
+          "name": "Ayisha Beham",
+          "party": "NTK"
+        },
+        {
+          "name": "Udhayanidhi Stalin",
+          "party": "DMK",
+          "star_candidate": true,
+          "position": "Deputy Chief Minister"
+        },
+        {
+          "name": "Adhi Rajaram",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "20": {
+      "name": "THOUSAND LIGHTS",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "JCD Prabhakar",
+          "party": "TVK"
+        },
+        {
+          "name": "Kalanjiyam",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Ezhilan Naganathan",
+          "party": "DMK"
+        },
+        {
+          "name": "B. Valarmathi",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "21": {
+      "name": "ANNA NAGAR",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V K Ramkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "C. Shankar",
+          "party": "NTK"
+        },
+        {
+          "name": "M.K. Mohan",
+          "party": "DMK"
+        },
+        {
+          "name": "Gokula Indira",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "22": {
+      "name": "VIRUGAMPAKKAM",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Sabarinathan",
+          "party": "TVK"
+        },
+        {
+          "name": "Santhosh",
+          "party": "NTK"
+        },
+        {
+          "name": "Prabhakar Raja",
+          "party": "DMK"
+        },
+        {
+          "name": "V. N. Ravi",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "23": {
+      "name": "SAIDAPET",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Arulprakasham",
+          "party": "TVK"
+        },
+        {
+          "name": "Srividhya",
+          "party": "NTK"
+        },
+        {
+          "name": "Ma. Subramanian",
+          "party": "DMK"
+        },
+        {
+          "name": "G. Senthamizhan",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "24": {
+      "name": "THEAYAGARAYA NAGAR",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Bussy N Anand",
+          "party": "TVK",
+          "star_candidate": true,
+          "position": "Senior Leader"
+        },
+        {
+          "name": "Anusha Vijayakumar",
+          "party": "NTK"
+        },
+        {
+          "name": "Raja Anbazhagan",
+          "party": "DMK"
+        },
+        {
+          "name": "B. Sathyanarayanan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "25": {
+      "name": "MYLAPORE",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Venkatramanan",
+          "party": "TVK"
+        },
+        {
+          "name": "Arun",
+          "party": "NTK"
+        },
+        {
+          "name": "T. Velu",
+          "party": "DMK"
+        },
+        {
+          "name": "Tamilisai Soundararajan",
+          "party": "BJP",
+          "star_candidate": true,
+          "position": "Former Governor of Telangana"
+        }
+      ]
+    },
+    "26": {
+      "name": "VELACHERY",
+      "district": "CHENNAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Kumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Keerthana",
+          "party": "NTK"
+        },
+        {
+          "name": "JMH Aassan Maulaana",
+          "party": "INC"
+        },
+        {
+          "name": "M. K. Ashok",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "27": {
+      "name": "SHOZHINGANALLUR",
+      "district": "KANCHIPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "P. Saravanamoorthy",
+          "party": "TVK"
+        },
+        {
+          "name": "Jayalakshmi Raman",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Aravind Ramesh",
+          "party": "DMK"
+        },
+        {
+          "name": "K. P. Kandan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "28": {
+      "name": "ALANDUR",
+      "district": "KANCHIPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Harish",
+          "party": "TVK"
+        },
+        {
+          "name": "Mahalakshmi",
+          "party": "NTK"
+        },
+        {
+          "name": "T.M. Anbarasan",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Saravanan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "29": {
+      "name": "SRIPERUMBUDUR",
+      "district": "KANCHIPURAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "K. Thennarasu",
+          "party": "TVK"
+        },
+        {
+          "name": "Sindhu",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Palani",
+          "party": "AIADMK"
+        },
+        {
+          "name": "K. Selvaperunthagai",
+          "party": "INC"
+        }
+      ]
+    },
+    "30": {
+      "name": "PALLAVARAM",
+      "district": "KANCHIPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "J. Kamatchi",
+          "party": "TVK"
+        },
+        {
+          "name": "Karthikeyan",
+          "party": "NTK"
+        },
+        {
+          "name": "D. Murugesan",
+          "party": "DMDK"
+        },
+        {
+          "name": "Venkatesan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "31": {
+      "name": "TAMBARAM",
+      "district": "KANCHIPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Sarathkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Tamilselvi",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. S.R. Raja",
+          "party": "DMK"
+        },
+        {
+          "name": "Cittlapakkam S. Rajendiran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "32": {
+      "name": "CHENGALPATTU",
+      "district": "KANCHIPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Thiyagarajan",
+          "party": "TVK"
+        },
+        {
+          "name": "Amutha Nambiyar",
+          "party": "NTK"
+        },
+        {
+          "name": "M.K.D. Karthik Dhandapani",
+          "party": "DMK"
+        },
+        {
+          "name": "M. Kajendiran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "33": {
+      "name": "THIRUPORUR",
+      "district": "KANCHIPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Vijayaraj",
+          "party": "TVK"
+        },
+        {
+          "name": "Ambethrajan",
+          "party": "NTK"
+        },
+        {
+          "name": "Panneer Doss",
+          "party": "VCK"
+        },
+        {
+          "name": "K Balu",
+          "party": "PMK"
+        }
+      ]
+    },
+    "34": {
+      "name": "CHEYYUR",
+      "district": "KANCHIPURAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "K. Mohanraja",
+          "party": "TVK"
+        },
+        {
+          "name": "Swathi Lakshmi",
+          "party": "NTK"
+        },
+        {
+          "name": "E. Rajasekhar",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Sindhanai Selvan",
+          "party": "VCK"
+        }
+      ]
+    },
+    "35": {
+      "name": "MADURANTHAKAM",
+      "district": "KANCHIPURAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "Munithnam",
+          "party": "TVK"
+        },
+        {
+          "name": "Janaki Raman",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Amulu Ponmalar",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. Maragatham Kumarvelu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "36": {
+      "name": "UTHIRAMERUR",
+      "district": "KANCHIPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R V Ranjithkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Maram Maasilamani",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Sundar",
+          "party": "DMK"
+        },
+        {
+          "name": "P Maheshkumar",
+          "party": "PMK"
+        }
+      ]
+    },
+    "37": {
+      "name": "KANCHEEPURAM",
+      "district": "KANCHIPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. V. Ranjithkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Vetriselvi",
+          "party": "NTK"
+        },
+        {
+          "name": "Nithya Sugumar",
+          "party": "DMK"
+        },
+        {
+          "name": "V. Somasundaram",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "38": {
+      "name": "ARAKONAM",
+      "district": "VELLORE",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "V. Gandhiraj",
+          "party": "TVK"
+        },
+        {
+          "name": "Raj Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "Su. Ravi",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Ezhil Caroline",
+          "party": "VCK"
+        }
+      ]
+    },
+    "39": {
+      "name": "SHOLINGHUR",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Kapil",
+          "party": "TVK"
+        },
+        {
+          "name": "Ashok Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "A.M. Munirathinam",
+          "party": "INC"
+        },
+        {
+          "name": "K Saravanan",
+          "party": "PMK"
+        }
+      ]
+    },
+    "40": {
+      "name": "KATPADI",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Sudhakar",
+          "party": "TVK"
+        },
+        {
+          "name": "Thirukumaran",
+          "party": "NTK"
+        },
+        {
+          "name": "Duraimurugan",
+          "party": "DMK",
+          "star_candidate": true,
+          "position": "Senior DMK leader & former MP"
+        },
+        {
+          "name": "V. Ramu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "41": {
+      "name": "RANIPET",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dhaheera",
+          "party": "TVK"
+        },
+        {
+          "name": "Tharikka Salman",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Gandhi",
+          "party": "DMK"
+        },
+        {
+          "name": "V.M. Karthikeyan",
+          "party": "TMC"
+        },
+        {
+          "name": "V. M. Karthikeyan",
+          "party": "BJP"
+        }
+      ]
+    },
+    "42": {
+      "name": "ARCOT",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Vijaymohan",
+          "party": "TVK"
+        },
+        {
+          "name": "Archaha",
+          "party": "NTK"
+        },
+        {
+          "name": "J.L. Eswarappan",
+          "party": "DMK"
+        },
+        {
+          "name": "S.M. Sukumar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "43": {
+      "name": "VELLORE",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M.M. Vinoth Kannan",
+          "party": "TVK"
+        },
+        {
+          "name": "Soniya",
+          "party": "NTK"
+        },
+        {
+          "name": "P. Karthikeyan",
+          "party": "DMK"
+        },
+        {
+          "name": "S.R.K. Appu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "44": {
+      "name": "ANAIKATTU",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Velmurugan",
+          "party": "TVK"
+        },
+        {
+          "name": "Ravi Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "A.P. Nandakumar",
+          "party": "DMK"
+        },
+        {
+          "name": "Tha. Velalagan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "45": {
+      "name": "KILVAITHINANKUPPAM",
+      "district": "VELLORE",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "E. Thendral Kumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Kalaiyendri",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Rajeswari Mohankandhi",
+          "party": "DMK"
+        },
+        {
+          "name": "M. Jagan Moorthy",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "46": {
+      "name": "GUDIYATHAM",
+      "district": "VELLORE",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "K. Sindhu",
+          "party": "TVK"
+        },
+        {
+          "name": "Imalan",
+          "party": "NTK"
+        },
+        {
+          "name": "Smt. G. Paritha Purushottaman",
+          "party": "AIADMK"
+        },
+        {
+          "name": "K. B. Pratap",
+          "party": "DMDK"
+        }
+      ]
+    },
+    "47": {
+      "name": "VANIYAMBADI",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Sayed",
+          "party": "TVK"
+        },
+        {
+          "name": "Murugesan",
+          "party": "NTK"
+        },
+        {
+          "name": "G. Senthilkumar",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Sayyed Farooq",
+          "party": "IUML"
+        }
+      ]
+    },
+    "48": {
+      "name": "AMBUR",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "P. Imdhiyas",
+          "party": "TVK"
+        },
+        {
+          "name": "Afsia Thoufic Bikrid",
+          "party": "NTK"
+        },
+        {
+          "name": "A.C. Vilvanathan",
+          "party": "DMK"
+        },
+        {
+          "name": "R. Venkatesan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "49": {
+      "name": "JOLARPET",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C. Munisamy",
+          "party": "TVK"
+        },
+        {
+          "name": "Sasi Rekha",
+          "party": "NTK"
+        },
+        {
+          "name": "Kavitha Dhandapani",
+          "party": "DMK"
+        },
+        {
+          "name": "K.C. Veeramani",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "50": {
+      "name": "TIRUPPATTUR",
+      "district": "VELLORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. M. Thiruppathi",
+          "party": "TVK"
+        },
+        {
+          "name": "Aarumugam",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Nallathambi",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Gnanasekar",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "51": {
+      "name": "UTHANGARAI",
+      "district": "KRISHNAGIRI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "B. Kumaravel",
+          "party": "TVK"
+        },
+        {
+          "name": "Megala",
+          "party": "NTK"
+        },
+        {
+          "name": "T.M. Thamizh Selvan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "R. Kuppu Saamy",
+          "party": "INC"
+        }
+      ]
+    },
+    "52": {
+      "name": "BARGUR",
+      "district": "KRISHNAGIRI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "E. Muralidharan",
+          "party": "TVK"
+        },
+        {
+          "name": "Kavin",
+          "party": "NTK"
+        },
+        {
+          "name": "De. Mathiazhagan",
+          "party": "DMK"
+        },
+        {
+          "name": "E.C. Govindarasan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "53": {
+      "name": "KRISHNAGIRI",
+      "district": "KRISHNAGIRI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Muhundh R. Pandian",
+          "party": "TVK"
+        },
+        {
+          "name": "Suganthi Parthiban",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Ashokkumar",
+          "party": "AIADMK"
+        },
+        {
+          "name": "A. Chella Kumar",
+          "party": "INC"
+        }
+      ]
+    },
+    "54": {
+      "name": "VEPPANAHALLI",
+      "district": "KRISHNAGIRI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Sambangi",
+          "party": "TVK"
+        },
+        {
+          "name": "Nagaraj",
+          "party": "NTK"
+        },
+        {
+          "name": "P.S. Srinivasan",
+          "party": "DMK"
+        },
+        {
+          "name": "K.P. Munusami",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "55": {
+      "name": "HOSUR",
+      "district": "KRISHNAGIRI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Ambarish",
+          "party": "TVK"
+        },
+        {
+          "name": "Stalin",
+          "party": "NTK"
+        },
+        {
+          "name": "S.A. Sathya",
+          "party": "DMK"
+        },
+        {
+          "name": "P. Balakrishna Reddy",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "56": {
+      "name": "THALLI",
+      "district": "KRISHNAGIRI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Suresh",
+          "party": "TVK"
+        },
+        {
+          "name": "Narasimman",
+          "party": "NTK"
+        },
+        {
+          "name": "Nagesh Kumar",
+          "party": "BJP"
+        },
+        {
+          "name": "Thalli T Ramachandran",
+          "party": "CPI"
+        }
+      ]
+    },
+    "57": {
+      "name": "PALACODE",
+      "district": "DHARMAPURI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Gopi",
+          "party": "TVK"
+        },
+        {
+          "name": "Boopathy",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. D.N.V. Senthilkumar",
+          "party": "DMK"
+        },
+        {
+          "name": "K.P. Anbazhagan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "58": {
+      "name": "PENNAGARAM",
+      "district": "DHARMAPURI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Kajendran",
+          "party": "TVK"
+        },
+        {
+          "name": "Palaniyammal",
+          "party": "NTK"
+        },
+        {
+          "name": "GKM Tamil Kumaran",
+          "party": "INC"
+        },
+        {
+          "name": "V. Selvam",
+          "party": "PMK"
+        }
+      ]
+    },
+    "59": {
+      "name": "DHARMAPURI",
+      "district": "DHARMAPURI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Sivan",
+          "party": "TVK"
+        },
+        {
+          "name": "Santha Lakshmi",
+          "party": "NTK"
+        },
+        {
+          "name": "V. Elangovan",
+          "party": "DMDK"
+        },
+        {
+          "name": "Sowmiya Anbumani",
+          "party": "PMK"
+        }
+      ]
+    },
+    "60": {
+      "name": "PAPPIREDDIPPATTI",
+      "district": "DHARMAPURI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Thilavathi",
+          "party": "TVK"
+        },
+        {
+          "name": "Archana Tamil Aruvi",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. P. Palaniappan",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. Maragatham Vetrivelu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "61": {
+      "name": "HARUR",
+      "district": "DHARMAPURI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "K. Rakesh",
+          "party": "TVK"
+        },
+        {
+          "name": "Anitha Annadurai",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Shanmugam",
+          "party": "DMK"
+        },
+        {
+          "name": "V. Sampathkumar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "62": {
+      "name": "CHENGAM",
+      "district": "TIRUVANNAMALAI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "K. Bharathidhasan",
+          "party": "TVK"
+        },
+        {
+          "name": "J. Shobha",
+          "party": "NTK"
+        },
+        {
+          "name": "M.P. Giri",
+          "party": "DMK"
+        },
+        {
+          "name": "T.S. Velu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "63": {
+      "name": "TIRUVANNAMALAI",
+      "district": "TIRUVANNAMALAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Arul Arumugam",
+          "party": "TVK"
+        },
+        {
+          "name": "Vignesh",
+          "party": "NTK"
+        },
+        {
+          "name": "E.V. Velu",
+          "party": "DMK"
+        },
+        {
+          "name": "C. Ezhumalai",
+          "party": "BJP"
+        }
+      ]
+    },
+    "64": {
+      "name": "KILPENNATHUR",
+      "district": "TIRUVANNAMALAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "D. Raja",
+          "party": "TVK"
+        },
+        {
+          "name": "V. Loganathan",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Pichandi",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Ramachandiran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "65": {
+      "name": "KALASAPAKKAM",
+      "district": "TIRUVANNAMALAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C. Elumalai",
+          "party": "TVK"
+        },
+        {
+          "name": "Seetha",
+          "party": "NTK"
+        },
+        {
+          "name": "P.S.T. Saravanan",
+          "party": "DMK"
+        },
+        {
+          "name": "Agri S.S. Krishnamoorthy",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "66": {
+      "name": "POLUR",
+      "district": "TIRUVANNAMALAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Abishek",
+          "party": "TVK"
+        },
+        {
+          "name": "Umadevi Prakash",
+          "party": "NTK"
+        },
+        {
+          "name": "T.P. Saravanan",
+          "party": "DMDK"
+        },
+        {
+          "name": "C. R. Bhaskaran",
+          "party": "PMK"
+        }
+      ]
+    },
+    "67": {
+      "name": "ARANI",
+      "district": "TIRUVANNAMALAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Venkatesan Kumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Thavamani Ramesh",
+          "party": "NTK"
+        },
+        {
+          "name": "Mahalakshmi Govarthanan",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. L. Jayasudha",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "68": {
+      "name": "CHEYYAR",
+      "district": "TIRUVANNAMALAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V.C.K. Mohan",
+          "party": "TVK"
+        },
+        {
+          "name": "Tamil Selvan",
+          "party": "NTK"
+        },
+        {
+          "name": "O. Jothi",
+          "party": "DMK"
+        },
+        {
+          "name": "Mukkur N. Subramanian",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "69": {
+      "name": "VANDAVASI",
+      "district": "TIRUVANNAMALAI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "Udhayakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Ganesh",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Ambedkumar",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. P. Rani",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "70": {
+      "name": "GINGEE",
+      "district": "VILLUPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Chandrasekaran",
+          "party": "TVK"
+        },
+        {
+          "name": "Krishnan",
+          "party": "NTK"
+        },
+        {
+          "name": "K.S. Masthan",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Ganeshkumar",
+          "party": "PMK"
+        }
+      ]
+    },
+    "71": {
+      "name": "MAILAM",
+      "district": "VILLUPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Vijay Niranjan",
+          "party": "TVK"
+        },
+        {
+          "name": "Vijay Vikram",
+          "party": "NTK"
+        },
+        {
+          "name": "C.Ve. Shanmugam",
+          "party": "AIADMK"
+        },
+        {
+          "name": "L. Venkatesan",
+          "party": "DMDK"
+        }
+      ]
+    },
+    "72": {
+      "name": "TINDIVANAM",
+      "district": "VILLUPURAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "S. Sakthivel",
+          "party": "TVK"
+        },
+        {
+          "name": "Petchimuthu",
+          "party": "NTK"
+        },
+        {
+          "name": "P. Arjunan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Vanniarasu",
+          "party": "VCK"
+        }
+      ]
+    },
+    "73": {
+      "name": "VANUR",
+      "district": "VILLUPURAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "G.P. Suresh",
+          "party": "TVK"
+        },
+        {
+          "name": "Karikazhan",
+          "party": "NTK"
+        },
+        {
+          "name": "Gautham Dravidamani",
+          "party": "DMK"
+        },
+        {
+          "name": "P. Murugan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "74": {
+      "name": "VILLUPURAM",
+      "district": "VILLUPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "N. Mohanraj",
+          "party": "TVK"
+        },
+        {
+          "name": "Abhinaya Ponnivalavan",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. R. Lakshmanan",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. K. Vijaya",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "75": {
+      "name": "VIKRAVANDI",
+      "district": "VILLUPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Vijay Vadivel",
+          "party": "TVK"
+        },
+        {
+          "name": "Suba Chandrasekaran",
+          "party": "NTK"
+        },
+        {
+          "name": "Anniyur Siva",
+          "party": "DMK"
+        },
+        {
+          "name": "C Sivakumar",
+          "party": "PMK"
+        }
+      ]
+    },
+    "76": {
+      "name": "TIRUKKOYILUR",
+      "district": "VILLUPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Barani Balaji",
+          "party": "TVK"
+        },
+        {
+          "name": "Hemarajan",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Pon. Gautham Sigamani",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Palanisami",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "77": {
+      "name": "ULUNDURPET",
+      "district": "VILLUPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Sudhakar",
+          "party": "TVK"
+        },
+        {
+          "name": "Logeshwari",
+          "party": "NTK"
+        },
+        {
+          "name": "G.R. Vasanthavel",
+          "party": "DMK"
+        },
+        {
+          "name": "Ira. Kumaraguru",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "78": {
+      "name": "RISHIVANDIAM",
+      "district": "VILLUPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Ashokkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Radhika",
+          "party": "NTK"
+        },
+        {
+          "name": "Vasantham Karthikeyan",
+          "party": "DMK"
+        },
+        {
+          "name": "A. P. Chezhiyan",
+          "party": "PMK"
+        }
+      ]
+    },
+    "79": {
+      "name": "SANKARAPURAM",
+      "district": "VILLUPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Jagadeesan",
+          "party": "TVK"
+        },
+        {
+          "name": "Ramesh",
+          "party": "NTK"
+        },
+        {
+          "name": "Tha. Udhayasuriyan",
+          "party": "DMK"
+        },
+        {
+          "name": "R. Rakesh",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "80": {
+      "name": "KALLAKURICHI",
+      "district": "VILLUPURAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "C. Arul Vignesh",
+          "party": "TVK"
+        },
+        {
+          "name": "Nagammal",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Rajivgandhi",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Malathi",
+          "party": "VCK"
+        }
+      ]
+    },
+    "81": {
+      "name": "GANGAVALLI",
+      "district": "SALEM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "V. Sujatha",
+          "party": "TVK"
+        },
+        {
+          "name": "Abirami Neduncheralathan",
+          "party": "NTK"
+        },
+        {
+          "name": "Gu. Chinnadurai",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Nallathambi",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "82": {
+      "name": "ATTUR",
+      "district": "SALEM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "R. Selvabharathi",
+          "party": "TVK"
+        },
+        {
+          "name": "Monisha Chinnadurai",
+          "party": "NTK"
+        },
+        {
+          "name": "A.P. Jeyasankaran",
+          "party": "AIADMK"
+        },
+        {
+          "name": "S K Arthanari",
+          "party": "INC"
+        }
+      ]
+    },
+    "83": {
+      "name": "YERCAUD",
+      "district": "SALEM",
+      "type": "ST",
+      "candidates": [
+        {
+          "name": "J. Lakshmi",
+          "party": "TVK"
+        },
+        {
+          "name": "Palanisamy",
+          "party": "NTK"
+        },
+        {
+          "name": "T.M. Revathi Madheswaran",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. P. Usharani",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "84": {
+      "name": "OMALUR",
+      "district": "SALEM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. V. Adhiyaman",
+          "party": "TVK"
+        },
+        {
+          "name": "Siva Sakthi",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Mani",
+          "party": "AIADMK"
+        },
+        {
+          "name": "A.R. Elangovan",
+          "party": "DMDK"
+        }
+      ]
+    },
+    "85": {
+      "name": "METTUR",
+      "district": "SALEM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Selvam",
+          "party": "TVK"
+        },
+        {
+          "name": "Vidhya Veerapan",
+          "party": "NTK"
+        },
+        {
+          "name": "Mithun Chakravarthy",
+          "party": "DMK"
+        },
+        {
+          "name": "G. Venkatajalalam",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "86": {
+      "name": "EDAPADI",
+      "district": "SALEM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Arunkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Priyadharshini",
+          "party": "NTK"
+        },
+        {
+          "name": "Kasi",
+          "party": "DMK"
+        },
+        {
+          "name": "Edapadi K. Palanisami",
+          "party": "AIADMK",
+          "star_candidate": true,
+          "position": "Party chief, former CM"
+        }
+      ]
+    },
+    "87": {
+      "name": "SANKARI",
+      "district": "SALEM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Senthilkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Nithya Arul",
+          "party": "NTK"
+        },
+        {
+          "name": "M. Manikandan",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Vetrivelu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "88": {
+      "name": "SALEM (West)",
+      "district": "SALEM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Lakshmanan",
+          "party": "TVK"
+        },
+        {
+          "name": "Suresh Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Mohanraj",
+          "party": "DMDK"
+        },
+        {
+          "name": "M Karthi",
+          "party": "PMK"
+        }
+      ]
+    },
+    "89": {
+      "name": "SALEM (North)",
+      "district": "SALEM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Sivakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Gunaseela",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Rajendran",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Sadhasivam",
+          "party": "PMK"
+        }
+      ]
+    },
+    "90": {
+      "name": "SALEM (South)",
+      "district": "SALEM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Vijay Tamilan Parthiban",
+          "party": "TVK"
+        },
+        {
+          "name": "Sophiya",
+          "party": "NTK"
+        },
+        {
+          "name": "M. Loganathan",
+          "party": "DMK"
+        },
+        {
+          "name": "J. Vinoath",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "91": {
+      "name": "VEERAPANDI",
+      "district": "SALEM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M.S. Palanivel",
+          "party": "TVK"
+        },
+        {
+          "name": "Rajesh Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. A.K. Tarun",
+          "party": "DMK"
+        },
+        {
+          "name": "Dr. Sri Balaji Sukumar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "92": {
+      "name": "RASIPURAM",
+      "district": "NAMAKKAL",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "Lokesh Dhanapal",
+          "party": "TVK"
+        },
+        {
+          "name": "Sasikala",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. M. Mathiventhan",
+          "party": "DMK"
+        },
+        {
+          "name": "S.D. Premkumar",
+          "party": "BJP"
+        }
+      ]
+    },
+    "93": {
+      "name": "SENDAMANGALAM",
+      "district": "NAMAKKAL",
+      "type": "ST",
+      "candidates": [
+        {
+          "name": "P. Chandrasekar",
+          "party": "TVK"
+        },
+        {
+          "name": "Ponnumani",
+          "party": "NTK"
+        },
+        {
+          "name": "P. Poomalar",
+          "party": "DMK"
+        },
+        {
+          "name": "C. Chandrasekaran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "94": {
+      "name": "NAMAKKAL",
+      "district": "NAMAKKAL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "T.S. Dileep",
+          "party": "TVK"
+        },
+        {
+          "name": "Praveen",
+          "party": "NTK"
+        },
+        {
+          "name": "P. Rani",
+          "party": "DMK"
+        },
+        {
+          "name": "Sridevi P.S. Mohan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "95": {
+      "name": "PARAMATHI-VELUR",
+      "district": "NAMAKKAL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Nandhakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Aravindh",
+          "party": "NTK"
+        },
+        {
+          "name": "K.S. Moorthy",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Sekar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "96": {
+      "name": "TIRUCHENGODE",
+      "district": "NAMAKKAL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K.G. Arunraj",
+          "party": "TVK",
+          "star_candidate": true,
+          "position": "Senior Leader"
+        },
+        {
+          "name": "Revathi",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Chandrasekhar",
+          "party": "AIADMK"
+        },
+        {
+          "name": "E. R. Eswaran",
+          "party": "DMK"
+        }
+      ]
+    },
+    "97": {
+      "name": "KUMARAPALAYAM",
+      "district": "NAMAKKAL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C. Vijayalakshmi",
+          "party": "TVK"
+        },
+        {
+          "name": "Yuvarani",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Balu",
+          "party": "DMK"
+        },
+        {
+          "name": "P. Thangamani",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "98": {
+      "name": "ERODE (East)",
+      "district": "ERODE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Vijay Balaji",
+          "party": "TVK"
+        },
+        {
+          "name": "Thandava Moorthy",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Manoharan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Gopinath Palaniyappan",
+          "party": "INC"
+        }
+      ]
+    },
+    "99": {
+      "name": "ERODE (West)",
+      "district": "ERODE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K.K. Anand Mohan",
+          "party": "TVK"
+        },
+        {
+          "name": "Vijay",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Muthusamy",
+          "party": "DMK"
+        },
+        {
+          "name": "M. Yuvaraja",
+          "party": "TMC"
+        },
+        {
+          "name": "M. Yuvaraja",
+          "party": "BJP"
+        }
+      ]
+    },
+    "100": {
+      "name": "MODAKURICHI",
+      "district": "ERODE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "D. Shanmugam",
+          "party": "TVK"
+        },
+        {
+          "name": "Arun",
+          "party": "NTK"
+        },
+        {
+          "name": "Kirthika Sivakumar",
+          "party": "BJP"
+        },
+        {
+          "name": "Senthil Nathan",
+          "party": "MDMK"
+        },
+        {
+          "name": "Senthilnathan",
+          "party": "DMK"
+        }
+      ]
+    },
+    "101": {
+      "name": "DHARAPURAM",
+      "district": "ERODE",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "S. Gowri Chithra",
+          "party": "TVK"
+        },
+        {
+          "name": "Divya",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Indirani",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. P. Sathiyabama",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "102": {
+      "name": "KANGAYAM",
+      "district": "ERODE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "T. Mani",
+          "party": "TVK"
+        },
+        {
+          "name": "Karmegan",
+          "party": "NTK"
+        },
+        {
+          "name": "Mu.Pe. Saminathan",
+          "party": "DMK"
+        },
+        {
+          "name": "N.S.N. Nadaraj",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "103": {
+      "name": "PERUNDURAI",
+      "district": "ERODE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. T. Arunachalam",
+          "party": "TVK"
+        },
+        {
+          "name": "Logu",
+          "party": "NTK"
+        },
+        {
+          "name": "Thoppu N.D. Venkatachalam",
+          "party": "DMK"
+        },
+        {
+          "name": "J.K. Jayakkumar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "104": {
+      "name": "BHAVANI",
+      "district": "ERODE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M.P. Balakrishnan",
+          "party": "TVK"
+        },
+        {
+          "name": "Menaka Devi",
+          "party": "NTK"
+        },
+        {
+          "name": "K.A. Sekar",
+          "party": "DMK"
+        },
+        {
+          "name": "K.C. Karuppannan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "105": {
+      "name": "ANTHIYUR",
+      "district": "ERODE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Vijay Venkatesh",
+          "party": "TVK"
+        },
+        {
+          "name": "Anandhi",
+          "party": "NTK"
+        },
+        {
+          "name": "M. Sivabalan",
+          "party": "DMK"
+        },
+        {
+          "name": "P. Haribaskar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "106": {
+      "name": "GOBICHETTIPALAYAM",
+      "district": "TIRUPUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. A. Sengottaiyan",
+          "party": "TVK",
+          "star_candidate": true,
+          "position": "Chief Organiser · Former Minister"
+        },
+        {
+          "name": "Seetha Lakshmi",
+          "party": "NTK"
+        },
+        {
+          "name": "N. Nallasivam",
+          "party": "DMK"
+        },
+        {
+          "name": "V.B. Prabu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "107": {
+      "name": "BHAVANISAGAR",
+      "district": "TIRUPUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "V.P. Tamil Selvi",
+          "party": "TVK"
+        },
+        {
+          "name": "Soundarya",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Pannaari",
+          "party": "AIADMK"
+        },
+        {
+          "name": "P L Sundaram",
+          "party": "CPI"
+        }
+      ]
+    },
+    "108": {
+      "name": "UDHAGAMANDALAM",
+      "district": "TIRUPUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Ibrahim",
+          "party": "TVK"
+        },
+        {
+          "name": "Ragupathu Deepan",
+          "party": "NTK"
+        },
+        {
+          "name": "Bhojarajan",
+          "party": "BJP"
+        },
+        {
+          "name": "B. Ramachandran",
+          "party": "INC"
+        }
+      ]
+    },
+    "109": {
+      "name": "GUDALUR",
+      "district": "TIRUPUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "A. Deepak Sai Kishore",
+          "party": "TVK"
+        },
+        {
+          "name": "Karthik Ramakrishnan",
+          "party": "NTK"
+        },
+        {
+          "name": "Mu. Dravidamani",
+          "party": "DMK"
+        },
+        {
+          "name": "Pon. Jayaselan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "110": {
+      "name": "COONOOR",
+      "district": "TIRUPUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C. Thangaraj",
+          "party": "TVK"
+        },
+        {
+          "name": "Dheenu",
+          "party": "NTK"
+        },
+        {
+          "name": "K.M. Raju",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Ramu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "111": {
+      "name": "METTUPALAYAM",
+      "district": "TIRUPUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "N. Sunil Anand",
+          "party": "TVK"
+        },
+        {
+          "name": "Gopalakrishnan",
+          "party": "NTK"
+        },
+        {
+          "name": "Kavitha Kalyanasundaram",
+          "party": "DMK"
+        },
+        {
+          "name": "O.K. Chinnaraj",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "112": {
+      "name": "AVANASHI",
+      "district": "TIRUPUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "S. Kamali",
+          "party": "TVK"
+        },
+        {
+          "name": "Menaga",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Kokila Mani",
+          "party": "DMK"
+        },
+        {
+          "name": "L. Murugan",
+          "party": "BJP",
+          "star_candidate": true,
+          "position": "Union Minister of State"
+        }
+      ]
+    },
+    "113": {
+      "name": "TIRUPPUR (North)",
+      "district": "TIRUPUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Sathyabama",
+          "party": "TVK"
+        },
+        {
+          "name": "Abhinaya",
+          "party": "NTK"
+        },
+        {
+          "name": "M.S.M. Ananthan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "M Ravi",
+          "party": "CPI"
+        }
+      ]
+    },
+    "114": {
+      "name": "TIRUPPUR (South)",
+      "district": "NILGIRIS",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Balamurugan",
+          "party": "TVK"
+        },
+        {
+          "name": "Perarivalan",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Dineshkumar",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Thangaraj",
+          "party": "BJP"
+        }
+      ]
+    },
+    "115": {
+      "name": "PALLADAM",
+      "district": "NILGIRIS",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Ramkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Thamizhinian",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Selvaraj",
+          "party": "DMK"
+        },
+        {
+          "name": "Palladam K.P. Paramasivam",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "116": {
+      "name": "SULUR",
+      "district": "NILGIRIS",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "N.M. Sukumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Rajasekhar",
+          "party": "NTK"
+        },
+        {
+          "name": "Thalapathi Murugesan",
+          "party": "DMK"
+        },
+        {
+          "name": "V.P. Kanthasami",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "117": {
+      "name": "KAVUNDAMPALAYAM",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. T. Kanimozhi",
+          "party": "TVK"
+        },
+        {
+          "name": "Kalamani",
+          "party": "NTK"
+        },
+        {
+          "name": "P.R.G. Arunkumar",
+          "party": "AIADMK"
+        },
+        {
+          "name": "K.P. Surya Prakash",
+          "party": "INC"
+        }
+      ]
+    },
+    "118": {
+      "name": "COIMBATORE NORTH",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Sampathkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Narmatha",
+          "party": "NTK"
+        },
+        {
+          "name": "Senthamizhselvan",
+          "party": "DMK"
+        },
+        {
+          "name": "Vanathi Srinivasan",
+          "party": "BJP",
+          "star_candidate": true,
+          "position": "Former MP, BJP TN president"
+        }
+      ]
+    },
+    "119": {
+      "name": "THONDAMUTHUR",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Sathish Raju",
+          "party": "TVK"
+        },
+        {
+          "name": "Rajabunisha",
+          "party": "NTK"
+        },
+        {
+          "name": "N.R. Karthikeyan",
+          "party": "DMK"
+        },
+        {
+          "name": "S.P. Velumani",
+          "party": "AIADMK",
+          "star_candidate": true,
+          "position": "Ex-Municipal Administration Minister"
+        }
+      ]
+    },
+    "120": {
+      "name": "COIMBATORE SOUTH",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Senthil Kumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Perarivalan",
+          "party": "NTK"
+        },
+        {
+          "name": "V. Senthil Balaji",
+          "party": "DMK",
+          "star_candidate": true,
+          "position": "Ex-minister, moved from Karur"
+        },
+        {
+          "name": "Amman K. Archunan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "121": {
+      "name": "SINGANALLUR",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K.S. Giriprashath",
+          "party": "TVK"
+        },
+        {
+          "name": "Nehruji",
+          "party": "NTK"
+        },
+        {
+          "name": "K.R. Jeyaram",
+          "party": "AIADMK"
+        },
+        {
+          "name": "V. Shrinithi Naidu",
+          "party": "INC"
+        }
+      ]
+    },
+    "122": {
+      "name": "KINATHUKADAVU",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Vignesh",
+          "party": "TVK"
+        },
+        {
+          "name": "Banupriya Senthil Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "K.V.K.S. Sabari Karthikeyan",
+          "party": "DMK"
+        },
+        {
+          "name": "Se. Thamotharan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "123": {
+      "name": "POLLACHI",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Ramanathan",
+          "party": "TVK"
+        },
+        {
+          "name": "Senthil",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Pollachi V. Jayaraman",
+          "party": "AIADMK"
+        },
+        {
+          "name": "K. Nithyanandhan",
+          "party": "DMK"
+        }
+      ]
+    },
+    "124": {
+      "name": "VALPARAI",
+      "district": "COIMBATORE",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "Dr. Sreedharan",
+          "party": "TVK"
+        },
+        {
+          "name": "Uma Devi",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Sudhakar",
+          "party": "DMK"
+        },
+        {
+          "name": "D. Laksmana Sing",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "125": {
+      "name": "UDUMALPET",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. K. Shankar",
+          "party": "TVK"
+        },
+        {
+          "name": "Ram Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Radhakrishnan",
+          "party": "DMK"
+        },
+        {
+          "name": "Udumallai K. Radhakrishnan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "126": {
+      "name": "MADATHUKULAM",
+      "district": "COIMBATORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Thirumalai",
+          "party": "TVK"
+        },
+        {
+          "name": "Radhamani",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Jayaramakrishnan",
+          "party": "DMK"
+        },
+        {
+          "name": "C. Shanmugavelu",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "127": {
+      "name": "PALANI",
+      "district": "DINDIGUL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. M. Praveenkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Murugeshwari",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Ravi Manoharan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "N Pandi",
+          "party": "CPI(M)"
+        }
+      ]
+    },
+    "128": {
+      "name": "ODDANCHATRAM",
+      "district": "DINDIGUL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Mohan",
+          "party": "TVK"
+        },
+        {
+          "name": "Ragupathi",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Sakkarapani",
+          "party": "DMK"
+        },
+        {
+          "name": "Vidiyal S. Sekar",
+          "party": "TMC"
+        },
+        {
+          "name": "Vidiyal Sekar",
+          "party": "BJP"
+        }
+      ]
+    },
+    "129": {
+      "name": "ATHOOR",
+      "district": "DINDIGUL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "N. Kalaiselvi",
+          "party": "TVK"
+        },
+        {
+          "name": "Simon Justin",
+          "party": "NTK"
+        },
+        {
+          "name": "I. Periyasamy",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Viswanathan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "130": {
+      "name": "NILAKOTTAI",
+      "district": "DINDIGUL",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "R. Ayyanar",
+          "party": "TVK"
+        },
+        {
+          "name": "Kailai Rajan",
+          "party": "NTK"
+        },
+        {
+          "name": "Nagajothi",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. S. Thenmozhi",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "131": {
+      "name": "NATHAM",
+      "district": "DINDIGUL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "L. L. Ramesh",
+          "party": "TVK"
+        },
+        {
+          "name": "Alagammal",
+          "party": "NTK"
+        },
+        {
+          "name": "Natham Ira. Visvanatham",
+          "party": "AIADMK"
+        },
+        {
+          "name": "K. K. Selvakumar",
+          "party": "DMK"
+        }
+      ]
+    },
+    "132": {
+      "name": "DINDIGUL",
+      "district": "DINDIGUL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Nazeer Raja",
+          "party": "TVK"
+        },
+        {
+          "name": "Mutharasi",
+          "party": "NTK"
+        },
+        {
+          "name": "I.P. Senthilkumar",
+          "party": "DMK"
+        },
+        {
+          "name": "Dindigul C. Srinivasan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "133": {
+      "name": "VEDASANDUR",
+      "district": "DINDIGUL",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. N. Nagajothi",
+          "party": "TVK"
+        },
+        {
+          "name": "Hussain",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Gandhirajan",
+          "party": "DMK"
+        },
+        {
+          "name": "Dr. V.P.B. Paramasivam",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "134": {
+      "name": "ARAVAKURICHI",
+      "district": "KARUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Karthikeyan",
+          "party": "TVK"
+        },
+        {
+          "name": "Narain",
+          "party": "NTK"
+        },
+        {
+          "name": "Monjanur R. Elango",
+          "party": "DMK"
+        },
+        {
+          "name": "K. Selvakkumar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "135": {
+      "name": "KARUR",
+      "district": "KARUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V.P. Mathiyalagan",
+          "party": "TVK"
+        },
+        {
+          "name": "Karuppaiah",
+          "party": "NTK"
+        },
+        {
+          "name": "Asi. M. Thyagarajan",
+          "party": "DMK"
+        },
+        {
+          "name": "M.R. Vijayabaskar",
+          "party": "AIADMK",
+          "star_candidate": true,
+          "position": "Ex-Health & Finance Minister"
+        }
+      ]
+    },
+    "136": {
+      "name": "KRISHNARAYAPURAM",
+      "district": "KARUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "S. Madhan",
+          "party": "TVK"
+        },
+        {
+          "name": "Sathya",
+          "party": "NTK"
+        },
+        {
+          "name": "S.K. Raja",
+          "party": "DMK"
+        },
+        {
+          "name": "Dr. S. Thivya",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "137": {
+      "name": "KULITHALAI",
+      "district": "KARUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Balasubramani",
+          "party": "TVK"
+        },
+        {
+          "name": "Nanmaran",
+          "party": "NTK"
+        },
+        {
+          "name": "Suriyanur A. Chandiran",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Karunakaran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "138": {
+      "name": "MANAPPARAI",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Kathiravan",
+          "party": "TVK"
+        },
+        {
+          "name": "Arunagiri",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. P.L. Vijayakumar",
+          "party": "AIADMK"
+        },
+        {
+          "name": "P. Abdul Samad",
+          "party": "DMK"
+        }
+      ]
+    },
+    "139": {
+      "name": "SRIRANGAM",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Ramesh",
+          "party": "TVK"
+        },
+        {
+          "name": "Dharmaraj",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Palaniandi",
+          "party": "DMK"
+        },
+        {
+          "name": "R. Manoharan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "140": {
+      "name": "TIRUCHIRAPALLI (West)",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Ramamoorthy",
+          "party": "TVK"
+        },
+        {
+          "name": "Bhuvaneshwari",
+          "party": "NTK"
+        },
+        {
+          "name": "K.N. Nehru",
+          "party": "DMK",
+          "star_candidate": true,
+          "position": "Senior cabinet minister"
+        },
+        {
+          "name": "M. Rajasekhar",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "141": {
+      "name": "TIRUCHIRAPALLI (East)",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C. Joseph Vijay",
+          "party": "TVK",
+          "star_candidate": true,
+          "position": "Party President"
+        },
+        {
+          "name": "Krishnasamy",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Inigo Irudayaraj",
+          "party": "DMK"
+        },
+        {
+          "name": "K. Rajasekaran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "142": {
+      "name": "THIRUVERAMBUR",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Navalpattu S. Viji",
+          "party": "TVK"
+        },
+        {
+          "name": "Jallikattu Rajesh",
+          "party": "NTK"
+        },
+        {
+          "name": "Anbil Mahesh Poyyamozhi",
+          "party": "DMK"
+        },
+        {
+          "name": "Pa. Kumar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "143": {
+      "name": "LALGUDI",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. P. Krishnan",
+          "party": "TVK"
+        },
+        {
+          "name": "Madhan",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Soundarapandian",
+          "party": "DMK"
+        },
+        {
+          "name": "Dr. M. Lima Rose",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "144": {
+      "name": "MANACHANALLUR",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Saravanan",
+          "party": "TVK"
+        },
+        {
+          "name": "Thenmozhi",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Kathiravan",
+          "party": "DMK"
+        },
+        {
+          "name": "R. V. Bharathan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "145": {
+      "name": "MUSIRI",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "N. Vignesh",
+          "party": "TVK"
+        },
+        {
+          "name": "Bakya Lakshmi",
+          "party": "NTK"
+        },
+        {
+          "name": "N.S.N. Karunairaja",
+          "party": "DMK"
+        },
+        {
+          "name": "N. Yoganathan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "146": {
+      "name": "THURAIYUR",
+      "district": "TIRUCHIRAPPALLI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "K. Sivakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Gowsalya Suresh",
+          "party": "NTK"
+        },
+        {
+          "name": "Smt. I. Suroja",
+          "party": "AIADMK"
+        },
+        {
+          "name": "M. Vichu Lenin Prasath",
+          "party": "INC"
+        }
+      ]
+    },
+    "147": {
+      "name": "PERAMBALUR",
+      "district": "PERAMBALUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "K. Sivakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Johnsy Rani",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. S.D. Jayalakshmi",
+          "party": "DMK"
+        },
+        {
+          "name": "Ilambe Ira. Thamizh Selvan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "148": {
+      "name": "KUNNAM",
+      "district": "PERAMBALUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Revathi",
+          "party": "TVK"
+        },
+        {
+          "name": "Keerthi Vasan",
+          "party": "NTK"
+        },
+        {
+          "name": "S.S. Sivasankar",
+          "party": "DMK"
+        },
+        {
+          "name": "Saranya Anbazhagan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "149": {
+      "name": "ARIYALUR",
+      "district": "ARIYALUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Sivakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Pugalendhi",
+          "party": "NTK"
+        },
+        {
+          "name": "Latha Balu",
+          "party": "DMK"
+        },
+        {
+          "name": "Thamarai S. Rajendiran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "150": {
+      "name": "JAYANKONDAM",
+      "district": "ARIYALUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Kavitha G. Rajendran",
+          "party": "TVK"
+        },
+        {
+          "name": "Revathi Kalaimani",
+          "party": "NTK"
+        },
+        {
+          "name": "Ka.So.Ka. Kannan",
+          "party": "DMK"
+        },
+        {
+          "name": "K Vaithi",
+          "party": "PMK"
+        }
+      ]
+    },
+    "151": {
+      "name": "TITTAKUDI",
+      "district": "CUDDALORE",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "Rajasekar",
+          "party": "TVK"
+        },
+        {
+          "name": "Mahalakshmi",
+          "party": "NTK"
+        },
+        {
+          "name": "C.V. Ganesan",
+          "party": "DMK"
+        },
+        {
+          "name": "N. Murugumaran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "152": {
+      "name": "VRIDDHACHALAM",
+      "district": "CUDDALORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Vijay",
+          "party": "TVK"
+        },
+        {
+          "name": "Amudha Nambi",
+          "party": "NTK"
+        },
+        {
+          "name": "Premalatha Vijayakanth",
+          "party": "DMDK"
+        },
+        {
+          "name": "Tamilarasi Adhimoolam",
+          "party": "PMK"
+        }
+      ]
+    },
+    "153": {
+      "name": "NEYVELI",
+      "district": "CUDDALORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Anand",
+          "party": "TVK"
+        },
+        {
+          "name": "Veeramani",
+          "party": "NTK"
+        },
+        {
+          "name": "Saba. Rajendran",
+          "party": "DMK"
+        },
+        {
+          "name": "Soratthur Ira. Rajendiran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "154": {
+      "name": "PANRUTI",
+      "district": "CUDDALORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Manikandan",
+          "party": "TVK"
+        },
+        {
+          "name": "Banu Priya",
+          "party": "NTK"
+        },
+        {
+          "name": "K. Mohan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Abdul Rahman",
+          "party": "VCK"
+        }
+      ]
+    },
+    "155": {
+      "name": "CUDDALORE",
+      "district": "CUDDALORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Rajkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Sarasu",
+          "party": "NTK"
+        },
+        {
+          "name": "M.C. Sampat",
+          "party": "AIADMK"
+        },
+        {
+          "name": "A.S. Chandrasekaran",
+          "party": "INC"
+        }
+      ]
+    },
+    "156": {
+      "name": "KURINJIPADI",
+      "district": "CUDDALORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. Rajkumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Sengolan",
+          "party": "NTK"
+        },
+        {
+          "name": "M.R.K. Panneerselvam",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Puvanendiran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "157": {
+      "name": "BHUVANAGIRI",
+      "district": "CUDDALORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "D.M. Mahalingam",
+          "party": "TVK"
+        },
+        {
+          "name": "Sumathi Srinivasan",
+          "party": "NTK"
+        },
+        {
+          "name": "Durai Ki. Saravanan",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Arunmozhidhevan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "158": {
+      "name": "CHIDAMBARAM",
+      "district": "CUDDALORE",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. N. Pari",
+          "party": "TVK"
+        },
+        {
+          "name": "Tamil",
+          "party": "NTK"
+        },
+        {
+          "name": "K.A. Pandian",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Thamimun Ansari",
+          "party": "DMK"
+        }
+      ]
+    },
+    "159": {
+      "name": "KATTUMANNARKOIL",
+      "district": "CUDDALORE",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "S. Srinivasan",
+          "party": "TVK"
+        },
+        {
+          "name": "Sivajothi",
+          "party": "NTK"
+        },
+        {
+          "name": "Thol. Thirumavalavan",
+          "party": "VCK"
+        },
+        {
+          "name": "Anbu Cholan",
+          "party": "PMK"
+        }
+      ]
+    },
+    "160": {
+      "name": "SIRKALI",
+      "district": "NAGAPATTINAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "C.S. Gopinath",
+          "party": "TVK"
+        },
+        {
+          "name": "Subash",
+          "party": "NTK"
+        },
+        {
+          "name": "Smt. Ma. Sakthi",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Senthil Selvan",
+          "party": "MDMK"
+        },
+        {
+          "name": "Senthil Selvan",
+          "party": "DMK"
+        }
+      ]
+    },
+    "161": {
+      "name": "MAYILADUTHURAI",
+      "district": "NAGAPATTINAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C.S. Arun Rasheeth",
+          "party": "TVK"
+        },
+        {
+          "name": "Kasiraman",
+          "party": "NTK"
+        },
+        {
+          "name": "Jamal Yunus Mohamed",
+          "party": "INC"
+        },
+        {
+          "name": "S. A. Palanichamy",
+          "party": "PMK"
+        }
+      ]
+    },
+    "162": {
+      "name": "POOMPUHAR",
+      "district": "NAGAPATTINAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Vijayalayan",
+          "party": "TVK"
+        },
+        {
+          "name": "Ilaiya Nagulan",
+          "party": "NTK"
+        },
+        {
+          "name": "Nivetha Murugan",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Pavunraj",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "163": {
+      "name": "NAGAPATTINAM",
+      "district": "NAGAPATTINAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "N. Sukumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Fathima Farhana",
+          "party": "NTK"
+        },
+        {
+          "name": "Thangu. Kathiravan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "M. H. Jawahirullah",
+          "party": "DMK"
+        }
+      ]
+    },
+    "164": {
+      "name": "KILVELUR",
+      "district": "NAGAPATTINAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "D.A.P. Senthilpandiyan",
+          "party": "TVK"
+        },
+        {
+          "name": "Karthiga",
+          "party": "NTK"
+        },
+        {
+          "name": "Vadivel Ravanan",
+          "party": "PMK"
+        },
+        {
+          "name": "D Latha",
+          "party": "CPI(M)"
+        }
+      ]
+    },
+    "165": {
+      "name": "VEDARANYAM",
+      "district": "NAGAPATTINAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Kingsley Gerald",
+          "party": "TVK"
+        },
+        {
+          "name": "Idumbavanam Karthik",
+          "party": "NTK"
+        },
+        {
+          "name": "Ma.Me. Pugazhendhi",
+          "party": "DMK"
+        },
+        {
+          "name": "O.S. Maniyan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "166": {
+      "name": "THIRUTHURAIPUNDI",
+      "district": "TIRUVARUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "S. Pandiyan",
+          "party": "TVK"
+        },
+        {
+          "name": "Vinothini",
+          "party": "NTK"
+        },
+        {
+          "name": "U. Balathandayutham",
+          "party": "AIADMK"
+        },
+        {
+          "name": "K Marimuthu",
+          "party": "CPI"
+        }
+      ]
+    },
+    "167": {
+      "name": "MANNARGUDI",
+      "district": "TIRUVARUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "UVM Rajarajan",
+          "party": "TVK"
+        },
+        {
+          "name": "Bharathi Selvan",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. T.R.B. Rajaa",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Kamaraj",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "168": {
+      "name": "THIRUVARUR",
+      "district": "TIRUVARUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Veeramani",
+          "party": "TVK"
+        },
+        {
+          "name": "Ashwini",
+          "party": "NTK"
+        },
+        {
+          "name": "Poondi K. Kalaivanan",
+          "party": "DMK"
+        },
+        {
+          "name": "Govi Chandru",
+          "party": "BJP"
+        }
+      ]
+    },
+    "169": {
+      "name": "NANNILAM",
+      "district": "TIRUVARUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Prabhakaran",
+          "party": "TVK"
+        },
+        {
+          "name": "Theanmozhi Dileep Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Kamaraj",
+          "party": "AIADMK"
+        },
+        {
+          "name": "V. M. S. Mohammed Mubarak",
+          "party": "DMK"
+        }
+      ]
+    },
+    "170": {
+      "name": "THIRUVIDAMARUDUR",
+      "district": "THANJAVUR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "S. Prabhakaran",
+          "party": "TVK"
+        },
+        {
+          "name": "Divya Bharathi",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Govi. Chezhian",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. Ilamathi Subramanian",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "171": {
+      "name": "KUMBAKONAM",
+      "district": "THANJAVUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Vinoth",
+          "party": "TVK"
+        },
+        {
+          "name": "Ananth",
+          "party": "NTK"
+        },
+        {
+          "name": "Sakkottai Ka. Anbazhagan",
+          "party": "DMK"
+        },
+        {
+          "name": "M.K.R. Ashok Kumar",
+          "party": "TMC"
+        },
+        {
+          "name": "M. K. R. Ashok Kumar",
+          "party": "BJP"
+        }
+      ]
+    },
+    "172": {
+      "name": "PAPANASAM",
+      "district": "THANJAVUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "U. Azarudeen",
+          "party": "TVK"
+        },
+        {
+          "name": "Aneesh Fathima",
+          "party": "NTK"
+        },
+        {
+          "name": "D. Shanmugaprabu",
+          "party": "AIADMK"
+        },
+        {
+          "name": "A. M. Shahjahan",
+          "party": "IUML"
+        }
+      ]
+    },
+    "173": {
+      "name": "THIRUVAIYARU",
+      "district": "THANJAVUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Manikandan",
+          "party": "TVK"
+        },
+        {
+          "name": "Senthilnathan",
+          "party": "NTK"
+        },
+        {
+          "name": "Durai. Chandrasekaran",
+          "party": "DMK"
+        },
+        {
+          "name": "V. Karthikeyan",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "174": {
+      "name": "THANJAVUR",
+      "district": "THANJAVUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R. Vijay Saravanan",
+          "party": "TVK"
+        },
+        {
+          "name": "Krishna Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "Shan. Ramanathan",
+          "party": "DMK"
+        },
+        {
+          "name": "M. Muruganantham",
+          "party": "BJP"
+        }
+      ]
+    },
+    "175": {
+      "name": "ORATHANAD",
+      "district": "THANJAVUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. K. Aravind",
+          "party": "TVK"
+        },
+        {
+          "name": "Thirumurugan",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Vaithilingam",
+          "party": "DMK"
+        },
+        {
+          "name": "M. Sekar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "176": {
+      "name": "PATTUKKOTTAI",
+      "district": "THANJAVUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C. Madhan",
+          "party": "TVK"
+        },
+        {
+          "name": "Kannan",
+          "party": "NTK"
+        },
+        {
+          "name": "Ka. Annadurai",
+          "party": "DMK"
+        },
+        {
+          "name": "C.V. Sekar",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "177": {
+      "name": "PERAVURANI",
+      "district": "THANJAVUR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "T. Chandra Kaandeeban",
+          "party": "TVK"
+        },
+        {
+          "name": "Rajaram",
+          "party": "NTK"
+        },
+        {
+          "name": "N. Ashokkumar",
+          "party": "DMK"
+        },
+        {
+          "name": "Kovi. Elango",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "178": {
+      "name": "GANDHARVAKOTTAI",
+      "district": "PUDUKKOTTAI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "N. Subramanian",
+          "party": "TVK"
+        },
+        {
+          "name": "Nadiya Tamilselvan",
+          "party": "NTK"
+        },
+        {
+          "name": "C. Udhayakumar",
+          "party": "BJP"
+        },
+        {
+          "name": "M Chinnadurai",
+          "party": "CPI(M)"
+        }
+      ]
+    },
+    "179": {
+      "name": "VIRALIMALAI",
+      "district": "PUDUKKOTTAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "P. Murugesan",
+          "party": "TVK"
+        },
+        {
+          "name": "Sathya Laxshmi",
+          "party": "NTK"
+        },
+        {
+          "name": "K.K. Sellapandian",
+          "party": "DMK"
+        },
+        {
+          "name": "Dr. C. Vijayabaskar",
+          "party": "AIADMK",
+          "star_candidate": true,
+          "position": "Ex-Health Minister"
+        }
+      ]
+    },
+    "180": {
+      "name": "PUDUKKOTTAI",
+      "district": "PUDUKKOTTAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K.M. Shareef",
+          "party": "TVK"
+        },
+        {
+          "name": "Ezhilarasi",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Vai. Muthuraja",
+          "party": "DMK"
+        },
+        {
+          "name": "N. Ramachandran",
+          "party": "BJP"
+        }
+      ]
+    },
+    "181": {
+      "name": "THIRUMAYAM",
+      "district": "PUDUKKOTTAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "C. Sindhamani",
+          "party": "TVK"
+        },
+        {
+          "name": "Lakshmi Srinivasan",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Regupathy",
+          "party": "DMK"
+        },
+        {
+          "name": "P.K. Vairamuthu",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "182": {
+      "name": "ALANGUDI",
+      "district": "PUDUKKOTTAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Durai Kandasamy",
+          "party": "TVK"
+        },
+        {
+          "name": "Rajaraman",
+          "party": "NTK"
+        },
+        {
+          "name": "Siva V. Meyyanathan",
+          "party": "DMK"
+        },
+        {
+          "name": "D. Vimal",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "183": {
+      "name": "ARANTANGI",
+      "district": "PUDUKKOTTAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "J. Mohamad Parvez",
+          "party": "TVK"
+        },
+        {
+          "name": "Muthu Lakshmi",
+          "party": "NTK"
+        },
+        {
+          "name": "Kavitha Srikanth",
+          "party": "BJP"
+        },
+        {
+          "name": "T. Rama Chandhiran",
+          "party": "INC"
+        }
+      ]
+    },
+    "184": {
+      "name": "KARAIKUDI",
+      "district": "SIVAGANGA",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Dr. T. K. Prabhu",
+          "party": "TVK"
+        },
+        {
+          "name": "Seeman",
+          "party": "NTK",
+          "star_candidate": true,
+          "position": "Party Chief Coordinator"
+        },
+        {
+          "name": "Dherpoki V. Pandi",
+          "party": "AMMK"
+        },
+        {
+          "name": "S. Mangudi",
+          "party": "INC"
+        }
+      ]
+    },
+    "185": {
+      "name": "TIRUPPATTUR",
+      "district": "SIVAGANGA",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Srinivasa Sethupathi",
+          "party": "TVK"
+        },
+        {
+          "name": "Ramya Mohan",
+          "party": "NTK"
+        },
+        {
+          "name": "K.R. Periakaruppan",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Gnanasekar",
+          "party": "AMMK"
+        },
+        {
+          "name": "K.C. Thirumaran",
+          "party": "BJP"
+        }
+      ]
+    },
+    "186": {
+      "name": "SIVAGANGA",
+      "district": "SIVAGANGA",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Kulandhai Rani Nachiar",
+          "party": "TVK"
+        },
+        {
+          "name": "Indhuja Ramesh",
+          "party": "NTK"
+        },
+        {
+          "name": "PR. Senthilnathan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Karunas",
+          "party": "DMK"
+        }
+      ]
+    },
+    "187": {
+      "name": "MANAMADURAI",
+      "district": "SIVAGANGA",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "D. Ilangovan",
+          "party": "TVK"
+        },
+        {
+          "name": "Shanmugapriya",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Tamilarasi Ravikumar",
+          "party": "DMK"
+        },
+        {
+          "name": "Pon. V. Balaganapathy",
+          "party": "BJP"
+        }
+      ]
+    },
+    "188": {
+      "name": "MELUR",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Madurai Veeran",
+          "party": "TVK"
+        },
+        {
+          "name": "Kottai Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "P. Periyapullaan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "189": {
+      "name": "MADURAI EAST",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Karthikeyan",
+          "party": "TVK"
+        },
+        {
+          "name": "Selvam",
+          "party": "NTK"
+        },
+        {
+          "name": "P. Moorthy",
+          "party": "DMK"
+        },
+        {
+          "name": "Maangulam K. Mahendiran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "190": {
+      "name": "SHOLAVANDAN",
+      "district": "MADURAI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "M.V. Karuppaiah",
+          "party": "TVK"
+        },
+        {
+          "name": "Nagalakshmi Thirumaran",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Venkatesan",
+          "party": "DMK"
+        },
+        {
+          "name": "Ki. Manikkam",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "191": {
+      "name": "MADURAI NORTH",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Kallanai",
+          "party": "TVK"
+        },
+        {
+          "name": "Thirunavukkarasu",
+          "party": "NTK"
+        },
+        {
+          "name": "Go. Thalapathi",
+          "party": "DMK"
+        },
+        {
+          "name": "Dr. P. Saravanan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "192": {
+      "name": "MADURAI SOUTH",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "J. Jo Peter",
+          "party": "TVK"
+        },
+        {
+          "name": "Sathya Devi",
+          "party": "NTK"
+        },
+        {
+          "name": "Raama Sreenivasan",
+          "party": "BJP"
+        },
+        {
+          "name": "Boominathan",
+          "party": "MDMK"
+        },
+        {
+          "name": "M. Boominathan",
+          "party": "DMK"
+        }
+      ]
+    },
+    "193": {
+      "name": "MADURAI CENTRAL",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V.N.S. Mustafa",
+          "party": "TVK"
+        },
+        {
+          "name": "Durga Kumaraswamy",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. P.T.R. Palanivel Thiagarajan",
+          "party": "DMK",
+          "star_candidate": true,
+          "position": "Finance Minister"
+        },
+        {
+          "name": "Sundar C",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "194": {
+      "name": "MADURAI WEST",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S.R. Thangapandi",
+          "party": "TVK"
+        },
+        {
+          "name": "Vignesh Kumar",
+          "party": "NTK"
+        },
+        {
+          "name": "Raghu Balaji",
+          "party": "DMK"
+        },
+        {
+          "name": "Sellur K. Raju",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "195": {
+      "name": "THIRUPARANKUNDRAM",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "CTR. Nirmalkumar",
+          "party": "TVK",
+          "star_candidate": true,
+          "position": "Senior Leader"
+        },
+        {
+          "name": "Sathya Devi",
+          "party": "NTK"
+        },
+        {
+          "name": "Krithika Thangapandian",
+          "party": "DMK"
+        },
+        {
+          "name": "V.V. Rajan Chellappa",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "196": {
+      "name": "THIRUMANGALAM",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "N. Sathish Kumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Munis",
+          "party": "NTK"
+        },
+        {
+          "name": "R.B. Udayakumar",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Sedapatti M. Manimaran",
+          "party": "DMK"
+        }
+      ]
+    },
+    "197": {
+      "name": "USILAMPATTI",
+      "district": "MADURAI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Vijay Mahalingam",
+          "party": "TVK"
+        },
+        {
+          "name": "Abirami Dhanapal",
+          "party": "NTK"
+        },
+        {
+          "name": "I. Mahendiran",
+          "party": "AIADMK"
+        },
+        {
+          "name": "T. Saravana Kumar",
+          "party": "INC"
+        }
+      ]
+    },
+    "198": {
+      "name": "ANDIPATTI",
+      "district": "THENI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Pandi",
+          "party": "TVK"
+        },
+        {
+          "name": "Arunadevi",
+          "party": "NTK"
+        },
+        {
+          "name": "A. Maharajan",
+          "party": "DMK"
+        },
+        {
+          "name": "A. Logirajam",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "199": {
+      "name": "PERIYAKULAM",
+      "district": "THENI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "G. Sabari",
+          "party": "TVK"
+        },
+        {
+          "name": "Vimala",
+          "party": "NTK"
+        },
+        {
+          "name": "Aatral Arasu",
+          "party": "VCK"
+        },
+        {
+          "name": "K. Kathirkamu",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "200": {
+      "name": "BODINAYAKANUR",
+      "district": "THENI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Prakash",
+          "party": "TVK"
+        },
+        {
+          "name": "Kalaiyarasu",
+          "party": "NTK"
+        },
+        {
+          "name": "O. Panneerselvam",
+          "party": "DMK",
+          "star_candidate": true,
+          "position": "Former AIADMK CM, joined DMK"
+        },
+        {
+          "name": "V.T. Narayanasami",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "201": {
+      "name": "CUMBUM",
+      "district": "THENI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "P.L.A. Jaganath",
+          "party": "TVK"
+        },
+        {
+          "name": "Anbu Selvi",
+          "party": "NTK"
+        },
+        {
+          "name": "N. Ramakrishnan",
+          "party": "DMK"
+        },
+        {
+          "name": "S.T.K. Jakkaiyan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "202": {
+      "name": "RAJAPALAYAM",
+      "district": "VIRUDHUNAGAR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Jagadeeswari",
+          "party": "TVK"
+        },
+        {
+          "name": "Karthik",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Thangapandian",
+          "party": "DMK"
+        },
+        {
+          "name": "Priscilla Pandian",
+          "party": "BJP"
+        }
+      ]
+    },
+    "203": {
+      "name": "SRIVILLIPUTHUR",
+      "district": "VIRUDHUNAGAR",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "A. Karthik",
+          "party": "TVK"
+        },
+        {
+          "name": "Karikala Pandiyan",
+          "party": "NTK"
+        },
+        {
+          "name": "Smt. M. Santhirapraba",
+          "party": "AIADMK"
+        },
+        {
+          "name": "P Mahalingam",
+          "party": "CPI"
+        }
+      ]
+    },
+    "204": {
+      "name": "SATTUR",
+      "district": "VIRUDHUNAGAR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "M. Ajith",
+          "party": "TVK"
+        },
+        {
+          "name": "Anandha Raja",
+          "party": "NTK"
+        },
+        {
+          "name": "A.R.R. Raghuraman",
+          "party": "DMK"
+        },
+        {
+          "name": "Nainar Nagendran",
+          "party": "BJP",
+          "star_candidate": true,
+          "position": "BJP Tamil Nadu president"
+        }
+      ]
+    },
+    "205": {
+      "name": "SIVAKASI",
+      "district": "VIRUDHUNAGAR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Keerthana",
+          "party": "TVK"
+        },
+        {
+          "name": "Dayana",
+          "party": "NTK"
+        },
+        {
+          "name": "K.T. Rajendrabalaji",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Ganesan Ashokan",
+          "party": "INC"
+        }
+      ]
+    },
+    "206": {
+      "name": "VIRUDHUNAGAR",
+      "district": "VIRUDHUNAGAR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S.P. Selvam",
+          "party": "TVK"
+        },
+        {
+          "name": "Laxmanan",
+          "party": "NTK"
+        },
+        {
+          "name": "V.G. Ganesan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "V. Vijaya Prabhakaran",
+          "party": "DMDK"
+        }
+      ]
+    },
+    "207": {
+      "name": "ARUPPUKOTTAI",
+      "district": "VIRUDHUNAGAR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Karthik Kumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Manimaran",
+          "party": "NTK"
+        },
+        {
+          "name": "K.K.S.S.R. Ramachandran",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Sethupathi",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "208": {
+      "name": "TIRUCHULI",
+      "district": "VIRUDHUNAGAR",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Samayan",
+          "party": "TVK"
+        },
+        {
+          "name": "Karthick Raja",
+          "party": "NTK"
+        },
+        {
+          "name": "Thangam Thennarasu",
+          "party": "DMK",
+          "star_candidate": true,
+          "position": "Industries & Commerce Minister"
+        },
+        {
+          "name": "M. S. R. Rajavarman",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "209": {
+      "name": "PARAMAKUDI",
+      "district": "RAMANATHAPURAM",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "G. Gopinathan",
+          "party": "TVK"
+        },
+        {
+          "name": "Ezhil Izhavarasi",
+          "party": "NTK"
+        },
+        {
+          "name": "K.K. Kathiravan",
+          "party": "DMK"
+        },
+        {
+          "name": "Dr. S. Muthaiya",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "210": {
+      "name": "TIRUVADANAI",
+      "district": "RAMANATHAPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V.K. Raji",
+          "party": "TVK"
+        },
+        {
+          "name": "Premnath",
+          "party": "NTK"
+        },
+        {
+          "name": "Smt. Kirthika Muniyasami",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Rama Karumanickam",
+          "party": "INC"
+        }
+      ]
+    },
+    "211": {
+      "name": "RAMANATHAPURAM",
+      "district": "RAMANATHAPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "E.K. Sahul Hameed",
+          "party": "TVK"
+        },
+        {
+          "name": "Muthu Kesavan",
+          "party": "NTK"
+        },
+        {
+          "name": "Kaderbatcha",
+          "party": "DMK"
+        },
+        {
+          "name": "K. Nagendran",
+          "party": "BJP"
+        }
+      ]
+    },
+    "212": {
+      "name": "MUDUKULATHUR",
+      "district": "RAMANATHAPURAM",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Malarvizhi Jayabala",
+          "party": "TVK"
+        },
+        {
+          "name": "Chandra Prabha",
+          "party": "NTK"
+        },
+        {
+          "name": "R.S. Rajakannappan",
+          "party": "DMK"
+        },
+        {
+          "name": "Malesia S. Pandy",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "213": {
+      "name": "VILATHIKULAM",
+      "district": "THOOTHUKUDI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Kasiram",
+          "party": "TVK"
+        },
+        {
+          "name": "Balaji",
+          "party": "NTK"
+        },
+        {
+          "name": "G.V. Markandayan",
+          "party": "DMK"
+        },
+        {
+          "name": "Smt. R. Sathya",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "214": {
+      "name": "THOOTHUKKUDI",
+      "district": "THOOTHUKUDI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Srinath",
+          "party": "TVK"
+        },
+        {
+          "name": "Jacob Abhishek Devadasan",
+          "party": "NTK"
+        },
+        {
+          "name": "Geetha Jeevan",
+          "party": "DMK"
+        },
+        {
+          "name": "Si.Tha. Sellapandiyan",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "215": {
+      "name": "TIRUCHENDUR",
+      "district": "THOOTHUKUDI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Murugan",
+          "party": "TVK"
+        },
+        {
+          "name": "Obiliya",
+          "party": "NTK"
+        },
+        {
+          "name": "Anitha Radhakrishnan",
+          "party": "DMK"
+        },
+        {
+          "name": "K. R. M. Radhakrishnan",
+          "party": "BJP"
+        }
+      ]
+    },
+    "216": {
+      "name": "SRIVAIKUNTAM",
+      "district": "THOOTHUKUDI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. Saravanan",
+          "party": "TVK"
+        },
+        {
+          "name": "Shanmugasundaram",
+          "party": "NTK"
+        },
+        {
+          "name": "S.P. Shanmughanathan",
+          "party": "AIADMK"
+        },
+        {
+          "name": "S. Oorvashi Amirtharaj",
+          "party": "INC"
+        }
+      ]
+    },
+    "217": {
+      "name": "OTTAPIDARAM",
+      "district": "THOOTHUKUDI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "P. Madhanraja",
+          "party": "TVK"
+        },
+        {
+          "name": "Anusiya",
+          "party": "NTK"
+        },
+        {
+          "name": "M.C. Shanmugiah",
+          "party": "DMK"
+        },
+        {
+          "name": "R. Sundararaj",
+          "party": "AMMK"
+        }
+      ]
+    },
+    "218": {
+      "name": "KOVILPATTI",
+      "district": "THOOTHUKUDI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Balasubramaniam",
+          "party": "TVK"
+        },
+        {
+          "name": "Pandi",
+          "party": "NTK"
+        },
+        {
+          "name": "Ka. Karunanithi",
+          "party": "DMK"
+        },
+        {
+          "name": "Kadambur C. Rajoo",
+          "party": "AIADMK",
+          "star_candidate": true,
+          "position": "Senior AIADMK leader"
+        }
+      ]
+    },
+    "219": {
+      "name": "SANKARANKOVIL",
+      "district": "TIRUNELVELI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "C. Ramarajan",
+          "party": "TVK"
+        },
+        {
+          "name": "Kavitha",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Thiliban Jeyasangar",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Sangai Ganesan",
+          "party": "INC"
+        }
+      ]
+    },
+    "220": {
+      "name": "VASUDEVANALLUR",
+      "district": "TIRUNELVELI",
+      "type": "SC",
+      "candidates": [
+        {
+          "name": "R. Amudha Rani",
+          "party": "TVK"
+        },
+        {
+          "name": "Isai Mathivanan",
+          "party": "NTK"
+        },
+        {
+          "name": "E. Raja",
+          "party": "DMK"
+        },
+        {
+          "name": "Ananthan Ayyasamy",
+          "party": "BJP"
+        }
+      ]
+    },
+    "221": {
+      "name": "KADAYANALLUR",
+      "district": "TIRUNELVELI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R.K. Abdul Jalil",
+          "party": "TVK"
+        },
+        {
+          "name": "Abubakar Siddique",
+          "party": "NTK"
+        },
+        {
+          "name": "C. Krishnamurali",
+          "party": "AIADMK"
+        },
+        {
+          "name": "Rajendran",
+          "party": "MDMK"
+        },
+        {
+          "name": "T. M. Rajendran",
+          "party": "DMK"
+        }
+      ]
+    },
+    "222": {
+      "name": "TENKASI",
+      "district": "TIRUNELVELI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "A. Rajaprakash",
+          "party": "TVK"
+        },
+        {
+          "name": "Gowshik Pandiyan",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Kalai Kathiravan",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Selvamoganthass-Pandian",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "223": {
+      "name": "ALANGULAM",
+      "district": "TIRUNELVELI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "V. Vipin Chakravarthi",
+          "party": "TVK"
+        },
+        {
+          "name": "Palraj",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Paul Manoj Pandian",
+          "party": "DMK"
+        },
+        {
+          "name": "K.R.P. Prabakaran",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "224": {
+      "name": "TIRUNELVELI",
+      "district": "TIRUNELVELI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "R.S. Murugan",
+          "party": "TVK"
+        },
+        {
+          "name": "Sathya",
+          "party": "NTK"
+        },
+        {
+          "name": "Su. Subramanian",
+          "party": "DMK"
+        },
+        {
+          "name": "Thakshai N. Ganesaraja",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "225": {
+      "name": "AMBASAMUDRAM",
+      "district": "TIRUNELVELI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Rajagopal",
+          "party": "TVK"
+        },
+        {
+          "name": "Sivasankaran",
+          "party": "NTK"
+        },
+        {
+          "name": "Dr. Isakki Subbaiah",
+          "party": "AIADMK"
+        },
+        {
+          "name": "V.P. Durai",
+          "party": "INC"
+        }
+      ]
+    },
+    "226": {
+      "name": "PALAYAMCOTTAI",
+      "district": "TIRUNELVELI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Maria John",
+          "party": "TVK"
+        },
+        {
+          "name": "Sankara Narayanan",
+          "party": "NTK"
+        },
+        {
+          "name": "M. Abdul Wahab",
+          "party": "DMK"
+        },
+        {
+          "name": "S. Saiyadhu Sultan Samsudheen",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "227": {
+      "name": "NANGUNERI",
+      "district": "TIRUNELVELI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Rettiyapatti Narayanan",
+          "party": "TVK"
+        },
+        {
+          "name": "Selvam",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Esakkimuthu",
+          "party": "AMMK"
+        },
+        {
+          "name": "Ruby Manoharan",
+          "party": "INC"
+        }
+      ]
+    },
+    "228": {
+      "name": "RADHAPURAM",
+      "district": "TIRUNELVELI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Satheesh Christopher",
+          "party": "TVK"
+        },
+        {
+          "name": "Girija Thamaraipandiyan",
+          "party": "NTK"
+        },
+        {
+          "name": "M. Appavu",
+          "party": "DMK"
+        },
+        {
+          "name": "S.P. Balakrishnan",
+          "party": "BJP"
+        }
+      ]
+    },
+    "229": {
+      "name": "KANNIYAKUMARI",
+      "district": "KANNIYAKUMARI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S.R. Madhavan",
+          "party": "TVK"
+        },
+        {
+          "name": "Maria Jenifer",
+          "party": "NTK"
+        },
+        {
+          "name": "R. Mahesh",
+          "party": "DMK"
+        },
+        {
+          "name": "N. Thalavaissundaram",
+          "party": "AIADMK"
+        }
+      ]
+    },
+    "230": {
+      "name": "NAGERCOIL",
+      "district": "KANNIYAKUMARI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "G. King",
+          "party": "TVK"
+        },
+        {
+          "name": "Muthukumar",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Austin",
+          "party": "DMK"
+        },
+        {
+          "name": "M.R. Gandhi",
+          "party": "BJP"
+        }
+      ]
+    },
+    "231": {
+      "name": "COLACHEL",
+      "district": "KANNIYAKUMARI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "Prem Alex Lawrence",
+          "party": "TVK"
+        },
+        {
+          "name": "Ancy Sobha Rani",
+          "party": "NTK"
+        },
+        {
+          "name": "T. Sivakumar",
+          "party": "BJP"
+        },
+        {
+          "name": "Tharagai Cuthbert",
+          "party": "INC"
+        }
+      ]
+    },
+    "232": {
+      "name": "PADMANABHAPURAM",
+      "district": "KANNIYAKUMARI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Krishnakumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Seelan",
+          "party": "NTK"
+        },
+        {
+          "name": "P. Ramesh",
+          "party": "BJP"
+        },
+        {
+          "name": "R Chellasamy",
+          "party": "CPI(M)"
+        }
+      ]
+    },
+    "233": {
+      "name": "VILAVANCODE",
+      "district": "KANNIYAKUMARI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "K. Michael Kumar",
+          "party": "TVK"
+        },
+        {
+          "name": "Maria Stella",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Vijayadharani",
+          "party": "BJP"
+        },
+        {
+          "name": "T.T. Praveen",
+          "party": "INC"
+        }
+      ]
+    },
+    "234": {
+      "name": "KILLIYOOR",
+      "district": "KANNIYAKUMARI",
+      "type": "GEN",
+      "candidates": [
+        {
+          "name": "S. Sabeer",
+          "party": "TVK"
+        },
+        {
+          "name": "Himler",
+          "party": "NTK"
+        },
+        {
+          "name": "S. Rajesh Kumar",
+          "party": "INC"
+        },
+        {
+          "name": "J. Nivin Simon",
+          "party": "TMC"
+        },
+        {
+          "name": "Nivin Simon",
+          "party": "BJP"
+        }
+      ]
+    }
+  }
+}

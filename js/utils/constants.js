@@ -9,7 +9,7 @@ const Constants = {
     LABEL_MIN_ZOOM: 9,
 
     // Available election years
-    AVAILABLE_YEARS: [2021, 2016],
+    AVAILABLE_YEARS: [2026, 2021, 2016],
 
     // Map configuration
     MAP_CENTER: [11.1271, 78.6569], // Tamil Nadu center

@@ -531,6 +531,26 @@
     user-select: none;
 }
 
+.star-candidate-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+    font-size: 13px;
+    color: #f5c518;
+    filter: drop-shadow(0 0 3px rgba(245, 197, 24, 0.7));
+    vertical-align: middle;
+    user-select: none;
+}
+
+.candidate-position {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+    margin-bottom: 3px;
+    font-style: italic;
+    opacity: 0.85;
+}
+
 .candidate-votes {
     text-align: right;
     min-width: 80px;

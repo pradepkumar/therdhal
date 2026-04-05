@@ -9,7 +9,7 @@ const DataQueries = (function () {
      * @returns {Array<number>} Array of available years
      */
     function getAvailableYears() {
-        return [2021, 2016, 2011];
+        return [2026, 2021, 2016, 2011];
     }
 
     /**
@@ -79,7 +79,7 @@ const DataQueries = (function () {
             try {
                 const data = await DataLoader.loadElectionData(year);
                 const result = data.constituencies[constituencyId];
-                if (result && result.winner) {
+                if (result && result.winner && result.winner.winner === true) {
                     history.push({
                         year,
                         winner: result.winner,

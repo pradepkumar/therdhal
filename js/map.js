@@ -23,6 +23,7 @@ const MapModule = (function () {
     let currentYear = null;
     let selectedDistrict = null;
     let selectedConstituency = null;
+    let selectedParty = null;
 
     /**
      * Initialize the map
@@ -149,9 +150,34 @@ const MapModule = (function () {
         let fillColor = '#8b5cf6';
         let fillOpacity = 0.3;
 
-        // If we have election data, color by winning party
-        if (currentYear && window.electionData && window.electionData[currentYear]) {
-            const result = window.electionData[currentYear].constituencies[id];
+        const year = String(currentYear);
+        const data = currentYear && window.electionData && window.electionData[currentYear];
+
+        if (selectedParty && data) {
+            // Party filter mode: highlight matching constituencies, dim others
+            let partyMatch = false;
+            const constituency = data.constituencies[id];
+            if (constituency) {
+                if (year === '2026') {
+                    // Match any candidate from this party
+                    const candidates = constituency.candidates || [];
+                    partyMatch = candidates.some(c => c.party === selectedParty);
+                } else {
+                    // Match winner
+                    partyMatch = constituency.winner && constituency.winner.party === selectedParty;
+                }
+            }
+
+            if (partyMatch) {
+                fillColor = DataModule.getPartyColor(selectedParty);
+                fillOpacity = 0.75;
+            } else {
+                fillColor = '#374151';
+                fillOpacity = 0.25;
+            }
+        } else if (data && year !== '2026') {
+            // Normal mode: color by winning party (not for 2026 — election hasn't happened yet)
+            const result = data.constituencies[id];
             if (result && result.winner) {
                 fillColor = DataModule.getPartyColor(result.winner.party);
                 fillOpacity = 0.6;
@@ -446,6 +472,7 @@ const MapModule = (function () {
      */
     function setElectionYear(year) {
         currentYear = year;
+        selectedParty = null;
         // Update constituency layer styles whether or not it's currently visible
         // This ensures colors are ready when user zooms in
         if (constituencyLayer) {
@@ -455,6 +482,13 @@ const MapModule = (function () {
         }
         // Trigger zoom change handler to update layer visibility based on year selection
         handleZoomChange();
+    }
+
+    function setSelectedParty(party) {
+        selectedParty = party;
+        if (constituencyLayer) {
+            constituencyLayer.setStyle(feature => getConstituencyStyle(feature, true));
+        }
     }
 
     /**
@@ -504,6 +538,7 @@ const MapModule = (function () {
         zoomToConstituency,
         resetToOverview,
         setElectionYear,
+        setSelectedParty,
         getMap,
         invalidateSize,
         _redrawStyles

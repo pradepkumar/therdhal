@@ -27,6 +27,7 @@ const PartyConfig = {
         'MMK': '#00a65a',
         'IJK': '#ff6600',
         'KMDK': '#99cc33',
+        'TVK': '#d4a017',
         'IND': '#607d8b',
         'OTHERS': '#78909c',
         'MKP': '#e91e63',
@@ -64,6 +65,7 @@ const PartyConfig = {
         'MMK': ['#00a65a'],  // Green
         'IJK': ['#ff6600', '#0000ff'],  // Orange and Blue
         'KMDK': ['#99cc33'],  // Yellow-Green
+        'TVK': ['#000000', '#d4a017'],  // Black and Deep Gold
         'IND': ['#607d8b'],  // Blue Grey
         'OTHERS': ['#78909c'],  // Grey
         'MKP': ['#e91e63'],

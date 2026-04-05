@@ -19,7 +19,7 @@ const DataLoader = (function () {
      */
     async function loadGeoJSON(path) {
         try {
-            const response = await fetch(path);
+            const response = await fetch(path, { cache: 'no-cache' });
             if (!response.ok) {
                 throw new Error(`Failed to load ${path}: ${response.status}`);
             }
@@ -37,7 +37,7 @@ const DataLoader = (function () {
      */
     async function loadJSON(path) {
         try {
-            const response = await fetch(path);
+            const response = await fetch(path, { cache: 'no-cache' });
             if (!response.ok) {
                 throw new Error(`Failed to load ${path}: ${response.status}`);
             }

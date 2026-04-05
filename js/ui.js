@@ -18,6 +18,7 @@ const UIModule = (function () {
     let isUpdatingConstituency = false;  // Flag to prevent recursive updates
     let currentOverlayElectionYear = 2021; // State for overlay year navigation
     let _overlayPrevFocus = null; // Element to restore focus to when overlay closes
+    let selectedLegendParty = null;
 
     function _getFocusable(container) {
         return Array.from(container.querySelectorAll(
@@ -176,6 +177,7 @@ const UIModule = (function () {
     }
 
     async function handleYearChange(year) {
+        selectedLegendParty = null;
         if (year) {
             const data = await DataModule.loadElectionData(year);
             window.electionData = window.electionData || {};
@@ -255,6 +257,32 @@ const UIModule = (function () {
     function showBackButton() { backButton.classList.remove('hidden'); }
     function hideBackButton() { backButton.classList.add('hidden'); }
 
+    function _renderLegendItem(p) {
+        return `
+            <div class="legend-item" data-party="${p.name}" role="button" tabindex="0">
+                <div class="legend-color" style="background:${p.color}"></div>
+                <span class="party-name">${p.name}</span>
+                <span class="party-seats">${p.seats}</span>
+            </div>
+        `;
+    }
+
+    function _applyLegendSelection() {
+        const itemsEl = document.querySelector('.legend-items');
+        if (!itemsEl) return;
+        itemsEl.querySelectorAll('.legend-item[data-party]').forEach(el => {
+            const party = el.dataset.party;
+            el.classList.toggle('legend-item--active', party === selectedLegendParty);
+            el.classList.toggle('legend-item--dimmed', selectedLegendParty !== null && party !== selectedLegendParty);
+        });
+    }
+
+    function selectLegendParty(partyName) {
+        selectedLegendParty = selectedLegendParty === partyName ? null : partyName;
+        _applyLegendSelection();
+        MapModule.setSelectedParty(selectedLegendParty);
+    }
+
     function showLegend() {
         if (!legend) {
             console.warn('Legend element not found');
@@ -267,12 +295,42 @@ const UIModule = (function () {
             return;
         }
 
-        const data = window.electionData && window.electionData[year];
-        if (!data) return;
-
         // Update legend title
         const titleEl = legend.querySelector('.legend-title');
         if (titleEl) titleEl.textContent = year;
+
+        const itemsEl = document.querySelector('.legend-items');
+
+        // 2026: show contesting seats from ALLIANCES_2026 (election hasn't happened yet)
+        if (String(year) === '2026' && typeof ALLIANCES_2026 !== 'undefined') {
+            if (itemsEl) {
+                itemsEl.innerHTML = ALLIANCES_2026.map(alliance => {
+                    const allianceTotal = alliance.parties.reduce((sum, p) => sum + (p.seats || 0), 0);
+                    return `
+                        <div class="legend-alliance">
+                            <div class="alliance-header">
+                                <span class="alliance-name">${alliance.shortName}</span>
+                                <span class="alliance-seats">${allianceTotal} seats</span>
+                            </div>
+                            <div class="alliance-parties">
+                                ${alliance.parties.map(p => _renderLegendItem({
+                                    name: p.name,
+                                    seats: p.seats,
+                                    color: DataModule.getPartyColor(p.name)
+                                })).join('')}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+            _bindLegendClicks(itemsEl);
+            _applyLegendSelection();
+            legend.classList.remove('hidden');
+            return;
+        }
+
+        const data = window.electionData && window.electionData[year];
+        if (!data) return;
 
         // Calculate seat counts
         const partySeats = {};
@@ -288,7 +346,6 @@ const UIModule = (function () {
         const allianceSummary = [];
         const assignedParties = new Set();
 
-        // Process defined alliances
         for (const [key, alliance] of Object.entries(alliances)) {
             const partiesInAlliance = [];
             let allianceTotalSeats = 0;
@@ -341,8 +398,6 @@ const UIModule = (function () {
             });
         }
 
-        // Render HTML
-        const itemsEl = document.querySelector('.legend-items');
         if (itemsEl) {
             itemsEl.innerHTML = allianceSummary.map(alliance => `
                 <div class="legend-alliance">
@@ -351,19 +406,30 @@ const UIModule = (function () {
                         <span class="alliance-seats">${alliance.totalSeats}</span>
                     </div>
                     <div class="alliance-parties">
-                        ${alliance.parties.map(p => `
-                            <div class="legend-item">
-                                <div class="legend-color" style="background:${p.color}"></div>
-                                <span class="party-name">${p.name}</span>
-                                <span class="party-seats">${p.seats}</span>
-                            </div>
-                        `).join('')}
+                        ${alliance.parties.map(p => _renderLegendItem(p)).join('')}
                     </div>
                 </div>
             `).join('');
         }
 
+        _bindLegendClicks(itemsEl);
+        _applyLegendSelection();
         legend.classList.remove('hidden');
+    }
+
+    function _bindLegendClicks(itemsEl) {
+        if (!itemsEl) return;
+        // Use event delegation — one listener on the container
+        itemsEl.onclick = (e) => {
+            const item = e.target.closest('.legend-item[data-party]');
+            if (item) selectLegendParty(item.dataset.party);
+        };
+        itemsEl.onkeydown = (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const item = e.target.closest('.legend-item[data-party]');
+                if (item) { e.preventDefault(); selectLegendParty(item.dataset.party); }
+            }
+        };
     }
 
     function hideLegend() {
@@ -375,8 +441,8 @@ const UIModule = (function () {
     async function showConstituencyOverlay(id) {
         currentConstituencyId = id;
 
-        // Initialize overlay year from filter or default to 2021
-        currentOverlayElectionYear = parseInt(yearFilter.value) || 2021;
+        // Initialize overlay year from filter or default to 2026
+        currentOverlayElectionYear = parseInt(yearFilter.value) || 2026;
 
         const info = await DataModule.getConstituencyInfo(id);
         const history = await DataModule.getWinnerHistory(id);
@@ -644,6 +710,46 @@ const UIModule = (function () {
         // Fetch and display results
         const candidatesEl = document.getElementById('candidates-table');
         const resultsTitle = document.querySelector('.candidates-section .section-title');
+
+        // 2026: No results yet — show declared candidates only
+        if (year === 2026) {
+            if (resultsTitle) {
+                resultsTitle.innerHTML = `Declared Candidates <span class="section-subtitle">2026</span>`;
+            }
+            candidatesEl.innerHTML = '<div class="loading-spinner" style="margin:20px auto;"></div>';
+            try {
+                const electionResults = await DataModule.getElectionResults(year, id);
+                if (electionResults && electionResults.candidates && electionResults.candidates.length > 0) {
+                    candidatesEl.innerHTML = electionResults.candidates.map((c, i) => {
+                        const partyColor = DataModule.getPartyColor(c.party);
+                        const partyTextColor = DataModule.getPartyTextColor(c.party);
+                        const borderGradient = DataModule.getPartyBorderGradient(c.party);
+                        const partyLogo = DataModule.getPartyLogo(c.party);
+                        const starBadge = c.star_candidate ? `<span class="star-candidate-badge" title="Star Candidate">★</span>` : '';
+                        const positionEl = c.position ? `<div class="candidate-position">${c.position}</div>` : '';
+                        return `<div class="candidate-row${c.star_candidate ? ' star-candidate' : ''}" style="--candidate-color:${partyColor};--border-gradient:${borderGradient}">
+                            <span class="candidate-rank">${i + 1}</span>
+                            <div class="candidate-logo-box">
+                                <img src="${partyLogo}" alt="${c.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
+                            </div>
+                            <div class="candidate-info">
+                                <div class="candidate-name">${c.name}${starBadge}</div>
+                                ${positionEl}
+                                <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}">
+                                    <span class="party-name">${c.party}</span>
+                                </span>
+                            </div>
+                        </div>`;
+                    }).join('');
+                } else {
+                    candidatesEl.innerHTML = '<p class="no-data">No candidates declared</p>';
+                }
+            } catch (e) {
+                candidatesEl.innerHTML = '<p class="no-data">No candidates declared</p>';
+            }
+            return;
+        }
+
         if (resultsTitle) {
             resultsTitle.innerHTML = `Election Results <span class="section-subtitle">Votes / Share %</span>`;
         }

@@ -553,45 +553,156 @@ function e2026_renderAlliances() {
     container.appendChild(alliancesDiv);
 }
 
-function e2026_renderCandidates(filterParty = null) {
+function e2026_renderCandidates() {
     const container = document.getElementById('epg-tab-candidates');
     if (!container || typeof CANDIDATES_2026 === 'undefined') return;
 
-    let candidates = CANDIDATES_2026;
-    if (filterParty) {
-        candidates = candidates.filter(c => c.party === filterParty);
-    }
-
-    const confirmed = candidates.filter(c => c.status === 'confirmed').length;
-
-    if (candidates.length === 0) {
+    if (CANDIDATES_2026.length === 0) {
         container.innerHTML = '<div class="epg-coming-soon">Candidate list coming soon</div>';
         return;
     }
 
-    container.innerHTML = `
-        <div class="epg-candidates-bar">
-            <div class="epg-candidates-counter">
-                <strong>${confirmed}</strong> of 234 constituencies announced
-            </div>
-            <select class="epg-party-filter" id="epg-party-filter" onchange="e2026_renderCandidates(this.value || null)">
-                <option value="">All Parties</option>
-                ${Array.from(new Set(CANDIDATES_2026.map(c => c.party))).map(p => `<option value="${p}">${p}</option>`).join('')}
-            </select>
-        </div>
-        <div class="epg-candidate-list">
-            ${candidates.map(c => `
-                <div class="epg-candidate-row">
-                    <div class="epg-candidate-info">
-                        <div class="epg-candidate-name">${c.name}</div>
-                        <div class="epg-candidate-party">${c.party}</div>
-                        <div class="epg-candidate-constituency">${c.constituency}</div>
-                    </div>
-                    <span class="epg-status-badge epg-status-${c.status}">${c.status}</span>
+    // Build party → alliance lookup from ALLIANCES_2026
+    const partyToAlliance = {};
+    if (typeof ALLIANCES_2026 !== 'undefined') {
+        ALLIANCES_2026.forEach(alliance => {
+            alliance.parties.forEach(p => {
+                partyToAlliance[p.name] = alliance;
+                if (p.subParties) {
+                    p.subParties.forEach(sp => {
+                        if (!partyToAlliance[sp.name]) partyToAlliance[sp.name] = alliance;
+                    });
+                }
+            });
+        });
+    }
+
+    // Group candidates: alliance → party → list
+    const allianceOrder = [];
+    const allianceMap = {};
+
+    CANDIDATES_2026.forEach(c => {
+        const alliance = partyToAlliance[c.party];
+        const allianceName = alliance ? alliance.name : 'Others';
+
+        if (!allianceMap[allianceName]) {
+            allianceMap[allianceName] = {
+                meta: alliance || { name: 'Others', shortName: 'Others', color: '#78909c' },
+                parties: {}
+            };
+            allianceOrder.push(allianceName);
+        }
+        const parties = allianceMap[allianceName].parties;
+        if (!parties[c.party]) parties[c.party] = [];
+        parties[c.party].push(c);
+    });
+
+    const listHtml = allianceOrder.map(allianceName => {
+        const { meta, parties } = allianceMap[allianceName];
+
+        const partyAccordions = Object.entries(parties).map(([party, members]) => {
+            const logo = typeof PartyConfig !== 'undefined' ? PartyConfig.getLogo(party) : null;
+            const color = typeof PartyConfig !== 'undefined' ? PartyConfig.getColor(party) : '#78909c';
+            const logoHtml = logo && !logo.includes('placeholder')
+                ? `<img class="epg-accordion-logo" src="${logo}" alt="${party}" />`
+                : `<span class="epg-accordion-logo-dot" style="background:${color};"></span>`;
+
+            const rows = members.map(c => `
+                <div class="epg-candidate-row" data-name="${c.name.toLowerCase()}" data-constituency="${c.constituency.toLowerCase()}">
+                    <span class="epg-candidate-name">${c.name}</span>
+                    <span class="epg-candidate-constituency">${c.constituency}</span>
                 </div>
-            `).join('')}
+            `).join('');
+
+            return `
+                <div class="epg-party-accordion">
+                    <button class="epg-accordion-header" onclick="e2026_toggleAccordion(this)" aria-expanded="false">
+                        ${logoHtml}
+                        <span class="epg-accordion-party-name">${party}</span>
+                        <span class="epg-accordion-count">${members.length}</span>
+                        <span class="epg-accordion-chevron">▸</span>
+                    </button>
+                    <div class="epg-accordion-body" hidden>
+                        <div class="epg-candidate-list">${rows}</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        return `
+            <div class="epg-alliance-section">
+                <div class="epg-alliance-header" style="border-left-color:${meta.color};">
+                    <span class="epg-alliance-name">${meta.name}</span>
+                </div>
+                <div class="epg-alliance-parties">${partyAccordions}</div>
+            </div>
+        `;
+    }).join('');
+
+    container.innerHTML = `
+        <div class="epg-candidate-search-wrap">
+            <input
+                class="epg-candidate-search"
+                type="search"
+                placeholder="Search candidate or constituency…"
+                oninput="e2026_searchCandidates(this.value)"
+                autocomplete="off"
+                spellcheck="false"
+            />
         </div>
+        <div class="epg-accordion-list">${listHtml}</div>
     `;
+}
+
+function e2026_searchCandidates(raw) {
+    const query = raw.trim().toLowerCase();
+    const container = document.getElementById('epg-tab-candidates');
+    if (!container) return;
+
+    const isSearching = query.length > 0;
+
+    // 1. Filter individual rows
+    container.querySelectorAll('.epg-candidate-row').forEach(row => {
+        if (!isSearching) {
+            row.classList.remove('epg-filtered-out');
+        } else {
+            const name = row.dataset.name || '';
+            const constituency = row.dataset.constituency || '';
+            row.classList.toggle('epg-filtered-out', !name.includes(query) && !constituency.includes(query));
+        }
+    });
+
+    // 2. Show/hide party accordions; expand ones with matches
+    container.querySelectorAll('.epg-party-accordion').forEach(accordion => {
+        const btn = accordion.querySelector('.epg-accordion-header');
+        const body = accordion.querySelector('.epg-accordion-body');
+        if (!isSearching) {
+            accordion.classList.remove('epg-filtered-out');
+            if (btn && body) body.hidden = btn.getAttribute('aria-expanded') !== 'true';
+        } else {
+            const hasMatch = accordion.querySelectorAll('.epg-candidate-row:not(.epg-filtered-out)').length > 0;
+            accordion.classList.toggle('epg-filtered-out', !hasMatch);
+            if (body) body.hidden = !hasMatch;
+            if (btn) btn.setAttribute('aria-expanded', hasMatch ? 'true' : 'false');
+        }
+    });
+
+    // 3. Hide alliance sections with no visible parties
+    container.querySelectorAll('.epg-alliance-section').forEach(section => {
+        if (!isSearching) {
+            section.classList.remove('epg-filtered-out');
+        } else {
+            const anyVisible = section.querySelectorAll('.epg-party-accordion:not(.epg-filtered-out)').length > 0;
+            section.classList.toggle('epg-filtered-out', !anyVisible);
+        }
+    });
+}
+
+function e2026_toggleAccordion(btn) {
+    const body = btn.nextElementSibling;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    body.hidden = expanded;
 }
 
 function e2026_renderStars() {

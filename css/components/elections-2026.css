@@ -1109,85 +1109,177 @@
 }
 
 /* ── Candidates Panel ── */
-.epg-candidates-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-    padding: var(--space-4) 0;
-    border-bottom: 1px solid var(--color-border);
-    margin-bottom: var(--space-4);
+/* ── Candidate Search ── */
+.epg-candidate-search-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--color-bg-primary);
+    padding: var(--space-3) 0 var(--space-4);
 }
 
-.epg-candidates-counter {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-}
-
-.epg-candidates-counter strong {
-    color: var(--color-accent-primary);
-    font-weight: 700;
-}
-
-.epg-party-filter {
-    padding: var(--space-2) var(--space-3);
+.epg-candidate-search {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
     background: var(--color-bg-tertiary);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     color: var(--color-text-primary);
     font-size: var(--font-size-sm);
     font-family: var(--font-primary);
-    cursor: pointer;
-    transition: all var(--transition-fast);
+    outline: none;
+    transition: border-color var(--transition-fast);
+    box-sizing: border-box;
 }
 
-.epg-party-filter:hover {
+.epg-candidate-search:focus {
     border-color: var(--color-accent-primary);
 }
 
-.epg-candidate-list {
+.epg-candidate-search::placeholder {
+    color: var(--color-text-muted);
+}
+
+.epg-filtered-out {
+    display: none !important;
+}
+
+/* ── Candidates Accordion ── */
+.epg-accordion-list {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    gap: var(--space-5);
 }
 
-.epg-candidate-row {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: var(--space-3);
-    align-items: center;
-    padding: var(--space-3);
-    background: var(--color-bg-tertiary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    transition: all var(--transition-base);
-}
-
-.epg-candidate-row:hover {
-    border-color: var(--color-accent-primary);
-    background: var(--color-bg-primary);
-}
-
-.epg-candidate-info {
+.epg-alliance-section {
     display: flex;
     flex-direction: column;
     gap: var(--space-1);
 }
 
-.epg-candidate-name {
-    font-size: var(--font-size-sm);
-    font-weight: 700;
-    color: var(--color-text-primary);
+.epg-alliance-header {
+    padding: var(--space-2) var(--space-3);
+    border-left: 3px solid var(--color-accent-primary);
+    margin-bottom: var(--space-1);
 }
 
-.epg-candidate-party {
+.epg-alliance-name {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+}
+
+.epg-alliance-parties {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.epg-party-accordion {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.epg-accordion-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-bg-tertiary);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    transition: background var(--transition-fast);
+}
+
+.epg-accordion-header:hover {
+    background: var(--color-bg-secondary);
+}
+
+.epg-accordion-header[aria-expanded="true"] {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.epg-accordion-header[aria-expanded="true"] .epg-accordion-chevron {
+    transform: rotate(90deg);
+}
+
+.epg-accordion-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 2px;
+}
+
+.epg-accordion-logo-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.epg-accordion-party-name {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    flex: 1;
+    letter-spacing: 0.02em;
+}
+
+.epg-accordion-count {
     font-size: 0.75rem;
     color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+.epg-accordion-chevron {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.epg-accordion-body {
+    background: var(--color-bg-primary);
+}
+
+.epg-candidate-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.epg-candidate-row {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.epg-candidate-row:last-child {
+    border-bottom: none;
+}
+
+.epg-candidate-name {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    flex-shrink: 0;
 }
 
 .epg-candidate-constituency {
     font-size: 0.75rem;
-    color: var(--color-text-secondary);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* ── Star Picks Panel ── */
@@ -1335,10 +1427,6 @@
         font-size: 0.85rem;
     }
 
-    .epg-candidate-row {
-        grid-template-columns: 1fr;
-        gap: var(--space-2);
-    }
 }
 
 @media (min-width: 768px) {
