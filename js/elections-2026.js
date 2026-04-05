@@ -577,6 +577,12 @@ function e2026_renderCandidates() {
         });
     }
 
+    // Build star candidate name lookup (case-insensitive)
+    const starNames = new Set();
+    if (typeof STAR_CANDIDATES_2026 !== 'undefined') {
+        STAR_CANDIDATES_2026.forEach(s => starNames.add(s.name.toLowerCase()));
+    }
+
     // Group candidates: alliance → party → list
     const allianceOrder = [];
     const allianceMap = {};
@@ -607,12 +613,15 @@ function e2026_renderCandidates() {
                 ? `<img class="epg-accordion-logo" src="${logo}" alt="${party}" />`
                 : `<span class="epg-accordion-logo-dot" style="background:${color};"></span>`;
 
-            const rows = members.map(c => `
+            const rows = members.map(c => {
+                const isStar = starNames.has(c.name.toLowerCase());
+                return `
                 <div class="epg-candidate-row" data-name="${c.name.toLowerCase()}" data-constituency="${c.constituency.toLowerCase()}">
+                    ${isStar ? '<span class="epg-candidate-star" title="Star candidate">★</span>' : ''}
                     <span class="epg-candidate-name">${c.name}</span>
                     <span class="epg-candidate-constituency">${c.constituency}</span>
-                </div>
-            `).join('');
+                </div>`;
+            }).join('');
 
             return `
                 <div class="epg-party-accordion">
@@ -720,18 +729,33 @@ function e2026_renderStars() {
     grid.className = 'epg-stars-grid';
 
     STAR_CANDIDATES_2026.forEach(star => {
+        const logo = PartyConfig.getLogo(star.party);
+        const logoHtml = logo && !logo.includes('placeholder')
+            ? `<img class="epg-star-logo" src="${logo}" alt="${star.party}" />`
+            : '';
+        const borderGradient = PartyConfig.getBorderGradient(star.party);
+        const photoHtml = star.photo
+            ? `<div class="epg-star-photo-wrap" style="background: ${borderGradient};">
+                   <img class="epg-star-photo" src="${star.photo}" alt="${star.name}" onerror="this.parentElement.style.display='none'" />
+               </div>`
+            : '';
         const card = document.createElement('div');
         card.className = 'epg-star-card';
         card.innerHTML = `
-            <div class="epg-star-name">${star.name}</div>
-            <div class="epg-star-party" style="background-color: ${star.partyColor}; color: ${PartyConfig.getTextColorForHex(star.partyColor)};">
-                ${star.party}
+            ${photoHtml}
+            <div class="epg-star-info">
+                <div class="epg-star-row epg-star-row-top">
+                    <span class="epg-star-name">${star.name}</span>
+                    <span class="epg-star-party-wrap">
+                        ${logoHtml}
+                        <span class="epg-star-party" style="background-color: ${star.partyColor}; color: ${PartyConfig.getTextColorForHex(star.partyColor)};">${star.party}</span>
+                    </span>
+                </div>
+                <div class="epg-star-row epg-star-row-bottom">
+                    <span class="epg-star-note">${star.note || ''}</span>
+                    <span class="epg-star-constituency">${star.constituency}</span>
+                </div>
             </div>
-            <div class="epg-star-meta">
-                <div class="epg-star-constituency">📍 ${star.constituency}</div>
-                ${star.note ? `<div class="epg-star-note">${star.note}</div>` : ''}
-            </div>
-            ${star.status && star.status !== 'confirmed' ? `<span class="epg-status-badge epg-status-${star.status}">${star.status}</span>` : ''}
         `;
         grid.appendChild(card);
     });
