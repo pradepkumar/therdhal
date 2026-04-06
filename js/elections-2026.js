@@ -823,3 +823,20 @@ function e2026_initTabs() {
         setup();
     }
 })();
+
+function e2026_renderTab(tab) {
+    if (tab === 'alliances') e2026_renderAlliances();
+    else if (tab === 'candidates') e2026_renderCandidates();
+    else if (tab === 'stars') e2026_renderStars();
+}
+
+document.addEventListener('langchange', () => {
+    const modal = document.getElementById('elections-modal');
+    if (!modal || modal.classList.contains('hidden')) return;
+    e2026_renderStepper();
+    const activePanel = modal.querySelector('.epg-tab-panel.active');
+    if (activePanel) {
+        const tab = activePanel.id.replace('epg-tab-', '');
+        e2026_renderTab(tab);
+    }
+});
