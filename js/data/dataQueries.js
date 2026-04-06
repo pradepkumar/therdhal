@@ -35,7 +35,9 @@ const DataQueries = (function () {
         let list = Object.entries(meta).map(([id, data]) => ({
             id,
             name: data.name,
-            district: data.district
+            name_ta: data.name_ta || data.name,
+            district: data.district,
+            district_ta: data.district_ta || data.district
         }));
 
         if (district) {
