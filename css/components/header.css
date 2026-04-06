@@ -198,4 +198,50 @@
     display: flex;
     align-items: center;
     gap: var(--space-2);
+}
+
+/* ── Language Toggle Pill ── */
+.lang-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    padding: 3px;
+    cursor: pointer;
+    min-height: 40px;
+    transition: border-color var(--transition-fast);
+}
+
+.lang-toggle-btn:hover {
+    border-color: var(--color-accent-primary);
+}
+
+.lang-toggle-btn:focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
+}
+
+.lang-option {
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    transition: all var(--transition-fast);
+    min-width: 30px;
+    text-align: center;
+    font-family: var(--font-primary);
+    line-height: 1.4;
+    user-select: none;
+}
+
+.lang-option[data-lang="ta"] {
+    font-family: 'Noto Sans Tamil', var(--font-primary);
+}
+
+.lang-option.active {
+    background: var(--color-accent-primary);
+    color: #ffffff;
 }
