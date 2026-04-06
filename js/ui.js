@@ -48,6 +48,16 @@ const UIModule = (function () {
         setupEventListeners();
         setupCandidateSearch();
         setupOverlayYearControls();
+
+        // Language change: re-render dropdowns and open overlay
+        document.addEventListener('langchange', async () => {
+            await populateDistrictDropdown();
+            const district = districtFilter.value;
+            await populateConstituencyDropdown(district || null);
+            if (currentConstituencyId) {
+                await showConstituencyOverlay(currentConstituencyId);
+            }
+        });
     }
 
     function setupEventListeners() {
@@ -155,23 +165,33 @@ const UIModule = (function () {
     }
 
     async function populateDistrictDropdown() {
+        const lang = (typeof I18n !== 'undefined') ? I18n.getLang() : 'en';
+        // Build district → district_ta map from constituency list
+        const constituencies = await DataModule.getConstituencyList();
+        const districtMap = {};
+        constituencies.forEach(c => {
+            if (!districtMap[c.district]) districtMap[c.district] = c.district_ta || c.district;
+        });
         const districts = await DataModule.getDistrictList();
-        districtFilter.innerHTML = '<option value="">All Districts</option>';
+        const allLabel = (typeof I18n !== 'undefined') ? I18n.t('filter.all_districts') : 'All Districts';
+        districtFilter.innerHTML = `<option value="">${allLabel}</option>`;
         districts.forEach(d => {
             const opt = document.createElement('option');
             opt.value = d;
-            opt.textContent = d;
+            opt.textContent = lang === 'ta' ? (districtMap[d] || d) : d;
             districtFilter.appendChild(opt);
         });
     }
 
     async function populateConstituencyDropdown(district = null) {
+        const lang = (typeof I18n !== 'undefined') ? I18n.getLang() : 'en';
         const list = await DataModule.getConstituencyList(district);
-        constituencyFilter.innerHTML = '<option value="">All Constituencies</option>';
+        const allLabel = (typeof I18n !== 'undefined') ? I18n.t('filter.all_constituencies') : 'All Constituencies';
+        constituencyFilter.innerHTML = `<option value="">${allLabel}</option>`;
         list.forEach(c => {
             const opt = document.createElement('option');
             opt.value = c.id;
-            opt.textContent = c.name;
+            opt.textContent = lang === 'ta' ? (c.name_ta || c.name) : c.name;
             constituencyFilter.appendChild(opt);
         });
     }
@@ -453,11 +473,15 @@ const UIModule = (function () {
         // Update dropdowns to reflect the selected constituency
         setConstituencyDropdowns(id, info.district);
 
-        document.getElementById('constituency-type').textContent = info.type || 'General';
+        const lang = (typeof I18n !== 'undefined') ? I18n.getLang() : 'en';
+        const badgeKey = info.type === 'SC' ? 'badge.sc' : 'badge.general';
+        document.getElementById('constituency-type').textContent =
+            (typeof I18n !== 'undefined') ? I18n.t(badgeKey) : (info.type || 'General');
         document.getElementById('constituency-type').className = `constituency-badge ${info.type === 'SC' ? 'sc' : ''}`;
         document.querySelector('#constituency-name .name-en').textContent = info.name;
         document.querySelector('#constituency-name .name-ta').textContent = info.name_ta || '';
-        document.getElementById('constituency-district').textContent = info.district;
+        document.getElementById('constituency-district').textContent =
+            lang === 'ta' ? (info.district_ta || info.district) : info.district;
         document.getElementById('constituency-description').textContent = info.description || '';
 
         // Update Constituency ID
@@ -468,7 +492,8 @@ const UIModule = (function () {
         if (histEl) {
             const historyTitle = document.querySelector('.history-section .section-title');
             if (historyTitle) {
-                historyTitle.innerHTML = `Election History <span class="section-subtitle">Winner's Margin / %</span>`;
+                const histLabel = (typeof I18n !== 'undefined') ? I18n.t('overlay.election_history') : 'Election History';
+                historyTitle.innerHTML = `${histLabel} <span class="section-subtitle">Winner's Margin / %</span>`;
             }
             histEl.innerHTML = history.length ? history.map(h => {
                 const partyColor = DataModule.getPartyColor(h.winner.party);
@@ -482,7 +507,7 @@ const UIModule = (function () {
                         <img src="${partyLogo}" alt="${h.winner.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
                     </div>
                     <div class="candidate-info">
-                        <div class="candidate-name">${h.winner.name}</div>
+                        <div class="candidate-name">${lang === 'ta' ? (h.winner.name_ta || h.winner.name) : h.winner.name}</div>
                         <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}"${h.winner.incumbent ? ' title="Incumbent"' : ''}>
                             <span class="party-name">${h.winner.party}</span>${h.winner.incumbent ? '<span class="incumbent-star" aria-label="Incumbent">★</span>' : ''}
                         </span>
@@ -494,7 +519,7 @@ const UIModule = (function () {
                         </div>
                     </div>
                 </div>`;
-            }).join('') : '<p class="no-data">No data</p>';
+            }).join('') : `<p class="no-data">${(typeof I18n !== 'undefined') ? I18n.t('overlay.no_data') : 'No data'}</p>`;
         }
 
         // Handle electors as an object (year-specific) or a single number
@@ -711,10 +736,12 @@ const UIModule = (function () {
         const candidatesEl = document.getElementById('candidates-table');
         const resultsTitle = document.querySelector('.candidates-section .section-title');
 
+        const lang = (typeof I18n !== 'undefined') ? I18n.getLang() : 'en';
         // 2026: No results yet — show declared candidates only
         if (year === 2026) {
             if (resultsTitle) {
-                resultsTitle.innerHTML = `Declared Candidates <span class="section-subtitle">2026</span>`;
+                const declLabel = (typeof I18n !== 'undefined') ? I18n.t('overlay.declared_candidates') : 'Declared Candidates';
+                resultsTitle.innerHTML = `${declLabel} <span class="section-subtitle">2026</span>`;
             }
             candidatesEl.innerHTML = '<div class="loading-spinner" style="margin:20px auto;"></div>';
             try {
@@ -733,7 +760,7 @@ const UIModule = (function () {
                                 <img src="${partyLogo}" alt="${c.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
                             </div>
                             <div class="candidate-info">
-                                <div class="candidate-name">${c.name}${starBadge}</div>
+                                <div class="candidate-name">${lang === 'ta' ? (c.name_ta || c.name) : c.name}${starBadge}</div>
                                 ${positionEl}
                                 <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}">
                                     <span class="party-name">${c.party}</span>
@@ -742,16 +769,17 @@ const UIModule = (function () {
                         </div>`;
                     }).join('');
                 } else {
-                    candidatesEl.innerHTML = '<p class="no-data">No candidates declared</p>';
+                    candidatesEl.innerHTML = `<p class="no-data">${(typeof I18n !== 'undefined') ? I18n.t('overlay.no_candidates') : 'No candidates declared'}</p>`;
                 }
             } catch (e) {
-                candidatesEl.innerHTML = '<p class="no-data">No candidates declared</p>';
+                candidatesEl.innerHTML = `<p class="no-data">${(typeof I18n !== 'undefined') ? I18n.t('overlay.no_candidates') : 'No candidates declared'}</p>`;
             }
             return;
         }
 
         if (resultsTitle) {
-            resultsTitle.innerHTML = `Election Results <span class="section-subtitle">Votes / Share %</span>`;
+            const resLabel = (typeof I18n !== 'undefined') ? I18n.t('overlay.election_results') : 'Election Results';
+            resultsTitle.innerHTML = `${resLabel} <span class="section-subtitle">Votes / Share %</span>`;
         }
         candidatesEl.innerHTML = '<div class="loading-spinner" style="margin:20px auto;"></div>'; // Inline loading
 
@@ -791,7 +819,7 @@ const UIModule = (function () {
                             <img src="${partyLogo}" alt="${c.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
                         </div>
                         <div class="candidate-info">
-                            <div class="candidate-name">${c.name}</div>
+                            <div class="candidate-name">${lang === 'ta' ? (c.name_ta || c.name) : c.name}</div>
                             <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}"${c.incumbent ? ' title="Incumbent"' : ''}>
                                 <span class="party-name">${c.party}</span>${c.incumbent ? '<span class="incumbent-star" aria-label="Incumbent">★</span>' : ''}
                             </span>
@@ -806,11 +834,11 @@ const UIModule = (function () {
                     </div>`;
                 }).join('');
             } else {
-                candidatesEl.innerHTML = '<p class="no-data">No candidate data available for this year</p>';
+                candidatesEl.innerHTML = `<p class="no-data">${(typeof I18n !== 'undefined') ? I18n.t('overlay.no_candidate_data') : 'No candidate data available for this year'}</p>`;
             }
         } catch (e) {
             console.error('Error fetching election results:', e);
-            candidatesEl.innerHTML = '<p class="no-data">Error loading data</p>';
+            candidatesEl.innerHTML = `<p class="no-data">${(typeof I18n !== 'undefined') ? I18n.t('overlay.error_loading') : 'Error loading data'}</p>`;
         }
     }
 
