@@ -58,8 +58,12 @@
                         <path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z"></path>
                         <path d="M22 19H2"></path>
                     </svg>
-                    <span>Elections 2026</span>
+                    <span data-i18n="btn.elections_2026">Elections 2026</span>
                     <span class="elections-live-dot"></span>
+                </button>
+                <button id="lang-toggle" class="lang-toggle-btn" aria-label="Switch to Tamil">
+                    <span class="lang-option" data-lang="en">EN</span>
+                    <span class="lang-option" data-lang="ta">த</span>
                 </button>
                 <button id="theme-toggle" aria-label="Switch to Light Mode" title="Switch to Light Mode">
                     <!-- Sun icon (shown in dark mode) -->
@@ -90,7 +94,7 @@
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                     </svg>
-                    <span>Filters</span>
+                    <span data-i18n="btn.filters">Filters</span>
                 </button>
                 </div><!-- /.header-actions -->
             </div>
@@ -99,9 +103,9 @@
             <div id="filter-container" class="filter-container">
                 <div class="filter-bar">
                     <div class="filter-group">
-                        <label for="year-filter" class="filter-label">Year</label>
+                        <label for="year-filter" class="filter-label" data-i18n="filter.year">Year</label>
                         <select id="year-filter" class="filter-select">
-                            <option value="">All Years</option>
+                            <option value="" data-i18n="filter.all_years">All Years</option>
                             <option value="2026">2026</option>
                             <option value="2021">2021</option>
                             <option value="2016">2016</option>
@@ -109,26 +113,26 @@
                     </div>
 
                     <div class="filter-group">
-                        <label for="district-filter" class="filter-label">District</label>
+                        <label for="district-filter" class="filter-label" data-i18n="filter.district">District</label>
                         <select id="district-filter" class="filter-select">
-                            <option value="">All Districts</option>
+                            <option value="" data-i18n="filter.all_districts">All Districts</option>
                             <!-- Populated dynamically -->
                         </select>
                     </div>
 
                     <div class="filter-group">
-                        <label for="constituency-filter" class="filter-label">Constituency</label>
+                        <label for="constituency-filter" class="filter-label" data-i18n="filter.constituency">Constituency</label>
                         <select id="constituency-filter" class="filter-select">
-                            <option value="">All Constituencies</option>
+                            <option value="" data-i18n="filter.all_constituencies">All Constituencies</option>
                             <!-- Populated dynamically -->
                         </select>
                     </div>
 
                     <div id="candidate-filter-group" class="filter-group hidden">
-                        <label for="candidate-search" class="filter-label">Candidate Name</label>
+                        <label for="candidate-search" class="filter-label" data-i18n="filter.candidate">Candidate Name</label>
                         <div class="candidate-search-container">
                             <input type="text" id="candidate-search" class="search-input"
-                                placeholder="Search candidate..." autocomplete="off">
+                                placeholder="Search candidate..." autocomplete="off" data-i18n-placeholder="filter.search_placeholder">
                             <div id="candidate-results" class="search-results-dropdown"></div>
                         </div>
                     </div>
@@ -147,13 +151,13 @@
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            <span>Overview</span>
+            <span data-i18n="btn.overview">Overview</span>
         </button>
 
         <!-- Legend -->
         <div id="legend" class="legend hidden">
             <div class="legend-header">
-                <h2 class="legend-title">Winning Party</h2>
+                <h2 class="legend-title" data-i18n="legend.title">Winning Party</h2>
                 <button id="legend-toggle" class="legend-toggle" aria-label="Toggle legend">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -169,7 +173,7 @@
         <!-- Loading Indicator -->
         <div id="loading" class="loading-overlay">
             <div class="loading-spinner"></div>
-            <p class="loading-text">Loading map data...</p>
+            <p class="loading-text" data-i18n="loading.text">Loading map data...</p>
         </div>
     </main>
 
@@ -218,11 +222,11 @@
                 <div class="stats-card">
                     <div class="stat-item">
                         <span class="stat-value" id="registered-voters">0</span>
-                        <span class="stat-label">Registered Voters</span>
+                        <span class="stat-label" data-i18n="overlay.registered_voters">Registered Voters</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value" id="constituency-id">0</span>
-                        <span class="stat-label">Constituency ID</span>
+                        <span class="stat-label" data-i18n="overlay.constituency_id">Constituency ID</span>
                     </div>
                 </div>
 
@@ -300,15 +304,15 @@
                 <!-- Polling Day Countdown Bar -->
                 <div class="emodal-countdown" id="emodal-countdown">
                     <div class="epg-bar">
-                        <span class="epg-bar-label">Polling Day — Apr 23</span>
+                        <span class="epg-bar-label" data-i18n="modal.polling_day">Polling Day — Apr 23</span>
                         <div class="epg-bar-timer" id="epg-timer">
-                            <span class="epg-unit"><span class="epg-num" id="epg-days">--</span><span class="epg-lbl">d</span></span>
+                            <span class="epg-unit"><span class="epg-num" id="epg-days">--</span><span class="epg-lbl" data-i18n="countdown.d">d</span></span>
                             <span class="epg-sep">:</span>
-                            <span class="epg-unit"><span class="epg-num" id="epg-hours">--</span><span class="epg-lbl">h</span></span>
+                            <span class="epg-unit"><span class="epg-num" id="epg-hours">--</span><span class="epg-lbl" data-i18n="countdown.h">h</span></span>
                             <span class="epg-sep">:</span>
-                            <span class="epg-unit"><span class="epg-num" id="epg-mins">--</span><span class="epg-lbl">m</span></span>
+                            <span class="epg-unit"><span class="epg-num" id="epg-mins">--</span><span class="epg-lbl" data-i18n="countdown.m">m</span></span>
                             <span class="epg-sep">:</span>
-                            <span class="epg-unit"><span class="epg-num" id="epg-secs">--</span><span class="epg-lbl">s</span></span>
+                            <span class="epg-unit"><span class="epg-num" id="epg-secs">--</span><span class="epg-lbl" data-i18n="countdown.s">s</span></span>
                         </div>
                     </div>
                 </div>
@@ -331,9 +335,9 @@
 
                 <!-- Tab Navigation (no scroll) -->
                 <nav class="epg-tabs" style="flex-shrink: 0; margin: 0; padding: 0;">
-                    <button class="epg-tab-btn active" data-tab="alliances">Alliances</button>
-                    <button class="epg-tab-btn" data-tab="candidates">Candidates</button>
-                    <button class="epg-tab-btn" data-tab="stars">Stars</button>
+                    <button class="epg-tab-btn active" data-tab="alliances" data-i18n="modal.tab_alliances">Alliances</button>
+                    <button class="epg-tab-btn" data-tab="candidates" data-i18n="modal.tab_candidates">Candidates</button>
+                    <button class="epg-tab-btn" data-tab="stars" data-i18n="modal.tab_stars">Stars</button>
                 </nav>
 
                 <!-- Tab Panels (scrollable content) -->
@@ -361,6 +365,9 @@
 
     <!-- Theme Manager (must be first to initialise tile layer correctly) -->
     <script src="js/utils/theme.js"></script>
+
+    <!-- i18n: Tamil/English language toggle (load before all other modules) -->
+    <script src="js/utils/i18n.js"></script>
 
     <!-- Utilities -->
     <script src="js/utils/constants.js"></script>
