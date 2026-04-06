@@ -128,11 +128,19 @@ const I18n = (function () {
     }
 
     // Init: read saved language, apply to DOM, bind toggle
-    // Scripts load at bottom of <body>, so DOM is fully parsed here
     const saved = localStorage.getItem(STORAGE_KEY);
     _lang = saved === 'ta' ? 'ta' : 'en';
-    _applyToDOM();
-    _bindToggle();
+
+    function _init() {
+        _applyToDOM();
+        _bindToggle();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', _init);
+    } else {
+        _init();
+    }
 
     return { t, getLang, setLang };
 })();
