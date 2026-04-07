@@ -26,6 +26,7 @@ docs/PROJECT_CONTEXT.md
 *.log
 npm-debug.log*
 
-#scripts
-scripts/
 tmp/
+
+# Local scripts
+scripts/

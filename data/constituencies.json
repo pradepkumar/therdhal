@@ -8,7 +8,9 @@
       "2021": 284412
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A northern gateway constituency of Tamil Nadu in Tiruvallur district, known for its major industrial estates."
+    "description": "A northern gateway constituency of Tamil Nadu in Tiruvallur district, known for its major industrial estates.",
+    "name_ta": "கும்மிடிப்பூண்டி",
+    "district_ta": "திருவள்ளூர்"
   },
   "2": {
     "name": "PONNERI",
@@ -19,7 +21,9 @@
       "2021": 268994
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A reserved constituency in Tiruvallur district, home to the historic Ponneri town and coastal salt pans."
+    "description": "A reserved constituency in Tiruvallur district, home to the historic Ponneri town and coastal salt pans.",
+    "name_ta": "பொன்னேரி",
+    "district_ta": "திருவள்ளூர்"
   },
   "3": {
     "name": "TIRUTTANI",
@@ -30,7 +34,9 @@
       "2021": 295358
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Famous for the ancient Arulmigu Subramanya Swamy Temple, one of the six abodes of Lord Murugan."
+    "description": "Famous for the ancient Arulmigu Subramanya Swamy Temple, one of the six abodes of Lord Murugan.",
+    "name_ta": "திருத்தணி",
+    "district_ta": "திருவள்ளூர்"
   },
   "4": {
     "name": "THIRUVALLUR",
@@ -41,7 +47,9 @@
       "2021": 277516
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "The administrative headquarters of Tiruvallur district, known for the historic Sri Veeraraghava Swamy Temple."
+    "description": "The administrative headquarters of Tiruvallur district, known for the historic Sri Veeraraghava Swamy Temple.",
+    "name_ta": "திருவள்ளூர்",
+    "district_ta": "திருவள்ளூர்"
   },
   "5": {
     "name": "POONAMALLEE",
@@ -52,7 +60,9 @@
       "2021": 361331
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A historic town and major transport hub in the western suburbs of Chennai, serving as a vital commercial center."
+    "description": "A historic town and major transport hub in the western suburbs of Chennai, serving as a vital commercial center.",
+    "name_ta": "பூந்தமல்லி",
+    "district_ta": "திருவள்ளூர்"
   },
   "6": {
     "name": "AVADI",
@@ -63,7 +73,9 @@
       "2021": 446678
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Home to heavy industrial units including the Heavy Vehicles Factory and significant Indian Army establishments."
+    "description": "Home to heavy industrial units including the Heavy Vehicles Factory and significant Indian Army establishments.",
+    "name_ta": "ஆவடி",
+    "district_ta": "திருவள்ளூர்"
   },
   "7": {
     "name": "MADURAVOYAL",
@@ -74,7 +86,9 @@
       "2021": 454179
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A rapidly developing residential suburb in West Chennai located along the arterial Chennai-Bangalore Highway."
+    "description": "A rapidly developing residential suburb in West Chennai located along the arterial Chennai-Bangalore Highway.",
+    "name_ta": "மாடுவாயல்",
+    "district_ta": "திருவள்ளூர்"
   },
   "8": {
     "name": "AMBATTUR",
@@ -85,7 +99,9 @@
       "2021": 387516
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "One of the largest industrial hubs in South Asia, known for its extensive IT parks and manufacturing units."
+    "description": "One of the largest industrial hubs in South Asia, known for its extensive IT parks and manufacturing units.",
+    "name_ta": "அம்பத்தூர்",
+    "district_ta": "திருவள்ளூர்"
   },
   "9": {
     "name": "MADAVARAM",
@@ -96,7 +112,9 @@
       "2021": 456079
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A northern residential suburb of Chennai, famous for its large botanical garden and milk dairy processing unit."
+    "description": "A northern residential suburb of Chennai, famous for its large botanical garden and milk dairy processing unit.",
+    "name_ta": "மாடவாரம்",
+    "district_ta": "திருவள்ளூர்"
   },
   "10": {
     "name": "THIRUVOTTIYUR",
@@ -107,7 +125,9 @@
       "2021": 306977
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "An ancient coastal town in North Chennai, home to the historic Thyagaraja Swamy Temple and industrial units."
+    "description": "An ancient coastal town in North Chennai, home to the historic Thyagaraja Swamy Temple and industrial units.",
+    "name_ta": "திருவொற்றியூர்",
+    "district_ta": "திருவள்ளூர்"
   },
   "11": {
     "name": "DR. RADHAKRISHNAN NAGAR",
@@ -118,7 +138,9 @@
       "2021": 263492
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A high-profile constituency in North Chennai, historically significant for being the seat of prominent political leaders."
+    "description": "A high-profile constituency in North Chennai, historically significant for being the seat of prominent political leaders.",
+    "name_ta": "டாக்டர் இராதாகிருஷ்ணன் நகர்",
+    "district_ta": "சென்னை"
   },
   "12": {
     "name": "PERAMBUR",
@@ -129,7 +151,9 @@
       "2021": 318074
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Known for the Integral Coach Factory, a premier coach-building unit of the Indian Railways located in Chennai."
+    "description": "Known for the Integral Coach Factory, a premier coach-building unit of the Indian Railways located in Chennai.",
+    "name_ta": "பெரம்பூர்",
+    "district_ta": "சென்னை"
   },
   "13": {
     "name": "KOLATHUR",
@@ -140,7 +164,9 @@
       "2021": 284056
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A prominent urban constituency in Chennai, currently represented by the Chief Minister of Tamil Nadu."
+    "description": "A prominent urban constituency in Chennai, currently represented by the Chief Minister of Tamil Nadu.",
+    "name_ta": "கொளத்தூர்",
+    "district_ta": "சென்னை"
   },
   "14": {
     "name": "VILLIVAKKAM",
@@ -151,7 +177,9 @@
       "2021": 257675
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A busy residential and commercial area in Chennai, once known for being part of the largest constituency in India."
+    "description": "A busy residential and commercial area in Chennai, once known for being part of the largest constituency in India.",
+    "name_ta": "விலிவாக்கம்",
+    "district_ta": "சென்னை"
   },
   "15": {
     "name": "THIRU-VI-KA-NAGAR",
@@ -162,7 +190,9 @@
       "2021": 220547
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A residential area in North Chennai named after the renowned Tamil scholar and activist Thiru. Vi. Kaliyanasundaram."
+    "description": "A residential area in North Chennai named after the renowned Tamil scholar and activist Thiru. Vi. Kaliyanasundaram.",
+    "name_ta": "திரு-வி-க-நகர்",
+    "district_ta": "சென்னை"
   },
   "16": {
     "name": "EGMORE",
@@ -173,7 +203,9 @@
       "2021": 195110
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A central district of Chennai, home to the Government Museum and the historic Egmore Railway Station."
+    "description": "A central district of Chennai, home to the Government Museum and the historic Egmore Railway Station.",
+    "name_ta": "எழும்பூர்",
+    "district_ta": "சென்னை"
   },
   "17": {
     "name": "ROYAPURAM",
@@ -184,7 +216,9 @@
       "2021": 193595
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "One of the oldest parts of Chennai, known for the historic Royapuram Railway Station and its fishing harbor."
+    "description": "One of the oldest parts of Chennai, known for the historic Royapuram Railway Station and its fishing harbor.",
+    "name_ta": "ராயபுரம்",
+    "district_ta": "சென்னை"
   },
   "18": {
     "name": "HARBOUR",
@@ -195,7 +229,9 @@
       "2021": 176353
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A vital commercial constituency encompassing the Chennai Port and the historic George Town business district."
+    "description": "A vital commercial constituency encompassing the Chennai Port and the historic George Town business district.",
+    "name_ta": "துறைமுகம்",
+    "district_ta": "சென்னை"
   },
   "19": {
     "name": "CHEPAUK-THIRUVALLIKENI",
@@ -206,7 +242,9 @@
       "2021": 235564
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Home to the world-famous Marina Beach and the iconic M.A. Chidambaram Cricket Stadium in Chennai."
+    "description": "Home to the world-famous Marina Beach and the iconic M.A. Chidambaram Cricket Stadium in Chennai.",
+    "name_ta": "சேப்பாக்கம்-திருவல்லிக்கேணி",
+    "district_ta": "சென்னை"
   },
   "20": {
     "name": "THOUSAND LIGHTS",
@@ -217,7 +255,9 @@
       "2021": 241671
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A key commercial and residential hub in central Chennai, named after the historic Thousand Lights Mosque."
+    "description": "A key commercial and residential hub in central Chennai, named after the historic Thousand Lights Mosque.",
+    "name_ta": "ஆயிரம் விளக்கு",
+    "district_ta": "சென்னை"
   },
   "21": {
     "name": "ANNA NAGAR",
@@ -228,7 +268,9 @@
       "2021": 287974
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A well-planned and upscale residential neighborhood in Chennai, famous for its landmark Tower Park."
+    "description": "A well-planned and upscale residential neighborhood in Chennai, famous for its landmark Tower Park.",
+    "name_ta": "அண்ணா நகர்",
+    "district_ta": "சென்னை"
   },
   "22": {
     "name": "VIRUGAMPAKKAM",
@@ -239,7 +281,9 @@
       "2021": 293604
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A residential area in West Chennai, historically significant for its deep association with the Tamil film industry."
+    "description": "A residential area in West Chennai, historically significant for its deep association with the Tamil film industry.",
+    "name_ta": "விருகம்பாக்கம்",
+    "district_ta": "சென்னை"
   },
   "23": {
     "name": "SAIDAPET",
@@ -250,7 +294,9 @@
       "2021": 279510
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Located on the banks of the Adyar River, it houses the historic Panagal Building and iconic Panagal Park."
+    "description": "Located on the banks of the Adyar River, it houses the historic Panagal Building and iconic Panagal Park.",
+    "name_ta": "சைதாப்பேட்டை",
+    "district_ta": "சென்னை"
   },
   "24": {
     "name": "THEAYAGARAYA NAGAR",
@@ -261,7 +307,9 @@
       "2021": 246676
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Commonly known as T. Nagar, it is Chennai's premier shopping district and a massive commercial hub."
+    "description": "Commonly known as T. Nagar, it is Chennai's premier shopping district and a massive commercial hub.",
+    "name_ta": "தியாகராய நகர்",
+    "district_ta": "சென்னை"
   },
   "25": {
     "name": "MYLAPORE",
@@ -272,7 +320,9 @@
       "2021": 271077
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A cultural hub of Chennai, famous for the ancient Kapaleeshwarar Temple and its rich Carnatic music heritage."
+    "description": "A cultural hub of Chennai, famous for the ancient Kapaleeshwarar Temple and its rich Carnatic music heritage.",
+    "name_ta": "மயிலாப்பூர்",
+    "district_ta": "சென்னை"
   },
   "26": {
     "name": "VELACHERY",
@@ -283,7 +333,9 @@
       "2021": 314549
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A rapidly growing residential and commercial neighborhood in South Chennai, home to several IT parks."
+    "description": "A rapidly growing residential and commercial neighborhood in South Chennai, home to several IT parks.",
+    "name_ta": "வேளச்சேரி",
+    "district_ta": "சென்னை"
   },
   "27": {
     "name": "SHOZHINGANALLUR",
@@ -294,7 +346,9 @@
       "2021": 699612
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A major IT corridor on the Old Mahabalipuram Road, housing numerous global technology companies and institutions."
+    "description": "A major IT corridor on the Old Mahabalipuram Road, housing numerous global technology companies and institutions.",
+    "name_ta": "சோழிங்கநல்லூர்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "28": {
     "name": "ALANDUR",
@@ -305,7 +359,9 @@
       "2021": 390909
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Home to the Chennai International Airport and serving as a critical gateway to the city's southern suburbs."
+    "description": "Home to the Chennai International Airport and serving as a critical gateway to the city's southern suburbs.",
+    "name_ta": "அலந்தூர்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "29": {
     "name": "SRIPERUMBUDUR",
@@ -316,7 +372,9 @@
       "2021": 357400
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A global manufacturing hub known for its automotive industries and the Rajiv Gandhi Memorial."
+    "description": "A global manufacturing hub known for its automotive industries and the Rajiv Gandhi Memorial.",
+    "name_ta": "ஸ்ரீபெரும்புதூர்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "30": {
     "name": "PALLAVARAM",
@@ -327,7 +385,9 @@
       "2021": 437387
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "An ancient settlement known for its Paleolithic archaeological sites and as a significant residential hub."
+    "description": "An ancient settlement known for its Paleolithic archaeological sites and as a significant residential hub.",
+    "name_ta": "பல்லாவரம்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "31": {
     "name": "TAMBARAM",
@@ -338,7 +398,9 @@
       "2021": 418082
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Known as the 'Gateway to Chennai,' it is a major suburban hub and home to a historic IAF station."
+    "description": "Known as the 'Gateway to Chennai,' it is a major suburban hub and home to a historic IAF station.",
+    "name_ta": "தாம்பரம்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "32": {
     "name": "CHENGALPATTU",
@@ -349,7 +411,9 @@
       "2021": 431361
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "The headquarters of Chengalpattu district, known for its historic fort and major healthcare institutions."
+    "description": "The headquarters of Chengalpattu district, known for its historic fort and major healthcare institutions.",
+    "name_ta": "செங்கல்பட்டு",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "33": {
     "name": "THIRUPORUR",
@@ -360,7 +424,9 @@
       "2021": 296921
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Famous for the ancient Arulmigu Kandaswamy Temple, a significant pilgrimage site dedicated to Lord Murugan."
+    "description": "Famous for the ancient Arulmigu Kandaswamy Temple, a significant pilgrimage site dedicated to Lord Murugan.",
+    "name_ta": "திருப்போரூர்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "34": {
     "name": "CHEYYUR",
@@ -371,7 +437,9 @@
       "2021": 229994
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A coastal constituency in Chengalpattu district, known for its scenic beauty and proposed industrial projects."
+    "description": "A coastal constituency in Chengalpattu district, known for its scenic beauty and proposed industrial projects.",
+    "name_ta": "செய்யூர்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "35": {
     "name": "MADURANTHAKAM",
@@ -382,7 +450,9 @@
       "2021": 230430
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Home to the second largest lake in Tamil Nadu and the historic Eri Kaatha Ramar Temple."
+    "description": "Home to the second largest lake in Tamil Nadu and the historic Eri Kaatha Ramar Temple.",
+    "name_ta": "மதுராந்தகம்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "36": {
     "name": "UTHIRAMERUR",
@@ -393,7 +463,9 @@
       "2021": 262832
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "World-famous for Chola-era inscriptions that describe an ancient democratic electoral system used centuries ago."
+    "description": "World-famous for Chola-era inscriptions that describe an ancient democratic electoral system used centuries ago.",
+    "name_ta": "உத்தரமேரூர்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "37": {
     "name": "KANCHEEPURAM",
@@ -404,7 +476,9 @@
       "2021": 313089
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "The 'City of Thousand Temples,' world-renowned for its traditional silk sarees and ancient heritage sites."
+    "description": "The 'City of Thousand Temples,' world-renowned for its traditional silk sarees and ancient heritage sites.",
+    "name_ta": "காஞ்சிபுரம்",
+    "district_ta": "காஞ்சிபுரம்"
   },
   "38": {
     "name": "ARAKONAM",
@@ -415,7 +489,9 @@
       "2021": 228885
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A major railway junction and home to the INS Rajali, one of the largest naval air stations in South Asia."
+    "description": "A major railway junction and home to the INS Rajali, one of the largest naval air stations in South Asia.",
+    "name_ta": "ஆரக்கோணம்",
+    "district_ta": "வேலூர்"
   },
   "39": {
     "name": "SHOLINGHUR",
@@ -426,7 +502,9 @@
       "2021": 279821
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Famous for the hill temple of Lord Narasimha and its historical significance in the Vellore region."
+    "description": "Famous for the hill temple of Lord Narasimha and its historical significance in the Vellore region.",
+    "name_ta": "சோளிங்கர்",
+    "district_ta": "வேலூர்"
   },
   "40": {
     "name": "KATPADI",
@@ -437,7 +515,9 @@
       "2021": 251683
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A vital transport hub in Vellore district, home to the prominent Vellore Institute of Technology campus."
+    "description": "A vital transport hub in Vellore district, home to the prominent Vellore Institute of Technology campus.",
+    "name_ta": "காட்பாடி",
+    "district_ta": "வேலூர்"
   },
   "41": {
     "name": "RANIPET",
@@ -448,7 +528,9 @@
       "2021": 268593
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "An industrial town known for its leather industries and historical role during the Carnatic Wars."
+    "description": "An industrial town known for its leather industries and historical role during the Carnatic Wars.",
+    "name_ta": "ராணிப்பேட்டை",
+    "district_ta": "வேலூர்"
   },
   "42": {
     "name": "ARCOT",
@@ -459,7 +541,9 @@
       "2021": 263490
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Historically the seat of the Nawabs of Arcot, famous for its rich heritage and local culinary delicacies."
+    "description": "Historically the seat of the Nawabs of Arcot, famous for its rich heritage and local culinary delicacies.",
+    "name_ta": "ஆற்காடு",
+    "district_ta": "வேலூர்"
   },
   "43": {
     "name": "VELLORE",
@@ -470,7 +554,9 @@
       "2021": 256083
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Known for the historic Vellore Fort, the Christian Medical College, and its significant leather industry."
+    "description": "Known for the historic Vellore Fort, the Christian Medical College, and its significant leather industry.",
+    "name_ta": "வேலூர்",
+    "district_ta": "வேலூர்"
   },
   "44": {
     "name": "ANAIKATTU",
@@ -481,7 +567,9 @@
       "2021": 256722
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A scenic constituency in Vellore district, known for its hills and proximity to the Amirthi Zoological Park."
+    "description": "A scenic constituency in Vellore district, known for its hills and proximity to the Amirthi Zoological Park.",
+    "name_ta": "யானைக்கட்டு",
+    "district_ta": "வேலூர்"
   },
   "45": {
     "name": "KILVAITHINANKUPPAM",
@@ -492,7 +580,9 @@
       "2021": 227613
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A rural constituency in Vellore district, primarily dependent on agriculture and small-scale palm leaf industries."
+    "description": "A rural constituency in Vellore district, primarily dependent on agriculture and small-scale palm leaf industries.",
+    "name_ta": "கீழ்வைத்தீனன்குப்பம்",
+    "district_ta": "வேலூர்"
   },
   "46": {
     "name": "GUDIYATHAM",
@@ -503,7 +593,9 @@
       "2021": 291662
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Known for its significant contribution to the handloom industry and matchbox manufacturing in Vellore district."
+    "description": "Known for its significant contribution to the handloom industry and matchbox manufacturing in Vellore district.",
+    "name_ta": "குடியாத்தம்",
+    "district_ta": "வேலூர்"
   },
   "47": {
     "name": "VANIAYAMBADI",
@@ -514,7 +606,9 @@
       "2021": 251485
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A major center for leather tanning and finished leather goods in the Vaniyambadi-Ambur industrial corridor."
+    "description": "A major center for leather tanning and finished leather goods in the Vaniyambadi-Ambur industrial corridor.",
+    "name_ta": "வாணியம்பாடி",
+    "district_ta": "வேலூர்"
   },
   "48": {
     "name": "AMBUR",
@@ -525,7 +619,9 @@
       "2021": 240343
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "World-famous for its leather footwear industry and its unique, eponymous style of biryani."
+    "description": "World-famous for its leather footwear industry and its unique, eponymous style of biryani.",
+    "name_ta": "அம்பூர்",
+    "district_ta": "வேலூர்"
   },
   "49": {
     "name": "JOLARPET",
@@ -536,7 +632,9 @@
       "2021": 242477
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A key railway junction in Tirupattur district, connecting several major rail routes in Southern India."
+    "description": "A key railway junction in Tirupattur district, connecting several major rail routes in Southern India.",
+    "name_ta": "ஜோலார்பேட்டை",
+    "district_ta": "வேலூர்"
   },
   "50": {
     "name": "TIRUPPATTUR",
@@ -547,7 +645,9 @@
       "2021": 241561
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Known as the 'Sandalwood City,' it is a historical town and the headquarters of the Tirupattur district."
+    "description": "Known as the 'Sandalwood City,' it is a historical town and the headquarters of the Tirupattur district.",
+    "name_ta": "திருப்பத்தூர்",
+    "district_ta": "வேலூர்"
   },
   "51": {
     "name": "UTHANGARAI",
@@ -558,7 +658,9 @@
       "2021": 240172
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in Krishnagiri district, primarily centered around agriculture and hill-based farming."
+    "description": "A reserved constituency in Krishnagiri district, primarily centered around agriculture and hill-based farming.",
+    "name_ta": "உத்தங்கரை",
+    "district_ta": "கிருஷ்ணகிரி"
   },
   "52": {
     "name": "BARGUR",
@@ -569,7 +671,9 @@
       "2021": 250106
     },
     "sub_region": "WESTERN REGION",
-    "description": "Famous for its association with former Chief Minister J. Jayalalithaa and its granite quarrying industry."
+    "description": "Famous for its association with former Chief Minister J. Jayalalithaa and its granite quarrying industry.",
+    "name_ta": "பர்கூர்",
+    "district_ta": "கிருஷ்ணகிரி"
   },
   "53": {
     "name": "KRISHNAGIRI",
@@ -580,7 +684,9 @@
       "2021": 269615
     },
     "sub_region": "WESTERN REGION",
-    "description": "The headquarters of Krishnagiri district, known for its mango production and the historic Krishnagiri Reservoir Project."
+    "description": "The headquarters of Krishnagiri district, known for its mango production and the historic Krishnagiri Reservoir Project.",
+    "name_ta": "கிருஷ்ணகிரி",
+    "district_ta": "கிருஷ்ணகிரி"
   },
   "54": {
     "name": "VEPPANAHALLI",
@@ -591,7 +697,9 @@
       "2021": 252294
     },
     "sub_region": "WESTERN REGION",
-    "description": "A border constituency in Krishnagiri district, known for its diverse culture and proximity to Karnataka."
+    "description": "A border constituency in Krishnagiri district, known for its diverse culture and proximity to Karnataka.",
+    "name_ta": "வேப்பனஹள்ளி",
+    "district_ta": "கிருஷ்ணகிரி"
   },
   "55": {
     "name": "HOSUR",
@@ -602,7 +710,9 @@
       "2021": 353970
     },
     "sub_region": "WESTERN REGION",
-    "description": "A major industrial city known as the 'Little England' of India due to its pleasant climate and manufacturing hub."
+    "description": "A major industrial city known as the 'Little England' of India due to its pleasant climate and manufacturing hub.",
+    "name_ta": "ஓசூர்",
+    "district_ta": "கிருஷ்ணகிரி"
   },
   "56": {
     "name": "THALLI",
@@ -613,7 +723,9 @@
       "2021": 251780
     },
     "sub_region": "WESTERN REGION",
-    "description": "Located in the hilly terrain of Krishnagiri, known for its scenic beauty and significant flower cultivation."
+    "description": "Located in the hilly terrain of Krishnagiri, known for its scenic beauty and significant flower cultivation.",
+    "name_ta": "தள்ளி",
+    "district_ta": "கிருஷ்ணகிரி"
   },
   "57": {
     "name": "PALACODE",
@@ -624,7 +736,9 @@
       "2021": 236459
     },
     "sub_region": "WESTERN REGION",
-    "description": "A key agricultural constituency in Dharmapuri district, known for its sugar mills and tomato production."
+    "description": "A key agricultural constituency in Dharmapuri district, known for its sugar mills and tomato production.",
+    "name_ta": "பாலக்கோடு",
+    "district_ta": "தர்மபுரி"
   },
   "58": {
     "name": "PENNAGARAM",
@@ -635,7 +749,9 @@
       "2021": 247417
     },
     "sub_region": "WESTERN REGION",
-    "description": "A rural constituency in Dharmapuri district, primarily dependent on agriculture and small-scale industries."
+    "description": "A rural constituency in Dharmapuri district, primarily dependent on agriculture and small-scale industries.",
+    "name_ta": "பென்னாகரம்",
+    "district_ta": "தர்மபுரி"
   },
   "59": {
     "name": "DHARMAPURI",
@@ -646,7 +762,9 @@
       "2021": 272723
     },
     "sub_region": "WESTERN REGION",
-    "description": "The headquarters of Dharmapuri district, known for its historical significance and drought-prone agricultural landscape."
+    "description": "The headquarters of Dharmapuri district, known for its historical significance and drought-prone agricultural landscape.",
+    "name_ta": "தர்மபுரி",
+    "district_ta": "தர்மபுரி"
   },
   "60": {
     "name": "PAPPIREDDIPPATTI",
@@ -657,7 +775,9 @@
       "2021": 269012
     },
     "sub_region": "WESTERN REGION",
-    "description": "A scenic constituency in Dharmapuri district, featuring the Vathalmalai hills and diverse agricultural activities."
+    "description": "A scenic constituency in Dharmapuri district, featuring the Vathalmalai hills and diverse agricultural activities.",
+    "name_ta": "பாப்பிரெட்டிப்பட்டி",
+    "district_ta": "தர்மபுரி"
   },
   "61": {
     "name": "HARUR",
@@ -668,7 +788,9 @@
       "2021": 253078
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in Dharmapuri district, home to the Theerthamalai Temple and varied forest cover."
+    "description": "A reserved constituency in Dharmapuri district, home to the Theerthamalai Temple and varied forest cover.",
+    "name_ta": "ஹாரூர்",
+    "district_ta": "தர்மபுரி"
   },
   "62": {
     "name": "CHENGAM",
@@ -679,7 +801,9 @@
       "2021": 277646
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A historic town in Tiruvannamalai district, known for its large cattle market and agricultural heritage."
+    "description": "A historic town in Tiruvannamalai district, known for its large cattle market and agricultural heritage.",
+    "name_ta": "செங்கம்",
+    "district_ta": "திருவண்ணாமலை"
   },
   "63": {
     "name": "TIRUVANNAMALAI",
@@ -690,7 +814,9 @@
       "2021": 291304
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Famous for the Arunachaleswarar Temple and the holy Annamalai Hill, a major spiritual center globally."
+    "description": "Famous for the Arunachaleswarar Temple and the holy Annamalai Hill, a major spiritual center globally.",
+    "name_ta": "திருவண்ணாமலை",
+    "district_ta": "திருவண்ணாமலை"
   },
   "64": {
     "name": "KILPENNATHUR",
@@ -701,7 +827,9 @@
       "2021": 256945
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A rural constituency in Tiruvannamalai district, primarily centered around agriculture and dairy farming."
+    "description": "A rural constituency in Tiruvannamalai district, primarily centered around agriculture and dairy farming.",
+    "name_ta": "கீழ்பெண்ணாத்தூர்",
+    "district_ta": "திருவண்ணாமலை"
   },
   "65": {
     "name": "KALASAPAKKAM",
@@ -712,7 +840,9 @@
       "2021": 244442
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Known for its scenic hills and the Sathanur Dam, a major irrigation and tourist spot in Tiruvannamalai."
+    "description": "Known for its scenic hills and the Sathanur Dam, a major irrigation and tourist spot in Tiruvannamalai.",
+    "name_ta": "களசப்பாக்கம்",
+    "district_ta": "திருவண்ணாமலை"
   },
   "66": {
     "name": "POLUR",
@@ -723,7 +853,9 @@
       "2021": 245368
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A historic town known for its ancient temples and as a significant agricultural hub in Tiruvannamalai district."
+    "description": "A historic town known for its ancient temples and as a significant agricultural hub in Tiruvannamalai district.",
+    "name_ta": "போளூர்",
+    "district_ta": "திருவண்ணாமலை"
   },
   "67": {
     "name": "ARANI",
@@ -734,7 +866,9 @@
       "2021": 277332
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Famous for its traditional silk weaving industry, often called the 'Arani Silk' hub, and historic forts."
+    "description": "Famous for its traditional silk weaving industry, often called the 'Arani Silk' hub, and historic forts.",
+    "name_ta": "ஆரணி",
+    "district_ta": "திருவண்ணாமலை"
   },
   "68": {
     "name": "CHEYYAR",
@@ -745,7 +879,9 @@
       "2021": 262529
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A major agricultural and educational hub in Tiruvannamalai district, known for its rice mills."
+    "description": "A major agricultural and educational hub in Tiruvannamalai district, known for its rice mills.",
+    "name_ta": "செய்யாறு",
+    "district_ta": "திருவண்ணாமலை"
   },
   "69": {
     "name": "VANDAVASI",
@@ -756,7 +892,9 @@
       "2021": 242122
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A reserved constituency in Tiruvannamalai district, known for its historic Jain temples and agriculture."
+    "description": "A reserved constituency in Tiruvannamalai district, known for its historic Jain temples and agriculture.",
+    "name_ta": "வந்தவாசி",
+    "district_ta": "திருவண்ணாமலை"
   },
   "70": {
     "name": "GINGEE",
@@ -767,7 +905,9 @@
       "2021": 264518
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Famous for the historic Gingee Fort, often called the 'Troy of the East' for its architectural brilliance."
+    "description": "Famous for the historic Gingee Fort, often called the 'Troy of the East' for its architectural brilliance.",
+    "name_ta": "செஞ்சி",
+    "district_ta": "விழுப்புரம்"
   },
   "71": {
     "name": "MAILAM",
@@ -778,7 +918,9 @@
       "2021": 222627
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A rural constituency in Villupuram district, home to several historic temples and agricultural lands."
+    "description": "A rural constituency in Villupuram district, home to several historic temples and agricultural lands.",
+    "name_ta": "மைலம்",
+    "district_ta": "விழுப்புரம்"
   },
   "72": {
     "name": "TINDIVANAM",
@@ -789,7 +931,9 @@
       "2021": 232740
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A reserved constituency in Villupuram district, known for its historic significance and educational institutions."
+    "description": "A reserved constituency in Villupuram district, known for its historic significance and educational institutions.",
+    "name_ta": "திண்டிவனம்",
+    "district_ta": "விழுப்புரம்"
   },
   "73": {
     "name": "VANUR",
@@ -800,7 +944,9 @@
       "2021": 228359
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A border constituency near Puducherry, known for its salt pans and the Auroville international township nearby."
+    "description": "A border constituency near Puducherry, known for its salt pans and the Auroville international township nearby.",
+    "name_ta": "வானூர்",
+    "district_ta": "விழுப்புரம்"
   },
   "74": {
     "name": "VILLUPURAM",
@@ -811,7 +957,9 @@
       "2021": 266155
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "The headquarters of Villupuram district, a major transport hub connecting Chennai with southern Tamil Nadu."
+    "description": "The headquarters of Villupuram district, a major transport hub connecting Chennai with southern Tamil Nadu.",
+    "name_ta": "விழுப்புரம்",
+    "district_ta": "விழுப்புரம்"
   },
   "75": {
     "name": "VIKRAVANDI",
@@ -822,7 +970,9 @@
       "2021": 237887
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A rapidly developing constituency in Villupuram district, known for its significant sugar mills and agriculture."
+    "description": "A rapidly developing constituency in Villupuram district, known for its significant sugar mills and agriculture.",
+    "name_ta": "விக்கிரவாண்டி",
+    "district_ta": "விழுப்புரம்"
   },
   "76": {
     "name": "TIRUKKOYILUR",
@@ -833,7 +983,9 @@
       "2021": 257266
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Famous for the historic Ulagalantha Perumal Temple and its role as a key agricultural center in the region."
+    "description": "Famous for the historic Ulagalantha Perumal Temple and its role as a key agricultural center in the region.",
+    "name_ta": "திருக்கோவிலூர்",
+    "district_ta": "விழுப்புரம்"
   },
   "77": {
     "name": "ULUNDURPET",
@@ -844,7 +996,9 @@
       "2021": 296360
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A major transport and commercial junction on the Chennai-Trichy highway, known for its active trade."
+    "description": "A major transport and commercial junction on the Chennai-Trichy highway, known for its active trade.",
+    "name_ta": "உளுந்தூர்பேட்டை",
+    "district_ta": "விழுப்புரம்"
   },
   "78": {
     "name": "RISHIVANDIAM",
@@ -855,7 +1009,9 @@
       "2021": 268278
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "A rural constituency in Kallakurichi district, primarily dependent on agriculture and forest-based activities."
+    "description": "A rural constituency in Kallakurichi district, primarily dependent on agriculture and forest-based activities.",
+    "name_ta": "ரிஷிவந்தியம்",
+    "district_ta": "விழுப்புரம்"
   },
   "79": {
     "name": "SANKARAPURAM",
@@ -866,7 +1022,9 @@
       "2021": 271176
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "Known for its proximity to the Kalrayan Hills and its significant contribution to sugarcane production."
+    "description": "Known for its proximity to the Kalrayan Hills and its significant contribution to sugarcane production.",
+    "name_ta": "சங்கரபுரம்",
+    "district_ta": "விழுப்புரம்"
   },
   "80": {
     "name": "KALLAKURICHI",
@@ -877,7 +1035,9 @@
       "2021": 288968
     },
     "sub_region": "CHENNAI CITY REGION",
-    "description": "The headquarters of Kallakurichi district, known for its sugar factories and vibrant agricultural markets."
+    "description": "The headquarters of Kallakurichi district, known for its sugar factories and vibrant agricultural markets.",
+    "name_ta": "கள்ளக்குறிச்சி",
+    "district_ta": "விழுப்புரம்"
   },
   "81": {
     "name": "GANGAVALLI",
@@ -888,7 +1048,9 @@
       "2021": 241866
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in Salem district, primarily focused on agriculture and small-scale hill farming."
+    "description": "A reserved constituency in Salem district, primarily focused on agriculture and small-scale hill farming.",
+    "name_ta": "கங்கவல்லி",
+    "district_ta": "சேலம்"
   },
   "82": {
     "name": "ATTUR",
@@ -899,7 +1061,9 @@
       "2021": 258533
     },
     "sub_region": "WESTERN REGION",
-    "description": "Known for its historical significance and its role as a major center for the sago and starch industry."
+    "description": "Known for its historical significance and its role as a major center for the sago and starch industry.",
+    "name_ta": "ஆத்தூர்",
+    "district_ta": "சேலம்"
   },
   "83": {
     "name": "YERCAUD",
@@ -910,7 +1074,9 @@
       "2021": 287548
     },
     "sub_region": "WESTERN REGION",
-    "description": "Home to the famous Yercaud hill station, known for its coffee plantations and pleasant weather in the Eastern Ghats."
+    "description": "Home to the famous Yercaud hill station, known for its coffee plantations and pleasant weather in the Eastern Ghats.",
+    "name_ta": "ஏற்காடு",
+    "district_ta": "சேலம்"
   },
   "84": {
     "name": "OMALUR",
@@ -921,7 +1087,9 @@
       "2021": 299023
     },
     "sub_region": "WESTERN REGION",
-    "description": "A major industrial and agricultural hub in Salem district, known for its handloom weaving tradition."
+    "description": "A major industrial and agricultural hub in Salem district, known for its handloom weaving tradition.",
+    "name_ta": "ஓமலூர்",
+    "district_ta": "சேலம்"
   },
   "85": {
     "name": "METTUR",
@@ -932,7 +1100,9 @@
       "2021": 291217
     },
     "sub_region": "WESTERN REGION",
-    "description": "Home to the massive Mettur Dam, the largest in Tamil Nadu, and a major power generation center."
+    "description": "Home to the massive Mettur Dam, the largest in Tamil Nadu, and a major power generation center.",
+    "name_ta": "மேட்டூர்",
+    "district_ta": "சேலம்"
   },
   "86": {
     "name": "EDAPADI",
@@ -943,7 +1113,9 @@
       "2021": 288768
     },
     "sub_region": "WESTERN REGION",
-    "description": "The home constituency of former Chief Minister Edappadi K. Palaniswami, known for its strong agricultural base."
+    "description": "The home constituency of former Chief Minister Edappadi K. Palaniswami, known for its strong agricultural base.",
+    "name_ta": "ஏடப்பாடி",
+    "district_ta": "சேலம்"
   },
   "87": {
     "name": "SANKARI",
@@ -954,7 +1126,9 @@
       "2021": 277442
     },
     "sub_region": "WESTERN REGION",
-    "description": "Known for the Sankary Durg fort and its significant presence in the truck body-building and cement industries."
+    "description": "Known for the Sankary Durg fort and its significant presence in the truck body-building and cement industries.",
+    "name_ta": "சங்ககிரி",
+    "district_ta": "சேலம்"
   },
   "88": {
     "name": "SALEM (West)",
@@ -965,7 +1139,9 @@
       "2021": 301668
     },
     "sub_region": "WESTERN REGION",
-    "description": "A major urban part of Salem city, known for its vibrant steel and textile trade centers."
+    "description": "A major urban part of Salem city, known for its vibrant steel and textile trade centers.",
+    "name_ta": "சேலம் (மேற்கு)",
+    "district_ta": "சேலம்"
   },
   "89": {
     "name": "SALEM (North)",
@@ -976,7 +1152,9 @@
       "2021": 280532
     },
     "sub_region": "WESTERN REGION",
-    "description": "A central urban constituency in Salem, home to major government offices and commercial establishments."
+    "description": "A central urban constituency in Salem, home to major government offices and commercial establishments.",
+    "name_ta": "சேலம் (வடக்கு)",
+    "district_ta": "சேலம்"
   },
   "90": {
     "name": "SALEM (South)",
@@ -987,7 +1165,9 @@
       "2021": 263134
     },
     "sub_region": "WESTERN REGION",
-    "description": "A key urban area in Salem city, known for its traditional silver anklet manufacturing and textile industry."
+    "description": "A key urban area in Salem city, known for its traditional silver anklet manufacturing and textile industry.",
+    "name_ta": "சேலம் (தெற்கு)",
+    "district_ta": "சேலம்"
   },
   "91": {
     "name": "VEERAPANDI",
@@ -998,7 +1178,9 @@
       "2021": 261212
     },
     "sub_region": "WESTERN REGION",
-    "description": "A rural-urban mix constituency in Salem district, primarily known for its textile power looms and agriculture."
+    "description": "A rural-urban mix constituency in Salem district, primarily known for its textile power looms and agriculture.",
+    "name_ta": "வீரபாண்டி",
+    "district_ta": "சேலம்"
   },
   "92": {
     "name": "RASIPURAM",
@@ -1009,7 +1191,9 @@
       "2021": 239980
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in Namakkal district, known for its sago factories and educational institutions."
+    "description": "A reserved constituency in Namakkal district, known for its sago factories and educational institutions.",
+    "name_ta": "இராசிபுரம்",
+    "district_ta": "நாமக்கல்"
   },
   "93": {
     "name": "SENDAMANGALAM",
@@ -1020,7 +1204,9 @@
       "2021": 246181
     },
     "sub_region": "WESTERN REGION",
-    "description": "A tribal-reserved constituency in the Kolli Hills region, famous for its medicinal plants and scenic beauty."
+    "description": "A tribal-reserved constituency in the Kolli Hills region, famous for its medicinal plants and scenic beauty.",
+    "name_ta": "சேந்தமங்கலம்",
+    "district_ta": "நாமக்கல்"
   },
   "94": {
     "name": "NAMAKKAL",
@@ -1031,7 +1217,9 @@
       "2021": 263152
     },
     "sub_region": "WESTERN REGION",
-    "description": "Famous for the historic Namakkal Fort and its world-renowned poultry and truck-body building industries."
+    "description": "Famous for the historic Namakkal Fort and its world-renowned poultry and truck-body building industries.",
+    "name_ta": "நாமக்கல்",
+    "district_ta": "நாமக்கல்"
   },
   "95": {
     "name": "PARAMATHI-VELUR",
@@ -1042,7 +1230,9 @@
       "2021": 226395
     },
     "sub_region": "WESTERN REGION",
-    "description": "Located on the banks of the Kaveri River, it is a major center for betel leaf cultivation and agriculture."
+    "description": "Located on the banks of the Kaveri River, it is a major center for betel leaf cultivation and agriculture.",
+    "name_ta": "பரமத்தி-வேலூர்",
+    "district_ta": "நாமக்கல்"
   },
   "96": {
     "name": "TIRUCHENGODE",
@@ -1053,7 +1243,9 @@
       "2021": 234619
     },
     "sub_region": "WESTERN REGION",
-    "description": "A significant hub for the textile industry and truck transport, known for the historic Ardhanareeswarar Temple."
+    "description": "A significant hub for the textile industry and truck transport, known for the historic Ardhanareeswarar Temple.",
+    "name_ta": "திருச்செங்கோடு",
+    "district_ta": "நாமக்கல்"
   },
   "97": {
     "name": "KUMARAPALAYAM",
@@ -1064,7 +1256,9 @@
       "2021": 256087
     },
     "sub_region": "WESTERN REGION",
-    "description": "A major textile manufacturing center in Namakkal district, famous for its high-quality power loom products."
+    "description": "A major textile manufacturing center in Namakkal district, famous for its high-quality power loom products.",
+    "name_ta": "குமாரபாளையம்",
+    "district_ta": "நாமக்கல்"
   },
   "98": {
     "name": "ERODE (East)",
@@ -1075,7 +1269,9 @@
       "2021": 229524
     },
     "sub_region": "WESTERN REGION",
-    "description": "The central urban part of Erode city, known for its massive turmeric market and textile trade."
+    "description": "The central urban part of Erode city, known for its massive turmeric market and textile trade.",
+    "name_ta": "ஈரோடு (கிழக்கு)",
+    "district_ta": "ஈரோடு"
   },
   "99": {
     "name": "ERODE (West)",
@@ -1086,7 +1282,9 @@
       "2021": 296394
     },
     "sub_region": "WESTERN REGION",
-    "description": "A rapidly growing urban area in Erode, known for its residential developments and industrial units."
+    "description": "A rapidly growing urban area in Erode, known for its residential developments and industrial units.",
+    "name_ta": "ஈரோடு (மேற்கு)",
+    "district_ta": "ஈரோடு"
   },
   "100": {
     "name": "MODAKURICHI",
@@ -1097,7 +1295,9 @@
       "2021": 241638
     },
     "sub_region": "WESTERN REGION",
-    "description": "A major agricultural constituency in Erode district, known for its significant textile and turmeric production."
+    "description": "A major agricultural constituency in Erode district, known for its significant textile and turmeric production.",
+    "name_ta": "மொடக்குறிச்சி",
+    "district_ta": "ஈரோடு"
   },
   "101": {
     "name": "DHARAPURAM",
@@ -1108,7 +1308,9 @@
       "2021": 261619
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in Tiruppur district, historically significant and centered around agriculture."
+    "description": "A reserved constituency in Tiruppur district, historically significant and centered around agriculture.",
+    "name_ta": "தாராபுரம்",
+    "district_ta": "ஈரோடு"
   },
   "102": {
     "name": "KANGAYAM",
@@ -1119,7 +1321,9 @@
       "2021": 258865
     },
     "sub_region": "WESTERN REGION",
-    "description": "Known for its vast grazing lands and its historical significance in the Erode-Tiruppur region."
+    "description": "Known for its vast grazing lands and its historical significance in the Erode-Tiruppur region.",
+    "name_ta": "கங்கயம்",
+    "district_ta": "ஈரோடு"
   },
   "103": {
     "name": "PERUNDURAI",
@@ -1130,7 +1334,9 @@
       "2021": 229834
     },
     "sub_region": "WESTERN REGION",
-    "description": "A major industrial and agricultural hub in Erode district, known for its educational institutions and SIPCOT park."
+    "description": "A major industrial and agricultural hub in Erode district, known for its educational institutions and SIPCOT park.",
+    "name_ta": "பெருந்துறை",
+    "district_ta": "ஈரோடு"
   },
   "104": {
     "name": "BHAVANI",
@@ -1141,7 +1347,9 @@
       "2021": 241179
     },
     "sub_region": "WESTERN REGION",
-    "description": "Famous for its namesake river and the Sangameswarar Temple at the confluence of the Kaveri and Bhavani rivers."
+    "description": "Famous for its namesake river and the Sangameswarar Temple at the confluence of the Kaveri and Bhavani rivers.",
+    "name_ta": "பவானி",
+    "district_ta": "ஈரோடு"
   },
   "105": {
     "name": "ANTHIYUR",
@@ -1152,7 +1360,9 @@
       "2021": 221338
     },
     "sub_region": "WESTERN REGION",
-    "description": "A rural constituency in Erode district, known for its hill-based agriculture and forest resources."
+    "description": "A rural constituency in Erode district, known for its hill-based agriculture and forest resources.",
+    "name_ta": "அந்தியூர்",
+    "district_ta": "ஈரோடு"
   },
   "106": {
     "name": "GOBICHETTIPALAYAM",
@@ -1163,7 +1373,9 @@
       "2021": 259671
     },
     "sub_region": "WESTERN REGION",
-    "description": "Known for its lush greenery and as a major agricultural center, often called the 'Green City' of the region."
+    "description": "Known for its lush greenery and as a major agricultural center, often called the 'Green City' of the region.",
+    "name_ta": "கோபிச்செட்டிப்பாளையம்",
+    "district_ta": "திருப்பூர்"
   },
   "107": {
     "name": "BHAVANISAGAR",
@@ -1174,7 +1386,9 @@
       "2021": 259230
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in Erode district, home to the Bhavanisagar Dam, one of the world's largest earthen dams."
+    "description": "A reserved constituency in Erode district, home to the Bhavanisagar Dam, one of the world's largest earthen dams.",
+    "name_ta": "பவானிசாகர்",
+    "district_ta": "திருப்பூர்"
   },
   "108": {
     "name": "UDHAGAMANDALAM",
@@ -1185,7 +1399,9 @@
       "2021": 208053
     },
     "sub_region": "WESTERN REGION",
-    "description": "The heart of the Nilgiris, world-famous for its tea plantations, tourism, and colonial-era heritage."
+    "description": "The heart of the Nilgiris, world-famous for its tea plantations, tourism, and colonial-era heritage.",
+    "name_ta": "உதகமண்டலம்",
+    "district_ta": "திருப்பூர்"
   },
   "109": {
     "name": "GUDALUR",
@@ -1196,7 +1412,9 @@
       "2021": 191624
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in the Nilgiris, known for its dense forests, wildlife, and extensive tea estates."
+    "description": "A reserved constituency in the Nilgiris, known for its dense forests, wildlife, and extensive tea estates.",
+    "name_ta": "குடலூர்",
+    "district_ta": "திருப்பூர்"
   },
   "110": {
     "name": "COONOOR",
@@ -1207,7 +1425,9 @@
       "2021": 194738
     },
     "sub_region": "WESTERN REGION",
-    "description": "A scenic hill station in the Nilgiris, famous for its step-farming, tea production, and the Nilgiri Mountain Railway."
+    "description": "A scenic hill station in the Nilgiris, famous for its step-farming, tea production, and the Nilgiri Mountain Railway.",
+    "name_ta": "கூனூர்",
+    "district_ta": "திருப்பூர்"
   },
   "111": {
     "name": "METTUPALAYAM",
@@ -1218,7 +1438,9 @@
       "2021": 299551
     },
     "sub_region": "WESTERN REGION",
-    "description": "Located at the foothills of the Nilgiris, it is a major trade center for vegetables and hill produce."
+    "description": "Located at the foothills of the Nilgiris, it is a major trade center for vegetables and hill produce.",
+    "name_ta": "மேட்டுப்பாளையம்",
+    "district_ta": "திருப்பூர்"
   },
   "112": {
     "name": "AVANASHI",
@@ -1229,7 +1451,9 @@
       "2021": 282823
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in Tiruppur district, famous for the historic Avanashiappar Temple and textile industry."
+    "description": "A reserved constituency in Tiruppur district, famous for the historic Avanashiappar Temple and textile industry.",
+    "name_ta": "அவினாசி",
+    "district_ta": "திருப்பூர்"
   },
   "113": {
     "name": "TIRUPPUR (North)",
@@ -1240,7 +1464,9 @@
       "2021": 381313
     },
     "sub_region": "WESTERN REGION",
-    "description": "Part of India's textile capital Tiruppur, known globally for its massive knitwear and garment export industry."
+    "description": "Part of India's textile capital Tiruppur, known globally for its massive knitwear and garment export industry.",
+    "name_ta": "திருப்பூர் (வடக்கு)",
+    "district_ta": "திருப்பூர்"
   },
   "114": {
     "name": "TIRUPPUR (South)",
@@ -1251,7 +1477,9 @@
       "2021": 278001
     },
     "sub_region": "WESTERN REGION",
-    "description": "The southern heart of Tiruppur city, a vital hub for the international garment trade and textile manufacturing."
+    "description": "The southern heart of Tiruppur city, a vital hub for the international garment trade and textile manufacturing.",
+    "name_ta": "திருப்பூர் (தெற்கு)",
+    "district_ta": "நீலகிரி"
   },
   "115": {
     "name": "PALLADAM",
@@ -1262,7 +1490,9 @@
       "2021": 392070
     },
     "sub_region": "WESTERN REGION",
-    "description": "A central urban constituency in Coimbatore, known for its vibrant commercial markets and textile legacy."
+    "description": "A central urban constituency in Coimbatore, known for its vibrant commercial markets and textile legacy.",
+    "name_ta": "பல்லடம்",
+    "district_ta": "நீலகிரி"
   },
   "116": {
     "name": "SULUR",
@@ -1273,7 +1503,9 @@
       "2021": 319773
     },
     "sub_region": "WESTERN REGION",
-    "description": "A major industrial and educational hub in Coimbatore, housing several prominent colleges and manufacturing units."
+    "description": "A major industrial and educational hub in Coimbatore, housing several prominent colleges and manufacturing units.",
+    "name_ta": "சூலூர்",
+    "district_ta": "நீலகிரி"
   },
   "117": {
     "name": "KAVUNDAMPALAYAM",
@@ -1284,7 +1516,9 @@
       "2021": 468649
     },
     "sub_region": "WESTERN REGION",
-    "description": "Known for being one of the largest assembly constituencies by electorate, featuring major residential areas of Coimbatore."
+    "description": "Known for being one of the largest assembly constituencies by electorate, featuring major residential areas of Coimbatore.",
+    "name_ta": "கவுண்டம்பாளையம்",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "118": {
     "name": "COIMBATORE NORTH",
@@ -1295,7 +1529,9 @@
       "2021": 342508
     },
     "sub_region": "WESTERN REGION",
-    "description": "A rapidly developing suburb of Coimbatore, known for its educational institutions and small-scale industries."
+    "description": "A rapidly developing suburb of Coimbatore, known for its educational institutions and small-scale industries.",
+    "name_ta": "கோயம்புத்தூர் வடக்கு",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "119": {
     "name": "THONDAMUTHUR",
@@ -1306,7 +1542,9 @@
       "2021": 328298
     },
     "sub_region": "WESTERN REGION",
-    "description": "The heart of Coimbatore city, known as the 'Manchester of South India' for its massive textile and pump industry."
+    "description": "The heart of Coimbatore city, known as the 'Manchester of South India' for its massive textile and pump industry.",
+    "name_ta": "தொண்டாமுத்தூர்",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "120": {
     "name": "COIMBATORE SOUTH",
@@ -1317,7 +1555,9 @@
       "2021": 255009
     },
     "sub_region": "WESTERN REGION",
-    "description": "A major industrial and residential area in Coimbatore, known for its textile mills and engineering units."
+    "description": "A major industrial and residential area in Coimbatore, known for its textile mills and engineering units.",
+    "name_ta": "கோயம்புத்தூர் தெற்கு",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "121": {
     "name": "SINGANALLUR",
@@ -1328,7 +1568,9 @@
       "2021": 327265
     },
     "sub_region": "WESTERN REGION",
-    "description": "A scenic constituency at the foothills of the Velliangiri Mountains, home to several spiritual and educational centers."
+    "description": "A scenic constituency at the foothills of the Velliangiri Mountains, home to several spiritual and educational centers.",
+    "name_ta": "சிங்காநல்லூர்",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "122": {
     "name": "KINATHUKADAVU",
@@ -1339,7 +1581,9 @@
       "2021": 329041
     },
     "sub_region": "WESTERN REGION",
-    "description": "Known for its lush coconut groves and as a major center for agricultural trade in the Coimbatore region."
+    "description": "Known for its lush coconut groves and as a major center for agricultural trade in the Coimbatore region.",
+    "name_ta": "கினத்துக்கடவு",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "123": {
     "name": "POLLACHI",
@@ -1350,7 +1594,9 @@
       "2021": 229257
     },
     "sub_region": "WESTERN REGION",
-    "description": "Famous for its diverse agriculture, especially coconut cultivation, and its proximity to the Anamalai Tiger Reserve."
+    "description": "Famous for its diverse agriculture, especially coconut cultivation, and its proximity to the Anamalai Tiger Reserve.",
+    "name_ta": "போளாச்சி",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "124": {
     "name": "VALPARAI",
@@ -1361,7 +1607,9 @@
       "2021": 207270
     },
     "sub_region": "WESTERN REGION",
-    "description": "A reserved constituency in the Western Ghats, world-famous for its tea and coffee plantations and scenic beauty."
+    "description": "A reserved constituency in the Western Ghats, world-famous for its tea and coffee plantations and scenic beauty.",
+    "name_ta": "வால்பாறை",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "125": {
     "name": "UDUMALPET",
@@ -1372,7 +1620,9 @@
       "2021": 272553
     },
     "sub_region": "WESTERN REGION",
-    "description": "A mixed rural-urban constituency in Coimbatore district, known for its traditional agriculture and small industries."
+    "description": "A mixed rural-urban constituency in Coimbatore district, known for its traditional agriculture and small industries.",
+    "name_ta": "உடுமலை",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "126": {
     "name": "MADATHUKULAM",
@@ -1383,7 +1633,9 @@
       "2021": 251072
     },
     "sub_region": "WESTERN REGION",
-    "description": "The headquarters of Tiruppur district, a global hub for the hosiery and garment industry."
+    "description": "The headquarters of Tiruppur district, a global hub for the hosiery and garment industry.",
+    "name_ta": "மடத்துக்குளம்",
+    "district_ta": "கோயம்புத்தூர்"
   },
   "127": {
     "name": "PALANI",
@@ -1394,7 +1646,9 @@
       "2021": 280081
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A major agricultural and textile center in Tiruppur district, known for its vibrant local markets."
+    "description": "A major agricultural and textile center in Tiruppur district, known for its vibrant local markets.",
+    "name_ta": "பழனி",
+    "district_ta": "திண்டுக்கல்"
   },
   "128": {
     "name": "ODDANCHATRAM",
@@ -1405,7 +1659,9 @@
       "2021": 242845
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Karur district, world-renowned for its home textile exports and bus body-building industry."
+    "description": "The headquarters of Karur district, world-renowned for its home textile exports and bus body-building industry.",
+    "name_ta": "ஒட்டன்சத்திரம்",
+    "district_ta": "திண்டுக்கல்"
   },
   "129": {
     "name": "ATHOOR",
@@ -1416,7 +1672,9 @@
       "2021": 294946
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A major agricultural constituency in Karur district, known for its significant betel leaf and banana cultivation."
+    "description": "A major agricultural constituency in Karur district, known for its significant betel leaf and banana cultivation.",
+    "name_ta": "ஆத்தூர்",
+    "district_ta": "திண்டுக்கல்"
   },
   "130": {
     "name": "NILAKOTTAI",
@@ -1427,7 +1685,9 @@
       "2021": 246176
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A rural constituency in Karur district, primarily centered around agriculture and small-scale palm industries."
+    "description": "A rural constituency in Karur district, primarily centered around agriculture and small-scale palm industries.",
+    "name_ta": "நிலக்கோட்டை",
+    "district_ta": "திண்டுக்கல்"
   },
   "131": {
     "name": "NATHAM",
@@ -1438,7 +1698,9 @@
       "2021": 285299
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A major industrial hub in Tiruchirappalli district, home to heavy industries like BHEL and several educational institutions."
+    "description": "A major industrial hub in Tiruchirappalli district, home to heavy industries like BHEL and several educational institutions.",
+    "name_ta": "நாத்தம்",
+    "district_ta": "திண்டுக்கல்"
   },
   "132": {
     "name": "DINDIGUL",
@@ -1449,7 +1711,9 @@
       "2021": 281677
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The heart of Tiruchirappalli city, famous for the iconic Rock Fort Temple and vibrant commercial markets."
+    "description": "The heart of Tiruchirappalli city, famous for the iconic Rock Fort Temple and vibrant commercial markets.",
+    "name_ta": "திண்டுக்கல்",
+    "district_ta": "திண்டுக்கல்"
   },
   "133": {
     "name": "VEDASANDUR",
@@ -1460,7 +1724,9 @@
       "2021": 265818
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A historical part of Trichy city, home to the massive Srirangam Temple, the largest functioning Hindu temple in the world."
+    "description": "A historical part of Trichy city, home to the massive Srirangam Temple, the largest functioning Hindu temple in the world.",
+    "name_ta": "வேடசந்தூர்",
+    "district_ta": "திண்டுக்கல்"
   },
   "134": {
     "name": "ARAVAKURICHI",
@@ -1470,7 +1736,9 @@
       "2021": 216203
     },
     "sub_region": "CENTRAL REGION",
-    "description": "An urban constituency in Trichy, home to major government offices and a diverse residential population."
+    "description": "An urban constituency in Trichy, home to major government offices and a diverse residential population.",
+    "name_ta": "அரவக்குறிச்சி",
+    "district_ta": "கரூர்"
   },
   "135": {
     "name": "KARUR",
@@ -1481,7 +1749,9 @@
       "2021": 248067
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A reserved constituency in Tiruchirappalli district, primarily dependent on agriculture and small industries."
+    "description": "A reserved constituency in Tiruchirappalli district, primarily dependent on agriculture and small industries.",
+    "name_ta": "கரூர்",
+    "district_ta": "கரூர்"
   },
   "136": {
     "name": "KRISHNARAYAPURAM",
@@ -1492,7 +1762,9 @@
       "2021": 214924
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Trichy district, known for its historical temples and agricultural output."
+    "description": "A rural constituency in Trichy district, known for its historical temples and agricultural output.",
+    "name_ta": "கிருஷ்ணராயபுரம்",
+    "district_ta": "கரூர்"
   },
   "137": {
     "name": "KULITHALAI",
@@ -1503,7 +1775,9 @@
       "2021": 229173
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A major agricultural hub in Trichy district, known for its large-scale banana and paddy cultivation."
+    "description": "A major agricultural hub in Trichy district, known for its large-scale banana and paddy cultivation.",
+    "name_ta": "குளித்தலை",
+    "district_ta": "கரூர்"
   },
   "138": {
     "name": "MANAPPARAI",
@@ -1514,7 +1788,9 @@
       "2021": 291696
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Trichy district, primarily centered around agriculture and traditional rural industries."
+    "description": "A rural constituency in Trichy district, primarily centered around agriculture and traditional rural industries.",
+    "name_ta": "மணப்பாறை",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "139": {
     "name": "SRIRANGAM",
@@ -1525,7 +1801,9 @@
       "2021": 315482
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The headquarters of Perambalur district, a major center for maize and onion production in the state."
+    "description": "The headquarters of Perambalur district, a major center for maize and onion production in the state.",
+    "name_ta": "ஸ்ரீரங்கம்",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "140": {
     "name": "TIRUCHIRAPALLI (West)",
@@ -1536,7 +1814,9 @@
       "2021": 273241
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A reserved constituency in Perambalur district, primarily focused on agriculture and small-scale industries."
+    "description": "A reserved constituency in Perambalur district, primarily focused on agriculture and small-scale industries.",
+    "name_ta": "திருச்சிராப்பள்ளி (மேற்கு)",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "141": {
     "name": "TIRUCHIRAPALLI (East)",
@@ -1547,7 +1827,9 @@
       "2021": 258495
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The headquarters of Ariyalur district, famous for its enormous limestone deposits and numerous cement factories."
+    "description": "The headquarters of Ariyalur district, famous for its enormous limestone deposits and numerous cement factories.",
+    "name_ta": "திருச்சிராப்பள்ளி (கிழக்கு)",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "142": {
     "name": "THIRUVERAMBUR",
@@ -1558,7 +1840,9 @@
       "2021": 295859
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A historic town in Ariyalur district, known for the magnificent Gangaikonda Cholapuram temple, a UNESCO World Heritage site."
+    "description": "A historic town in Ariyalur district, known for the magnificent Gangaikonda Cholapuram temple, a UNESCO World Heritage site.",
+    "name_ta": "திருவெரும்பூர்",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "143": {
     "name": "LALGUDI",
@@ -1569,7 +1853,9 @@
       "2021": 220565
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The headquarters of Cuddalore district, known for its significant industrial port and silver beach."
+    "description": "The headquarters of Cuddalore district, known for its significant industrial port and silver beach.",
+    "name_ta": "லால்குடி",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "144": {
     "name": "MANACHANALLUR",
@@ -1580,7 +1866,9 @@
       "2021": 247041
     },
     "sub_region": "CENTRAL REGION",
-    "description": "An ancient coastal town famous for the Nataraja Temple, one of the most sacred sites in Saivism."
+    "description": "An ancient coastal town famous for the Nataraja Temple, one of the most sacred sites in Saivism.",
+    "name_ta": "மணச்சநல்லூர்",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "145": {
     "name": "MUSIRI",
@@ -1591,7 +1879,9 @@
       "2021": 236517
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Cuddalore district, primarily dependent on agriculture and sugarcane cultivation."
+    "description": "A rural constituency in Cuddalore district, primarily dependent on agriculture and sugarcane cultivation.",
+    "name_ta": "முசிறி",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "146": {
     "name": "THURAIYUR",
@@ -1602,7 +1892,9 @@
       "2021": 229513
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A coastal constituency in Cuddalore district, known for its fishing industry and mangrove forests in Pichavaram."
+    "description": "A coastal constituency in Cuddalore district, known for its fishing industry and mangrove forests in Pichavaram.",
+    "name_ta": "துறையூர்",
+    "district_ta": "திருச்சிராப்பள்ளி"
   },
   "147": {
     "name": "PERAMBALUR",
@@ -1613,7 +1905,9 @@
       "2021": 306938
     },
     "sub_region": "CENTRAL REGION",
-    "description": "An industrial town in Cuddalore district, home to the massive Neyveli Lignite Corporation and its mining units."
+    "description": "An industrial town in Cuddalore district, home to the massive Neyveli Lignite Corporation and its mining units.",
+    "name_ta": "பெரம்பலூர்",
+    "district_ta": "பெரம்பலூர்"
   },
   "148": {
     "name": "KUNNAM",
@@ -1624,7 +1918,9 @@
       "2021": 274677
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A reserved constituency in Cuddalore district, primarily centered around agriculture and rural industries."
+    "description": "A reserved constituency in Cuddalore district, primarily centered around agriculture and rural industries.",
+    "name_ta": "குன்னம்",
+    "district_ta": "பெரம்பலூர்"
   },
   "149": {
     "name": "ARIYALUR",
@@ -1635,7 +1931,9 @@
       "2021": 266412
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Cuddalore district, known for its traditional agriculture and historical local temples."
+    "description": "A rural constituency in Cuddalore district, known for its traditional agriculture and historical local temples.",
+    "name_ta": "அரியலூர்",
+    "district_ta": "அரியலூர்"
   },
   "150": {
     "name": "JAYANKONDAM",
@@ -1646,7 +1944,9 @@
       "2021": 269181
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Cuddalore district, primarily focused on paddy cultivation and small industries."
+    "description": "A rural constituency in Cuddalore district, primarily focused on paddy cultivation and small industries.",
+    "name_ta": "ஜெயங்கொண்டம்",
+    "district_ta": "அரியலூர்"
   },
   "151": {
     "name": "TITTAKUDI",
@@ -1657,7 +1957,9 @@
       "2021": 220424
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A major agricultural hub in Cuddalore district, known for its rich paddy fields and rural heritage."
+    "description": "A major agricultural hub in Cuddalore district, known for its rich paddy fields and rural heritage.",
+    "name_ta": "திட்டக்குடி",
+    "district_ta": "கடலூர்"
   },
   "152": {
     "name": "VRIDDHACHALAM",
@@ -1668,7 +1970,9 @@
       "2021": 255432
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Mayiladuthurai district, primarily dependent on agriculture and traditional arts."
+    "description": "A rural constituency in Mayiladuthurai district, primarily dependent on agriculture and traditional arts.",
+    "name_ta": "விருத்தாசலம்",
+    "district_ta": "கடலூர்"
   },
   "153": {
     "name": "NEYVELI",
@@ -1679,7 +1983,9 @@
       "2021": 221050
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The headquarters of Mayiladuthurai district, an ancient town known for its historic temples and rich cultural heritage."
+    "description": "The headquarters of Mayiladuthurai district, an ancient town known for its historic temples and rich cultural heritage.",
+    "name_ta": "நெய்வேலி",
+    "district_ta": "கடலூர்"
   },
   "154": {
     "name": "PANRUTI",
@@ -1690,7 +1996,9 @@
       "2021": 247548
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A coastal constituency world-famous for the Poompuhar heritage site and its significant fishing industry."
+    "description": "A coastal constituency world-famous for the Poompuhar heritage site and its significant fishing industry.",
+    "name_ta": "பண்ருட்டி",
+    "district_ta": "கடலூர்"
   },
   "155": {
     "name": "CUDDALORE",
@@ -1701,7 +2009,9 @@
       "2021": 243414
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The headquarters of Nagapattinam district, an ancient port town known for its coastal trade and fishing industry."
+    "description": "The headquarters of Nagapattinam district, an ancient port town known for its coastal trade and fishing industry.",
+    "name_ta": "கடலூர்",
+    "district_ta": "கடலூர்"
   },
   "156": {
     "name": "KURINJIPADI",
@@ -1712,7 +2022,9 @@
       "2021": 242238
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A reserved constituency in Nagapattinam district, primarily dependent on agriculture and rural crafts."
+    "description": "A reserved constituency in Nagapattinam district, primarily dependent on agriculture and rural crafts.",
+    "name_ta": "குரிஞ்சிப்பாடி",
+    "district_ta": "கடலூர்"
   },
   "157": {
     "name": "BHUVANAGIRI",
@@ -1723,7 +2035,9 @@
       "2021": 250941
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A coastal constituency famous for the Vailankanni Church and the Nagore Dargah, major spiritual centers."
+    "description": "A coastal constituency famous for the Vailankanni Church and the Nagore Dargah, major spiritual centers.",
+    "name_ta": "புவனகிரி",
+    "district_ta": "கடலூர்"
   },
   "158": {
     "name": "CHIDAMBARAM",
@@ -1734,7 +2048,9 @@
       "2021": 254903
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A reserved constituency in Tiruvarur district, primarily centered around paddy cultivation and rural life."
+    "description": "A reserved constituency in Tiruvarur district, primarily centered around paddy cultivation and rural life.",
+    "name_ta": "சிதம்பரம்",
+    "district_ta": "கடலூர்"
   },
   "159": {
     "name": "KATTUMANNARKOIL",
@@ -1745,7 +2061,9 @@
       "2021": 231397
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The headquarters of Tiruvarur district, famous for its massive chariot festival and being the birthplace of Carnatic music legends."
+    "description": "The headquarters of Tiruvarur district, famous for its massive chariot festival and being the birthplace of Carnatic music legends.",
+    "name_ta": "காட்டுமன்னார்கோவில்",
+    "district_ta": "கடலூர்"
   },
   "160": {
     "name": "SIRKALI",
@@ -1756,7 +2074,9 @@
       "2021": 255406
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A major agricultural constituency in Tiruvarur district, known for its extensive rice production."
+    "description": "A major agricultural constituency in Tiruvarur district, known for its extensive rice production.",
+    "name_ta": "சீர்காழி",
+    "district_ta": "நாகப்பட்டினம்"
   },
   "161": {
     "name": "MAYILADUTHURAI",
@@ -1767,7 +2087,9 @@
       "2021": 248987
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Tiruvarur district, primarily dependent on agriculture in the fertile Kaveri Delta."
+    "description": "A rural constituency in Tiruvarur district, primarily dependent on agriculture in the fertile Kaveri Delta.",
+    "name_ta": "மயிலாடுதுறை",
+    "district_ta": "நாகப்பட்டினம்"
   },
   "162": {
     "name": "POOMPUHAR",
@@ -1778,7 +2100,9 @@
       "2021": 276417
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A reserved constituency in Thanjavur district, primarily focused on agriculture and rural industries."
+    "description": "A reserved constituency in Thanjavur district, primarily focused on agriculture and rural industries.",
+    "name_ta": "பூம்புகார்",
+    "district_ta": "நாகப்பட்டினம்"
   },
   "163": {
     "name": "NAGAPATTINAM",
@@ -1789,7 +2113,9 @@
       "2021": 199472
     },
     "sub_region": "CENTRAL REGION",
-    "description": "Famous for the historic Swamimalai Murugan Temple and its traditional bronze icon casting industry."
+    "description": "Famous for the historic Swamimalai Murugan Temple and its traditional bronze icon casting industry.",
+    "name_ta": "நாகப்பட்டினம்",
+    "district_ta": "நாகப்பட்டினம்"
   },
   "164": {
     "name": "KILVELUR",
@@ -1800,7 +2126,9 @@
       "2021": 180026
     },
     "sub_region": "CENTRAL REGION",
-    "description": "Known as the 'Kashi of the South,' it is an ancient temple town famous for the Mahamaham festival."
+    "description": "Known as the 'Kashi of the South,' it is an ancient temple town famous for the Mahamaham festival.",
+    "name_ta": "கீழ்வேலூர்",
+    "district_ta": "நாகப்பட்டினம்"
   },
   "165": {
     "name": "VEDARANYAM",
@@ -1811,7 +2139,9 @@
       "2021": 196104
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Thanjavur district, primarily centered around the fertile paddy fields of the Delta."
+    "description": "A rural constituency in Thanjavur district, primarily centered around the fertile paddy fields of the Delta.",
+    "name_ta": "வேதாரண்யம்",
+    "district_ta": "நாகப்பட்டினம்"
   },
   "166": {
     "name": "THIRUTHURAIPUNDI",
@@ -1822,7 +2152,9 @@
       "2021": 242228
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural-urban mix constituency in Thanjavur district, known for its traditional agriculture and local temples."
+    "description": "A rural-urban mix constituency in Thanjavur district, known for its traditional agriculture and local temples.",
+    "name_ta": "திருத்துறைப்பூண்டி",
+    "district_ta": "திருவாரூர்"
   },
   "167": {
     "name": "MANNARGUDI",
@@ -1833,7 +2165,9 @@
       "2021": 259926
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The 'Rice Bowl of Tamil Nadu,' world-famous for the Big Temple (Brihadisvara) and its rich cultural heritage."
+    "description": "The 'Rice Bowl of Tamil Nadu,' world-famous for the Big Temple (Brihadisvara) and its rich cultural heritage.",
+    "name_ta": "மன்னார்குடி",
+    "district_ta": "திருவாரூர்"
   },
   "168": {
     "name": "THIRUVARUR",
@@ -1844,7 +2178,9 @@
       "2021": 284354
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rapidly growing suburb of Thanjavur city, known for its educational institutions and residential areas."
+    "description": "A rapidly growing suburb of Thanjavur city, known for its educational institutions and residential areas.",
+    "name_ta": "திருவாரூர்",
+    "district_ta": "திருவாரூர்"
   },
   "169": {
     "name": "NANNILAM",
@@ -1855,7 +2191,9 @@
       "2021": 273734
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A major agricultural constituency in Thanjavur district, known for its extensive coconut groves and paddy fields."
+    "description": "A major agricultural constituency in Thanjavur district, known for its extensive coconut groves and paddy fields.",
+    "name_ta": "நன்னிலம்",
+    "district_ta": "திருவாரூர்"
   },
   "170": {
     "name": "THIRUVIDAMARUDUR",
@@ -1866,7 +2204,9 @@
       "2021": 261940
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A coastal constituency in Thanjavur district, known for its ancient fort and significant fishing industry."
+    "description": "A coastal constituency in Thanjavur district, known for its ancient fort and significant fishing industry.",
+    "name_ta": "திருவிடைமருதூர்",
+    "district_ta": "தஞ்சாவூர்"
   },
   "171": {
     "name": "KUMBAKONAM",
@@ -1877,7 +2217,9 @@
       "2021": 276506
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A reserved constituency in Pudukkottai district, primarily focused on agriculture and rural development."
+    "description": "A reserved constituency in Pudukkottai district, primarily focused on agriculture and rural development.",
+    "name_ta": "கும்பகோணம்",
+    "district_ta": "தஞ்சாவூர்"
   },
   "172": {
     "name": "PAPANASAM",
@@ -1888,7 +2230,9 @@
       "2021": 263485
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Pudukkottai district, known for its historical sites and agricultural landscape."
+    "description": "A rural constituency in Pudukkottai district, known for its historical sites and agricultural landscape.",
+    "name_ta": "பாபநாசம்",
+    "district_ta": "தஞ்சாவூர்"
   },
   "173": {
     "name": "THIRUVAIYARU",
@@ -1899,7 +2243,9 @@
       "2021": 270682
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The headquarters of Pudukkottai district, famous for its rich history as a princely state and its ancient monuments."
+    "description": "The headquarters of Pudukkottai district, famous for its rich history as a princely state and its ancient monuments.",
+    "name_ta": "திருவையாறு",
+    "district_ta": "தஞ்சாவூர்"
   },
   "174": {
     "name": "THANJAVUR",
@@ -1909,7 +2255,9 @@
       "2021": 296498
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A historic town in Pudukkottai district, known for the ancient Thirumayam Fort and rock-cut temples."
+    "description": "A historic town in Pudukkottai district, known for the ancient Thirumayam Fort and rock-cut temples.",
+    "name_ta": "தஞ்சாவூர்",
+    "district_ta": "தஞ்சாவூர்"
   },
   "175": {
     "name": "ORATHANAD",
@@ -1920,7 +2268,9 @@
       "2021": 245037
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rural constituency in Pudukkottai district, primarily dependent on agriculture and traditional village life."
+    "description": "A rural constituency in Pudukkottai district, primarily dependent on agriculture and traditional village life.",
+    "name_ta": "ஒரத்தநாடு",
+    "district_ta": "தஞ்சாவூர்"
   },
   "176": {
     "name": "PATTUKKOTTAI",
@@ -1931,7 +2281,9 @@
       "2021": 247278
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A coastal constituency in Pudukkottai district, known for its fishing industry and historical coastal trade."
+    "description": "A coastal constituency in Pudukkottai district, known for its fishing industry and historical coastal trade.",
+    "name_ta": "பட்டுக்கோட்டை",
+    "district_ta": "தஞ்சாவூர்"
   },
   "177": {
     "name": "PERAVURANI",
@@ -1942,7 +2294,9 @@
       "2021": 221825
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The headquarters of Sivaganga district, famous for its rich history and association with the Maruthu Pandiyar brothers."
+    "description": "The headquarters of Sivaganga district, famous for its rich history and association with the Maruthu Pandiyar brothers.",
+    "name_ta": "பேராவூரணி",
+    "district_ta": "தஞ்சாவூர்"
   },
   "178": {
     "name": "GANDHARVAKOTTAI",
@@ -1953,7 +2307,9 @@
       "2021": 211712
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A major educational and cultural hub in Sivaganga district, home to Alagappa University and the Chettinad region."
+    "description": "A major educational and cultural hub in Sivaganga district, home to Alagappa University and the Chettinad region.",
+    "name_ta": "காந்தர்வக்கோட்டை",
+    "district_ta": "புதுக்கோட்டை"
   },
   "179": {
     "name": "VIRALIMALAI",
@@ -1964,7 +2320,9 @@
       "2021": 226411
     },
     "sub_region": "CENTRAL REGION",
-    "description": "Historically significant as the seat of the Sivaganga Kingdom, known for its heroic resistance against colonial rule."
+    "description": "Historically significant as the seat of the Sivaganga Kingdom, known for its heroic resistance against colonial rule.",
+    "name_ta": "விராலிமலை",
+    "district_ta": "புதுக்கோட்டை"
   },
   "180": {
     "name": "PUDUKKOTTAI",
@@ -1975,7 +2333,9 @@
       "2021": 246630
     },
     "sub_region": "CENTRAL REGION",
-    "description": "The heart of the Chettinad region, world-renowned for its unique architecture, palatial houses, and cuisine."
+    "description": "The heart of the Chettinad region, world-renowned for its unique architecture, palatial houses, and cuisine.",
+    "name_ta": "புதுக்கோட்டை",
+    "district_ta": "புதுக்கோட்டை"
   },
   "181": {
     "name": "THIRUMAYAM",
@@ -1986,7 +2346,9 @@
       "2021": 229441
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A central urban constituency in Madurai city, famous for the iconic Meenakshi Amman Temple and vibrant trade."
+    "description": "A central urban constituency in Madurai city, famous for the iconic Meenakshi Amman Temple and vibrant trade.",
+    "name_ta": "திருமயம்",
+    "district_ta": "புதுக்கோட்டை"
   },
   "182": {
     "name": "ALANGUDI",
@@ -1997,7 +2359,9 @@
       "2021": 218990
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A rapidly developing urban area in Madurai, known for its diverse residential and commercial growth."
+    "description": "A rapidly developing urban area in Madurai, known for its diverse residential and commercial growth.",
+    "name_ta": "ஆலங்குடி",
+    "district_ta": "புதுக்கோட்டை"
   },
   "183": {
     "name": "ARANTANGI",
@@ -2008,7 +2372,9 @@
       "2021": 239350
     },
     "sub_region": "CENTRAL REGION",
-    "description": "A major urban part of Madurai city, home to several historic landmarks and busy commercial districts."
+    "description": "A major urban part of Madurai city, home to several historic landmarks and busy commercial districts.",
+    "name_ta": "ஆரந்தாங்கி",
+    "district_ta": "புதுக்கோட்டை"
   },
   "184": {
     "name": "KARAIKUDI",
@@ -2019,7 +2385,9 @@
       "2021": 320785
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A key urban constituency in Madurai, a hub for the local textile industry and small-scale manufacturing."
+    "description": "A key urban constituency in Madurai, a hub for the local textile industry and small-scale manufacturing.",
+    "name_ta": "காரைக்குடி",
+    "district_ta": "சிவகங்கை"
   },
   "185": {
     "name": "TIRUPPATTUR",
@@ -2030,7 +2398,9 @@
       "2021": 292811
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A mixed urban-rural constituency in Madurai, known for its residential developments and traditional agriculture."
+    "description": "A mixed urban-rural constituency in Madurai, known for its residential developments and traditional agriculture.",
+    "name_ta": "திருப்பத்தூர்",
+    "district_ta": "சிவகங்கை"
   },
   "186": {
     "name": "SIVAGANGA",
@@ -2041,7 +2411,9 @@
       "2021": 304788
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A reserved constituency in Madurai district, primarily dependent on agriculture and rural industries."
+    "description": "A reserved constituency in Madurai district, primarily dependent on agriculture and rural industries.",
+    "name_ta": "சிவகங்கை",
+    "district_ta": "சிவகங்கை"
   },
   "187": {
     "name": "MANAMADURAI",
@@ -2052,7 +2424,9 @@
       "2021": 281833
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Home to the historic Alagar Koyil temple and a major center for agricultural production in the Madurai region."
+    "description": "Home to the historic Alagar Koyil temple and a major center for agricultural production in the Madurai region.",
+    "name_ta": "மாநாமதுரை",
+    "district_ta": "சிவகங்கை"
   },
   "188": {
     "name": "MELUR",
@@ -2063,7 +2437,9 @@
       "2021": 246237
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A historic town in Madurai district, known for its ancient fort and significance in local history."
+    "description": "A historic town in Madurai district, known for its ancient fort and significance in local history.",
+    "name_ta": "மேலூர்",
+    "district_ta": "மதுரை"
   },
   "189": {
     "name": "MADURAI EAST",
@@ -2074,7 +2450,9 @@
       "2021": 333462
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Famous for the Thirumangalam formula in politics and its role as a major center for agricultural trade."
+    "description": "Famous for the Thirumangalam formula in politics and its role as a major center for agricultural trade.",
+    "name_ta": "மதுரை கிழக்கு",
+    "district_ta": "மதுரை"
   },
   "190": {
     "name": "SHOLAVANDAN",
@@ -2085,7 +2463,9 @@
       "2021": 220607
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Home to the famous Thirupparankundram Murugan Temple, one of the six abodes of Lord Murugan."
+    "description": "Home to the famous Thirupparankundram Murugan Temple, one of the six abodes of Lord Murugan.",
+    "name_ta": "சோளவந்தன்",
+    "district_ta": "மதுரை"
   },
   "191": {
     "name": "MADURAI NORTH",
@@ -2096,7 +2476,9 @@
       "2021": 246157
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Theni district, known for its vibrant weekly markets and proximity to the Western Ghats."
+    "description": "The headquarters of Theni district, known for its vibrant weekly markets and proximity to the Western Ghats.",
+    "name_ta": "மதுரை வடக்கு",
+    "district_ta": "மதுரை"
   },
   "192": {
     "name": "MADURAI SOUTH",
@@ -2107,7 +2489,9 @@
       "2021": 231713
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Located at the foothills of the Western Ghats, it is a major agricultural hub for cardamom and grapes."
+    "description": "Located at the foothills of the Western Ghats, it is a major agricultural hub for cardamom and grapes.",
+    "name_ta": "மதுரை தெற்கு",
+    "district_ta": "மதுரை"
   },
   "193": {
     "name": "MADURAI CENTRAL",
@@ -2118,7 +2502,9 @@
       "2021": 244846
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Famous for its lush greenery, the Suruli Falls, and its significant contribution to the state's agriculture."
+    "description": "Famous for its lush greenery, the Suruli Falls, and its significant contribution to the state's agriculture.",
+    "name_ta": "மதுரை மத்திய",
+    "district_ta": "மதுரை"
   },
   "194": {
     "name": "MADURAI WEST",
@@ -2129,7 +2515,9 @@
       "2021": 309726
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A scenic constituency in Theni district, serving as a gateway to the popular Kodaikanal hill station."
+    "description": "A scenic constituency in Theni district, serving as a gateway to the popular Kodaikanal hill station.",
+    "name_ta": "மதுரை மேற்கு",
+    "district_ta": "மதுரை"
   },
   "195": {
     "name": "THIRUPARANKUNDRAM",
@@ -2140,7 +2528,9 @@
       "2021": 324280
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Dindigul district, world-famous for its historic rock fort and lock manufacturing industry."
+    "description": "The headquarters of Dindigul district, world-famous for its historic rock fort and lock manufacturing industry.",
+    "name_ta": "திருப்பரங்குன்றம்",
+    "district_ta": "மதுரை"
   },
   "196": {
     "name": "THIRUMANGALAM",
@@ -2151,7 +2541,9 @@
       "2021": 282215
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A rural constituency in Dindigul district, primarily focused on agriculture and small-scale industries."
+    "description": "A rural constituency in Dindigul district, primarily focused on agriculture and small-scale industries.",
+    "name_ta": "திருமங்கலம்",
+    "district_ta": "மதுரை"
   },
   "197": {
     "name": "USILAMPATTI",
@@ -2162,7 +2554,9 @@
       "2021": 287879
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A major agricultural hub in Dindigul district, known for its significant vegetable and flower production."
+    "description": "A major agricultural hub in Dindigul district, known for its significant vegetable and flower production.",
+    "name_ta": "உசிலம்பட்டி",
+    "district_ta": "மதுரை"
   },
   "198": {
     "name": "ANDIPATTI",
@@ -2173,7 +2567,9 @@
       "2021": 279946
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A rural constituency in Dindigul district, primarily dependent on agriculture and local trading."
+    "description": "A rural constituency in Dindigul district, primarily dependent on agriculture and local trading.",
+    "name_ta": "ஆண்டிப்பட்டி",
+    "district_ta": "தேனி"
   },
   "199": {
     "name": "PERIYAKULAM",
@@ -2184,7 +2580,9 @@
       "2021": 288528
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A rural-urban mix in Dindigul district, known for its traditional agriculture and small industries."
+    "description": "A rural-urban mix in Dindigul district, known for its traditional agriculture and small industries.",
+    "name_ta": "பெரியகுளம்",
+    "district_ta": "தேனி"
   },
   "200": {
     "name": "BODINAYAKANUR",
@@ -2195,7 +2593,9 @@
       "2021": 281513
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Famous for the historic Palani Murugan Temple, one of the most visited pilgrimage sites in South India."
+    "description": "Famous for the historic Palani Murugan Temple, one of the most visited pilgrimage sites in South India.",
+    "name_ta": "போடிநாயக்கனூர்",
+    "district_ta": "தேனி"
   },
   "201": {
     "name": "CUMBUM",
@@ -2206,7 +2606,9 @@
       "2021": 291001
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A historic constituency in Dindigul district, known for its ancient fort and agricultural landscape."
+    "description": "A historic constituency in Dindigul district, known for its ancient fort and agricultural landscape.",
+    "name_ta": "கம்பம்",
+    "district_ta": "தேனி"
   },
   "202": {
     "name": "RAJAPALAYAM",
@@ -2217,7 +2619,9 @@
       "2021": 241856
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A rural constituency in Dindigul district, primarily focused on paddy and sugarcane cultivation."
+    "description": "A rural constituency in Dindigul district, primarily focused on paddy and sugarcane cultivation.",
+    "name_ta": "இராஜபாளையம்",
+    "district_ta": "விருதுநகர்"
   },
   "203": {
     "name": "SRIVILLIPUTHUR",
@@ -2228,7 +2632,9 @@
       "2021": 252992
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A major agricultural constituency in Virudhunagar district, known for its significant cotton and pulse production."
+    "description": "A major agricultural constituency in Virudhunagar district, known for its significant cotton and pulse production.",
+    "name_ta": "ஸ்ரீவில்லிபுத்தூர்",
+    "district_ta": "விருதுநகர்"
   },
   "204": {
     "name": "SATTUR",
@@ -2239,7 +2645,9 @@
       "2021": 255132
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Virudhunagar district, famous as the birthplace of former Chief Minister K. Kamaraj."
+    "description": "The headquarters of Virudhunagar district, famous as the birthplace of former Chief Minister K. Kamaraj.",
+    "name_ta": "சாத்தூர்",
+    "district_ta": "விருதுநகர்"
   },
   "205": {
     "name": "SIVAKASI",
@@ -2250,7 +2658,9 @@
       "2021": 263750
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "World-famous as the 'Little Japan' of India for its massive firecracker, matchbox, and printing industries."
+    "description": "World-famous as the 'Little Japan' of India for its massive firecracker, matchbox, and printing industries.",
+    "name_ta": "சிவகாசி",
+    "district_ta": "விருதுநகர்"
   },
   "206": {
     "name": "VIRUDHUNAGAR",
@@ -2261,7 +2671,9 @@
       "2021": 226907
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A historic town in Virudhunagar district, known for its significant textile industry and local temples."
+    "description": "A historic town in Virudhunagar district, known for its significant textile industry and local temples.",
+    "name_ta": "விருதுநகர்",
+    "district_ta": "விருதுநகர்"
   },
   "207": {
     "name": "ARUPPUKOTTAI",
@@ -2272,7 +2684,9 @@
       "2021": 226456
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A major industrial hub in Virudhunagar district, known for its textile mills and agricultural markets."
+    "description": "A major industrial hub in Virudhunagar district, known for its textile mills and agricultural markets.",
+    "name_ta": "அருப்புக்கோட்டை",
+    "district_ta": "விருதுநகர்"
   },
   "208": {
     "name": "TIRUCHULI",
@@ -2283,7 +2697,9 @@
       "2021": 223097
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Sivakasi district, a global center for safety matches and high-quality printing."
+    "description": "The headquarters of Sivakasi district, a global center for safety matches and high-quality printing.",
+    "name_ta": "திருச்சுழி",
+    "district_ta": "விருதுநகர்"
   },
   "209": {
     "name": "PARAMAKUDI",
@@ -2294,7 +2710,9 @@
       "2021": 258050
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Ramanathapuram district, a historic town serving as the gateway to Rameswaram."
+    "description": "The headquarters of Ramanathapuram district, a historic town serving as the gateway to Rameswaram.",
+    "name_ta": "பரமக்குடி",
+    "district_ta": "இராமநாதபுரம்"
   },
   "210": {
     "name": "TIRUVADANAI",
@@ -2305,7 +2723,9 @@
       "2021": 293677
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A reserved constituency in Ramanathapuram district, primarily dependent on coastal agriculture and fishing."
+    "description": "A reserved constituency in Ramanathapuram district, primarily dependent on coastal agriculture and fishing.",
+    "name_ta": "திருவாடானை",
+    "district_ta": "இராமநாதபுரம்"
   },
   "211": {
     "name": "RAMANATHAPURAM",
@@ -2316,7 +2736,9 @@
       "2021": 311143
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A coastal constituency in Ramanathapuram district, known for its fishing industry and palm-based crafts."
+    "description": "A coastal constituency in Ramanathapuram district, known for its fishing industry and palm-based crafts.",
+    "name_ta": "இராமநாதபுரம்",
+    "district_ta": "இராமநாதபுரம்"
   },
   "212": {
     "name": "MUDUKULATHUR",
@@ -2327,7 +2749,9 @@
       "2021": 314714
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A historic coastal town and major pilgrimage site, home to the Ramanathaswamy Temple and Pamban Bridge."
+    "description": "A historic coastal town and major pilgrimage site, home to the Ramanathaswamy Temple and Pamban Bridge.",
+    "name_ta": "முதுகுளத்தூர்",
+    "district_ta": "இராமநாதபுரம்"
   },
   "213": {
     "name": "VILATHIKULAM",
@@ -2338,7 +2762,9 @@
       "2021": 218464
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A reserved constituency in Thoothukudi district, primarily focused on agriculture and rural development."
+    "description": "A reserved constituency in Thoothukudi district, primarily focused on agriculture and rural development.",
+    "name_ta": "விளாத்திகுளம்",
+    "district_ta": "தூத்துக்குடி"
   },
   "214": {
     "name": "THOOTHUKKUDI",
@@ -2349,7 +2775,9 @@
       "2021": 289545
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Known as the 'Pearl City,' it is a major port city famous for its pearl fishing and thermal power plants."
+    "description": "Known as the 'Pearl City,' it is a major port city famous for its pearl fishing and thermal power plants.",
+    "name_ta": "தூத்துக்குடி",
+    "district_ta": "தூத்துக்குடி"
   },
   "215": {
     "name": "TIRUCHENDUR",
@@ -2360,7 +2788,9 @@
       "2021": 249194
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A coastal constituency in Thoothukudi district, home to the famous Tiruchendur Murugan Temple by the sea."
+    "description": "A coastal constituency in Thoothukudi district, home to the famous Tiruchendur Murugan Temple by the sea.",
+    "name_ta": "திருச்செந்தூர்",
+    "district_ta": "தூத்துக்குடி"
   },
   "216": {
     "name": "SRIVAIKUNTAM",
@@ -2371,7 +2801,9 @@
       "2021": 227240
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A rural constituency in Thoothukudi district, primarily dependent on dry-land agriculture and salt pans."
+    "description": "A rural constituency in Thoothukudi district, primarily dependent on dry-land agriculture and salt pans.",
+    "name_ta": "ஸ்ரீவைகுண்டம்",
+    "district_ta": "தூத்துக்குடி"
   },
   "217": {
     "name": "OTTAPIDARAM",
@@ -2382,7 +2814,9 @@
       "2021": 254712
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Known as the birthplace of the great Tamil poet Subramania Bharati and the historic Ettayapuram palace."
+    "description": "Known as the birthplace of the great Tamil poet Subramania Bharati and the historic Ettayapuram palace.",
+    "name_ta": "ஒட்டப்பிடாரம்",
+    "district_ta": "தூத்துக்குடி"
   },
   "218": {
     "name": "KOVILPATTI",
@@ -2393,7 +2827,9 @@
       "2021": 268319
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Tenkasi district, famous for the Kasi Viswanathar Temple and its scenic beauty."
+    "description": "The headquarters of Tenkasi district, famous for the Kasi Viswanathar Temple and its scenic beauty.",
+    "name_ta": "கோவில்பட்டி",
+    "district_ta": "தூத்துக்குடி"
   },
   "219": {
     "name": "SANKARANKOVIL",
@@ -2404,7 +2840,9 @@
       "2021": 256488
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Famous for the Courtallam waterfalls, often called the 'Spa of South India,' and its lush greenery."
+    "description": "Famous for the Courtallam waterfalls, often called the 'Spa of South India,' and its lush greenery.",
+    "name_ta": "சங்கரன்கோவில்",
+    "district_ta": "திருநெல்வேலி"
   },
   "220": {
     "name": "VASUDEVANALLUR",
@@ -2415,7 +2853,9 @@
       "2021": 244721
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A reserved constituency in Tenkasi district, primarily dependent on agriculture and rural crafts."
+    "description": "A reserved constituency in Tenkasi district, primarily dependent on agriculture and rural crafts.",
+    "name_ta": "வாசுதேவனல்லூர்",
+    "district_ta": "திருநெல்வேலி"
   },
   "221": {
     "name": "KADAYANALLUR",
@@ -2426,7 +2866,9 @@
       "2021": 291931
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A historic town in Tenkasi district, known for the ancient Nellaiappar Temple and agricultural heritage."
+    "description": "A historic town in Tenkasi district, known for the ancient Nellaiappar Temple and agricultural heritage.",
+    "name_ta": "கடையநல்லூர்",
+    "district_ta": "திருநெல்வேலி"
   },
   "222": {
     "name": "TENKASI",
@@ -2437,7 +2879,9 @@
       "2021": 295729
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Tirunelveli district, famous for its ancient temples and the local 'Halwa' delicacy."
+    "description": "The headquarters of Tirunelveli district, famous for its ancient temples and the local 'Halwa' delicacy.",
+    "name_ta": "தென்காசி",
+    "district_ta": "திருநெல்வேலி"
   },
   "223": {
     "name": "ALANGULAM",
@@ -2448,7 +2892,9 @@
       "2021": 262891
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A rapidly developing urban area in Tirunelveli, home to many educational institutions and IT parks."
+    "description": "A rapidly developing urban area in Tirunelveli, home to many educational institutions and IT parks.",
+    "name_ta": "ஆலங்குளம்",
+    "district_ta": "திருநெல்வேலி"
   },
   "224": {
     "name": "TIRUNELVELI",
@@ -2459,7 +2905,9 @@
       "2021": 295302
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Famous for the ISRO Propulsion Complex and its proximity to the scenic Western Ghats."
+    "description": "Famous for the ISRO Propulsion Complex and its proximity to the scenic Western Ghats.",
+    "name_ta": "திருநெல்வேலி",
+    "district_ta": "திருநெல்வேலி"
   },
   "225": {
     "name": "AMBASAMUDRAM",
@@ -2470,7 +2918,9 @@
       "2021": 246676
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A rural constituency in Tirunelveli district, primarily focused on agriculture and small industries."
+    "description": "A rural constituency in Tirunelveli district, primarily focused on agriculture and small industries.",
+    "name_ta": "அம்பாசமுத்திரம்",
+    "district_ta": "திருநெல்வேலி"
   },
   "226": {
     "name": "PALAYAMCOTTAI",
@@ -2481,7 +2931,9 @@
       "2021": 278897
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A coastal constituency in Tirunelveli district, known for its significant fishing industry and renewable energy projects."
+    "description": "A coastal constituency in Tirunelveli district, known for its significant fishing industry and renewable energy projects.",
+    "name_ta": "பாளையங்கோட்டை",
+    "district_ta": "திருநெல்வேலி"
   },
   "227": {
     "name": "NANGUNERI",
@@ -2492,7 +2944,9 @@
       "2021": 280685
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A major trade center in Tirunelveli district, known for its vibrant agricultural and cattle markets."
+    "description": "A major trade center in Tirunelveli district, known for its vibrant agricultural and cattle markets.",
+    "name_ta": "நாங்குநேரி",
+    "district_ta": "திருநெல்வேலி"
   },
   "228": {
     "name": "RADHAPURAM",
@@ -2503,7 +2957,9 @@
       "2021": 275132
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The headquarters of Kanniyakumari district, world-famous for its sunrise and sunset at the tip of India."
+    "description": "The headquarters of Kanniyakumari district, world-famous for its sunrise and sunset at the tip of India.",
+    "name_ta": "இராதாபுரம்",
+    "district_ta": "திருநெல்வேலி"
   },
   "229": {
     "name": "KANNIYAKUMARI",
@@ -2514,7 +2970,9 @@
       "2021": 299074
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A coastal constituency in Kanniyakumari district, known for its salt pans and significant fishing harbor."
+    "description": "A coastal constituency in Kanniyakumari district, known for its salt pans and significant fishing harbor.",
+    "name_ta": "கன்னியாகுமரி",
+    "district_ta": "கன்னியாகுமரி"
   },
   "230": {
     "name": "NAGERCOIL",
@@ -2525,7 +2983,9 @@
       "2021": 274657
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "The administrative heart of Kanniyakumari district, a major commercial hub and educational center."
+    "description": "The administrative heart of Kanniyakumari district, a major commercial hub and educational center.",
+    "name_ta": "நாகர்கோவில்",
+    "district_ta": "கன்னியாகுமரி"
   },
   "231": {
     "name": "COLACHEL",
@@ -2536,7 +2996,9 @@
       "2021": 271991
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A coastal town in Kanniyakumari district, known for its significant history and fishing industry."
+    "description": "A coastal town in Kanniyakumari district, known for its significant history and fishing industry.",
+    "name_ta": "கொல்லச்சேல்",
+    "district_ta": "கன்னியாகுமரி"
   },
   "232": {
     "name": "PADMANABHAPURAM",
@@ -2547,7 +3009,9 @@
       "2021": 242802
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "Historically the capital of the Travancore Kingdom, known for its magnificent wooden palace."
+    "description": "Historically the capital of the Travancore Kingdom, known for its magnificent wooden palace.",
+    "name_ta": "பத்மநாபபுரம்",
+    "district_ta": "கன்னியாகுமரி"
   },
   "233": {
     "name": "VILAVANCODE",
@@ -2558,7 +3022,9 @@
       "2021": 251138
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A coastal constituency in Kanniyakumari district, known for its high literacy rate and rubber plantations."
+    "description": "A coastal constituency in Kanniyakumari district, known for its high literacy rate and rubber plantations.",
+    "name_ta": "விளவங்கோடு",
+    "district_ta": "கன்னியாகுமரி"
   },
   "234": {
     "name": "KILLIYOOR",
@@ -2569,6 +3035,8 @@
       "2021": 257959
     },
     "sub_region": "SOUTHERN REGION",
-    "description": "A coastal constituency in Kanniyakumari district, primarily dependent on fishing and coconut cultivation."
+    "description": "A coastal constituency in Kanniyakumari district, primarily dependent on fishing and coconut cultivation.",
+    "name_ta": "கிள்ளியூர்",
+    "district_ta": "கன்னியாகுமரி"
   }
 }
