@@ -173,6 +173,11 @@
         </div>
     </main>
 
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p><span class="footer-heart">♥</span><span id="footer-year"></span><span>&ndash;</span><a href="https://pradepkumar.com" target="_blank" rel="noopener noreferrer">Pradep Kumar</a></p>
+    </footer>
+
     <!-- Constituency Detail Overlay -->
     <div id="constituency-overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="constituency-name">
         <div class="overlay-content">
@@ -381,6 +386,8 @@
     <!-- Elections 2026 Modal -->
     <script src="js/elections-2026-data.js"></script>
     <script src="js/elections-2026.js"></script>
+
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
