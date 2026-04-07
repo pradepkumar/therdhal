@@ -507,7 +507,7 @@ const UIModule = (function () {
                         <img src="${partyLogo}" alt="${h.winner.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
                     </div>
                     <div class="candidate-info">
-                        <div class="candidate-name">${lang === 'ta' ? (h.winner.name_ta || h.winner.name) : h.winner.name}</div>
+                        <div class="candidate-name">${h.winner.name}</div>
                         <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}"${h.winner.incumbent ? ' title="Incumbent"' : ''}>
                             <span class="party-name">${h.winner.party}</span>${h.winner.incumbent ? '<span class="incumbent-star" aria-label="Incumbent">★</span>' : ''}
                         </span>
@@ -760,7 +760,7 @@ const UIModule = (function () {
                                 <img src="${partyLogo}" alt="${c.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
                             </div>
                             <div class="candidate-info">
-                                <div class="candidate-name">${lang === 'ta' ? (c.name_ta || c.name) : c.name}${starBadge}</div>
+                                <div class="candidate-name">${c.name}${starBadge}</div>
                                 ${positionEl}
                                 <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}">
                                     <span class="party-name">${c.party}</span>
@@ -819,7 +819,7 @@ const UIModule = (function () {
                             <img src="${partyLogo}" alt="${c.party}" class="candidate-party-logo-large" onerror="this.style.display='none'">
                         </div>
                         <div class="candidate-info">
-                            <div class="candidate-name">${lang === 'ta' ? (c.name_ta || c.name) : c.name}</div>
+                            <div class="candidate-name">${c.name}</div>
                             <span class="candidate-party" style="background:${partyColor};color:${partyTextColor}"${c.incumbent ? ' title="Incumbent"' : ''}>
                                 <span class="party-name">${c.party}</span>${c.incumbent ? '<span class="incumbent-star" aria-label="Incumbent">★</span>' : ''}
                             </span>
