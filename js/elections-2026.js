@@ -853,6 +853,26 @@ function e2026_renderStarChart(canvas, star) {
     const barColors = dataPoints.map(v => v === null ? 'transparent' : v >= 0 ? WIN_COLOR + 'cc' : LOSS_COLOR + 'cc');
     const barBorders = dataPoints.map(v => v === null ? 'transparent' : v >= 0 ? WIN_COLOR : LOSS_COLOR);
 
+    // Inline plugin: always draw a solid zero line regardless of tick positions
+    const zeroLinePlugin = {
+        id: 'zeroLine',
+        afterDraw(chart) {
+            const yScale = chart.scales.y;
+            const xScale = chart.scales.x;
+            if (yScale.min > 0 || yScale.max < 0) return;
+            const zeroY = yScale.getPixelForValue(0);
+            const ctx2  = chart.ctx;
+            ctx2.save();
+            ctx2.beginPath();
+            ctx2.strokeStyle = mutedColor;
+            ctx2.lineWidth   = 2;
+            ctx2.moveTo(xScale.left, zeroY);
+            ctx2.lineTo(xScale.right, zeroY);
+            ctx2.stroke();
+            ctx2.restore();
+        }
+    };
+
     return new Chart(canvas, {
         type: 'bar',
         data: {
@@ -896,14 +916,12 @@ function e2026_renderStarChart(canvas, star) {
                         font: { size: 10 },
                         callback: (v) => (v >= 0 ? '+' : '') + v + '%'
                     },
-                    grid: {
-                        color: (ctx) => ctx.tick.value === 0 ? mutedColor : borderColor,
-                        lineWidth: (ctx) => ctx.tick.value === 0 ? 2 : 1,
-                    },
+                    grid:  { color: borderColor },
                     border: { color: borderColor }
                 }
             }
-        }
+        },
+        plugins: [zeroLinePlugin]
     });
 }
 
