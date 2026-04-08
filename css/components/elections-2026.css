@@ -1439,6 +1439,16 @@
     height: 120px !important;
 }
 
+/* Chart header label */
+.epg-star-chart-label {
+    margin: 0 0 var(--space-2) 0;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
 /* No-history message */
 .epg-star-no-history {
     margin: 0;

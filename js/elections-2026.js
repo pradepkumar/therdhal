@@ -778,7 +778,7 @@ function e2026_renderStars() {
         if (!star.history || star.history.length === 0) {
             panel.innerHTML = `<p class="epg-star-no-history">Did not contest in the past 5 Tamil Nadu assembly elections</p>`;
         } else {
-            panel.innerHTML = `<canvas class="epg-star-canvas"></canvas>`;
+            panel.innerHTML = `<p class="epg-star-chart-label">Win/Loss margin % — Past elections</p><canvas class="epg-star-canvas"></canvas>`;
         }
 
         card.addEventListener('click', () => e2026_toggleStarCard(idx, card, panel));
