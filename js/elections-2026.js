@@ -877,8 +877,10 @@ function e2026_renderStarChart(canvas, star) {
 
                 c.fillStyle    = inside ? '#ffffff' : (isWin ? WIN_COLOR : LOSS_COLOR);
                 c.textBaseline = (inside && isWin) ? 'top' : 'bottom';
-                const textY    = inside ? (isWin ? bar.y + PAD : bar.y - PAD)
+                const rawTextY = inside ? (isWin ? bar.y + PAD : bar.y - PAD)
                                         : (isWin ? bar.y - PAD : zeroY - PAD);
+                // Clamp so label never renders above the chart area (e.g. all-loss charts)
+                const textY    = Math.max(chart.chartArea.top + 10, rawTextY);
                 c.fillText(label, bar.x, textY);
             });
 
