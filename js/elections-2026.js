@@ -848,21 +848,21 @@ function e2026_renderStarChart(canvas, star) {
     star.history.forEach(h => { yearMap[h.year] = h; });
     const dataPoints = YEARS.map(y => (yearMap[y] ? yearMap[y].margin : null));
 
+    const WIN_COLOR  = '#4caf50';
+    const LOSS_COLOR = '#e53935';
+    const barColors = dataPoints.map(v => v === null ? 'transparent' : v >= 0 ? WIN_COLOR + 'cc' : LOSS_COLOR + 'cc');
+    const barBorders = dataPoints.map(v => v === null ? 'transparent' : v >= 0 ? WIN_COLOR : LOSS_COLOR);
+
     return new Chart(canvas, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels,
             datasets: [{
                 data: dataPoints,
-                borderColor: star.partyColor,
-                backgroundColor: star.partyColor + '22',
-                pointBackgroundColor: star.partyColor,
-                pointBorderColor: star.partyColor,
-                pointRadius: 4,
-                pointHoverRadius: 6,
-                borderWidth: 2,
-                spanGaps: false,
-                tension: 0.3,
+                backgroundColor: barColors,
+                borderColor: barBorders,
+                borderWidth: 1,
+                borderRadius: 3,
             }]
         },
         options: {
