@@ -770,7 +770,6 @@ function e2026_renderStars() {
                     <span class="epg-star-constituency">${star.constituency}</span>
                 </div>
             </div>
-            <span class="epg-star-chevron">▸</span>
         `;
 
         const panel = document.createElement('div');
