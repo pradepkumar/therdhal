@@ -1044,45 +1044,324 @@ const CANDIDATES_2026 = [
 
 const STAR_CANDIDATES_2026 = [
     // DMK
-    { name: 'M.K. Stalin', party: 'DMK', partyColor: '#e53935', constituency: 'Kolathur', note: 'Chief Minister', status: 'confirmed', photo: 'assets/photos/stalin.jpg' },
-    { name: 'Udhayanidhi Stalin', party: 'DMK', partyColor: '#e53935', constituency: 'Chepauk-Thiruvallikeni', note: 'Deputy Chief Minister', status: 'confirmed', photo: 'assets/photos/udhayanidhi.jpg' },
-    { name: 'V. Senthil Balaji', party: 'DMK', partyColor: '#e53935', constituency: 'Coimbatore South', note: 'Ex-minister, moved from Karur', status: 'confirmed', photo: 'assets/photos/senthil-balaji.jpg' },
-    { name: 'Dr. P.T.R. Palanivel Thiagarajan', party: 'DMK', partyColor: '#e53935', constituency: 'Madurai Central', note: 'Finance Minister', status: 'confirmed', photo: 'assets/photos/ptr.jpg' },
-    { name: 'Thangam Thennarasu', party: 'DMK', partyColor: '#e53935', constituency: 'Tiruchuli', note: 'Industries & Commerce Minister', status: 'confirmed', photo: 'assets/photos/thennarasu.jpg' },
-    { name: 'K.N. Nehru', party: 'DMK', partyColor: '#e53935', constituency: 'Tiruchirappalli West', note: 'Senior cabinet minister', status: 'confirmed', photo: 'assets/photos/kn-nehru.jpg' },
-    { name: 'O. Panneerselvam', party: 'DMK', partyColor: '#e53935', constituency: 'Bodinayakkanur', note: 'Former AIADMK CM, switched to DMK', status: 'confirmed', photo: 'assets/photos/ops.jpg' },
-    { name: 'Duraimurugan', party: 'DMK', partyColor: '#e53935', constituency: 'Katpadi', note: 'Senior DMK leader & former MP', status: 'confirmed', photo: 'assets/photos/duraimurugan.jpg' },
-    { name: 'Anbil Mahesh Poyyamozhi', party: 'DMK', partyColor: '#e53935', constituency: 'Thiruverambur', note: 'Minister for School Education', status: 'confirmed', photo: 'assets/photos/anbil-mahesh.jpg' },
+    {
+        name: 'M.K. Stalin', party: 'DMK', partyColor: '#e53935', constituency: 'Kolathur',
+        note: 'Chief Minister', status: 'confirmed', photo: 'assets/photos/stalin.jpg',
+        history: [
+            { year: 2021, margin: 34.2 },
+            { year: 2016, margin: 21.4 },
+            { year: 2011, margin: 1.6  },
+            { year: 2006, margin: 2.2  },
+            { year: 2001, margin: 5.3  },
+        ]
+    },
+    {
+        name: 'Udhayanidhi Stalin', party: 'DMK', partyColor: '#e53935', constituency: 'Chepauk-Thiruvallikeni',
+        note: 'Deputy Chief Minister', status: 'confirmed', photo: 'assets/photos/udhayanidhi.jpg',
+        history: [
+            { year: 2021, margin: 44.1 },
+            { year: 2016, margin: null },
+            { year: 2011, margin: null },
+            { year: 2006, margin: null },
+            { year: 2001, margin: null },
+        ]
+    },
+    {
+        name: 'V. Senthil Balaji', party: 'DMK', partyColor: '#e53935', constituency: 'Coimbatore South',
+        note: 'Ex-minister, moved from Karur', status: 'confirmed', photo: 'assets/photos/senthil-balaji.jpg',
+        history: [
+            { year: 2021, margin: 6.2  },
+            { year: 2016, margin: 14.6 },
+            { year: 2011, margin: 28.1 },
+            { year: 2006, margin: 3.5  },
+            { year: 2001, margin: -3.8 },
+        ]
+    },
+    {
+        name: 'Dr. P.T.R. Palanivel Thiagarajan', party: 'DMK', partyColor: '#e53935', constituency: 'Madurai Central',
+        note: 'Finance Minister', status: 'confirmed', photo: 'assets/photos/ptr.jpg',
+        history: [
+            { year: 2021, margin: 25.4 },
+            { year: 2016, margin: 3.5  },
+            { year: 2011, margin: null },
+            { year: 2006, margin: null },
+            { year: 2001, margin: null },
+        ]
+    },
+    {
+        name: 'Thangam Thennarasu', party: 'DMK', partyColor: '#e53935', constituency: 'Tiruchuli',
+        note: 'Industries & Commerce Minister', status: 'confirmed', photo: 'assets/photos/thennarasu.jpg',
+        history: [
+            { year: 2021, margin: 30.9 },
+            { year: 2016, margin: 16.0 },
+            { year: 2011, margin: 11.1 },
+            { year: 2006, margin: 2.8  },
+            { year: 2001, margin: -3.1 },
+        ]
+    },
+    {
+        name: 'K.N. Nehru', party: 'DMK', partyColor: '#e53935', constituency: 'Tiruchirappalli West',
+        note: 'Senior cabinet minister', status: 'confirmed', photo: 'assets/photos/kn-nehru.jpg',
+        history: [
+            { year: 2021, margin: 33.9 },
+            { year: 2016, margin: 15.1 },
+            { year: 2011, margin: -3.9 },
+            { year: 2006, margin: 8.7  },
+            { year: 2001, margin: 8.1  },
+        ]
+    },
+    {
+        name: 'O. Panneerselvam', party: 'DMK', partyColor: '#e53935', constituency: 'Bodinayakkanur',
+        note: 'Former AIADMK CM, switched to DMK', status: 'confirmed', photo: 'assets/photos/ops.jpg',
+        history: [
+            { year: 2021, margin: 5.5  },
+            { year: 2016, margin: 8.9  },
+            { year: 2011, margin: 16.2 },
+            { year: 2006, margin: 14.6 },
+            { year: 2001, margin: 16.4 },
+        ]
+    },
+    {
+        name: 'Duraimurugan', party: 'DMK', partyColor: '#e53935', constituency: 'Katpadi',
+        note: 'Senior DMK leader & former MP', status: 'confirmed', photo: 'assets/photos/duraimurugan.jpg',
+        history: [
+            { year: 2021, margin: 0.4  },
+            { year: 2016, margin: 13.5 },
+            { year: 2011, margin: 2.0  },
+            { year: 2006, margin: 23.3 },
+            { year: 2001, margin: 6.2  },
+        ]
+    },
+    {
+        name: 'Anbil Mahesh Poyyamozhi', party: 'DMK', partyColor: '#e53935', constituency: 'Thiruverambur',
+        note: 'Minister for School Education', status: 'confirmed', photo: 'assets/photos/anbil-mahesh.jpg',
+        history: [
+            { year: 2021, margin: 25.2 },
+            { year: 2016, margin: 9.1  },
+            { year: 2011, margin: null },
+            { year: 2006, margin: null },
+            { year: 2001, margin: null },
+        ]
+    },
     // AIADMK
-    { name: 'Edapadi K. Palanisami', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Edapadi', note: 'AIADMK General Secretary, former CM', status: 'confirmed', photo: 'assets/photos/edapadi.jpg' },
-    { name: 'D. Jayakumar', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Royapuram', note: 'Senior AIADMK leader, ex-minister', status: 'confirmed', photo: 'assets/photos/jayakumar.jpg' },
-    { name: 'S.P. Velumani', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Thondamuthur', note: 'Ex-minister for Municipal Administration', status: 'confirmed', photo: 'assets/photos/velumani.jpg' },
-    { name: 'M.R. Vijayabaskar', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Karur', note: 'Ex-Health & Finance Minister', status: 'confirmed', photo: 'assets/photos/mr-vijayabaskar.jpg' },
-    { name: 'Dr. C. Vijayabaskar', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Viralimalai', note: 'Ex-Health Minister', status: 'confirmed', photo: 'assets/photos/c-vijayabaskar.jpg' },
-    { name: 'Kadambur C. Rajoo', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Kovilpatti', note: 'Senior AIADMK leader', status: 'confirmed', photo: 'assets/photos/kadambur.jpg' },
+    {
+        name: 'Edapadi K. Palanisami', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Edapadi',
+        note: 'AIADMK General Secretary, former CM', status: 'confirmed', photo: 'assets/photos/edapadi.jpg',
+        history: [
+            { year: 2021, margin: 38.6  },
+            { year: 2016, margin: 20.3  },
+            { year: 2011, margin: 17.2  },
+            { year: 2006, margin: -10.1 },
+            { year: 2001, margin: -12.4 },
+        ]
+    },
+    {
+        name: 'D. Jayakumar', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Royapuram',
+        note: 'Senior AIADMK leader, ex-minister', status: 'confirmed', photo: 'assets/photos/jayakumar.jpg',
+        history: [
+            { year: 2021, margin: -23.1 },
+            { year: 2016, margin: 5.2   },
+            { year: 2011, margin: 15.5  },
+            { year: 2006, margin: 11.8  },
+            { year: 2001, margin: 12.8  },
+        ]
+    },
+    {
+        name: 'S.P. Velumani', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Thondamuthur',
+        note: 'Ex-minister for Municipal Administration', status: 'confirmed', photo: 'assets/photos/velumani.jpg',
+        history: [
+            { year: 2021, margin: 11.3 },
+            { year: 2016, margin: 34.0 },
+            { year: 2011, margin: 31.4 },
+            { year: 2006, margin: 7.2  },
+            { year: 2001, margin: null },
+        ]
+    },
+    {
+        name: 'M.R. Vijayabaskar', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Karur',
+        note: 'Ex-Health & Finance Minister', status: 'confirmed', photo: 'assets/photos/mr-vijayabaskar.jpg',
+        history: [
+            { year: 2021, margin: -6.2 },
+            { year: 2016, margin: 0.2  },
+            { year: 2011, margin: null },
+            { year: 2006, margin: null },
+            { year: 2001, margin: null },
+        ]
+    },
+    {
+        name: 'Dr. C. Vijayabaskar', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Viralimalai',
+        note: 'Ex-Health Minister', status: 'confirmed', photo: 'assets/photos/c-vijayabaskar.jpg',
+        history: [
+            { year: 2021, margin: 12.2 },
+            { year: 2016, margin: 5.0  },
+            { year: 2011, margin: 28.5 },
+            { year: 2006, margin: null },
+            { year: 2001, margin: 5.7  },
+        ]
+    },
+    {
+        name: 'Kadambur C. Rajoo', party: 'AIADMK', partyColor: '#4caf50', constituency: 'Kovilpatti',
+        note: 'Senior AIADMK leader', status: 'confirmed', photo: 'assets/photos/kadambur.jpg',
+        history: [
+            { year: 2021, margin: 6.7  },
+            { year: 2016, margin: 0.3  },
+            { year: 2011, margin: 15.2 },
+            { year: 2006, margin: null },
+            { year: 2001, margin: null },
+        ]
+    },
     // INC
-    { name: 'K. Selvaperunthagai', party: 'INC', partyColor: '#2196f3', constituency: 'Sriperumbudur', note: 'TNCC President, prominent state assembly voice', status: 'confirmed', photo: 'assets/photos/selvaperunthagai.jpg' },
-    { name: 'JMH Aassan Maulaana', party: 'INC', partyColor: '#2196f3', constituency: 'Velachery', note: 'Sitting MLA, TN Youth Congress President', status: 'confirmed', photo: 'assets/photos/aassan.jpg' },
-    { name: 'Dr. A. Chella Kumar', party: 'INC', partyColor: '#2196f3', constituency: 'Krishnagiri', note: 'Veteran politician & former MP', status: 'confirmed', photo: 'assets/photos/chella-kumar.jpg' },
-    // BJP
+    {
+        name: 'K. Selvaperunthagai', party: 'INC', partyColor: '#2196f3', constituency: 'Sriperumbudur',
+        note: 'TNCC President, prominent state assembly voice', status: 'confirmed', photo: 'assets/photos/selvaperunthagai.jpg',
+        history: [
+            { year: 2021, margin: 4.1  },
+            { year: 2016, margin: -4.5 },
+            { year: 2011, margin: -5.1 },
+            { year: 2006, margin: 4.8  },
+            { year: 2001, margin: null },
+        ]
+    },
+    {
+        name: 'JMH Aassan Maulaana', party: 'INC', partyColor: '#2196f3', constituency: 'Velachery',
+        note: 'Sitting MLA, TN Youth Congress President', status: 'confirmed', photo: 'assets/photos/aassan.jpg',
+        history: [
+            { year: 2021, margin: 2.5  },
+            { year: 2016, margin: null },
+            { year: 2011, margin: null },
+            { year: 2006, margin: null },
+            { year: 2001, margin: null },
+        ]
+    },
+    {
+        name: 'Dr. A. Chella Kumar', party: 'INC', partyColor: '#2196f3', constituency: 'Krishnagiri',
+        note: 'Veteran politician & former MP', status: 'confirmed', photo: 'assets/photos/chella-kumar.jpg',
+        history: [
+            { year: 2021, margin: null  },
+            { year: 2016, margin: null  },
+            { year: 2011, margin: -24.8 },
+            { year: 2006, margin: null  },
+            { year: 2001, margin: -16.8 },
+        ]
+    },
     // PMK
-    { name: 'Sowmiya Anbumani', party: 'PMK', partyColor: '#ffeb3b', constituency: 'Dharmapuri', note: 'Wife of PMK president Anbumani Ramadoss', status: 'confirmed', photo: 'assets/photos/sowmiya.jpg' },
-    { name: 'M Thilagabama', party: 'PMK', partyColor: '#ffeb3b', constituency: 'Perambur', note: 'PMK Party Treasurer', status: 'confirmed', photo: 'assets/photos/thilagabama.jpg' },
+    {
+        name: 'Sowmiya Anbumani', party: 'PMK', partyColor: '#ffeb3b', constituency: 'Dharmapuri',
+        note: 'Wife of PMK president Anbumani Ramadoss', status: 'confirmed', photo: 'assets/photos/sowmiya.jpg',
+        history: []
+    },
+    {
+        name: 'M Thilagabama', party: 'PMK', partyColor: '#ffeb3b', constituency: 'Perambur',
+        note: 'PMK Party Treasurer', status: 'confirmed', photo: 'assets/photos/thilagabama.jpg',
+        history: [
+            { year: 2021, margin: -16.4 },
+            { year: 2016, margin: null  },
+            { year: 2011, margin: null  },
+            { year: 2006, margin: null  },
+            { year: 2001, margin: null  },
+        ]
+    },
     // TVK
-    { name: 'C. Joseph Vijay', party: 'TVK', partyColor: '#ff5722', constituency: 'Perambur', note: 'Actor & TVK founder-president', status: 'confirmed', photo: 'assets/photos/vijay.jpg' },
-    { name: 'Adhav Arjuna', party: 'TVK', partyColor: '#ff5722', constituency: 'Villivakkam', note: 'General Secretary of Election Campaign Management', status: 'confirmed', photo: 'assets/photos/adhav-arjuna.jpg' },
-    { name: 'Bussy N Anand', party: 'TVK', partyColor: '#ff5722', constituency: 'Theayagaraya Nagar', note: 'General Secretary', status: 'confirmed', photo: 'assets/photos/bussy.jpg' },
-    { name: 'Rajmohan', party: 'TVK', partyColor: '#ff5722', constituency: 'Egmore', note: 'Propaganda Secretary', status: 'confirmed', photo: 'assets/photos/rajmohan.jpg' },
+    {
+        name: 'C. Joseph Vijay', party: 'TVK', partyColor: '#ff5722', constituency: 'Perambur',
+        note: 'Actor & TVK founder-president', status: 'confirmed', photo: 'assets/photos/vijay.jpg',
+        history: []
+    },
+    {
+        name: 'Adhav Arjuna', party: 'TVK', partyColor: '#ff5722', constituency: 'Villivakkam',
+        note: 'General Secretary of Election Campaign Management', status: 'confirmed', photo: 'assets/photos/adhav-arjuna.jpg',
+        history: []
+    },
+    {
+        name: 'Bussy N Anand', party: 'TVK', partyColor: '#ff5722', constituency: 'Theayagaraya Nagar',
+        note: 'General Secretary', status: 'confirmed', photo: 'assets/photos/bussy.jpg',
+        history: [
+            { year: 2021, margin: null  },
+            { year: 2016, margin: null  },
+            { year: 2011, margin: null  },
+            { year: 2006, margin: 10.5  },
+            { year: 2001, margin: -45.1 },
+        ]
+    },
+    {
+        name: 'Rajmohan', party: 'TVK', partyColor: '#ff5722', constituency: 'Egmore',
+        note: 'Propaganda Secretary', status: 'confirmed', photo: 'assets/photos/rajmohan.jpg',
+        history: []
+    },
     // NTK
-    { name: 'Seeman', party: 'NTK', partyColor: '#f44336', constituency: 'Karaikudi', note: 'NTK founder & party leader', status: 'confirmed', photo: 'assets/photos/seeman.jpg' },
+    {
+        name: 'Seeman', party: 'NTK', partyColor: '#f44336', constituency: 'Karaikudi',
+        note: 'NTK founder & party leader', status: 'confirmed', photo: 'assets/photos/seeman.jpg',
+        history: [
+            { year: 2021, margin: -15.4 },
+            { year: 2016, margin: -9.2  },
+            { year: 2011, margin: null  },
+            { year: 2006, margin: null  },
+            { year: 2001, margin: null  },
+        ]
+    },
     // DMDK
-    { name: 'Vijayaprabhakar', party: 'DMDK', partyColor: '#9c27b0', constituency: 'Virudhunagar', note: 'DMDK leader', status: 'confirmed', photo: 'assets/photos/vijayaprabhakar.jpg' },
-    { name: 'Premalatha Vijaykanth', party: 'DMDK', partyColor: '#9c27b0', constituency: 'Vriddhachalam', note: 'DMDK General Secretary', status: 'confirmed', photo: 'assets/photos/premalatha.jpg' },
+    {
+        name: 'Vijayaprabhakar', party: 'DMDK', partyColor: '#9c27b0', constituency: 'Virudhunagar',
+        note: 'DMDK leader', status: 'confirmed', photo: 'assets/photos/vijayaprabhakar.jpg',
+        history: []
+    },
+    {
+        name: 'Premalatha Vijaykanth', party: 'DMDK', partyColor: '#9c27b0', constituency: 'Vriddhachalam',
+        note: 'DMDK General Secretary', status: 'confirmed', photo: 'assets/photos/premalatha.jpg',
+        history: [
+            { year: 2021, margin: -14.6 },
+            { year: 2016, margin: null  },
+            { year: 2011, margin: null  },
+            { year: 2006, margin: null  },
+            { year: 2001, margin: null  },
+        ]
+    },
     // BJP
-    { name: 'Tamilisai Soundararajan', party: 'BJP', partyColor: '#ff9800', constituency: 'Mylapore', note: 'Former Governor of Telangana', status: 'confirmed', photo: 'assets/photos/tamilisai.jpg' },
-    { name: 'Vanathi Srinivasan', party: 'BJP', partyColor: '#ff9800', constituency: 'Coimbatore North', note: 'Former MP, BJP Tamil Nadu chief', status: 'confirmed', photo: 'assets/photos/vanathi.jpg' },
-    { name: 'L. Murugan', party: 'BJP', partyColor: '#ff9800', constituency: 'Avanashi', note: 'Union Minister of State', status: 'confirmed', photo: 'assets/photos/murugan.jpg' },
-    { name: 'Nainar Nagenthran', party: 'BJP', partyColor: '#ff9800', constituency: 'Sattur', note: 'BJP Tamil Nadu president', status: 'confirmed', photo: 'assets/photos/nainar.jpg' },
+    {
+        name: 'Tamilisai Soundararajan', party: 'BJP', partyColor: '#ff9800', constituency: 'Mylapore',
+        note: 'Former Governor of Telangana', status: 'confirmed', photo: 'assets/photos/tamilisai.jpg',
+        history: [
+            { year: 2021, margin: null  },
+            { year: 2016, margin: -13.6 },
+            { year: 2011, margin: -11.4 },
+            { year: 2006, margin: -14.1 },
+            { year: 2001, margin: null  },
+        ]
+    },
+    {
+        name: 'Vanathi Srinivasan', party: 'BJP', partyColor: '#ff9800', constituency: 'Coimbatore North',
+        note: 'Former MP, BJP Tamil Nadu chief', status: 'confirmed', photo: 'assets/photos/vanathi.jpg',
+        history: [
+            { year: 2021, margin: 0.7   },
+            { year: 2016, margin: -10.4 },
+            { year: 2011, margin: -8.2  },
+            { year: 2006, margin: null  },
+            { year: 2001, margin: null  },
+        ]
+    },
+    {
+        name: 'L. Murugan', party: 'BJP', partyColor: '#ff9800', constituency: 'Avanashi',
+        note: 'Union Minister of State', status: 'confirmed', photo: 'assets/photos/murugan.jpg',
+        history: [
+            { year: 2021, margin: -0.1  },
+            { year: 2016, margin: null  },
+            { year: 2011, margin: -24.1 },
+            { year: 2006, margin: null  },
+            { year: 2001, margin: null  },
+        ]
+    },
+    {
+        name: 'Nainar Nagenthran', party: 'BJP', partyColor: '#ff9800', constituency: 'Sattur',
+        note: 'BJP Tamil Nadu president', status: 'confirmed', photo: 'assets/photos/nainar.jpg',
+        history: [
+            { year: 2021, margin: 10.9  },
+            { year: 2016, margin: -17.4 },
+            { year: 2011, margin: -11.6 },
+            { year: 2006, margin: 0.7   },
+            { year: 2001, margin: 0.9   },
+        ]
+    },
 ];
 
 /* ── NEWS ITEMS ── */

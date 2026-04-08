@@ -287,6 +287,11 @@ function e2026_openModal() {
 function e2026_closeModal() {
     const modal = document.getElementById('elections-modal');
     if (!modal) return;
+    // Clean up any open star chart
+    if (e2026_openStarChart) { e2026_openStarChart.destroy(); e2026_openStarChart = null; }
+    if (e2026_openStarCard)  e2026_openStarCard.classList.remove('is-open');
+    if (e2026_openStarPanel) e2026_openStarPanel.classList.remove('is-open');
+    e2026_openStarIdx = null; e2026_openStarCard = null; e2026_openStarPanel = null;
     modal.classList.add('hidden');
     e2026_stopCountdown();
     document.removeEventListener('keydown', e2026_handleKey);
@@ -314,6 +319,10 @@ function e2026_handleKey(e) {
 }
 
 let e2026_pageInterval = null;
+let e2026_openStarIdx   = null;
+let e2026_openStarChart = null;
+let e2026_openStarCard  = null;
+let e2026_openStarPanel = null;
 
 function e2026_renderStepper() {
     const container = document.getElementById('epg-stepper');
@@ -717,6 +726,7 @@ function e2026_toggleAccordion(btn) {
 function e2026_renderStars() {
     const container = document.getElementById('epg-tab-stars');
     if (!container || typeof STAR_CANDIDATES_2026 === 'undefined') return;
+    if (container.children.length > 0) return; // already rendered
 
     container.innerHTML = '';
 
@@ -728,7 +738,7 @@ function e2026_renderStars() {
     const grid = document.createElement('div');
     grid.className = 'epg-stars-grid';
 
-    STAR_CANDIDATES_2026.forEach(star => {
+    STAR_CANDIDATES_2026.forEach((star, idx) => {
         const logo = PartyConfig.getLogo(star.party);
         const logoHtml = logo && !logo.includes('placeholder')
             ? `<img class="epg-star-logo" src="${logo}" alt="${star.party}" />`
@@ -739,6 +749,10 @@ function e2026_renderStars() {
                    <img class="epg-star-photo" src="${star.photo}" alt="${star.name}" onerror="this.parentElement.style.display='none'" />
                </div>`
             : '';
+
+        const wrap = document.createElement('div');
+        wrap.className = 'epg-star-card-wrap';
+
         const card = document.createElement('div');
         card.className = 'epg-star-card';
         card.innerHTML = `
@@ -757,10 +771,193 @@ function e2026_renderStars() {
                 </div>
             </div>
         `;
-        grid.appendChild(card);
+
+        const panel = document.createElement('div');
+        panel.className = 'epg-star-chart-panel';
+
+        if (!star.history || star.history.length === 0) {
+            panel.innerHTML = `<p class="epg-star-no-history">Did not contest in the past 5 Tamil Nadu assembly elections</p>`;
+        } else {
+            panel.innerHTML = `<p class="epg-star-chart-label">Win/Loss margin % — Past elections</p><canvas class="epg-star-canvas"></canvas>`;
+        }
+
+        card.addEventListener('click', () => e2026_toggleStarCard(idx, card, panel));
+
+        wrap.appendChild(card);
+        wrap.appendChild(panel);
+        grid.appendChild(wrap);
     });
 
     container.appendChild(grid);
+
+    // Open Stalin's card (index 0) by default
+    const firstCard  = grid.querySelectorAll('.epg-star-card')[0];
+    const firstPanel = grid.querySelectorAll('.epg-star-chart-panel')[0];
+    if (firstCard && firstPanel) {
+        e2026_toggleStarCard(0, firstCard, firstPanel);
+    }
+}
+
+function e2026_toggleStarCard(idx, card, panel) {
+    const isOpen = idx === e2026_openStarIdx;
+
+    // Close the currently open card if it's a different one
+    if (e2026_openStarIdx !== null && !isOpen) {
+        e2026_openStarCard.classList.remove('is-open');
+        e2026_openStarPanel.classList.remove('is-open');
+        if (e2026_openStarChart) { e2026_openStarChart.destroy(); e2026_openStarChart = null; }
+        e2026_openStarIdx   = null;
+        e2026_openStarCard  = null;
+        e2026_openStarPanel = null;
+    }
+
+    if (isOpen) {
+        // Collapse
+        card.classList.remove('is-open');
+        panel.classList.remove('is-open');
+        if (e2026_openStarChart) { e2026_openStarChart.destroy(); e2026_openStarChart = null; }
+        e2026_openStarIdx   = null;
+        e2026_openStarCard  = null;
+        e2026_openStarPanel = null;
+    } else {
+        // Expand
+        card.classList.add('is-open');
+        panel.classList.add('is-open');
+        e2026_openStarIdx   = idx;
+        e2026_openStarCard  = card;
+        e2026_openStarPanel = panel;
+
+        const canvas = panel.querySelector('.epg-star-canvas');
+        if (canvas) {
+            const star = STAR_CANDIDATES_2026[idx];
+            e2026_openStarChart = e2026_renderStarChart(canvas, star);
+        }
+    }
+}
+
+function e2026_renderStarChart(canvas, star) {
+    const style = getComputedStyle(document.documentElement);
+    const mutedColor  = style.getPropertyValue('--color-text-muted').trim()  || '#9ca3af';
+    const borderColor = style.getPropertyValue('--color-border').trim()       || 'rgba(255,255,255,0.1)';
+
+    const YEARS  = [2021, 2016, 2011, 2006, 2001];
+    const labels = YEARS.map(String);
+
+    const yearMap = {};
+    star.history.forEach(h => { yearMap[h.year] = h; });
+    const dataPoints = YEARS.map(y => (yearMap[y] ? yearMap[y].margin : null));
+
+    const WIN_COLOR  = '#4caf50';
+    const LOSS_COLOR = '#e53935';
+    const barColors = dataPoints.map(v => v === null ? 'transparent' : v >= 0 ? WIN_COLOR + 'cc' : LOSS_COLOR + 'cc');
+    const barBorders = dataPoints.map(v => v === null ? 'transparent' : v >= 0 ? WIN_COLOR : LOSS_COLOR);
+
+    // Inline plugin: draw margin % labels inside bars when there's room, outside otherwise
+    const dataLabelsPlugin = {
+        id: 'dataLabels',
+        afterDatasetsDraw(chart) {
+            const { ctx: c, scales: { y: yScale } } = chart;
+            const meta  = chart.getDatasetMeta(0);
+            const zeroY = yScale.getPixelForValue(0);
+            const MIN_INSIDE = 22; // px — minimum bar height to fit label inside
+            const PAD = 4;
+
+            c.save();
+            c.font = 'bold 9px system-ui, sans-serif';
+            c.textAlign = 'center';
+
+            meta.data.forEach((bar, i) => {
+                const val = dataPoints[i];
+                if (val === null) return;
+
+                const isWin  = val >= 0;
+                const barH   = Math.abs(bar.y - zeroY);
+                const label  = (isWin ? '+' : '') + val + '%';
+                const inside = barH >= MIN_INSIDE;
+
+                c.fillStyle    = inside ? '#ffffff' : (isWin ? WIN_COLOR : LOSS_COLOR);
+                c.textBaseline = (inside && isWin) ? 'top' : 'bottom';
+                const rawTextY = inside ? (isWin ? bar.y + PAD : bar.y - PAD)
+                                        : (isWin ? bar.y - PAD : zeroY - PAD);
+                // Clamp so label never renders above the chart area (e.g. all-loss charts)
+                const textY    = Math.max(chart.chartArea.top + 10, rawTextY);
+                c.fillText(label, bar.x, textY);
+            });
+
+            c.restore();
+        }
+    };
+
+    // Inline plugin: always draw a solid zero line regardless of tick positions
+    const zeroLinePlugin = {
+        id: 'zeroLine',
+        afterDraw(chart) {
+            const yScale = chart.scales.y;
+            const xScale = chart.scales.x;
+            if (yScale.min > 0 || yScale.max < 0) return;
+            const zeroY = yScale.getPixelForValue(0);
+            const ctx2  = chart.ctx;
+            ctx2.save();
+            ctx2.beginPath();
+            ctx2.strokeStyle = mutedColor;
+            ctx2.lineWidth   = 2;
+            ctx2.moveTo(xScale.left, zeroY);
+            ctx2.lineTo(xScale.right, zeroY);
+            ctx2.stroke();
+            ctx2.restore();
+        }
+    };
+
+    return new Chart(canvas, {
+        type: 'bar',
+        data: {
+            labels,
+            datasets: [{
+                data: dataPoints,
+                backgroundColor: barColors,
+                borderColor: barBorders,
+                borderWidth: 1,
+                borderRadius: 3,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: (items) => items[0].label,
+                        label: (item) => {
+                            if (item.raw === null) return 'Did not contest';
+                            const entry = yearMap[parseInt(item.label, 10)];
+                            const sign  = item.raw >= 0 ? '+' : '';
+                            const lines = [`Margin: ${sign}${item.raw}%`];
+                            if (entry && entry.note) lines.push(entry.note);
+                            return lines;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: mutedColor, font: { size: 10 } },
+                    grid:  { color: borderColor },
+                    border: { color: borderColor }
+                },
+                y: {
+                    ticks: {
+                        color: mutedColor,
+                        font: { size: 10 },
+                        callback: (v) => (v >= 0 ? '+' : '') + v + '%'
+                    },
+                    grid:  { color: borderColor },
+                    border: { color: borderColor }
+                }
+            }
+        },
+        plugins: [dataLabelsPlugin, zeroLinePlugin]
+    });
 }
 
 function e2026_initTabs() {
