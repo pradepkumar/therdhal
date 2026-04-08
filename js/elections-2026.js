@@ -876,9 +876,9 @@ function e2026_renderStarChart(canvas, star) {
                 const inside = barH >= MIN_INSIDE;
 
                 c.fillStyle    = inside ? '#ffffff' : (isWin ? WIN_COLOR : LOSS_COLOR);
-                c.textBaseline = inside ? (isWin ? 'top' : 'bottom') : (isWin ? 'bottom' : 'top');
+                c.textBaseline = 'bottom';
                 const textY    = inside ? (isWin ? bar.y + PAD : bar.y - PAD)
-                                        : (isWin ? bar.y - PAD : bar.y + PAD);
+                                        : (isWin ? bar.y - PAD : zeroY - PAD);
                 c.fillText(label, bar.x, textY);
             });
 
