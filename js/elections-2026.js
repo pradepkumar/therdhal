@@ -721,14 +721,9 @@ function e2026_toggleAccordion(btn) {
 function e2026_renderStars() {
     const container = document.getElementById('epg-tab-stars');
     if (!container || typeof STAR_CANDIDATES_2026 === 'undefined') return;
+    if (container.children.length > 0) return; // already rendered
 
     container.innerHTML = '';
-
-    // Reset tracking state each time the tab is rendered
-    if (e2026_openStarChart) { e2026_openStarChart.destroy(); e2026_openStarChart = null; }
-    e2026_openStarIdx   = null;
-    e2026_openStarCard  = null;
-    e2026_openStarPanel = null;
 
     if (STAR_CANDIDATES_2026.length === 0) {
         container.innerHTML = '<div class="epg-coming-soon">Star picks coming soon</div>';
@@ -775,7 +770,6 @@ function e2026_renderStars() {
 
         const panel = document.createElement('div');
         panel.className = 'epg-star-chart-panel';
-        panel.setAttribute('data-star-idx', String(idx));
 
         if (!star.history || star.history.length === 0) {
             panel.innerHTML = `<p class="epg-star-no-history">Did not contest in the past 5 Tamil Nadu assembly elections</p>`;
