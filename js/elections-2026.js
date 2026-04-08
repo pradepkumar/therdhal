@@ -852,6 +852,40 @@ function e2026_renderStarChart(canvas, star) {
     const barColors = dataPoints.map(v => v === null ? 'transparent' : v >= 0 ? WIN_COLOR + 'cc' : LOSS_COLOR + 'cc');
     const barBorders = dataPoints.map(v => v === null ? 'transparent' : v >= 0 ? WIN_COLOR : LOSS_COLOR);
 
+    // Inline plugin: draw margin % labels inside bars when there's room, outside otherwise
+    const dataLabelsPlugin = {
+        id: 'dataLabels',
+        afterDatasetsDraw(chart) {
+            const { ctx: c, scales: { y: yScale } } = chart;
+            const meta  = chart.getDatasetMeta(0);
+            const zeroY = yScale.getPixelForValue(0);
+            const MIN_INSIDE = 22; // px — minimum bar height to fit label inside
+            const PAD = 4;
+
+            c.save();
+            c.font = 'bold 9px system-ui, sans-serif';
+            c.textAlign = 'center';
+
+            meta.data.forEach((bar, i) => {
+                const val = dataPoints[i];
+                if (val === null) return;
+
+                const isWin  = val >= 0;
+                const barH   = Math.abs(bar.y - zeroY);
+                const label  = (isWin ? '+' : '') + val + '%';
+                const inside = barH >= MIN_INSIDE;
+
+                c.fillStyle    = inside ? '#ffffff' : (isWin ? WIN_COLOR : LOSS_COLOR);
+                c.textBaseline = inside ? (isWin ? 'top' : 'bottom') : (isWin ? 'bottom' : 'top');
+                const textY    = inside ? (isWin ? bar.y + PAD : bar.y - PAD)
+                                        : (isWin ? bar.y - PAD : bar.y + PAD);
+                c.fillText(label, bar.x, textY);
+            });
+
+            c.restore();
+        }
+    };
+
     // Inline plugin: always draw a solid zero line regardless of tick positions
     const zeroLinePlugin = {
         id: 'zeroLine',
@@ -920,7 +954,7 @@ function e2026_renderStarChart(canvas, star) {
                 }
             }
         },
-        plugins: [zeroLinePlugin]
+        plugins: [dataLabelsPlugin, zeroLinePlugin]
     });
 }
 
