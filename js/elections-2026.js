@@ -314,6 +314,10 @@ function e2026_handleKey(e) {
 }
 
 let e2026_pageInterval = null;
+let e2026_openStarIdx   = null;
+let e2026_openStarChart = null;
+let e2026_openStarCard  = null;
+let e2026_openStarPanel = null;
 
 function e2026_renderStepper() {
     const container = document.getElementById('epg-stepper');
@@ -720,6 +724,12 @@ function e2026_renderStars() {
 
     container.innerHTML = '';
 
+    // Reset tracking state each time the tab is rendered
+    if (e2026_openStarChart) { e2026_openStarChart.destroy(); e2026_openStarChart = null; }
+    e2026_openStarIdx   = null;
+    e2026_openStarCard  = null;
+    e2026_openStarPanel = null;
+
     if (STAR_CANDIDATES_2026.length === 0) {
         container.innerHTML = '<div class="epg-coming-soon">Star picks coming soon</div>';
         return;
@@ -728,7 +738,7 @@ function e2026_renderStars() {
     const grid = document.createElement('div');
     grid.className = 'epg-stars-grid';
 
-    STAR_CANDIDATES_2026.forEach(star => {
+    STAR_CANDIDATES_2026.forEach((star, idx) => {
         const logo = PartyConfig.getLogo(star.party);
         const logoHtml = logo && !logo.includes('placeholder')
             ? `<img class="epg-star-logo" src="${logo}" alt="${star.party}" />`
@@ -739,6 +749,10 @@ function e2026_renderStars() {
                    <img class="epg-star-photo" src="${star.photo}" alt="${star.name}" onerror="this.parentElement.style.display='none'" />
                </div>`
             : '';
+
+        const wrap = document.createElement('div');
+        wrap.className = 'epg-star-card-wrap';
+
         const card = document.createElement('div');
         card.className = 'epg-star-card';
         card.innerHTML = `
@@ -756,11 +770,142 @@ function e2026_renderStars() {
                     <span class="epg-star-constituency">${star.constituency}</span>
                 </div>
             </div>
+            <span class="epg-star-chevron">▸</span>
         `;
-        grid.appendChild(card);
+
+        const panel = document.createElement('div');
+        panel.className = 'epg-star-chart-panel';
+        panel.setAttribute('data-star-idx', String(idx));
+
+        if (!star.history || star.history.length === 0) {
+            panel.innerHTML = `<p class="epg-star-no-history">Did not contest in the past 5 Tamil Nadu assembly elections</p>`;
+        } else {
+            panel.innerHTML = `<canvas class="epg-star-canvas"></canvas>`;
+        }
+
+        card.addEventListener('click', () => e2026_toggleStarCard(idx, card, panel));
+
+        wrap.appendChild(card);
+        wrap.appendChild(panel);
+        grid.appendChild(wrap);
     });
 
     container.appendChild(grid);
+
+    // Open Stalin's card (index 0) by default
+    const firstCard  = grid.querySelectorAll('.epg-star-card')[0];
+    const firstPanel = grid.querySelectorAll('.epg-star-chart-panel')[0];
+    if (firstCard && firstPanel) {
+        e2026_toggleStarCard(0, firstCard, firstPanel);
+    }
+}
+
+function e2026_toggleStarCard(idx, card, panel) {
+    const isOpen = idx === e2026_openStarIdx;
+
+    // Close the currently open card if it's a different one
+    if (e2026_openStarIdx !== null && !isOpen) {
+        e2026_openStarCard.classList.remove('is-open');
+        e2026_openStarPanel.classList.remove('is-open');
+        if (e2026_openStarChart) { e2026_openStarChart.destroy(); e2026_openStarChart = null; }
+        e2026_openStarIdx   = null;
+        e2026_openStarCard  = null;
+        e2026_openStarPanel = null;
+    }
+
+    if (isOpen) {
+        // Collapse
+        card.classList.remove('is-open');
+        panel.classList.remove('is-open');
+        if (e2026_openStarChart) { e2026_openStarChart.destroy(); e2026_openStarChart = null; }
+        e2026_openStarIdx   = null;
+        e2026_openStarCard  = null;
+        e2026_openStarPanel = null;
+    } else {
+        // Expand
+        card.classList.add('is-open');
+        panel.classList.add('is-open');
+        e2026_openStarIdx   = idx;
+        e2026_openStarCard  = card;
+        e2026_openStarPanel = panel;
+
+        const canvas = panel.querySelector('.epg-star-canvas');
+        if (canvas) {
+            const star = STAR_CANDIDATES_2026[idx];
+            e2026_openStarChart = e2026_renderStarChart(canvas, star);
+        }
+    }
+}
+
+function e2026_renderStarChart(canvas, star) {
+    const style = getComputedStyle(document.documentElement);
+    const mutedColor  = style.getPropertyValue('--color-text-muted').trim()  || '#9ca3af';
+    const borderColor = style.getPropertyValue('--color-border').trim()       || 'rgba(255,255,255,0.1)';
+
+    const YEARS  = [2021, 2016, 2011, 2006, 2001];
+    const labels = YEARS.map(String);
+
+    const yearMap = {};
+    star.history.forEach(h => { yearMap[h.year] = h; });
+    const dataPoints = YEARS.map(y => (yearMap[y] ? yearMap[y].margin : null));
+
+    return new Chart(canvas, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [{
+                data: dataPoints,
+                borderColor: star.partyColor,
+                backgroundColor: star.partyColor + '22',
+                pointBackgroundColor: star.partyColor,
+                pointBorderColor: star.partyColor,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                borderWidth: 2,
+                spanGaps: false,
+                tension: 0.3,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        title: (items) => items[0].label,
+                        label: (item) => {
+                            if (item.raw === null) return 'Did not contest';
+                            const entry = yearMap[parseInt(item.label, 10)];
+                            const sign  = item.raw >= 0 ? '+' : '';
+                            const lines = [`Margin: ${sign}${item.raw}%`];
+                            if (entry && entry.note) lines.push(entry.note);
+                            return lines;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: mutedColor, font: { size: 10 } },
+                    grid:  { color: borderColor },
+                    border: { color: borderColor }
+                },
+                y: {
+                    ticks: {
+                        color: mutedColor,
+                        font: { size: 10 },
+                        callback: (v) => (v >= 0 ? '+' : '') + v + '%'
+                    },
+                    grid: {
+                        color: (ctx) => ctx.tick.value === 0 ? mutedColor : borderColor,
+                        lineWidth: (ctx) => ctx.tick.value === 0 ? 2 : 1,
+                    },
+                    border: { color: borderColor }
+                }
+            }
+        }
+    });
 }
 
 function e2026_initTabs() {
