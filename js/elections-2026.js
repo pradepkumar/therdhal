@@ -287,6 +287,11 @@ function e2026_openModal() {
 function e2026_closeModal() {
     const modal = document.getElementById('elections-modal');
     if (!modal) return;
+    // Clean up any open star chart
+    if (e2026_openStarChart) { e2026_openStarChart.destroy(); e2026_openStarChart = null; }
+    if (e2026_openStarCard)  e2026_openStarCard.classList.remove('is-open');
+    if (e2026_openStarPanel) e2026_openStarPanel.classList.remove('is-open');
+    e2026_openStarIdx = null; e2026_openStarCard = null; e2026_openStarPanel = null;
     modal.classList.add('hidden');
     e2026_stopCountdown();
     document.removeEventListener('keydown', e2026_handleKey);
