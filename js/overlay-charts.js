@@ -16,9 +16,18 @@ const OverlayCharts = (function () {
         }
     });
 
-    function _fmtK(v) {
+    function _fmtL(v) {
         if (v == null) return '';
-        return v >= 1000 ? (v / 1000).toFixed(0) + 'K' : String(v);
+        const l = v / 100000;
+        return (l % 1 === 0 ? l.toFixed(0) : l.toFixed(1)) + 'L';
+    }
+
+    function _axisRange(values, padFraction) {
+        const valid = values.filter(v => v != null);
+        if (!valid.length) return {};
+        const lo = Math.min(...valid), hi = Math.max(...valid);
+        const pad = (hi - lo) * padFraction || hi * 0.05;
+        return { min: lo - pad, max: hi + pad };
     }
 
     function render(electors, turnoutByYear) {
@@ -38,6 +47,9 @@ const OverlayCharts = (function () {
         const borderColor = style.getPropertyValue('--color-border').trim()      || 'rgba(255,255,255,0.1)';
         const voterData   = YEARS.map(y => (electors?.[y] != null)     ? electors[y]     : null);
         const turnoutData = YEARS.map(y => (turnoutByYear?.[y] != null) ? turnoutByYear[y] : null);
+
+        const voterRange   = _axisRange(voterData, 0.25);
+        const turnoutRange = _axisRange(turnoutData, 0.25);
 
         _chart = new Chart(canvas, {
             type: 'bar',
@@ -93,22 +105,22 @@ const OverlayCharts = (function () {
                     yVoters: {
                         type: 'linear',
                         position: 'left',
+                        ...voterRange,
                         ticks: {
                             color: mutedColor,
                             font: { size: 10 },
-                            callback: v => _fmtK(v),
+                            callback: v => _fmtL(v),
                         },
                         grid: { color: borderColor }
                     },
                     yTurnout: {
                         type: 'linear',
                         position: 'right',
-                        min: 0,
-                        max: 100,
+                        ...turnoutRange,
                         ticks: {
                             color: mutedColor,
                             font: { size: 10 },
-                            callback: v => v + '%',
+                            callback: v => v.toFixed(1) + '%',
                         },
                         grid: { drawOnChartArea: false }
                     }
