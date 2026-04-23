@@ -460,9 +460,6 @@ const UIModule = (function () {
         document.getElementById('constituency-district').textContent = info.district;
         document.getElementById('constituency-description').textContent = info.description || '';
 
-        // Update Constituency ID
-        document.getElementById('constituency-id').textContent = id;
-
         // Render Election History (All Years)
         const histEl = document.getElementById('election-history');
         if (histEl) {
@@ -716,15 +713,6 @@ const UIModule = (function () {
         const currentIndex = years.indexOf(year);
         document.getElementById('prev-election-year').disabled = (currentIndex <= 0);
         document.getElementById('next-election-year').disabled = (currentIndex === -1 || currentIndex >= years.length - 1);
-
-        // Update Registered Voters (depends on year)
-        const info = await DataModule.getConstituencyInfo(id);
-        if (info) {
-            const electorsCount = (info.electors && typeof info.electors === 'object')
-                ? info.electors[year]
-                : info.electors;
-            document.getElementById('registered-voters').textContent = electorsCount?.toLocaleString() || 'N/A';
-        }
 
         // Fetch and display results
         const candidatesEl = document.getElementById('candidates-table');
