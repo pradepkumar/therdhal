@@ -503,13 +503,19 @@ const UIModule = (function () {
 
         // Render voter/turnout chart
         (async () => {
+            const capturedId = id;
             const turnoutByYear = {};
-            await Promise.all([2016, 2021].map(async y => {
-                const result = await DataModule.getElectionResults(y, id);
-                if (result && result.turnout_percent != null) {
-                    turnoutByYear[String(y)] = result.turnout_percent;
-                }
-            }));
+            try {
+                await Promise.all([2016, 2021].map(async y => {
+                    const result = await DataModule.getElectionResults(y, capturedId);
+                    if (result && result.turnout_percent != null) {
+                        turnoutByYear[String(y)] = result.turnout_percent;
+                    }
+                }));
+            } catch (e) {
+                // Non-critical: chart will render with whatever data resolved
+            }
+            if (currentConstituencyId !== capturedId) return;
             OverlayCharts.render(info.electors || {}, turnoutByYear);
         })();
 
