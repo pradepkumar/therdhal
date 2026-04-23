@@ -45,8 +45,31 @@ const OverlayCharts = (function () {
         const voterData   = YEARS.map(y => (electors?.[y] != null)     ? electors[y]     : null);
         const turnoutData = YEARS.map(y => (turnoutByYear?.[y] != null) ? turnoutByYear[y] : null);
 
+        const dataLabelsPlugin = {
+            id: 'overlayDataLabels',
+            afterDatasetsDraw(chart) {
+                const { ctx, chartArea } = chart;
+                ctx.save();
+                ctx.font = 'bold 9px system-ui, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                chart.data.datasets.forEach((dataset, di) => {
+                    chart.getDatasetMeta(di).data.forEach((el, i) => {
+                        const val = dataset.data[i];
+                        if (val == null) return;
+                        const label = dataset.yAxisID === 'yVoters' ? _fmtL(val) : val.toFixed(1) + '%';
+                        ctx.fillStyle = dataset.yAxisID === 'yVoters' ? 'rgba(99,102,241,0.9)' : '#f59e0b';
+                        const y = Math.max(chartArea.top + 10, el.y - 4);
+                        ctx.fillText(label, el.x, y);
+                    });
+                });
+                ctx.restore();
+            }
+        };
+
         _chart = new Chart(canvas, {
             type: 'bar',
+            plugins: [dataLabelsPlugin],
             data: {
                 labels: YEARS,
                 datasets: [
