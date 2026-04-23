@@ -501,6 +501,18 @@ const UIModule = (function () {
         // Initial update of election results and voters for the current year
         updateOverlayElectionResults(id, currentOverlayElectionYear);
 
+        // Render voter/turnout chart
+        (async () => {
+            const turnoutByYear = {};
+            await Promise.all([2016, 2021].map(async y => {
+                const result = await DataModule.getElectionResults(y, id);
+                if (result && result.turnout_percent != null) {
+                    turnoutByYear[String(y)] = result.turnout_percent;
+                }
+            }));
+            OverlayCharts.render(info.electors || {}, turnoutByYear);
+        })();
+
         overlay.classList.remove('hidden');
         _overlayPrevFocus = document.activeElement;
         // Move focus into dialog — close button is the first logical target
@@ -509,6 +521,7 @@ const UIModule = (function () {
     }
 
     function hideConstituencyOverlay() {
+        OverlayCharts.destroy();
         overlay.classList.add('hidden');
         document.body.classList.remove('overlay-open');
         currentConstituencyId = null;
