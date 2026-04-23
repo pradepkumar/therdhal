@@ -124,7 +124,6 @@ const OverlayCharts = (function () {
         }
         _lastElectors = null;
         _lastTurnout  = null;
-        _observer.disconnect();
     }
 
     // Re-render automatically when dark/light theme changes
