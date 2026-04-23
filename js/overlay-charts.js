@@ -16,18 +16,15 @@ const OverlayCharts = (function () {
         }
     });
 
+    // Fixed axis bounds derived from global min/max across all TN constituencies (2016+2021)
+    // Voters: 1.63L–7.0L → padded to 1.5L–7.5L; Turnout: 55.4–88.6% → padded to 50–95
+    const VOTER_AXIS   = { min: 150000, max: 750000 };
+    const TURNOUT_AXIS = { min: 50,     max: 95     };
+
     function _fmtL(v) {
         if (v == null) return '';
         const l = v / 100000;
         return (l % 1 === 0 ? l.toFixed(0) : l.toFixed(1)) + 'L';
-    }
-
-    function _axisRange(values, padFraction) {
-        const valid = values.filter(v => v != null);
-        if (!valid.length) return {};
-        const lo = Math.min(...valid), hi = Math.max(...valid);
-        const pad = (hi - lo) * padFraction || hi * 0.05;
-        return { min: lo - pad, max: hi + pad };
     }
 
     function render(electors, turnoutByYear) {
@@ -47,9 +44,6 @@ const OverlayCharts = (function () {
         const borderColor = style.getPropertyValue('--color-border').trim()      || 'rgba(255,255,255,0.1)';
         const voterData   = YEARS.map(y => (electors?.[y] != null)     ? electors[y]     : null);
         const turnoutData = YEARS.map(y => (turnoutByYear?.[y] != null) ? turnoutByYear[y] : null);
-
-        const voterRange   = _axisRange(voterData, 0.25);
-        const turnoutRange = _axisRange(turnoutData, 0.25);
 
         _chart = new Chart(canvas, {
             type: 'bar',
@@ -105,7 +99,7 @@ const OverlayCharts = (function () {
                     yVoters: {
                         type: 'linear',
                         position: 'left',
-                        ...voterRange,
+                        ...VOTER_AXIS,
                         ticks: {
                             color: mutedColor,
                             font: { size: 10 },
@@ -116,11 +110,11 @@ const OverlayCharts = (function () {
                     yTurnout: {
                         type: 'linear',
                         position: 'right',
-                        ...turnoutRange,
+                        ...TURNOUT_AXIS,
                         ticks: {
                             color: mutedColor,
                             font: { size: 10 },
-                            callback: v => v.toFixed(1) + '%',
+                            callback: v => v + '%',
                         },
                         grid: { drawOnChartArea: false }
                     }
