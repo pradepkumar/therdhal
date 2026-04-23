@@ -1,9 +1,20 @@
+/**
+ * overlay-charts.js
+ * OverlayCharts — dual-axis Chart.js combo chart (registered voters / turnout %)
+ * rendered inside the constituency overlay. Reads CSS variables at render time
+ * for dark/light theme support; auto-rerenders on data-theme change.
+ */
 const OverlayCharts = (function () {
     let _chart = null;
     let _lastElectors = null;
     let _lastTurnout = null;
     const YEARS = ['2016', '2021', '2026'];
     const CANVAS_ID = 'overlay-voter-canvas';
+    const _observer = new MutationObserver(() => {
+        if (_chart && _lastElectors !== null) {
+            render(_lastElectors, _lastTurnout);
+        }
+    });
 
     function _fmtK(v) {
         if (v == null) return '';
@@ -25,7 +36,6 @@ const OverlayCharts = (function () {
         const style = getComputedStyle(document.documentElement);
         const mutedColor  = style.getPropertyValue('--color-text-muted').trim() || '#9ca3af';
         const borderColor = style.getPropertyValue('--color-border').trim()      || 'rgba(255,255,255,0.1)';
-
         const voterData   = YEARS.map(y => (electors?.[y] != null)     ? electors[y]     : null);
         const turnoutData = YEARS.map(y => (turnoutByYear?.[y] != null) ? turnoutByYear[y] : null);
 
@@ -37,8 +47,8 @@ const OverlayCharts = (function () {
                     {
                         label: 'Registered Voters',
                         data: voterData,
-                        backgroundColor: 'rgba(99,102,241,0.45)',
-                        borderColor: 'rgba(99,102,241,0.85)',
+                        backgroundColor: 'rgba(99,102,241,0.45)', /* indigo-500 — matches --color-accent-primary */
+                        borderColor: 'rgba(99,102,241,0.85)',     /* indigo-500 — matches --color-accent-primary */
                         borderWidth: 1,
                         borderRadius: 3,
                         yAxisID: 'yVoters',
@@ -114,14 +124,11 @@ const OverlayCharts = (function () {
         }
         _lastElectors = null;
         _lastTurnout  = null;
+        _observer.disconnect();
     }
 
     // Re-render automatically when dark/light theme changes
-    new MutationObserver(() => {
-        if (_chart && _lastElectors !== null) {
-            render(_lastElectors, _lastTurnout);
-        }
-    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    _observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
     return { render, destroy };
 })();
