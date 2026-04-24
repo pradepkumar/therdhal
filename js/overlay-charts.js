@@ -57,7 +57,8 @@ const OverlayCharts = (function () {
                 const BAR_PAD   = 5;  // gap above bar top
                 const POINT_R   = 4;  // matches pointRadius in dataset config
                 const POINT_PAD = 5;  // gap above point circle top
-                const MIN_GAP   = 14; // minimum px between two label baselines
+                const MIN_GAP   = 13; // minimum px between two label baselines
+                const DOT_CLEAR = 3;  // extra clearance below dot circle
 
                 // Pre-compute each label's natural render y so we can collide-check them
                 const byIndex = {};
@@ -70,7 +71,7 @@ const OverlayCharts = (function () {
                         const color    = isVoters ? 'rgba(99,102,241,0.9)' : '#f59e0b';
                         // For bars el.y is bar top; for line points el.y is dot centre
                         const rawY = isVoters ? el.y - BAR_PAD : el.y - POINT_R - POINT_PAD;
-                        (byIndex[i] = byIndex[i] || []).push({ x: el.x, rawY, label, color });
+                        (byIndex[i] = byIndex[i] || []).push({ x: el.x, elY: el.y, rawY, label, color, isVoters });
                     });
                 });
 
@@ -86,7 +87,15 @@ const OverlayCharts = (function () {
                     items.sort((a, b) => a.rawY - b.rawY);
                     let y0 = Math.max(chartArea.top + MIN_GAP, items[0].rawY);
                     let y1 = Math.max(chartArea.top + MIN_GAP, items[1].rawY);
-                    if (y1 - y0 < MIN_GAP) y1 = y0 + MIN_GAP;
+
+                    if (y1 - y0 < MIN_GAP) {
+                        // The lower label (items[1]) needs to move down.
+                        // Also ensure it clears the line dot circle, which sits between the two labels.
+                        const lineItem = items.find(it => !it.isVoters);
+                        const dotClearY = lineItem ? lineItem.elY + POINT_R + DOT_CLEAR : y0;
+                        y1 = Math.max(y0 + MIN_GAP, dotClearY);
+                    }
+
                     ctx.fillStyle = items[0].color;
                     ctx.fillText(items[0].label, x, y0);
                     ctx.fillStyle = items[1].color;
