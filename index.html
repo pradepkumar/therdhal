@@ -29,7 +29,7 @@
 
     <!-- Apply saved theme BEFORE first paint to prevent flash -->
     <script>
-        (function(){
+        (function () {
             var t = localStorage.getItem('tn-map-theme');
             if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', t);
@@ -51,47 +51,50 @@
                     </h1>
                 </div>
                 <div class="header-actions">
-                <button id="elections-2026-btn" class="elections-nav-btn" title="TN Elections 2026" aria-haspopup="dialog">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m9 12 2 2 4-4"></path>
-                        <path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z"></path>
-                        <path d="M22 19H2"></path>
-                    </svg>
-                    <span>Elections 2026</span>
-                    <span class="elections-live-dot"></span>
-                </button>
-                <button id="theme-toggle" aria-label="Switch to Light Mode" title="Switch to Light Mode">
-                    <!-- Sun icon (shown in dark mode) -->
-                    <span class="theme-sun">
+                    <button id="elections-2026-btn" class="elections-nav-btn" title="TN Elections 2026"
+                        aria-haspopup="dialog">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 12 2 2 4-4"></path>
+                            <path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z"></path>
+                            <path d="M22 19H2"></path>
+                        </svg>
+                        <span>Elections 2026</span>
+                        <span class="elections-live-dot"></span>
+                    </button>
+                    <button id="theme-toggle" aria-label="Switch to Light Mode" title="Switch to Light Mode">
+                        <!-- Sun icon (shown in dark mode) -->
+                        <span class="theme-sun">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </span>
+                        <!-- Moon icon (shown in light mode) -->
+                        <span class="theme-moon" style="display:none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <button id="filter-toggle" class="header-toggle-btn" aria-label="Toggle Filters">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                         </svg>
-                    </span>
-                    <!-- Moon icon (shown in light mode) -->
-                    <span class="theme-moon" style="display:none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </span>
-                </button>
-                <button id="filter-toggle" class="header-toggle-btn" aria-label="Toggle Filters">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                    </svg>
-                    <span>Filters</span>
-                </button>
+                        <span>Filters</span>
+                    </button>
                 </div><!-- /.header-actions -->
             </div>
 
@@ -108,20 +111,26 @@
                         </select>
                     </div>
 
-                    <div class="filter-group">
-                        <label for="district-filter" class="filter-label">District</label>
-                        <select id="district-filter" class="filter-select">
-                            <option value="">All Districts</option>
-                            <!-- Populated dynamically -->
-                        </select>
-                    </div>
-
-                    <div class="filter-group">
-                        <label for="constituency-filter" class="filter-label">Constituency</label>
-                        <select id="constituency-filter" class="filter-select">
-                            <option value="">All Constituencies</option>
-                            <!-- Populated dynamically -->
-                        </select>
+                    <div class="filter-group constituency-search-group">
+                        <label for="constituency-trigger" class="filter-label">Constituency</label>
+                        <div class="constituency-select-wrapper" id="constituency-select-wrapper">
+                            <!-- Trigger button (looks like a native select) -->
+                            <button type="button" id="constituency-trigger" class="filter-select constituency-trigger"
+                                aria-haspopup="listbox" aria-expanded="false">
+                                <span id="constituency-trigger-label">All Constituencies</span>
+                            </button>
+                            <!-- Dropdown panel -->
+                            <div id="constituency-dropdown" class="constituency-dropdown" role="listbox"
+                                aria-label="Select constituency">
+                                <div class="constituency-search-wrap">
+                                    <input type="text" id="constituency-search" class="constituency-panel-search"
+                                        placeholder="Search..." autocomplete="off" aria-label="Search constituencies">
+                                </div>
+                                <div id="constituency-results" class="constituency-list">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="candidate-filter-group" class="filter-group hidden">
@@ -175,11 +184,13 @@
 
     <!-- Footer -->
     <footer class="app-footer">
-        <p><span class="footer-heart">♥</span><span id="footer-year"></span><span>&ndash;</span><a href="https://pradepkumar.com" target="_blank" rel="noopener noreferrer">Pradep Kumar</a></p>
+        <p><span class="footer-heart">♥</span><span id="footer-year"></span><span>&ndash;</span><a
+                href="https://pradepkumar.com" target="_blank" rel="noopener noreferrer">Pradep Kumar</a></p>
     </footer>
 
     <!-- Constituency Detail Overlay -->
-    <div id="constituency-overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="constituency-name">
+    <div id="constituency-overlay" class="overlay hidden" role="dialog" aria-modal="true"
+        aria-labelledby="constituency-name">
         <div class="overlay-content">
             <div class="overlay-nav-controls">
                 <div class="header-navigation">
@@ -272,7 +283,8 @@
     <!-- ══════════════════════════════════════════
          Elections 2026 Modal
          ══════════════════════════════════════════ -->
-    <div id="elections-modal" class="elections-modal hidden" role="dialog" aria-modal="true" aria-label="TN Elections 2026">
+    <div id="elections-modal" class="elections-modal hidden" role="dialog" aria-modal="true"
+        aria-label="TN Elections 2026">
         <div class="elections-modal-panel">
 
             <!-- Modal Header -->
@@ -300,13 +312,17 @@
                     <div class="epg-bar">
                         <span class="epg-bar-label">Polling Day — Apr 23</span>
                         <div class="epg-bar-timer" id="epg-timer">
-                            <span class="epg-unit"><span class="epg-num" id="epg-days">--</span><span class="epg-lbl">d</span></span>
+                            <span class="epg-unit"><span class="epg-num" id="epg-days">--</span><span
+                                    class="epg-lbl">d</span></span>
                             <span class="epg-sep">:</span>
-                            <span class="epg-unit"><span class="epg-num" id="epg-hours">--</span><span class="epg-lbl">h</span></span>
+                            <span class="epg-unit"><span class="epg-num" id="epg-hours">--</span><span
+                                    class="epg-lbl">h</span></span>
                             <span class="epg-sep">:</span>
-                            <span class="epg-unit"><span class="epg-num" id="epg-mins">--</span><span class="epg-lbl">m</span></span>
+                            <span class="epg-unit"><span class="epg-num" id="epg-mins">--</span><span
+                                    class="epg-lbl">m</span></span>
                             <span class="epg-sep">:</span>
-                            <span class="epg-unit"><span class="epg-num" id="epg-secs">--</span><span class="epg-lbl">s</span></span>
+                            <span class="epg-unit"><span class="epg-num" id="epg-secs">--</span><span
+                                    class="epg-lbl">s</span></span>
                         </div>
                     </div>
                 </div>
@@ -318,11 +334,13 @@
                         <!-- Populated by JS -->
                     </div>
                     <!-- Left Arrow -->
-                    <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 30px; background: linear-gradient(to right, var(--color-bg-primary) 0%, transparent 100%); display: flex; align-items: center; justify-content: center; pointer-events: none; font-size: 0.8rem; color: var(--color-accent-primary); opacity: 0.6;">
+                    <div
+                        style="position: absolute; left: 0; top: 0; bottom: 0; width: 30px; background: linear-gradient(to right, var(--color-bg-primary) 0%, transparent 100%); display: flex; align-items: center; justify-content: center; pointer-events: none; font-size: 0.8rem; color: var(--color-accent-primary); opacity: 0.6;">
                         ◀
                     </div>
                     <!-- Right Arrow -->
-                    <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 30px; background: linear-gradient(to left, var(--color-bg-primary) 0%, transparent 100%); display: flex; align-items: center; justify-content: center; pointer-events: none; font-size: 0.8rem; color: var(--color-accent-primary); opacity: 0.6;">
+                    <div
+                        style="position: absolute; right: 0; top: 0; bottom: 0; width: 30px; background: linear-gradient(to left, var(--color-bg-primary) 0%, transparent 100%); display: flex; align-items: center; justify-content: center; pointer-events: none; font-size: 0.8rem; color: var(--color-accent-primary); opacity: 0.6;">
                         ▶
                     </div>
                 </div>

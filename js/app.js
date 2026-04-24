@@ -28,7 +28,6 @@ const App = (function () {
             MapModule.addConstituencyLayer(constituencies);
 
             // Populate dropdowns
-            await UIModule.populateDistrictDropdown();
             await UIModule.populateConstituencyDropdown();
 
             // Hide loading

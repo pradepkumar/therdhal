@@ -69,9 +69,7 @@ const MapCore = (function () {
         UIModule.hideBackButton();
         UIModule.hideConstituencyOverlay();
 
-        // Reset filters
-        document.getElementById('district-filter').value = '';
-        document.getElementById('constituency-filter').value = '';
+        UIModule.resetConstituencyTrigger();
     }
 
     /**

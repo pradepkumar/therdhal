@@ -3,7 +3,12 @@
  */
 
 const UIModule = (function () {
-    let yearFilter, districtFilter, constituencyFilter;
+    let yearFilter;
+    let constituencyTrigger, constituencyTriggerLabel, constituencyDropdown;
+    let constituencySearchInput, constituencyResults;
+    let allConstituenciesForSearch = []; // full list for client-side filtering
+    let constituencySearchTimeout;
+    let constituencyIsOpen = false;
     let candidateFilterGroup, candidateSearchInput, candidateResults;
     let searchTimeout;
     let backButton, legend, loadingOverlay;
@@ -14,8 +19,7 @@ const UIModule = (function () {
     let touchEndX = 0;
     let touchStartY = 0;
     let touchEndY = 0;
-    let isUpdatingDistrict = false;  // Flag to prevent recursive updates
-    let isUpdatingConstituency = false;  // Flag to prevent recursive updates
+
     let currentOverlayElectionYear = 2021; // State for overlay year navigation
     let _overlayPrevFocus = null; // Element to restore focus to when overlay closes
     let selectedLegendParty = null;
@@ -28,8 +32,6 @@ const UIModule = (function () {
 
     function init() {
         yearFilter = document.getElementById('year-filter');
-        districtFilter = document.getElementById('district-filter');
-        constituencyFilter = document.getElementById('constituency-filter');
         backButton = document.getElementById('back-btn');
         legend = document.getElementById('legend');
         loadingOverlay = document.getElementById('loading');
@@ -40,12 +42,20 @@ const UIModule = (function () {
         candidateSearchInput = document.getElementById('candidate-search');
         candidateResults = document.getElementById('candidate-results');
 
-        // Load all constituencies once for navigation
+        constituencyTrigger = document.getElementById('constituency-trigger');
+        constituencyTriggerLabel = document.getElementById('constituency-trigger-label');
+        constituencyDropdown = document.getElementById('constituency-dropdown');
+        constituencySearchInput = document.getElementById('constituency-search');
+        constituencyResults = document.getElementById('constituency-results');
+
+        // Load all constituencies once for navigation and for the constituency search
         DataModule.getConstituencyList().then(list => {
             allConstituencies = list;
+            allConstituenciesForSearch = list; // seed the constituency search cache
         });
 
         setupEventListeners();
+        setupConstituencySearch();
         setupCandidateSearch();
         setupOverlayYearControls();
     }
@@ -53,14 +63,6 @@ const UIModule = (function () {
     function setupEventListeners() {
         yearFilter.addEventListener('change', async (e) => {
             await handleYearChange(e.target.value);
-        });
-        districtFilter.addEventListener('change', (e) => {
-            handleDistrictChange(e.target.value);
-        });
-        constituencyFilter.addEventListener('change', (e) => {
-            // Prevent handling if we're programmatically updating the dropdown
-            if (isUpdatingConstituency) return;
-            if (e.target.value) MapModule.zoomToConstituency(e.target.value);
         });
         backButton.addEventListener('click', () => MapModule.resetToOverview());
         overlayClose.addEventListener('click', () => hideConstituencyOverlay());
@@ -154,26 +156,9 @@ const UIModule = (function () {
         }
     }
 
-    async function populateDistrictDropdown() {
-        const districts = await DataModule.getDistrictList();
-        districtFilter.innerHTML = '<option value="">All Districts</option>';
-        districts.forEach(d => {
-            const opt = document.createElement('option');
-            opt.value = d;
-            opt.textContent = d;
-            districtFilter.appendChild(opt);
-        });
-    }
-
     async function populateConstituencyDropdown(district = null) {
-        const list = await DataModule.getConstituencyList(district);
-        constituencyFilter.innerHTML = '<option value="">All Constituencies</option>';
-        list.forEach(c => {
-            const opt = document.createElement('option');
-            opt.value = c.id;
-            opt.textContent = c.name;
-            constituencyFilter.appendChild(opt);
-        });
+        // Refresh the cached list used by the constituency search
+        allConstituenciesForSearch = await DataModule.getConstituencyList(district);
     }
 
     async function handleYearChange(year) {
@@ -192,64 +177,11 @@ const UIModule = (function () {
         }
     }
 
-    async function handleDistrictChange(district) {
-        // Prevent handling if we're programmatically updating the dropdown
-        if (isUpdatingDistrict) return;
-
-        await populateConstituencyDropdown(district);
-        if (district) {
-            // Zoom to selected district
-            MapModule.zoomToDistrict(district);
+    function setConstituencyDropdowns(constituencyId) {
+        const found = allConstituenciesForSearch.find(c => String(c.id) === String(constituencyId));
+        if (found && constituencyTriggerLabel) {
+            constituencyTriggerLabel.textContent = found.name;
         }
-    }
-
-    function setDistrictDropdown(district) {
-        isUpdatingDistrict = true;
-
-        // Find the matching option (case-insensitive)
-        const districtUpper = district.toUpperCase();
-        let matchedValue = null;
-
-        for (let i = 0; i < districtFilter.options.length; i++) {
-            const option = districtFilter.options[i];
-            if (option.value.toUpperCase() === districtUpper) {
-                matchedValue = option.value;
-                break;
-            }
-        }
-
-        if (matchedValue) {
-            districtFilter.value = matchedValue;
-            populateConstituencyDropdown(matchedValue);
-        }
-
-        isUpdatingDistrict = false;
-    }
-
-    function setConstituencyDropdowns(constituencyId, district) {
-        isUpdatingDistrict = true;
-        isUpdatingConstituency = true;
-
-        // Set district dropdown first
-        if (district) {
-            const districtUpper = district.toUpperCase();
-            for (let i = 0; i < districtFilter.options.length; i++) {
-                const option = districtFilter.options[i];
-                if (option.value.toUpperCase() === districtUpper) {
-                    districtFilter.value = option.value;
-                    break;
-                }
-            }
-        }
-
-        // Populate constituency dropdown for the district
-        populateConstituencyDropdown(district).then(() => {
-            // Set constituency dropdown
-            constituencyFilter.value = String(constituencyId);
-
-            isUpdatingDistrict = false;
-            isUpdatingConstituency = false;
-        });
     }
 
     function showLoading() { loadingOverlay.classList.remove('hidden'); }
@@ -314,10 +246,10 @@ const UIModule = (function () {
                             </div>
                             <div class="alliance-parties">
                                 ${alliance.parties.map(p => _renderLegendItem({
-                                    name: p.name,
-                                    seats: p.seats,
-                                    color: DataModule.getPartyColor(p.name)
-                                })).join('')}
+                        name: p.name,
+                        seats: p.seats,
+                        color: DataModule.getPartyColor(p.name)
+                    })).join('')}
                             </div>
                         </div>
                     `;
@@ -451,7 +383,7 @@ const UIModule = (function () {
         if (!info) return;
 
         // Update dropdowns to reflect the selected constituency
-        setConstituencyDropdowns(id, info.district);
+        setConstituencyDropdowns(id);
 
         document.getElementById('constituency-type').textContent = info.type || 'General';
         document.getElementById('constituency-type').className = `constituency-badge ${info.type === 'SC' ? 'sc' : ''}`;
@@ -570,6 +502,166 @@ const UIModule = (function () {
 
         MapModule.zoomToConstituency(prevId);
     }
+
+    function _openConstituencyDropdown() {
+        if (constituencyIsOpen) return;
+        constituencyIsOpen = true;
+        constituencyDropdown.classList.add('open');
+        constituencyTrigger.setAttribute('aria-expanded', 'true');
+        // Show full unfiltered list on open (no query, no split)
+        _renderConstituencyList(allConstituenciesForSearch, [], '');
+        // Focus the search input
+        setTimeout(() => constituencySearchInput && constituencySearchInput.focus(), 50);
+    }
+
+    function _closeConstituencyDropdown() {
+        if (!constituencyIsOpen) return;
+        constituencyIsOpen = false;
+        constituencyDropdown.classList.remove('open');
+        constituencyTrigger.setAttribute('aria-expanded', 'false');
+        if (constituencySearchInput) constituencySearchInput.value = '';
+    }
+
+    function setupConstituencySearch() {
+        if (!constituencyTrigger) return;
+
+        // Toggle dropdown on trigger click
+        constituencyTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (constituencyIsOpen) {
+                _closeConstituencyDropdown();
+            } else {
+                _openConstituencyDropdown();
+            }
+        });
+
+        // Filter list as user types in the panel search input
+        if (constituencySearchInput) {
+            constituencySearchInput.addEventListener('input', (e) => {
+                clearTimeout(constituencySearchTimeout);
+                constituencySearchTimeout = setTimeout(() => {
+                    const query = e.target.value.trim();
+                    if (query.length === 0) {
+                        // No query — show full list unsplit
+                        _renderConstituencyList(allConstituenciesForSearch, [], '');
+                        return;
+                    }
+                    const q = query.toLowerCase();
+                    const nameMatches = [];
+                    const districtMatches = [];
+                    allConstituenciesForSearch.forEach(c => {
+                        const nameHit = c.name.toLowerCase().includes(q);
+                        const distHit = c.district && c.district.toLowerCase().includes(q);
+                        if (nameHit) {
+                            nameMatches.push(c);
+                        } else if (distHit) {
+                            // Name didn't match — show as a district-grouped result
+                            districtMatches.push(c);
+                        }
+                    });
+                    _renderConstituencyList(nameMatches, districtMatches, query);
+                }, 150);
+            });
+
+            // Prevent the trigger's click-outside handler from closing while typing
+            constituencySearchInput.addEventListener('click', (e) => e.stopPropagation());
+        }
+
+        // Close on click outside the whole wrapper
+        document.addEventListener('click', (e) => {
+            const wrapper = document.getElementById('constituency-select-wrapper');
+            if (wrapper && !wrapper.contains(e.target)) {
+                _closeConstituencyDropdown();
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && constituencyIsOpen) {
+                _closeConstituencyDropdown();
+                if (constituencyTrigger) constituencyTrigger.focus();
+            }
+        });
+    }
+
+    function _renderConstituencyList(nameMatches, districtMatches, query) {
+        if (!constituencyResults) return;
+
+        // Highlight matching substring in any text
+        function highlight(text, q) {
+            if (!q) return text;
+            const idx = text.toLowerCase().indexOf(q.toLowerCase());
+            if (idx === -1) return text;
+            return text.slice(0, idx) +
+                '<mark class="search-highlight">' + text.slice(idx, idx + q.length) + '</mark>' +
+                text.slice(idx + q.length);
+        }
+
+        // Build item HTML (districtHighlight: whether to highlight the district label too)
+        function itemHTML(c, highlightDistrict) {
+            const distLabel = c.district
+                ? `<span class="cl-district">${highlightDistrict ? highlight(c.district, query) : c.district}</span>`
+                : '';
+            return `<div class="constituency-list-item" data-constituency-id="${c.id}" data-constituency-name="${c.name}" role="option">
+                        <span class="cl-name">${highlight(c.name, query)}</span>
+                        ${distLabel}
+                    </div>`;
+        }
+
+        // "All Constituencies" reset option — always first
+        const resetHTML = `<div class="constituency-list-item reset-item" data-constituency-id="" data-constituency-name="All Constituencies">All Constituencies</div>`;
+
+        const hasNameMatches = nameMatches && nameMatches.length > 0;
+        const hasDistMatches = districtMatches && districtMatches.length > 0;
+
+        if (!hasNameMatches && !hasDistMatches) {
+            constituencyResults.innerHTML = resetHTML +
+                '<div class="constituency-list-item no-results">No constituencies found</div>';
+        } else {
+            // Group the district matches by district name for a compact header
+            let districtSectionHTML = '';
+            if (hasDistMatches) {
+                // Find unique districts among the matches
+                const districtGroups = {};
+                districtMatches.forEach(c => {
+                    const d = c.district || 'Unknown';
+                    if (!districtGroups[d]) districtGroups[d] = [];
+                    districtGroups[d].push(c);
+                });
+
+                districtSectionHTML = Object.entries(districtGroups).map(([district, items]) =>
+                    `<div class="constituency-group-header">
+                        <span class="cg-label">in ${highlight(district, query)} district</span>
+                    </div>` +
+                    items.map(c => itemHTML(c, true)).join('')
+                ).join('');
+            }
+
+            constituencyResults.innerHTML =
+                resetHTML +
+                (hasNameMatches ? nameMatches.map(c => itemHTML(c, false)).join('') : '') +
+                districtSectionHTML;
+        }
+
+        // Bind click on all items
+        constituencyResults.querySelectorAll('.constituency-list-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const id = item.dataset.constituencyId;
+                const name = item.dataset.constituencyName;
+                if (constituencyTriggerLabel) constituencyTriggerLabel.textContent = name;
+                _closeConstituencyDropdown();
+                if (id) {
+                    MapModule.zoomToConstituency(id);
+                } else {
+                    MapModule.resetToOverview();
+                }
+            });
+        });
+    }
+
+    function displayConstituencyResults() { /* unused — kept for compat */ }
+
 
     function setupCandidateSearch() {
         if (!candidateSearchInput) return;
@@ -821,11 +913,17 @@ const UIModule = (function () {
         }
     }
 
+    function resetConstituencyTrigger() {
+        if (constituencyTriggerLabel) constituencyTriggerLabel.textContent = 'All Constituencies';
+        _closeConstituencyDropdown();
+    }
+
     return {
-        init, populateDistrictDropdown, populateConstituencyDropdown,
-        handleDistrictChange, handleYearChange, showLoading, hideLoading,
+        init, populateConstituencyDropdown,
+        handleYearChange, showLoading, hideLoading,
         showBackButton, hideBackButton, showLegend, hideLegend,
-        showConstituencyOverlay, hideConstituencyOverlay, setDistrictDropdown,
-        setConstituencyDropdowns, navigateToNext, navigateToPrev
+        showConstituencyOverlay, hideConstituencyOverlay,
+        setConstituencyDropdowns, navigateToNext, navigateToPrev,
+        resetConstituencyTrigger
     };
 })();

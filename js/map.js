@@ -400,8 +400,6 @@ const MapModule = (function () {
         // Show back button
         UIModule.showBackButton();
 
-        // Update dropdown using the UI module method (prevents recursive zoom)
-        UIModule.setDistrictDropdown(name);
     }
 
     /**
@@ -462,9 +460,7 @@ const MapModule = (function () {
         UIModule.hideBackButton();
         UIModule.hideConstituencyOverlay();
 
-        // Reset filters
-        document.getElementById('district-filter').value = '';
-        document.getElementById('constituency-filter').value = '';
+        UIModule.resetConstituencyTrigger();
     }
 
     /**
