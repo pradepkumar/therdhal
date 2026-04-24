@@ -638,6 +638,13 @@
     }
 }
 
+/* Voter history chart */
+.overlay-voter-chart {
+    margin-top: var(--spacing-md);
+    height: 160px;
+    position: relative;
+}
+
 /* Responsive Overlay */
 @media (min-width: 768px) {
     .overlay {

@@ -219,16 +219,9 @@
             </header>
 
             <div class="overlay-body">
-                <!-- Voter Stats -->
-                <div class="stats-card">
-                    <div class="stat-item">
-                        <span class="stat-value" id="registered-voters">0</span>
-                        <span class="stat-label">Registered Voters</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-value" id="constituency-id">0</span>
-                        <span class="stat-label">Constituency ID</span>
-                    </div>
+                <!-- Voter History Chart -->
+                <div class="overlay-voter-chart">
+                    <canvas id="overlay-voter-canvas"></canvas>
                 </div>
 
                 <!-- Election History -->
@@ -380,6 +373,7 @@
 
     <!-- Map & UI (Original modules - already well structured) -->
     <script src="js/map.js"></script>
+    <script src="js/overlay-charts.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/app.js"></script>
 

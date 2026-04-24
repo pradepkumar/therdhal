@@ -460,9 +460,6 @@ const UIModule = (function () {
         document.getElementById('constituency-district').textContent = info.district;
         document.getElementById('constituency-description').textContent = info.description || '';
 
-        // Update Constituency ID
-        document.getElementById('constituency-id').textContent = id;
-
         // Render Election History (All Years)
         const histEl = document.getElementById('election-history');
         if (histEl) {
@@ -501,6 +498,24 @@ const UIModule = (function () {
         // Initial update of election results and voters for the current year
         updateOverlayElectionResults(id, currentOverlayElectionYear);
 
+        // Render voter/turnout chart
+        (async () => {
+            const capturedId = id;
+            const turnoutByYear = {};
+            try {
+                await Promise.all([2016, 2021].map(async y => {
+                    const result = await DataModule.getElectionResults(y, capturedId);
+                    if (result && result.turnout_percent != null) {
+                        turnoutByYear[String(y)] = result.turnout_percent;
+                    }
+                }));
+            } catch (e) {
+                // Non-critical: chart will render with whatever data resolved
+            }
+            if (currentConstituencyId !== capturedId) return;
+            OverlayCharts.render(info.electors || {}, turnoutByYear);
+        })();
+
         overlay.classList.remove('hidden');
         _overlayPrevFocus = document.activeElement;
         // Move focus into dialog — close button is the first logical target
@@ -509,6 +524,7 @@ const UIModule = (function () {
     }
 
     function hideConstituencyOverlay() {
+        OverlayCharts.destroy();
         overlay.classList.add('hidden');
         document.body.classList.remove('overlay-open');
         currentConstituencyId = null;
@@ -697,15 +713,6 @@ const UIModule = (function () {
         const currentIndex = years.indexOf(year);
         document.getElementById('prev-election-year').disabled = (currentIndex <= 0);
         document.getElementById('next-election-year').disabled = (currentIndex === -1 || currentIndex >= years.length - 1);
-
-        // Update Registered Voters (depends on year)
-        const info = await DataModule.getConstituencyInfo(id);
-        if (info) {
-            const electorsCount = (info.electors && typeof info.electors === 'object')
-                ? info.electors[year]
-                : info.electors;
-            document.getElementById('registered-voters').textContent = electorsCount?.toLocaleString() || 'N/A';
-        }
 
         // Fetch and display results
         const candidatesEl = document.getElementById('candidates-table');
