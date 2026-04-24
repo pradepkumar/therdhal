@@ -53,16 +53,42 @@ const OverlayCharts = (function () {
                 ctx.font = 'bold 9px system-ui, sans-serif';
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
+
+                const PAD = 4;
+                const LINE_H = 12; // minimum gap between two labels
+
+                // Collect labels per x-index so we can detect collisions column by column
+                const byIndex = {};
                 chart.data.datasets.forEach((dataset, di) => {
                     chart.getDatasetMeta(di).data.forEach((el, i) => {
                         const val = dataset.data[i];
                         if (val == null) return;
                         const label = dataset.yAxisID === 'yVoters' ? _fmtL(val) : val.toFixed(1) + '%';
-                        ctx.fillStyle = dataset.yAxisID === 'yVoters' ? 'rgba(99,102,241,0.9)' : '#f59e0b';
-                        const y = Math.max(chartArea.top + 10, el.y - 4);
-                        ctx.fillText(label, el.x, y);
+                        const color = dataset.yAxisID === 'yVoters' ? 'rgba(99,102,241,0.9)' : '#f59e0b';
+                        (byIndex[i] = byIndex[i] || []).push({ x: el.x, y: el.y, label, color });
                     });
                 });
+
+                Object.values(byIndex).forEach(items => {
+                    const x = items[0].x;
+                    if (items.length === 1) {
+                        const { y, label, color } = items[0];
+                        ctx.fillStyle = color;
+                        ctx.fillText(label, x, Math.max(chartArea.top + LINE_H, y - PAD));
+                        return;
+                    }
+                    // Two labels: sort so the one higher on screen (smaller y) comes first
+                    items.sort((a, b) => a.y - b.y);
+                    let y0 = Math.max(chartArea.top + LINE_H, items[0].y - PAD);
+                    let y1 = Math.max(chartArea.top + LINE_H, items[1].y - PAD);
+                    // If they'd overlap, push the lower one down to maintain gap
+                    if (y1 - y0 < LINE_H) y1 = y0 + LINE_H;
+                    ctx.fillStyle = items[0].color;
+                    ctx.fillText(items[0].label, x, y0);
+                    ctx.fillStyle = items[1].color;
+                    ctx.fillText(items[1].label, x, y1);
+                });
+
                 ctx.restore();
             }
         };
