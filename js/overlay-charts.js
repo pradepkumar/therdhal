@@ -54,35 +54,39 @@ const OverlayCharts = (function () {
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
 
-                const PAD = 4;
-                const LINE_H = 12; // minimum gap between two labels
+                const BAR_PAD   = 5;  // gap above bar top
+                const POINT_R   = 4;  // matches pointRadius in dataset config
+                const POINT_PAD = 5;  // gap above point circle top
+                const MIN_GAP   = 14; // minimum px between two label baselines
 
-                // Collect labels per x-index so we can detect collisions column by column
+                // Pre-compute each label's natural render y so we can collide-check them
                 const byIndex = {};
                 chart.data.datasets.forEach((dataset, di) => {
                     chart.getDatasetMeta(di).data.forEach((el, i) => {
                         const val = dataset.data[i];
                         if (val == null) return;
-                        const label = dataset.yAxisID === 'yVoters' ? _fmtL(val) : val.toFixed(1) + '%';
-                        const color = dataset.yAxisID === 'yVoters' ? 'rgba(99,102,241,0.9)' : '#f59e0b';
-                        (byIndex[i] = byIndex[i] || []).push({ x: el.x, y: el.y, label, color });
+                        const isVoters = dataset.yAxisID === 'yVoters';
+                        const label    = isVoters ? _fmtL(val) : val.toFixed(1) + '%';
+                        const color    = isVoters ? 'rgba(99,102,241,0.9)' : '#f59e0b';
+                        // For bars el.y is bar top; for line points el.y is dot centre
+                        const rawY = isVoters ? el.y - BAR_PAD : el.y - POINT_R - POINT_PAD;
+                        (byIndex[i] = byIndex[i] || []).push({ x: el.x, rawY, label, color });
                     });
                 });
 
                 Object.values(byIndex).forEach(items => {
                     const x = items[0].x;
                     if (items.length === 1) {
-                        const { y, label, color } = items[0];
+                        const { rawY, label, color } = items[0];
                         ctx.fillStyle = color;
-                        ctx.fillText(label, x, Math.max(chartArea.top + LINE_H, y - PAD));
+                        ctx.fillText(label, x, Math.max(chartArea.top + MIN_GAP, rawY));
                         return;
                     }
-                    // Two labels: sort so the one higher on screen (smaller y) comes first
-                    items.sort((a, b) => a.y - b.y);
-                    let y0 = Math.max(chartArea.top + LINE_H, items[0].y - PAD);
-                    let y1 = Math.max(chartArea.top + LINE_H, items[1].y - PAD);
-                    // If they'd overlap, push the lower one down to maintain gap
-                    if (y1 - y0 < LINE_H) y1 = y0 + LINE_H;
+                    // Sort: higher on screen (smaller rawY) first
+                    items.sort((a, b) => a.rawY - b.rawY);
+                    let y0 = Math.max(chartArea.top + MIN_GAP, items[0].rawY);
+                    let y1 = Math.max(chartArea.top + MIN_GAP, items[1].rawY);
+                    if (y1 - y0 < MIN_GAP) y1 = y0 + MIN_GAP;
                     ctx.fillStyle = items[0].color;
                     ctx.fillText(items[0].label, x, y0);
                     ctx.fillStyle = items[1].color;
