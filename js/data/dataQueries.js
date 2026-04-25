@@ -127,6 +127,43 @@ const DataQueries = (function () {
         return results.sort((a, b) => (b.votes || 0) - (a.votes || 0)).slice(0, 50);
     }
 
+    /**
+     * Search for candidates across all years
+     * @param {string} query - Search query
+     * @returns {Promise<Array<Object>>} Matching candidates with a `year` field added
+     */
+    async function searchCandidatesAllYears(query) {
+        if (!query || query.length < 2) return [];
+
+        const years = getAvailableYears();
+        const normalizedQuery = query.toLowerCase();
+
+        const perYear = await Promise.all(years.map(async year => {
+            try {
+                const data = await DataLoader.loadElectionData(year);
+                const results = [];
+                for (const [constituencyId, constituency] of Object.entries(data.constituencies)) {
+                    for (const candidate of (constituency.candidates || [])) {
+                        if (candidate.name && candidate.name.toLowerCase().includes(normalizedQuery)) {
+                            results.push({
+                                ...candidate,
+                                year,
+                                constituencyName: constituency.name,
+                                constituencyId,
+                                district: constituency.district
+                            });
+                        }
+                    }
+                }
+                return results;
+            } catch (e) {
+                return [];
+            }
+        }));
+
+        return perYear.flat().sort((a, b) => b.year - a.year || (b.votes || 0) - (a.votes || 0)).slice(0, 80);
+    }
+
     // Public API
     return {
         getAvailableYears,
@@ -135,6 +172,7 @@ const DataQueries = (function () {
         getConstituencyInfo,
         getElectionResults,
         getWinnerHistory,
-        searchCandidates
+        searchCandidates,
+        searchCandidatesAllYears
     };
 })();

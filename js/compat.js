@@ -21,6 +21,7 @@ const DataModule = {
     getElectionResults: (year, id) => DataQueries.getElectionResults(year, id),
     getWinnerHistory: (id) => DataQueries.getWinnerHistory(id),
     searchCandidates: (year, query) => DataQueries.searchCandidates(year, query),
+    searchCandidatesAllYears: (query) => DataQueries.searchCandidatesAllYears(query),
 
     // Party configuration
     getPartyColor: (party) => PartyConfig.getColor(party),

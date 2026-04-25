@@ -103,12 +103,19 @@
                 <div class="filter-bar">
                     <div class="filter-group">
                         <label for="year-filter" class="filter-label">Year</label>
-                        <select id="year-filter" class="filter-select">
-                            <option value="">All Years</option>
-                            <option value="2026">2026</option>
-                            <option value="2021">2021</option>
-                            <option value="2016">2016</option>
-                        </select>
+                        <div class="year-filter-wrapper">
+                            <select id="year-filter" class="filter-select">
+                                <option value="">All Years</option>
+                                <option value="2026">2026</option>
+                                <option value="2021">2021</option>
+                                <option value="2016">2016</option>
+                            </select>
+                            <button type="button" id="year-filter-clear" class="year-filter-clear hidden" aria-label="Clear year">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6L6 18M6 6l12 12"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="filter-group constituency-search-group">
@@ -118,6 +125,11 @@
                             <button type="button" id="constituency-trigger" class="filter-select constituency-trigger"
                                 aria-haspopup="listbox" aria-expanded="false">
                                 <span id="constituency-trigger-label">All Constituencies</span>
+                            </button>
+                            <button type="button" id="constituency-clear" class="constituency-clear hidden" aria-label="Clear constituency">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6L6 18M6 6l12 12"/>
+                                </svg>
                             </button>
                             <!-- Dropdown panel -->
                             <div id="constituency-dropdown" class="constituency-dropdown" role="listbox"
@@ -133,11 +145,16 @@
                         </div>
                     </div>
 
-                    <div id="candidate-filter-group" class="filter-group hidden">
+                    <div id="candidate-filter-group" class="filter-group">
                         <label for="candidate-search" class="filter-label">Candidate Name</label>
                         <div class="candidate-search-container">
                             <input type="text" id="candidate-search" class="search-input"
                                 placeholder="Search candidate..." autocomplete="off">
+                            <button type="button" id="candidate-search-clear" class="candidate-search-clear hidden" aria-label="Clear search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6L6 18M6 6l12 12"/>
+                                </svg>
+                            </button>
                             <div id="candidate-results" class="search-results-dropdown"></div>
                         </div>
                     </div>

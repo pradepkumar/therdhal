@@ -9,7 +9,7 @@ const UIModule = (function () {
     let allConstituenciesForSearch = []; // full list for client-side filtering
     let constituencySearchTimeout;
     let constituencyIsOpen = false;
-    let candidateFilterGroup, candidateSearchInput, candidateResults;
+    let candidateSearchInput, candidateResults;
     let searchTimeout;
     let backButton, legend, loadingOverlay;
     let overlay, overlayClose;
@@ -38,7 +38,6 @@ const UIModule = (function () {
         overlay = document.getElementById('constituency-overlay');
         overlayClose = document.getElementById('overlay-close');
 
-        candidateFilterGroup = document.getElementById('candidate-filter-group');
         candidateSearchInput = document.getElementById('candidate-search');
         candidateResults = document.getElementById('candidate-results');
 
@@ -63,7 +62,17 @@ const UIModule = (function () {
     function setupEventListeners() {
         yearFilter.addEventListener('change', async (e) => {
             await handleYearChange(e.target.value);
+            _updateYearClearBtn(!!e.target.value);
         });
+
+        const yearClearBtn = document.getElementById('year-filter-clear');
+        if (yearClearBtn) {
+            yearClearBtn.addEventListener('click', () => {
+                yearFilter.value = '';
+                handleYearChange('');
+                _updateYearClearBtn(false);
+            });
+        }
         backButton.addEventListener('click', () => MapModule.resetToOverview());
         overlayClose.addEventListener('click', () => hideConstituencyOverlay());
         overlay.addEventListener('click', (e) => {
@@ -169,11 +178,9 @@ const UIModule = (function () {
             window.electionData[year] = data;
             MapModule.setElectionYear(year);
             showLegend();
-            if (candidateFilterGroup) candidateFilterGroup.classList.remove('hidden');
         } else {
             MapModule.setElectionYear(null);
             hideLegend();
-            if (candidateFilterGroup) candidateFilterGroup.classList.add('hidden');
         }
     }
 
@@ -181,6 +188,7 @@ const UIModule = (function () {
         const found = allConstituenciesForSearch.find(c => String(c.id) === String(constituencyId));
         if (found && constituencyTriggerLabel) {
             constituencyTriggerLabel.textContent = found.name;
+            _updateConstituencyClearBtn(true);
         }
     }
 
@@ -575,6 +583,16 @@ const UIModule = (function () {
             }
         });
 
+        // Clear button
+        const clearBtn = document.getElementById('constituency-clear');
+        if (clearBtn) {
+            clearBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                _closeConstituencyDropdown();
+                MapModule.resetToOverview();
+            });
+        }
+
         // Close on Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && constituencyIsOpen) {
@@ -582,6 +600,18 @@ const UIModule = (function () {
                 if (constituencyTrigger) constituencyTrigger.focus();
             }
         });
+    }
+
+    function _updateYearClearBtn(hasSelection) {
+        const clearBtn = document.getElementById('year-filter-clear');
+        if (clearBtn) clearBtn.classList.toggle('hidden', !hasSelection);
+        if (yearFilter) yearFilter.classList.toggle('has-selection', hasSelection);
+    }
+
+    function _updateConstituencyClearBtn(hasSelection) {
+        const clearBtn = document.getElementById('constituency-clear');
+        if (clearBtn) clearBtn.classList.toggle('hidden', !hasSelection);
+        if (constituencyTrigger) constituencyTrigger.classList.toggle('has-selection', hasSelection);
     }
 
     function _renderConstituencyList(nameMatches, districtMatches, query) {
@@ -650,6 +680,7 @@ const UIModule = (function () {
                 const id = item.dataset.constituencyId;
                 const name = item.dataset.constituencyName;
                 if (constituencyTriggerLabel) constituencyTriggerLabel.textContent = name;
+                _updateConstituencyClearBtn(!!id);
                 _closeConstituencyDropdown();
                 if (id) {
                     MapModule.zoomToConstituency(id);
@@ -666,8 +697,15 @@ const UIModule = (function () {
     function setupCandidateSearch() {
         if (!candidateSearchInput) return;
 
+        const clearBtn = document.getElementById('candidate-search-clear');
+
+        function updateClearBtn() {
+            if (clearBtn) clearBtn.classList.toggle('hidden', !candidateSearchInput.value);
+        }
+
         candidateSearchInput.addEventListener('input', (e) => {
             clearTimeout(searchTimeout);
+            updateClearBtn();
             const query = e.target.value;
 
             if (query.length < 2) {
@@ -678,12 +716,22 @@ const UIModule = (function () {
 
             searchTimeout = setTimeout(async () => {
                 const year = yearFilter.value;
-                if (!year) return;
-
-                const results = await DataModule.searchCandidates(year, query);
-                displayCandidateResults(results);
+                const results = year
+                    ? await DataModule.searchCandidates(year, query)
+                    : await DataModule.searchCandidatesAllYears(query);
+                displayCandidateResults(results, !year);
             }, 300);
         });
+
+        if (clearBtn) {
+            clearBtn.addEventListener('click', () => {
+                candidateSearchInput.value = '';
+                candidateResults.innerHTML = '';
+                candidateResults.classList.remove('active');
+                clearBtn.classList.add('hidden');
+                candidateSearchInput.focus();
+            });
+        }
 
         // Hide results on click outside
         document.addEventListener('click', (e) => {
@@ -700,7 +748,7 @@ const UIModule = (function () {
         });
     }
 
-    function displayCandidateResults(results) {
+    function displayCandidateResults(results, showYear = false) {
         if (!results || results.length === 0) {
             candidateResults.innerHTML = '<div class="search-result-item"><span class="search-result-meta">No candidates found</span></div>';
             candidateResults.classList.add('active');
@@ -711,6 +759,7 @@ const UIModule = (function () {
         <div class="search-result-item" data-constituency-id="${c.constituencyId}">
             <span class="search-result-name">${c.name}</span>
             <div class="search-result-meta">
+                ${showYear ? `<span class="search-year-tag">${c.year}</span>` : ''}
                 <span class="search-party-tag" style="background:${DataModule.getPartyColor(c.party)};color:${DataModule.getPartyTextColor(c.party)}">${c.party}</span>
                 <span>${c.constituencyName}</span>
                 <span>(${c.district})</span>
@@ -728,7 +777,9 @@ const UIModule = (function () {
                 if (constituencyId && constituencyId !== "undefined") {
                     MapModule.zoomToConstituency(constituencyId);
                     candidateResults.classList.remove('active');
-                    candidateSearchInput.value = ''; // Clear search after selection
+                    candidateSearchInput.value = '';
+                    const cb = document.getElementById('candidate-search-clear');
+                    if (cb) cb.classList.add('hidden');
                 }
             });
         });
@@ -915,6 +966,7 @@ const UIModule = (function () {
 
     function resetConstituencyTrigger() {
         if (constituencyTriggerLabel) constituencyTriggerLabel.textContent = 'All Constituencies';
+        _updateConstituencyClearBtn(false);
         _closeConstituencyDropdown();
     }
 
