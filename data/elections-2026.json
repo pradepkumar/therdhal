@@ -5,6 +5,8 @@
       "name": "GUMMIDIPUNDI",
       "district": "TIRUVALLUR",
       "type": "GEN",
+      "electors": 254129,
+      "turnout_percent": 90.96,
       "candidates": [
         {
           "name": "S. Vijayakumar",
@@ -28,6 +30,8 @@
       "name": "PONNERI",
       "district": "TIRUVALLUR",
       "type": "SC",
+      "electors": 251397,
+      "turnout_percent": 89.77,
       "candidates": [
         {
           "name": "Dr. M S Ravi",
@@ -51,6 +55,8 @@
       "name": "TIRUTTANI",
       "district": "TIRUVALLUR",
       "type": "GEN",
+      "electors": 261857,
+      "turnout_percent": 90.23,
       "candidates": [
         {
           "name": "Dr. Sathyakumar",
@@ -74,6 +80,8 @@
       "name": "THIRUVALLUR",
       "district": "TIRUVALLUR",
       "type": "GEN",
+      "electors": 251018,
+      "turnout_percent": 89.51,
       "candidates": [
         {
           "name": "Dr. Arunkumar",
@@ -97,6 +105,8 @@
       "name": "POONAMALLEE",
       "district": "TIRUVALLUR",
       "type": "SC",
+      "electors": 368634,
+      "turnout_percent": 83.41,
       "candidates": [
         {
           "name": "R. Prakasam",
@@ -120,6 +130,8 @@
       "name": "AVADI",
       "district": "TIRUVALLUR",
       "type": "GEN",
+      "electors": 436177,
+      "turnout_percent": 78.81,
       "candidates": [
         {
           "name": "R. Rameshkumar",
@@ -143,6 +155,8 @@
       "name": "MADURAVOYAL",
       "district": "TIRUVALLUR",
       "type": "GEN",
+      "electors": 373283,
+      "turnout_percent": 78.55,
       "candidates": [
         {
           "name": "P. Revanth Saran",
@@ -166,6 +180,8 @@
       "name": "AMBATTUR",
       "district": "TIRUVALLUR",
       "type": "GEN",
+      "electors": 337019,
+      "turnout_percent": 77.04,
       "candidates": [
         {
           "name": "G. Balamurugan",
@@ -189,6 +205,8 @@
       "name": "MADAVARAM",
       "district": "TIRUVALLUR",
       "type": "GEN",
+      "electors": 431796,
+      "turnout_percent": 83.47,
       "candidates": [
         {
           "name": "M. L. Vijay Prabhu",
@@ -212,6 +230,8 @@
       "name": "THIRUVOTTIYUR",
       "district": "TIRUVALLUR",
       "type": "GEN",
+      "electors": 244903,
+      "turnout_percent": 84.41,
       "candidates": [
         {
           "name": "Senthilkumar",
@@ -235,6 +255,8 @@
       "name": "DR. RADHAKRISHNAN NAGAR",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 199359,
+      "turnout_percent": 90.6,
       "candidates": [
         {
           "name": "Maria Wilson",
@@ -258,6 +280,8 @@
       "name": "PERAMBUR",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 226296,
+      "turnout_percent": 89.73,
       "candidates": [
         {
           "name": "C. Joseph Vijay",
@@ -283,6 +307,8 @@
       "name": "KOLATHUR",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 211772,
+      "turnout_percent": 86.11,
       "candidates": [
         {
           "name": "V.S. Babu",
@@ -308,6 +334,8 @@
       "name": "VILLIVAKKAM",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 163372,
+      "turnout_percent": 86.0,
       "candidates": [
         {
           "name": "Adhav Arjuna",
@@ -333,6 +361,8 @@
       "name": "THIRU-VI-KA-NAGAR",
       "district": "CHENNAI",
       "type": "SC",
+      "electors": 181621,
+      "turnout_percent": 78.7,
       "candidates": [
         {
           "name": "M R Pallavi",
@@ -356,6 +386,8 @@
       "name": "EGMORE",
       "district": "CHENNAI",
       "type": "SC",
+      "electors": 138775,
+      "turnout_percent": 85.55,
       "candidates": [
         {
           "name": "Rajmohan",
@@ -379,6 +411,8 @@
       "name": "ROYAPURAM",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 159654,
+      "turnout_percent": 79.35,
       "candidates": [
         {
           "name": "K V Vijayathamu",
@@ -404,6 +438,8 @@
       "name": "HARBOUR",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 120126,
+      "turnout_percent": 82.75,
       "candidates": [
         {
           "name": "Sinora Ashok",
@@ -427,6 +463,8 @@
       "name": "CHEPAUK-THIRUVALLIKENI",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 166023,
+      "turnout_percent": 84.34,
       "candidates": [
         {
           "name": "D. Selvam",
@@ -452,6 +490,8 @@
       "name": "THOUSAND LIGHTS",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 157529,
+      "turnout_percent": 83.09,
       "candidates": [
         {
           "name": "JCD Prabhakar",
@@ -475,6 +515,8 @@
       "name": "ANNA NAGAR",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 188861,
+      "turnout_percent": 85.65,
       "candidates": [
         {
           "name": "V K Ramkumar",
@@ -498,6 +540,8 @@
       "name": "VIRUGAMPAKKAM",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 200578,
+      "turnout_percent": 85.5,
       "candidates": [
         {
           "name": "Sabarinathan",
@@ -521,6 +565,8 @@
       "name": "SAIDAPET",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 204146,
+      "turnout_percent": 77.85,
       "candidates": [
         {
           "name": "M. Arulprakasham",
@@ -544,6 +590,8 @@
       "name": "THEAYAGARAYA NAGAR",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 158757,
+      "turnout_percent": 83.55,
       "candidates": [
         {
           "name": "Bussy N Anand",
@@ -569,6 +617,8 @@
       "name": "MYLAPORE",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 199465,
+      "turnout_percent": 74.89,
       "candidates": [
         {
           "name": "Venkatramanan",
@@ -594,6 +644,8 @@
       "name": "VELACHERY",
       "district": "CHENNAI",
       "type": "GEN",
+      "electors": 217171,
+      "turnout_percent": 84.5,
       "candidates": [
         {
           "name": "R. Kumar",
@@ -617,6 +669,8 @@
       "name": "SHOZHINGANALLUR",
       "district": "KANCHIPURAM",
       "type": "GEN",
+      "electors": 553905,
+      "turnout_percent": 80.46,
       "candidates": [
         {
           "name": "P. Saravanamoorthy",
@@ -640,6 +694,8 @@
       "name": "ALANDUR",
       "district": "KANCHIPURAM",
       "type": "GEN",
+      "electors": 301055,
+      "turnout_percent": 86.15,
       "candidates": [
         {
           "name": "M. Harish",
@@ -663,6 +719,8 @@
       "name": "SRIPERUMBUDUR",
       "district": "KANCHIPURAM",
       "type": "SC",
+      "electors": 381750,
+      "turnout_percent": 86.12,
       "candidates": [
         {
           "name": "K. Thennarasu",
@@ -686,6 +744,8 @@
       "name": "PALLAVARAM",
       "district": "KANCHIPURAM",
       "type": "GEN",
+      "electors": 336963,
+      "turnout_percent": 83.63,
       "candidates": [
         {
           "name": "J. Kamatchi",
@@ -709,6 +769,8 @@
       "name": "TAMBARAM",
       "district": "KANCHIPURAM",
       "type": "GEN",
+      "electors": 330060,
+      "turnout_percent": 83.94,
       "candidates": [
         {
           "name": "Sarathkumar",
@@ -732,6 +794,8 @@
       "name": "CHENGALPATTU",
       "district": "KANCHIPURAM",
       "type": "GEN",
+      "electors": 372839,
+      "turnout_percent": 86.42,
       "candidates": [
         {
           "name": "S. Thiyagarajan",
@@ -755,6 +819,8 @@
       "name": "THIRUPORUR",
       "district": "KANCHIPURAM",
       "type": "GEN",
+      "electors": 294410,
+      "turnout_percent": 88.71,
       "candidates": [
         {
           "name": "Vijayaraj",
@@ -778,6 +844,8 @@
       "name": "CHEYYUR",
       "district": "KANCHIPURAM",
       "type": "SC",
+      "electors": 203998,
+      "turnout_percent": 91.02,
       "candidates": [
         {
           "name": "K. Mohanraja",
@@ -801,6 +869,8 @@
       "name": "MADURANTHAKAM",
       "district": "KANCHIPURAM",
       "type": "SC",
+      "electors": 212639,
+      "turnout_percent": 92.28,
       "candidates": [
         {
           "name": "Munithnam",
@@ -824,6 +894,8 @@
       "name": "UTHIRAMERUR",
       "district": "KANCHIPURAM",
       "type": "GEN",
+      "electors": 246177,
+      "turnout_percent": 91.15,
       "candidates": [
         {
           "name": "R V Ranjithkumar",
@@ -847,6 +919,8 @@
       "name": "KANCHEEPURAM",
       "district": "KANCHIPURAM",
       "type": "GEN",
+      "electors": 278775,
+      "turnout_percent": 87.15,
       "candidates": [
         {
           "name": "R. V. Ranjithkumar",
@@ -870,6 +944,8 @@
       "name": "ARAKONAM",
       "district": "VELLORE",
       "type": "SC",
+      "electors": 200773,
+      "turnout_percent": 90.12,
       "candidates": [
         {
           "name": "V. Gandhiraj",
@@ -893,6 +969,8 @@
       "name": "SHOLINGHUR",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 257522,
+      "turnout_percent": 89.96,
       "candidates": [
         {
           "name": "G. Kapil",
@@ -916,6 +994,8 @@
       "name": "KATPADI",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 228736,
+      "turnout_percent": 88.06,
       "candidates": [
         {
           "name": "M. Sudhakar",
@@ -941,6 +1021,8 @@
       "name": "RANIPET",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 248244,
+      "turnout_percent": 88.51,
       "candidates": [
         {
           "name": "Dhaheera",
@@ -968,6 +1050,8 @@
       "name": "ARCOT",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 245319,
+      "turnout_percent": 91.03,
       "candidates": [
         {
           "name": "G. Vijaymohan",
@@ -991,6 +1075,8 @@
       "name": "VELLORE",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 214504,
+      "turnout_percent": 87.98,
       "candidates": [
         {
           "name": "M.M. Vinoth Kannan",
@@ -1014,6 +1100,8 @@
       "name": "ANAIKATTU",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 238715,
+      "turnout_percent": 89.69,
       "candidates": [
         {
           "name": "R. Velmurugan",
@@ -1037,6 +1125,8 @@
       "name": "KILVAITHINANKUPPAM",
       "district": "VELLORE",
       "type": "SC",
+      "electors": 215304,
+      "turnout_percent": 87.25,
       "candidates": [
         {
           "name": "E. Thendral Kumar",
@@ -1060,6 +1150,8 @@
       "name": "GUDIYATHAM",
       "district": "VELLORE",
       "type": "SC",
+      "electors": 251588,
+      "turnout_percent": 90.47,
       "candidates": [
         {
           "name": "K. Sindhu",
@@ -1083,6 +1175,8 @@
       "name": "VANIYAMBADI",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 242540,
+      "turnout_percent": 87.01,
       "candidates": [
         {
           "name": "S. Sayed",
@@ -1106,6 +1200,8 @@
       "name": "AMBUR",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 214469,
+      "turnout_percent": 90.67,
       "candidates": [
         {
           "name": "P. Imdhiyas",
@@ -1129,6 +1225,8 @@
       "name": "JOLARPET",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 236127,
+      "turnout_percent": 89.45,
       "candidates": [
         {
           "name": "C. Munisamy",
@@ -1152,6 +1250,8 @@
       "name": "TIRUPPATTUR",
       "district": "VELLORE",
       "type": "GEN",
+      "electors": 226691,
+      "turnout_percent": 88.69,
       "candidates": [
         {
           "name": "Dr. M. Thiruppathi",
@@ -1175,6 +1275,8 @@
       "name": "UTHANGARAI",
       "district": "KRISHNAGIRI",
       "type": "SC",
+      "electors": 235451,
+      "turnout_percent": 86.15,
       "candidates": [
         {
           "name": "B. Kumaravel",
@@ -1198,6 +1300,8 @@
       "name": "BARGUR",
       "district": "KRISHNAGIRI",
       "type": "GEN",
+      "electors": 239318,
+      "turnout_percent": 88.01,
       "candidates": [
         {
           "name": "E. Muralidharan",
@@ -1221,6 +1325,8 @@
       "name": "KRISHNAGIRI",
       "district": "KRISHNAGIRI",
       "type": "GEN",
+      "electors": 267366,
+      "turnout_percent": 84.85,
       "candidates": [
         {
           "name": "Muhundh R. Pandian",
@@ -1244,6 +1350,8 @@
       "name": "VEPPANAHALLI",
       "district": "KRISHNAGIRI",
       "type": "GEN",
+      "electors": 246093,
+      "turnout_percent": 89.84,
       "candidates": [
         {
           "name": "Sambangi",
@@ -1267,6 +1375,8 @@
       "name": "HOSUR",
       "district": "KRISHNAGIRI",
       "type": "GEN",
+      "electors": 342989,
+      "turnout_percent": 80.35,
       "candidates": [
         {
           "name": "M. Ambarish",
@@ -1290,6 +1400,8 @@
       "name": "THALLI",
       "district": "KRISHNAGIRI",
       "type": "GEN",
+      "electors": 237924,
+      "turnout_percent": 85.89,
       "candidates": [
         {
           "name": "G. Suresh",
@@ -1313,6 +1425,8 @@
       "name": "PALACODE",
       "district": "DHARMAPURI",
       "type": "GEN",
+      "electors": 240322,
+      "turnout_percent": 92.57,
       "candidates": [
         {
           "name": "R. Gopi",
@@ -1336,6 +1450,8 @@
       "name": "PENNAGARAM",
       "district": "DHARMAPURI",
       "type": "GEN",
+      "electors": 248614,
+      "turnout_percent": 90.71,
       "candidates": [
         {
           "name": "Kajendran",
@@ -1359,6 +1475,8 @@
       "name": "DHARMAPURI",
       "district": "DHARMAPURI",
       "type": "GEN",
+      "electors": 260751,
+      "turnout_percent": 89.44,
       "candidates": [
         {
           "name": "M. Sivan",
@@ -1382,6 +1500,8 @@
       "name": "PAPPIREDDIPPATTI",
       "district": "DHARMAPURI",
       "type": "GEN",
+      "electors": 256640,
+      "turnout_percent": 90.36,
       "candidates": [
         {
           "name": "S. Thilavathi",
@@ -1405,6 +1525,8 @@
       "name": "HARUR",
       "district": "DHARMAPURI",
       "type": "SC",
+      "electors": 245692,
+      "turnout_percent": 87.66,
       "candidates": [
         {
           "name": "K. Rakesh",
@@ -1428,6 +1550,8 @@
       "name": "CHENGAM",
       "district": "TIRUVANNAMALAI",
       "type": "SC",
+      "electors": 268997,
+      "turnout_percent": 89.46,
       "candidates": [
         {
           "name": "K. Bharathidhasan",
@@ -1451,6 +1575,8 @@
       "name": "TIRUVANNAMALAI",
       "district": "TIRUVANNAMALAI",
       "type": "GEN",
+      "electors": 249848,
+      "turnout_percent": 87.32,
       "candidates": [
         {
           "name": "Arul Arumugam",
@@ -1474,6 +1600,8 @@
       "name": "KILPENNATHUR",
       "district": "TIRUVANNAMALAI",
       "type": "GEN",
+      "electors": 240823,
+      "turnout_percent": 90.3,
       "candidates": [
         {
           "name": "D. Raja",
@@ -1497,6 +1625,8 @@
       "name": "KALASAPAKKAM",
       "district": "TIRUVANNAMALAI",
       "type": "GEN",
+      "electors": 232847,
+      "turnout_percent": 91.03,
       "candidates": [
         {
           "name": "C. Elumalai",
@@ -1520,6 +1650,8 @@
       "name": "POLUR",
       "district": "TIRUVANNAMALAI",
       "type": "GEN",
+      "electors": 233774,
+      "turnout_percent": 89.37,
       "candidates": [
         {
           "name": "R. Abishek",
@@ -1543,6 +1675,8 @@
       "name": "ARANI",
       "district": "TIRUVANNAMALAI",
       "type": "GEN",
+      "electors": 254963,
+      "turnout_percent": 89.31,
       "candidates": [
         {
           "name": "A. Venkatesan Kumar",
@@ -1566,6 +1700,8 @@
       "name": "CHEYYAR",
       "district": "TIRUVANNAMALAI",
       "type": "GEN",
+      "electors": 239856,
+      "turnout_percent": 91.97,
       "candidates": [
         {
           "name": "V.C.K. Mohan",
@@ -1589,6 +1725,8 @@
       "name": "VANDAVASI",
       "district": "TIRUVANNAMALAI",
       "type": "SC",
+      "electors": 213474,
+      "turnout_percent": 88.62,
       "candidates": [
         {
           "name": "Udhayakumar",
@@ -1612,6 +1750,8 @@
       "name": "GINGEE",
       "district": "VILLUPURAM",
       "type": "GEN",
+      "electors": 242667,
+      "turnout_percent": 88.51,
       "candidates": [
         {
           "name": "V. Chandrasekaran",
@@ -1635,6 +1775,8 @@
       "name": "MAILAM",
       "district": "VILLUPURAM",
       "type": "GEN",
+      "electors": 209016,
+      "turnout_percent": 89.65,
       "candidates": [
         {
           "name": "A. Vijay Niranjan",
@@ -1658,6 +1800,8 @@
       "name": "TINDIVANAM",
       "district": "VILLUPURAM",
       "type": "SC",
+      "electors": 219256,
+      "turnout_percent": 88.56,
       "candidates": [
         {
           "name": "S. Sakthivel",
@@ -1681,6 +1825,8 @@
       "name": "VANUR",
       "district": "VILLUPURAM",
       "type": "SC",
+      "electors": 209824,
+      "turnout_percent": 91.08,
       "candidates": [
         {
           "name": "G.P. Suresh",
@@ -1704,6 +1850,8 @@
       "name": "VILLUPURAM",
       "district": "VILLUPURAM",
       "type": "GEN",
+      "electors": 245899,
+      "turnout_percent": 86.6,
       "candidates": [
         {
           "name": "N. Mohanraj",
@@ -1727,6 +1875,8 @@
       "name": "VIKRAVANDI",
       "district": "VILLUPURAM",
       "type": "GEN",
+      "electors": 228995,
+      "turnout_percent": 90.51,
       "candidates": [
         {
           "name": "A. Vijay Vadivel",
@@ -1750,6 +1900,8 @@
       "name": "TIRUKKOYILUR",
       "district": "VILLUPURAM",
       "type": "GEN",
+      "electors": 243105,
+      "turnout_percent": 88.46,
       "candidates": [
         {
           "name": "Barani Balaji",
@@ -1773,6 +1925,8 @@
       "name": "ULUNDURPET",
       "district": "VILLUPURAM",
       "type": "GEN",
+      "electors": 300699,
+      "turnout_percent": 89.48,
       "candidates": [
         {
           "name": "M. Sudhakar",
@@ -1796,6 +1950,8 @@
       "name": "RISHIVANDIAM",
       "district": "VILLUPURAM",
       "type": "GEN",
+      "electors": 273571,
+      "turnout_percent": 88.92,
       "candidates": [
         {
           "name": "G. Ashokkumar",
@@ -1819,6 +1975,8 @@
       "name": "SANKARAPURAM",
       "district": "VILLUPURAM",
       "type": "GEN",
+      "electors": 265951,
+      "turnout_percent": 87.58,
       "candidates": [
         {
           "name": "A. Jagadeesan",
@@ -1842,6 +2000,8 @@
       "name": "KALLAKURICHI",
       "district": "VILLUPURAM",
       "type": "SC",
+      "electors": 281582,
+      "turnout_percent": 87.93,
       "candidates": [
         {
           "name": "C. Arul Vignesh",
@@ -1865,6 +2025,8 @@
       "name": "GANGAVALLI",
       "district": "SALEM",
       "type": "SC",
+      "electors": 218317,
+      "turnout_percent": 88.79,
       "candidates": [
         {
           "name": "V. Sujatha",
@@ -1888,6 +2050,8 @@
       "name": "ATTUR",
       "district": "SALEM",
       "type": "SC",
+      "electors": 228153,
+      "turnout_percent": 90.24,
       "candidates": [
         {
           "name": "R. Selvabharathi",
@@ -1911,6 +2075,8 @@
       "name": "YERCAUD",
       "district": "SALEM",
       "type": "ST",
+      "electors": 272829,
+      "turnout_percent": 92.03,
       "candidates": [
         {
           "name": "J. Lakshmi",
@@ -1934,6 +2100,8 @@
       "name": "OMALUR",
       "district": "SALEM",
       "type": "GEN",
+      "electors": 294593,
+      "turnout_percent": 90.9,
       "candidates": [
         {
           "name": "R. V. Adhiyaman",
@@ -1957,6 +2125,8 @@
       "name": "METTUR",
       "district": "SALEM",
       "type": "GEN",
+      "electors": 255665,
+      "turnout_percent": 89.22,
       "candidates": [
         {
           "name": "K. Selvam",
@@ -1980,6 +2150,8 @@
       "name": "EDAPADI",
       "district": "SALEM",
       "type": "GEN",
+      "electors": 276387,
+      "turnout_percent": 92.09,
       "candidates": [
         {
           "name": "M. Arunkumar",
@@ -2005,6 +2177,8 @@
       "name": "SANKARI",
       "district": "SALEM",
       "type": "GEN",
+      "electors": 260525,
+      "turnout_percent": 92.53,
       "candidates": [
         {
           "name": "Senthilkumar",
@@ -2028,6 +2202,8 @@
       "name": "SALEM (West)",
       "district": "SALEM",
       "type": "GEN",
+      "electors": 257950,
+      "turnout_percent": 89.99,
       "candidates": [
         {
           "name": "S. Lakshmanan",
@@ -2051,6 +2227,8 @@
       "name": "SALEM (North)",
       "district": "SALEM",
       "type": "GEN",
+      "electors": 238637,
+      "turnout_percent": 87.4,
       "candidates": [
         {
           "name": "K. Sivakumar",
@@ -2074,6 +2252,8 @@
       "name": "SALEM (South)",
       "district": "SALEM",
       "type": "GEN",
+      "electors": 226851,
+      "turnout_percent": 91.01,
       "candidates": [
         {
           "name": "A. Vijay Tamilan Parthiban",
@@ -2097,6 +2277,8 @@
       "name": "VEERAPANDI",
       "district": "SALEM",
       "type": "GEN",
+      "electors": 250449,
+      "turnout_percent": 93.4,
       "candidates": [
         {
           "name": "M.S. Palanivel",
@@ -2120,6 +2302,8 @@
       "name": "RASIPURAM",
       "district": "NAMAKKAL",
       "type": "SC",
+      "electors": 222252,
+      "turnout_percent": 90.6,
       "candidates": [
         {
           "name": "Lokesh Dhanapal",
@@ -2143,6 +2327,8 @@
       "name": "SENDAMANGALAM",
       "district": "NAMAKKAL",
       "type": "ST",
+      "electors": 229398,
+      "turnout_percent": 90.17,
       "candidates": [
         {
           "name": "P. Chandrasekar",
@@ -2166,6 +2352,8 @@
       "name": "NAMAKKAL",
       "district": "NAMAKKAL",
       "type": "GEN",
+      "electors": 237836,
+      "turnout_percent": 87.72,
       "candidates": [
         {
           "name": "T.S. Dileep",
@@ -2189,6 +2377,8 @@
       "name": "PARAMATHI-VELUR",
       "district": "NAMAKKAL",
       "type": "GEN",
+      "electors": 205147,
+      "turnout_percent": 90.24,
       "candidates": [
         {
           "name": "A. Nandhakumar",
@@ -2212,6 +2402,8 @@
       "name": "TIRUCHENGODE",
       "district": "NAMAKKAL",
       "type": "GEN",
+      "electors": 209072,
+      "turnout_percent": 90.06,
       "candidates": [
         {
           "name": "K.G. Arunraj",
@@ -2237,6 +2429,8 @@
       "name": "KUMARAPALAYAM",
       "district": "NAMAKKAL",
       "type": "GEN",
+      "electors": 220048,
+      "turnout_percent": 92.65,
       "candidates": [
         {
           "name": "C. Vijayalakshmi",
@@ -2260,6 +2454,8 @@
       "name": "ERODE (East)",
       "district": "ERODE",
       "type": "GEN",
+      "electors": 179566,
+      "turnout_percent": 89.8,
       "candidates": [
         {
           "name": "M. Vijay Balaji",
@@ -2283,6 +2479,8 @@
       "name": "ERODE (West)",
       "district": "ERODE",
       "type": "GEN",
+      "electors": 250177,
+      "turnout_percent": 87.95,
       "candidates": [
         {
           "name": "K.K. Anand Mohan",
@@ -2310,6 +2508,8 @@
       "name": "MODAKURICHI",
       "district": "ERODE",
       "type": "GEN",
+      "electors": 207664,
+      "turnout_percent": 90.34,
       "candidates": [
         {
           "name": "D. Shanmugam",
@@ -2337,6 +2537,8 @@
       "name": "DHARAPURAM",
       "district": "ERODE",
       "type": "SC",
+      "electors": 222406,
+      "turnout_percent": 88.92,
       "candidates": [
         {
           "name": "S. Gowri Chithra",
@@ -2360,6 +2562,8 @@
       "name": "KANGAYAM",
       "district": "ERODE",
       "type": "GEN",
+      "electors": 219553,
+      "turnout_percent": 91.56,
       "candidates": [
         {
           "name": "T. Mani",
@@ -2383,6 +2587,8 @@
       "name": "PERUNDURAI",
       "district": "ERODE",
       "type": "GEN",
+      "electors": 214431,
+      "turnout_percent": 92.47,
       "candidates": [
         {
           "name": "V. T. Arunachalam",
@@ -2406,6 +2612,8 @@
       "name": "BHAVANI",
       "district": "ERODE",
       "type": "GEN",
+      "electors": 223172,
+      "turnout_percent": 91.96,
       "candidates": [
         {
           "name": "M.P. Balakrishnan",
@@ -2429,6 +2637,8 @@
       "name": "ANTHIYUR",
       "district": "ERODE",
       "type": "GEN",
+      "electors": 207355,
+      "turnout_percent": 88.15,
       "candidates": [
         {
           "name": "M. Vijay Venkatesh",
@@ -2452,6 +2662,8 @@
       "name": "GOBICHETTIPALAYAM",
       "district": "TIRUPUR",
       "type": "GEN",
+      "electors": 239179,
+      "turnout_percent": 90.74,
       "candidates": [
         {
           "name": "K. A. Sengottaiyan",
@@ -2477,6 +2689,8 @@
       "name": "BHAVANISAGAR",
       "district": "TIRUPUR",
       "type": "SC",
+      "electors": 237613,
+      "turnout_percent": 89.52,
       "candidates": [
         {
           "name": "V.P. Tamil Selvi",
@@ -2500,6 +2714,8 @@
       "name": "UDHAGAMANDALAM",
       "district": "TIRUPUR",
       "type": "GEN",
+      "electors": 188826,
+      "turnout_percent": 77.59,
       "candidates": [
         {
           "name": "R. Ibrahim",
@@ -2523,6 +2739,8 @@
       "name": "GUDALUR",
       "district": "TIRUPUR",
       "type": "SC",
+      "electors": 185398,
+      "turnout_percent": 80.8,
       "candidates": [
         {
           "name": "A. Deepak Sai Kishore",
@@ -2546,6 +2764,8 @@
       "name": "COONOOR",
       "district": "TIRUPUR",
       "type": "GEN",
+      "electors": 177782,
+      "turnout_percent": 78.38,
       "candidates": [
         {
           "name": "C. Thangaraj",
@@ -2569,6 +2789,8 @@
       "name": "METTUPALAYAM",
       "district": "TIRUPUR",
       "type": "GEN",
+      "electors": 282179,
+      "turnout_percent": 85.96,
       "candidates": [
         {
           "name": "N. Sunil Anand",
@@ -2592,6 +2814,8 @@
       "name": "AVANASHI",
       "district": "TIRUPUR",
       "type": "SC",
+      "electors": 253361,
+      "turnout_percent": 90.57,
       "candidates": [
         {
           "name": "S. Kamali",
@@ -2617,6 +2841,8 @@
       "name": "TIRUPPUR (North)",
       "district": "TIRUPUR",
       "type": "GEN",
+      "electors": 315837,
+      "turnout_percent": 83.14,
       "candidates": [
         {
           "name": "Sathyabama",
@@ -2640,6 +2866,8 @@
       "name": "TIRUPPUR (South)",
       "district": "NILGIRIS",
       "type": "GEN",
+      "electors": 197091,
+      "turnout_percent": 90.71,
       "candidates": [
         {
           "name": "S. Balamurugan",
@@ -2663,6 +2891,8 @@
       "name": "PALLADAM",
       "district": "NILGIRIS",
       "type": "GEN",
+      "electors": 329849,
+      "turnout_percent": 90.73,
       "candidates": [
         {
           "name": "K. Ramkumar",
@@ -2686,6 +2916,8 @@
       "name": "SULUR",
       "district": "NILGIRIS",
       "type": "GEN",
+      "electors": 307616,
+      "turnout_percent": 88.31,
       "candidates": [
         {
           "name": "N.M. Sukumar",
@@ -2709,6 +2941,8 @@
       "name": "KAVUNDAMPALAYAM",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 422138,
+      "turnout_percent": 85.5,
       "candidates": [
         {
           "name": "R. T. Kanimozhi",
@@ -2732,6 +2966,8 @@
       "name": "COIMBATORE NORTH",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 296939,
+      "turnout_percent": 75.67,
       "candidates": [
         {
           "name": "V. Sampathkumar",
@@ -2757,6 +2993,8 @@
       "name": "THONDAMUTHUR",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 293324,
+      "turnout_percent": 87.5,
       "candidates": [
         {
           "name": "R. Sathish Raju",
@@ -2782,6 +3020,8 @@
       "name": "COIMBATORE SOUTH",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 188878,
+      "turnout_percent": 82.16,
       "candidates": [
         {
           "name": "V. Senthil Kumar",
@@ -2807,6 +3047,8 @@
       "name": "SINGANALLUR",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 269941,
+      "turnout_percent": 81.2,
       "candidates": [
         {
           "name": "K.S. Giriprashath",
@@ -2830,6 +3072,8 @@
       "name": "KINATHUKADAVU",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 305878,
+      "turnout_percent": 87.11,
       "candidates": [
         {
           "name": "K. Vignesh",
@@ -2853,6 +3097,8 @@
       "name": "POLLACHI",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 203971,
+      "turnout_percent": 88.09,
       "candidates": [
         {
           "name": "G. Ramanathan",
@@ -2876,6 +3122,8 @@
       "name": "VALPARAI",
       "district": "COIMBATORE",
       "type": "SC",
+      "electors": 173608,
+      "turnout_percent": 85.95,
       "candidates": [
         {
           "name": "Dr. Sreedharan",
@@ -2899,6 +3147,8 @@
       "name": "UDUMALPET",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 230976,
+      "turnout_percent": 87.4,
       "candidates": [
         {
           "name": "G. K. Shankar",
@@ -2922,6 +3172,8 @@
       "name": "MADATHUKULAM",
       "district": "COIMBATORE",
       "type": "GEN",
+      "electors": 214809,
+      "turnout_percent": 86.9,
       "candidates": [
         {
           "name": "R. Thirumalai",
@@ -2945,6 +3197,8 @@
       "name": "PALANI",
       "district": "DINDIGUL",
       "type": "GEN",
+      "electors": 239795,
+      "turnout_percent": 86.24,
       "candidates": [
         {
           "name": "Dr. M. Praveenkumar",
@@ -2968,6 +3222,8 @@
       "name": "ODDANCHATRAM",
       "district": "DINDIGUL",
       "type": "GEN",
+      "electors": 220238,
+      "turnout_percent": 90.73,
       "candidates": [
         {
           "name": "S. Mohan",
@@ -2995,6 +3251,8 @@
       "name": "ATHOOR",
       "district": "DINDIGUL",
       "type": "GEN",
+      "electors": 261843,
+      "turnout_percent": 89.49,
       "candidates": [
         {
           "name": "N. Kalaiselvi",
@@ -3018,6 +3276,8 @@
       "name": "NILAKOTTAI",
       "district": "DINDIGUL",
       "type": "SC",
+      "electors": 221094,
+      "turnout_percent": 88.57,
       "candidates": [
         {
           "name": "R. Ayyanar",
@@ -3041,6 +3301,8 @@
       "name": "NATHAM",
       "district": "DINDIGUL",
       "type": "GEN",
+      "electors": 261152,
+      "turnout_percent": 91.13,
       "candidates": [
         {
           "name": "L. L. Ramesh",
@@ -3064,6 +3326,8 @@
       "name": "DINDIGUL",
       "district": "DINDIGUL",
       "type": "GEN",
+      "electors": 241926,
+      "turnout_percent": 86.34,
       "candidates": [
         {
           "name": "Nazeer Raja",
@@ -3087,6 +3351,8 @@
       "name": "VEDASANDUR",
       "district": "DINDIGUL",
       "type": "GEN",
+      "electors": 243774,
+      "turnout_percent": 92.14,
       "candidates": [
         {
           "name": "Dr. N. Nagajothi",
@@ -3110,6 +3376,8 @@
       "name": "ARAVAKURICHI",
       "district": "KARUR",
       "type": "GEN",
+      "electors": 195517,
+      "turnout_percent": 91.75,
       "candidates": [
         {
           "name": "Karthikeyan",
@@ -3133,6 +3401,8 @@
       "name": "KARUR",
       "district": "KARUR",
       "type": "GEN",
+      "electors": 229995,
+      "turnout_percent": 93.4,
       "candidates": [
         {
           "name": "V.P. Mathiyalagan",
@@ -3158,6 +3428,8 @@
       "name": "KRISHNARAYAPURAM",
       "district": "KARUR",
       "type": "SC",
+      "electors": 202994,
+      "turnout_percent": 92.45,
       "candidates": [
         {
           "name": "S. Madhan",
@@ -3181,6 +3453,8 @@
       "name": "KULITHALAI",
       "district": "KARUR",
       "type": "GEN",
+      "electors": 223184,
+      "turnout_percent": 92.79,
       "candidates": [
         {
           "name": "G. Balasubramani",
@@ -3204,6 +3478,8 @@
       "name": "MANAPPARAI",
       "district": "TIRUCHIRAPPALLI",
       "type": "GEN",
+      "electors": 267999,
+      "turnout_percent": 88.81,
       "candidates": [
         {
           "name": "R. Kathiravan",
@@ -3227,6 +3503,8 @@
       "name": "SRIRANGAM",
       "district": "TIRUCHIRAPPALLI",
       "type": "GEN",
+      "electors": 287027,
+      "turnout_percent": 87.89,
       "candidates": [
         {
           "name": "S. Ramesh",
@@ -3250,6 +3528,8 @@
       "name": "TIRUCHIRAPALLI (West)",
       "district": "TIRUCHIRAPPALLI",
       "type": "GEN",
+      "electors": 238920,
+      "turnout_percent": 81.35,
       "candidates": [
         {
           "name": "G. Ramamoorthy",
@@ -3275,6 +3555,8 @@
       "name": "TIRUCHIRAPALLI (East)",
       "district": "TIRUCHIRAPPALLI",
       "type": "GEN",
+      "electors": 220191,
+      "turnout_percent": 81.77,
       "candidates": [
         {
           "name": "C. Joseph Vijay",
@@ -3300,6 +3582,8 @@
       "name": "THIRUVERAMBUR",
       "district": "TIRUCHIRAPPALLI",
       "type": "GEN",
+      "electors": 259546,
+      "turnout_percent": 81.21,
       "candidates": [
         {
           "name": "Navalpattu S. Viji",
@@ -3323,6 +3607,8 @@
       "name": "LALGUDI",
       "district": "TIRUCHIRAPPALLI",
       "type": "GEN",
+      "electors": 212177,
+      "turnout_percent": 86.51,
       "candidates": [
         {
           "name": "K. P. Krishnan",
@@ -3346,6 +3632,8 @@
       "name": "MANACHANALLUR",
       "district": "TIRUCHIRAPPALLI",
       "type": "GEN",
+      "electors": 236500,
+      "turnout_percent": 87.64,
       "candidates": [
         {
           "name": "V. Saravanan",
@@ -3369,6 +3657,8 @@
       "name": "MUSIRI",
       "district": "TIRUCHIRAPPALLI",
       "type": "GEN",
+      "electors": 214006,
+      "turnout_percent": 86.82,
       "candidates": [
         {
           "name": "N. Vignesh",
@@ -3392,6 +3682,8 @@
       "name": "THURAIYUR",
       "district": "TIRUCHIRAPPALLI",
       "type": "SC",
+      "electors": 210685,
+      "turnout_percent": 86.52,
       "candidates": [
         {
           "name": "K. Sivakumar",
@@ -3415,6 +3707,8 @@
       "name": "PERAMBALUR",
       "district": "PERAMBALUR",
       "type": "SC",
+      "electors": 290666,
+      "turnout_percent": 85.92,
       "candidates": [
         {
           "name": "K. Sivakumar",
@@ -3438,6 +3732,8 @@
       "name": "KUNNAM",
       "district": "PERAMBALUR",
       "type": "GEN",
+      "electors": 268095,
+      "turnout_percent": 85.04,
       "candidates": [
         {
           "name": "M. Revathi",
@@ -3461,6 +3757,8 @@
       "name": "ARIYALUR",
       "district": "ARIYALUR",
       "type": "GEN",
+      "electors": 262942,
+      "turnout_percent": 88.97,
       "candidates": [
         {
           "name": "M. Sivakumar",
@@ -3484,6 +3782,8 @@
       "name": "JAYANKONDAM",
       "district": "ARIYALUR",
       "type": "GEN",
+      "electors": 263450,
+      "turnout_percent": 85.85,
       "candidates": [
         {
           "name": "Kavitha G. Rajendran",
@@ -3507,6 +3807,8 @@
       "name": "TITTAKUDI",
       "district": "CUDDALORE",
       "type": "SC",
+      "electors": 208984,
+      "turnout_percent": 83.33,
       "candidates": [
         {
           "name": "Rajasekar",
@@ -3530,6 +3832,8 @@
       "name": "VRIDDHACHALAM",
       "district": "CUDDALORE",
       "type": "GEN",
+      "electors": 240783,
+      "turnout_percent": 86.0,
       "candidates": [
         {
           "name": "S. Vijay",
@@ -3553,6 +3857,8 @@
       "name": "NEYVELI",
       "district": "CUDDALORE",
       "type": "GEN",
+      "electors": 191271,
+      "turnout_percent": 87.19,
       "candidates": [
         {
           "name": "K. Anand",
@@ -3576,6 +3882,8 @@
       "name": "PANRUTI",
       "district": "CUDDALORE",
       "type": "GEN",
+      "electors": 241767,
+      "turnout_percent": 86.09,
       "candidates": [
         {
           "name": "M. Manikandan",
@@ -3599,6 +3907,8 @@
       "name": "CUDDALORE",
       "district": "CUDDALORE",
       "type": "GEN",
+      "electors": 223149,
+      "turnout_percent": 83.88,
       "candidates": [
         {
           "name": "V. Rajkumar",
@@ -3622,6 +3932,8 @@
       "name": "KURINJIPADI",
       "district": "CUDDALORE",
       "type": "GEN",
+      "electors": 238189,
+      "turnout_percent": 88.93,
       "candidates": [
         {
           "name": "Dr. Rajkumar",
@@ -3645,6 +3957,8 @@
       "name": "BHUVANAGIRI",
       "district": "CUDDALORE",
       "type": "GEN",
+      "electors": 233259,
+      "turnout_percent": 87.9,
       "candidates": [
         {
           "name": "D.M. Mahalingam",
@@ -3668,6 +3982,8 @@
       "name": "CHIDAMBARAM",
       "district": "CUDDALORE",
       "type": "GEN",
+      "electors": 231236,
+      "turnout_percent": 83.81,
       "candidates": [
         {
           "name": "Dr. N. Pari",
@@ -3691,6 +4007,8 @@
       "name": "KATTUMANNARKOIL",
       "district": "CUDDALORE",
       "type": "SC",
+      "electors": 226333,
+      "turnout_percent": 82.11,
       "candidates": [
         {
           "name": "S. Srinivasan",
@@ -3714,6 +4032,8 @@
       "name": "SIRKALI",
       "district": "NAGAPATTINAM",
       "type": "SC",
+      "electors": 241319,
+      "turnout_percent": 82.44,
       "candidates": [
         {
           "name": "C.S. Gopinath",
@@ -3741,6 +4061,8 @@
       "name": "MAYILADUTHURAI",
       "district": "NAGAPATTINAM",
       "type": "GEN",
+      "electors": 234554,
+      "turnout_percent": 79.67,
       "candidates": [
         {
           "name": "C.S. Arun Rasheeth",
@@ -3764,6 +4086,8 @@
       "name": "POOMPUHAR",
       "district": "NAGAPATTINAM",
       "type": "GEN",
+      "electors": 259262,
+      "turnout_percent": 84.09,
       "candidates": [
         {
           "name": "K. Vijayalayan",
@@ -3787,6 +4111,8 @@
       "name": "NAGAPATTINAM",
       "district": "NAGAPATTINAM",
       "type": "GEN",
+      "electors": 174683,
+      "turnout_percent": 85.87,
       "candidates": [
         {
           "name": "N. Sukumar",
@@ -3810,6 +4136,8 @@
       "name": "KILVELUR",
       "district": "NAGAPATTINAM",
       "type": "SC",
+      "electors": 170558,
+      "turnout_percent": 87.98,
       "candidates": [
         {
           "name": "D.A.P. Senthilpandiyan",
@@ -3833,6 +4161,8 @@
       "name": "VEDARANYAM",
       "district": "NAGAPATTINAM",
       "type": "GEN",
+      "electors": 187439,
+      "turnout_percent": 81.52,
       "candidates": [
         {
           "name": "A. Kingsley Gerald",
@@ -3856,6 +4186,8 @@
       "name": "THIRUTHURAIPUNDI",
       "district": "TIRUVARUR",
       "type": "SC",
+      "electors": 226845,
+      "turnout_percent": 83.38,
       "candidates": [
         {
           "name": "S. Pandiyan",
@@ -3879,6 +4211,8 @@
       "name": "MANNARGUDI",
       "district": "TIRUVARUR",
       "type": "GEN",
+      "electors": 234430,
+      "turnout_percent": 82.14,
       "candidates": [
         {
           "name": "UVM Rajarajan",
@@ -3902,6 +4236,8 @@
       "name": "THIRUVARUR",
       "district": "TIRUVARUR",
       "type": "GEN",
+      "electors": 260027,
+      "turnout_percent": 83.07,
       "candidates": [
         {
           "name": "V. Veeramani",
@@ -3925,6 +4261,8 @@
       "name": "NANNILAM",
       "district": "TIRUVARUR",
       "type": "GEN",
+      "electors": 267432,
+      "turnout_percent": 85.92,
       "candidates": [
         {
           "name": "S. Prabhakaran",
@@ -3948,6 +4286,8 @@
       "name": "THIRUVIDAMARUDUR",
       "district": "THANJAVUR",
       "type": "SC",
+      "electors": 256930,
+      "turnout_percent": 80.78,
       "candidates": [
         {
           "name": "S. Prabhakaran",
@@ -3971,6 +4311,8 @@
       "name": "KUMBAKONAM",
       "district": "THANJAVUR",
       "type": "GEN",
+      "electors": 254318,
+      "turnout_percent": 81.04,
       "candidates": [
         {
           "name": "R. Vinoth",
@@ -3998,6 +4340,8 @@
       "name": "PAPANASAM",
       "district": "THANJAVUR",
       "type": "GEN",
+      "electors": 256518,
+      "turnout_percent": 80.34,
       "candidates": [
         {
           "name": "U. Azarudeen",
@@ -4021,6 +4365,8 @@
       "name": "THIRUVAIYARU",
       "district": "THANJAVUR",
       "type": "GEN",
+      "electors": 258374,
+      "turnout_percent": 85.19,
       "candidates": [
         {
           "name": "M. Manikandan",
@@ -4044,6 +4390,8 @@
       "name": "THANJAVUR",
       "district": "THANJAVUR",
       "type": "GEN",
+      "electors": 252676,
+      "turnout_percent": 77.47,
       "candidates": [
         {
           "name": "R. Vijay Saravanan",
@@ -4067,6 +4415,8 @@
       "name": "ORATHANAD",
       "district": "THANJAVUR",
       "type": "GEN",
+      "electors": 233542,
+      "turnout_percent": 82.98,
       "candidates": [
         {
           "name": "Dr. K. Aravind",
@@ -4090,6 +4440,8 @@
       "name": "PATTUKKOTTAI",
       "district": "THANJAVUR",
       "type": "GEN",
+      "electors": 242420,
+      "turnout_percent": 75.42,
       "candidates": [
         {
           "name": "C. Madhan",
@@ -4113,6 +4465,8 @@
       "name": "PERAVURANI",
       "district": "THANJAVUR",
       "type": "GEN",
+      "electors": 213946,
+      "turnout_percent": 81.89,
       "candidates": [
         {
           "name": "T. Chandra Kaandeeban",
@@ -4136,6 +4490,8 @@
       "name": "GANDHARVAKOTTAI",
       "district": "PUDUKKOTTAI",
       "type": "SC",
+      "electors": 196024,
+      "turnout_percent": 84.93,
       "candidates": [
         {
           "name": "N. Subramanian",
@@ -4159,6 +4515,8 @@
       "name": "VIRALIMALAI",
       "district": "PUDUKKOTTAI",
       "type": "GEN",
+      "electors": 225090,
+      "turnout_percent": 89.8,
       "candidates": [
         {
           "name": "P. Murugesan",
@@ -4184,6 +4542,8 @@
       "name": "PUDUKKOTTAI",
       "district": "PUDUKKOTTAI",
       "type": "GEN",
+      "electors": 225944,
+      "turnout_percent": 83.26,
       "candidates": [
         {
           "name": "K.M. Shareef",
@@ -4207,6 +4567,8 @@
       "name": "THIRUMAYAM",
       "district": "PUDUKKOTTAI",
       "type": "GEN",
+      "electors": 220568,
+      "turnout_percent": 82.07,
       "candidates": [
         {
           "name": "C. Sindhamani",
@@ -4230,6 +4592,8 @@
       "name": "ALANGUDI",
       "district": "PUDUKKOTTAI",
       "type": "GEN",
+      "electors": 212078,
+      "turnout_percent": 84.59,
       "candidates": [
         {
           "name": "Durai Kandasamy",
@@ -4253,6 +4617,8 @@
       "name": "ARANTANGI",
       "district": "PUDUKKOTTAI",
       "type": "GEN",
+      "electors": 229792,
+      "turnout_percent": 78.97,
       "candidates": [
         {
           "name": "J. Mohamad Parvez",
@@ -4276,6 +4642,8 @@
       "name": "KARAIKUDI",
       "district": "SIVAGANGA",
       "type": "GEN",
+      "electors": 305925,
+      "turnout_percent": 74.33,
       "candidates": [
         {
           "name": "Dr. T. K. Prabhu",
@@ -4301,6 +4669,8 @@
       "name": "TIRUPPATTUR",
       "district": "SIVAGANGA",
       "type": "GEN",
+      "electors": 275904,
+      "turnout_percent": 77.45,
       "candidates": [
         {
           "name": "Srinivasa Sethupathi",
@@ -4328,6 +4698,8 @@
       "name": "SIVAGANGA",
       "district": "SIVAGANGA",
       "type": "GEN",
+      "electors": 278124,
+      "turnout_percent": 75.99,
       "candidates": [
         {
           "name": "Kulandhai Rani Nachiar",
@@ -4351,6 +4723,8 @@
       "name": "MANAMADURAI",
       "district": "SIVAGANGA",
       "type": "SC",
+      "electors": 259382,
+      "turnout_percent": 79.29,
       "candidates": [
         {
           "name": "D. Ilangovan",
@@ -4374,6 +4748,8 @@
       "name": "MELUR",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 229821,
+      "turnout_percent": 82.22,
       "candidates": [
         {
           "name": "A. Madurai Veeran",
@@ -4393,6 +4769,8 @@
       "name": "MADURAI EAST",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 336527,
+      "turnout_percent": 79.9,
       "candidates": [
         {
           "name": "S. Karthikeyan",
@@ -4416,6 +4794,8 @@
       "name": "SHOLAVANDAN",
       "district": "MADURAI",
       "type": "SC",
+      "electors": 214785,
+      "turnout_percent": 87.23,
       "candidates": [
         {
           "name": "M.V. Karuppaiah",
@@ -4439,6 +4819,8 @@
       "name": "MADURAI NORTH",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 221174,
+      "turnout_percent": 72.63,
       "candidates": [
         {
           "name": "A. Kallanai",
@@ -4462,6 +4844,8 @@
       "name": "MADURAI SOUTH",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 179919,
+      "turnout_percent": 78.19,
       "candidates": [
         {
           "name": "J. Jo Peter",
@@ -4489,6 +4873,8 @@
       "name": "MADURAI CENTRAL",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 199618,
+      "turnout_percent": 73.88,
       "candidates": [
         {
           "name": "V.N.S. Mustafa",
@@ -4514,6 +4900,8 @@
       "name": "MADURAI WEST",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 275516,
+      "turnout_percent": 77.77,
       "candidates": [
         {
           "name": "S.R. Thangapandi",
@@ -4537,6 +4925,8 @@
       "name": "THIRUPARANKUNDRAM",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 311400,
+      "turnout_percent": 81.41,
       "candidates": [
         {
           "name": "CTR. Nirmalkumar",
@@ -4562,6 +4952,8 @@
       "name": "THIRUMANGALAM",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 261238,
+      "turnout_percent": 87.03,
       "candidates": [
         {
           "name": "N. Sathish Kumar",
@@ -4585,6 +4977,8 @@
       "name": "USILAMPATTI",
       "district": "MADURAI",
       "type": "GEN",
+      "electors": 266192,
+      "turnout_percent": 82.95,
       "candidates": [
         {
           "name": "Vijay Mahalingam",
@@ -4608,6 +5002,8 @@
       "name": "ANDIPATTI",
       "district": "THENI",
       "type": "GEN",
+      "electors": 256529,
+      "turnout_percent": 83.68,
       "candidates": [
         {
           "name": "V. Pandi",
@@ -4631,6 +5027,8 @@
       "name": "PERIYAKULAM",
       "district": "THENI",
       "type": "SC",
+      "electors": 265830,
+      "turnout_percent": 78.51,
       "candidates": [
         {
           "name": "G. Sabari",
@@ -4654,6 +5052,8 @@
       "name": "BODINAYAKANUR",
       "district": "THENI",
       "type": "GEN",
+      "electors": 263292,
+      "turnout_percent": 82.87,
       "candidates": [
         {
           "name": "S. Prakash",
@@ -4679,6 +5079,8 @@
       "name": "CUMBUM",
       "district": "THENI",
       "type": "GEN",
+      "electors": 255888,
+      "turnout_percent": 81.23,
       "candidates": [
         {
           "name": "P.L.A. Jaganath",
@@ -4702,6 +5104,8 @@
       "name": "RAJAPALAYAM",
       "district": "VIRUDHUNAGAR",
       "type": "GEN",
+      "electors": 214192,
+      "turnout_percent": 84.35,
       "candidates": [
         {
           "name": "K. Jagadeeswari",
@@ -4725,6 +5129,8 @@
       "name": "SRIVILLIPUTHUR",
       "district": "VIRUDHUNAGAR",
       "type": "SC",
+      "electors": 224122,
+      "turnout_percent": 84.97,
       "candidates": [
         {
           "name": "A. Karthik",
@@ -4748,6 +5154,8 @@
       "name": "SATTUR",
       "district": "VIRUDHUNAGAR",
       "type": "GEN",
+      "electors": 229330,
+      "turnout_percent": 85.63,
       "candidates": [
         {
           "name": "M. Ajith",
@@ -4773,6 +5181,8 @@
       "name": "SIVAKASI",
       "district": "VIRUDHUNAGAR",
       "type": "GEN",
+      "electors": 228205,
+      "turnout_percent": 84.07,
       "candidates": [
         {
           "name": "Keerthana",
@@ -4796,6 +5206,8 @@
       "name": "VIRUDHUNAGAR",
       "district": "VIRUDHUNAGAR",
       "type": "GEN",
+      "electors": 200618,
+      "turnout_percent": 82.74,
       "candidates": [
         {
           "name": "S.P. Selvam",
@@ -4819,6 +5231,8 @@
       "name": "ARUPPUKOTTAI",
       "district": "VIRUDHUNAGAR",
       "type": "GEN",
+      "electors": 207750,
+      "turnout_percent": 84.71,
       "candidates": [
         {
           "name": "K. Karthik Kumar",
@@ -4842,6 +5256,8 @@
       "name": "TIRUCHULI",
       "district": "VIRUDHUNAGAR",
       "type": "GEN",
+      "electors": 205301,
+      "turnout_percent": 87.23,
       "candidates": [
         {
           "name": "S. Samayan",
@@ -4867,6 +5283,8 @@
       "name": "PARAMAKUDI",
       "district": "RAMANATHAPURAM",
       "type": "SC",
+      "electors": 234608,
+      "turnout_percent": 79.61,
       "candidates": [
         {
           "name": "G. Gopinathan",
@@ -4890,6 +5308,8 @@
       "name": "TIRUVADANAI",
       "district": "RAMANATHAPURAM",
       "type": "GEN",
+      "electors": 283864,
+      "turnout_percent": 77.08,
       "candidates": [
         {
           "name": "V.K. Raji",
@@ -4913,6 +5333,8 @@
       "name": "RAMANATHAPURAM",
       "district": "RAMANATHAPURAM",
       "type": "GEN",
+      "electors": 312303,
+      "turnout_percent": 75.37,
       "candidates": [
         {
           "name": "E.K. Sahul Hameed",
@@ -4936,6 +5358,8 @@
       "name": "MUDUKULATHUR",
       "district": "RAMANATHAPURAM",
       "type": "GEN",
+      "electors": 298958,
+      "turnout_percent": 76.62,
       "candidates": [
         {
           "name": "V. Malarvizhi Jayabala",
@@ -4959,6 +5383,8 @@
       "name": "VILATHIKULAM",
       "district": "THOOTHUKUDI",
       "type": "GEN",
+      "electors": 204982,
+      "turnout_percent": 84.16,
       "candidates": [
         {
           "name": "Kasiram",
@@ -4982,6 +5408,8 @@
       "name": "THOOTHUKKUDI",
       "district": "THOOTHUKUDI",
       "type": "GEN",
+      "electors": 250587,
+      "turnout_percent": 80.92,
       "candidates": [
         {
           "name": "A. Srinath",
@@ -5005,6 +5433,8 @@
       "name": "TIRUCHENDUR",
       "district": "THOOTHUKUDI",
       "type": "GEN",
+      "electors": 232933,
+      "turnout_percent": 78.89,
       "candidates": [
         {
           "name": "K. Murugan",
@@ -5028,6 +5458,8 @@
       "name": "SRIVAIKUNTAM",
       "district": "THOOTHUKUDI",
       "type": "GEN",
+      "electors": 214268,
+      "turnout_percent": 81.04,
       "candidates": [
         {
           "name": "G. Saravanan",
@@ -5051,6 +5483,8 @@
       "name": "OTTAPIDARAM",
       "district": "THOOTHUKUDI",
       "type": "SC",
+      "electors": 243756,
+      "turnout_percent": 79.39,
       "candidates": [
         {
           "name": "P. Madhanraja",
@@ -5074,6 +5508,8 @@
       "name": "KOVILPATTI",
       "district": "THOOTHUKUDI",
       "type": "GEN",
+      "electors": 241660,
+      "turnout_percent": 79.34,
       "candidates": [
         {
           "name": "S. Balasubramaniam",
@@ -5099,6 +5535,8 @@
       "name": "SANKARANKOVIL",
       "district": "TIRUNELVELI",
       "type": "SC",
+      "electors": 238082,
+      "turnout_percent": 81.04,
       "candidates": [
         {
           "name": "C. Ramarajan",
@@ -5122,6 +5560,8 @@
       "name": "VASUDEVANALLUR",
       "district": "TIRUNELVELI",
       "type": "SC",
+      "electors": 228557,
+      "turnout_percent": 85.18,
       "candidates": [
         {
           "name": "R. Amudha Rani",
@@ -5145,6 +5585,8 @@
       "name": "KADAYANALLUR",
       "district": "TIRUNELVELI",
       "type": "GEN",
+      "electors": 269220,
+      "turnout_percent": 81.38,
       "candidates": [
         {
           "name": "R.K. Abdul Jalil",
@@ -5172,6 +5614,8 @@
       "name": "TENKASI",
       "district": "TIRUNELVELI",
       "type": "GEN",
+      "electors": 281624,
+      "turnout_percent": 82.44,
       "candidates": [
         {
           "name": "A. Rajaprakash",
@@ -5195,6 +5639,8 @@
       "name": "ALANGULAM",
       "district": "TIRUNELVELI",
       "type": "GEN",
+      "electors": 255457,
+      "turnout_percent": 85.53,
       "candidates": [
         {
           "name": "V. Vipin Chakravarthi",
@@ -5218,6 +5664,8 @@
       "name": "TIRUNELVELI",
       "district": "TIRUNELVELI",
       "type": "GEN",
+      "electors": 275857,
+      "turnout_percent": 78.21,
       "candidates": [
         {
           "name": "R.S. Murugan",
@@ -5241,6 +5689,8 @@
       "name": "AMBASAMUDRAM",
       "district": "TIRUNELVELI",
       "type": "GEN",
+      "electors": 227878,
+      "turnout_percent": 82.89,
       "candidates": [
         {
           "name": "S. Rajagopal",
@@ -5264,6 +5714,8 @@
       "name": "PALAYAMCOTTAI",
       "district": "TIRUNELVELI",
       "type": "GEN",
+      "electors": 257329,
+      "turnout_percent": 68.97,
       "candidates": [
         {
           "name": "S. Maria John",
@@ -5287,6 +5739,8 @@
       "name": "NANGUNERI",
       "district": "TIRUNELVELI",
       "type": "GEN",
+      "electors": 257177,
+      "turnout_percent": 80.22,
       "candidates": [
         {
           "name": "Rettiyapatti Narayanan",
@@ -5310,6 +5764,8 @@
       "name": "RADHAPURAM",
       "district": "TIRUNELVELI",
       "type": "GEN",
+      "electors": 247061,
+      "turnout_percent": 80.03,
       "candidates": [
         {
           "name": "K. Satheesh Christopher",
@@ -5333,6 +5789,8 @@
       "name": "KANNIYAKUMARI",
       "district": "KANNIYAKUMARI",
       "type": "GEN",
+      "electors": 288867,
+      "turnout_percent": 81.43,
       "candidates": [
         {
           "name": "S.R. Madhavan",
@@ -5356,6 +5814,8 @@
       "name": "NAGERCOIL",
       "district": "KANNIYAKUMARI",
       "type": "GEN",
+      "electors": 258928,
+      "turnout_percent": 74.72,
       "candidates": [
         {
           "name": "G. King",
@@ -5379,6 +5839,8 @@
       "name": "COLACHEL",
       "district": "KANNIYAKUMARI",
       "type": "GEN",
+      "electors": 265015,
+      "turnout_percent": 74.13,
       "candidates": [
         {
           "name": "Prem Alex Lawrence",
@@ -5402,6 +5864,8 @@
       "name": "PADMANABHAPURAM",
       "district": "KANNIYAKUMARI",
       "type": "GEN",
+      "electors": 235511,
+      "turnout_percent": 75.46,
       "candidates": [
         {
           "name": "S. Krishnakumar",
@@ -5425,6 +5889,8 @@
       "name": "VILAVANCODE",
       "district": "KANNIYAKUMARI",
       "type": "GEN",
+      "electors": 226658,
+      "turnout_percent": 75.77,
       "candidates": [
         {
           "name": "K. Michael Kumar",
@@ -5448,6 +5914,8 @@
       "name": "KILLIYOOR",
       "district": "KANNIYAKUMARI",
       "type": "GEN",
+      "electors": 245359,
+      "turnout_percent": 71.29,
       "candidates": [
         {
           "name": "S. Sabeer",

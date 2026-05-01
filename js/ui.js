@@ -443,7 +443,7 @@ const UIModule = (function () {
             const capturedId = id;
             const turnoutByYear = {};
             try {
-                await Promise.all([2016, 2021].map(async y => {
+                await Promise.all([2016, 2021, 2026].map(async y => {
                     const result = await DataModule.getElectionResults(y, capturedId);
                     if (result && result.turnout_percent != null) {
                         turnoutByYear[String(y)] = result.turnout_percent;
